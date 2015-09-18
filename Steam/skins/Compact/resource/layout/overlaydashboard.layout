@@ -167,7 +167,7 @@
 		
 		place { control="TaskbarPanel" region=taskbar height=32 width=max }
 
-		place { control="SessionText,TwoWeeksText,ForeverText" dir=right align=top-center spacing=32 region=detailpanels margin-top=216 }
+		place { control="SessionText,TwoWeeksText,ForeverText" dir=right align=top-center spacing=32 region=detailpanels margin-top=217 }
 		
 		place { control="CloseButton" region=mid align=top-center width=0 }
 		place { control="HotkeyLabel,HotkeyExplain" region=mid align=top-center y=14 spacing=5 width=0 }

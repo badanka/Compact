@@ -73,6 +73,6 @@
 	
 		place { controls=grid region=friendspanels width=max height=max margin-left=4 margin-top=7 }
 		
-		place { controls=AllFriendsButton,ViewPlayersButton region=box margin-left=4 spacing=5 height=20 align=bottom }
+		place { controls=AllFriendsButton,ViewPlayersButton region=box margin-left=4 spacing=4 height=20 align=bottom }
 	}
 }

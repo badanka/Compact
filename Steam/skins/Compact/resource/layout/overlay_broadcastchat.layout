@@ -1,0 +1,112 @@
+"resource/layout/overlay_broadcastpanel.layout"
+{
+	controls
+	{
+		"BroadcastChatDialog"
+		{
+			"ControlName"		"COverlayBroadcastChatDialog"
+			"title"		"#Overlay_Broadcast_Chat_Title"
+		}
+		"TextEntry"
+		{
+			"ControlName"		"TextEntry"
+			"tabPosition"		"1"
+			"editable"		"1"
+			"maxchars"		"2048"
+			"unicode"		"1"
+			style="textentryfocus_chat"
+		}
+		"ChatHistory"
+		{
+			"ControlName"		"RichText"
+			"maxchars"		"-1"
+			"ScrollBar"		"1"
+			style="ChatListPanel"
+		}
+		"SendButton"
+		{
+			"ControlName"		"Button"
+			"tabPosition"		"2"
+			"paintbackground"		"1"
+			"labelText"		"#Friends_Chat_Send"
+			"textAlignment"		"west"
+			"Default"		"1"
+			style="button"
+			command="PostMessage"
+		}
+		"EmoticonButton"
+		{
+			"ControlName"		"CEmoticonButton"
+		}
+	}	
+	
+	styles
+	{
+	
+		label
+		{
+			font-size=13
+		}
+		
+		controlbutton
+		{
+			minimum-width=120
+		}
+		
+		Textentryfocus_chat
+		{
+			font-size=13
+			render
+			{
+			}     
+		}
+
+		CEmoticonButton
+		{
+			image="graphics/chatemo_nrml"
+		}
+
+		CEmoticonButton:hover
+		{
+			image="graphics/chatemo_hvr"
+		}
+
+		CEmoticonButton:selected
+		{
+			image="graphics/chatemo_prs"
+		}
+
+		EmoticonMenuItemStyle
+		{
+			font-size=16
+			bgcolor=none
+		}
+		
+		EmoticonMenuItemStyle:hover
+		{
+			textcolor=white
+			bgcolor=none
+		}
+		
+		EmoticonMenuItemStyle:selected
+		{
+			textcolor=white
+			bgcolor=none
+		}
+		
+		GridMenu
+		{
+			font-size=13
+		}
+	}
+	
+	layout
+	{
+		region { name=bottomrow align=bottom height=36 }
+		place { control="ChatHistory" y=24 margin-left=2 margin-right=2 width=max height=max align=right dir=down margin-bottom=35 spacing=3 }
+		place { control="EmoticonButton" height=16 width=24 margin-top=1 margin-right=8 align=right }
+		place { control="SendButton" x=9999 height=0 align=right }
+		place { control="TextEntry" region=bottomrow height=32 align=left width=max margin-right=2 margin-left=2 margin-top=2 }
+		place { control="StatusLabel" align=bottom width=max margin-left=4 margin-right=17 margin-bottom=38 }
+	}
+}

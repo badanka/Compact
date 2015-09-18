@@ -55,13 +55,10 @@
 	{
 		region { name=overlay width=max align=top-center margin-top=2 margin-left=2 margin-right=2 }
 	
-		region { name="left" region=overlay width=200 height=max margin-top=10 align=left }
-		region { name="mid" region=overlay width=140 height=max margin-top=10 align=top-center }
-		region { name="right" region=overlay width=200 height=max margin-top=10 align=right }
-		
-		region { name="detailpanels" region=overlay align=bottom width=max height=400 margin-bottom=100 }
+		region { name="detailpanels" region=overlay align=bottom width=max height=400 }
 		region { name="taskbar" region=overlay width="140" align=top-center height=35 y=25 }
 		
+		place { controls="BroadcastDetailPanel" region=detailpanels width=330 height=68 align=bottom}
 		place { controls="GameGroupsButton,ChatRoomButton,WebSiteButton" width=0 y=0 align=right region=overlay dir=down spacing=5 }
 		place { controls="DLCButton,GameHubButton,GuideButton,GuidesButton,LegacyCDKeyButton,FriendsButton,PlayersButton,AchievementsButton,ScreenshotsButton,ForumsButton,WorkshopButton,RecommendButton" y=0 align=right region=overlay dir=down spacing=3 }
 	}	
