@@ -24,20 +24,6 @@
 			style=bottomfade
 			zpos=-1
 		}		
-		Clock
-		{
-			controlname="Label"
-			labeltext="10:43"
-			style=topbar
-			textalignment=west
-
-		}
-		ClockSuffix
-		{
-			controlname="Label"
-			labeltext="am"
-			style=clocksuffix
-		}
 		GameName
 		{
 			controlname="Label"
@@ -59,10 +45,6 @@
 		CloseButton	{ controlname="URLLabel" labeltext="#Overlay_Taskbar_Close" style="OverlayURLLabel"}
 		HotkeyLabel { controlname="Label" labeltext="%hotkey%" style="hotkey" }	
 		HotkeyExplain { controlname="Label" labeltext="#Overlay_Hotkey_Explain" margin-left=4 style="LabelOverlay"}		
-
-		SessionText { controlname=label style=TimeStrings labeltext="#Overlay_Playtime_Session" }
-		TwoWeeksText { controlname=label style=TimeStrings }
-		ForeverText { controlname=label style=TimeStrings }
 	}
 	
 	colors
@@ -98,23 +80,6 @@
 			bgcolor = "23 23 23 35"
 		}	
 		
-		clocksuffix
-		{
-			font-size=12
-			padding-top=10
-			//textcolor=red
-			font-weight=700
-			font-style=uppercase;antialias
-		}
-		topbar
-		{
-			font-size=36
-			font-family=basefontbold
-			textcolor=text
-			font-style=antialias
-			font-weight=700
-		}
-				
 		OverlayURLLabel
 		{
 			font-size=13
@@ -132,15 +97,6 @@
 			font-size=13
 			textcolor=text2
 		}
-		
-		
-		timeStrings
-		{
-			font-size="13"
-			textcolor="label2"
-			font-family=basefont
-			font-weight=400
-		}
 	}
 	
 	layout
@@ -152,7 +108,6 @@
 		region	 { name="right" region=overlay width=415 height=max margin-top=0 align=right }
 		
 		region	{ name="detailpanels" region=overlay align=bottom width=max height=232 }
-		region 	{ name="topbar" region=mid width="140" height=81 align=top-center }
 		region	{ name="taskbar" region=mid width="max" height=120 y=50 align=top-center }
 		region	{ name="above_taskbar" region=overlay align=bottom width=max height=33 margin-bottom=3 }
 		region 	{ name="powermeter" region=above_taskbar align=right height=44 width=240 bottom-margin=12 }
@@ -160,15 +115,11 @@
 		place { control="TopFadePanel" align=top width=max y=0 height=180 }
 		place { control="BottomFadePanel" align=bottom width=max height=100 }
 				
-		place { control="Clock" region=topbar width=max height=22 margin-top=20 }
-		place { control="ClockSuffix" region=topbar align=bottom margin-left=123 width=17 height=24 margin-bottom=36 }
 		
 		place { control="PowerMeterDim" region=powermeter align=right margin-right=5 }
 		
 		place { control="TaskbarPanel" region=taskbar height=32 width=max }
 
-		place { control="SessionText,TwoWeeksText,ForeverText" dir=right align=top-center spacing=32 region=detailpanels margin-top=217 }
-		
 		place { control="CloseButton" region=mid align=top-center width=0 }
 		place { control="HotkeyLabel,HotkeyExplain" region=mid align=top-center y=14 spacing=5 width=0 }
 		place { controls="gamename" region=topbar align=right width=0 }

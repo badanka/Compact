@@ -24,8 +24,15 @@
 		CommunityHubDetailPanel { controlname="COverlay_Details_CommunityHub_Panel" style="detailsbox" }
 		CommunityDiscussionsDetailPanel { controlname="COverlay_Details_CommunityDiscussions_Panel" style="detailsbox" }
 		BroadcastDetailPanel { controlname="COverlay_Details_Broadcast_Panel" style="detailsbox" }
+
+		Clock { controlname="Label" labeltext="10:43" style=topbar }
+		ClockSuffix { controlname="Label" labeltext="am" style=clocksuffix }
+		SessionText { controlname=label style=TimeStrings labeltext="#Overlay_Playtime_Session" }
+		TwoWeeksText { controlname=label style=TimeStrings }
+		ForeverText { controlname=label style=TimeStrings }
+
 	}
-	
+
 	colors
 	{
 	}
@@ -50,6 +57,31 @@
 			textcolor="label2"
 			font-family=basefont
 		}		
+		
+		topbar
+		{
+			font-size=36
+			font-family=basefontbold
+			textcolor=text
+			font-style=antialias
+			font-weight=700
+		}
+
+		clocksuffix
+		{
+			font-size=12
+			padding-top=10
+			font-weight=700
+			font-style=uppercase;antialias
+		}
+
+		timeStrings
+		{
+			font-size="13"
+			textcolor="label2"
+			font-family=basefont
+			font-weight=400
+		}
 	}
 	
 	layout
@@ -60,8 +92,9 @@
 		region	{ name="left" region=overlay width=645 height=max margin-top=0 align=left }
 		region	{ name="mid" region=overlay width=max height=max margin-top=0 margin-left=645 align=top-center margin-right=415 }
 		region	{ name="right" region=overlay width=415 height=max margin-top=0 align=right }
+
+		region 	{ name="topbar" region=mid width="140" height=81 align=top-center }
 		
-		//region	{ name="detailpanelsnew" region=overlay align=bottom width=max height=216 margin-bottom=2 }
 		region	{ name="detailpanelsnew" region=overlay align=bottom width=max height=224 }
 		region	{ name="detailpanels" region=overlay align=bottom width=max height=232 }
 		region	{ name="taskbar" region=overlay width="max" height=75 align=bottom }
@@ -80,6 +113,10 @@
 		place { controls="CommunityHubDetailPanel" region=detailpanelsnew end-right="CommunityDiscussionsDetailPanel" y=200 margin-right=4 width=115 height=24 align=right }
 		place { controls="CommunityDiscussionsDetailPanel" region=detailpanelsnew y=200 margin-right=4 width=96 height=24 align=right }
 
+		place { control="Clock" region=topbar width=max height=22 margin-top=20 }
+		place { control="ClockSuffix" region=topbar align=bottom margin-left=123 width=17 height=24 margin-bottom=36 }
+
+		place { control="SessionText,TwoWeeksText,ForeverText" dir=right align=top-center spacing=32 region=detailpanels margin-top=217 }
 
 		place { controls="NewsDetailPanel" region=detailpanels width=0 height=0 }
 	}
