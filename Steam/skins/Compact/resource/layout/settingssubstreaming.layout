@@ -66,7 +66,7 @@
 	
 	layout
 	{
-		region { name=bottom margin-top=218 width=max height=max margin-left=10 margin-right=10 }
+		region { name=bottom margin-top=205 width=max height=max margin-left=10 margin-right=10 }
 
 		place
 		{
