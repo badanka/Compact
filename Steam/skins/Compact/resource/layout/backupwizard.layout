@@ -1,0 +1,15 @@
+"resource/layout/backupwizard.layout"
+{
+	controls
+	{
+	}
+
+	styles {}
+
+	layout
+	{
+		place { control="CBackupWizard" y=27 height=max width=max margin-bottom=24 }
+		region { name=bottom align=bottom height=24 }
+		place { control="PrevButton,NextButton,FinishButton,CancelButton" region=bottom align=right height=20 width=84 spacing=4 margin-right=4 }
+	}
+}

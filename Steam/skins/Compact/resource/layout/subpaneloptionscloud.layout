@@ -1,0 +1,62 @@
+"resource/layout/subpaneloptionscloud.layout"
+{
+	controls
+	{
+		EnableCloudCheck 
+		{ 
+			controlname=button
+			labeltext="#Steam_EnableCloud"			
+			wrap=1
+		}
+		
+		EnableScreenshotsCheck
+		{
+			controlname=button
+			labeltext="#Steam_EnableCloudScreenshots"
+			wrap=1
+		}
+		
+		SteamCloudInfo
+		{
+			controlname=label
+			labeltext="#Steam_CloudInfo"
+			wrap=1
+		}			
+	}
+	
+	colors
+	{
+
+	}	
+	
+	styles
+	{
+	}
+	
+	layout
+	{
+		region { name=box margin-top=3 margin-bottom=20 margin-left=10 margin-right=10 width=max height=max }
+		
+		place { control=SteamCloudInfo region=box width=310 }
+		place
+		{ 
+			control="EnableCloudCheck" 
+			start = "SteamCloudInfo"
+			region=box 
+			dir=down 
+			height=18
+			width=max
+			y=1
+		}
+		place
+		{ 
+			control="EnableScreenshotsCheck" 
+			start = "EnableCloudCheck"
+			region=box 
+			dir=down 
+			height=36
+			width=max
+			y=-3
+		}		
+	}
+}

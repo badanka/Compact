@@ -1,0 +1,154 @@
+"resource/layout/toolwindow.layout"
+{
+	controls
+	{
+		// the container
+		ToolWindowSheet	{	controlname="PropertySheet" }
+		ChatTabPanel	{	controlname="CChatTabPanel" }
+	} 
+	
+	styles
+	{
+		ToolWindow
+		{			
+			bgcolor="none"
+			render_bg
+			{
+				0="gradient_horizontal(x0, y0+1, x1, y0+27, MainFrameBG1, FrameBG3 )"
+
+				1="gradient(x0  , y0+27, x1  , y0+91, MainFrameBG1, MainFrameBG2 )"				//TitlePanel
+				2="gradient(x0  , y0+91, x1  , y1 , MainFrameBG2, MainFrameBG1 )"				//chatbox and down to bottom
+			}
+		}
+		
+		ToolWindow:Framefocus
+		{			
+			bgcolor="MainFrameBG1"
+			render_bg
+			{
+				0="fill(x0, y0+1, x1-125, y0+27, MainFrameBG1 )"
+				1="image( x1-128, y0, x1, y0+28, graphics/chatgr)"
+
+				2="gradient(x0  , y0+27, x1  , y0+91, MainFrameBG1, MainFrameBG2 )"				//TitlePanel
+				3="gradient(x0  , y0+91, x1  , y1   , MainFrameBG2, MainFrameBG1 )"				//chatbox and down to bottom
+			}
+		}
+
+
+		CChatTabPanel
+		{
+			inset="0 3 0 0"
+			minimum-height=16
+		}
+		
+		Button
+		{     
+			textcolor="0 0 0 0"
+			render_bg
+			{
+				0="gradient(x0, y0+4, x1-5, y1-1, BtnDarkHover, MainFrameBG1 )"
+				1="image(x0+4, y0+7, x1, y1-1, graphics/new_tab)"	
+			}
+		}
+	  
+		Button:hover
+		{     
+			render_bg
+			{
+				0="gradient(x0, y0+4, x1-5, y1-1, BtnLight, MainFrameBG1 )"	
+				1="image(x0+4, y0+7, x1, y1-1, graphics/new_tab)"				
+			}
+		}
+
+		MenuButton
+		{ 
+			padding-right=4
+			bgcolor=none
+			inset="0 4 0 0"
+			render_bg
+			{
+				0="gradient( x0, y0+5, x1-1, y1-1, BtnDarkHover, MainFrameBG1 )"
+			}
+		}
+	  
+		TabMenuButtonFlash
+		{ 
+			bgcolor=none
+			render_bg
+			{
+				0="fill( x0, y0, x1-1, y1-1, PropertySheet.FlashTabColor )"
+			}
+		}
+	  
+		TabMenuItemFlash
+		{
+			textcolor="PropertySheet.FlashTabColor"
+		}
+		
+		PageTab
+		{
+			textcolor="Label"
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			font-style=normal
+			inset="1 -2 0 0"
+			padding-left=1
+			minimum-width=10
+			render_bg
+			{
+				0="fill(x0+2, y0+5, x1  , y1-4, FrameBG3 )"
+			}
+		}
+		
+		PageTab:hover
+		{
+		textcolor="texthover"
+		font-family=basefont
+		font-size=13
+		font-weight=400
+		inset="1 -2 0 0"
+		padding-left=1
+		render_bg
+			{
+				0="gradient(x0+3, y0+5, x1-1, y1-2, Titlebar, MainFrameBG2 )"
+				
+				1="fill(    x0+2, y0+4, x1  , y0+5, ExBorder )" // top
+				2="gradient(x0+2, y0+5, x0+3, y1-2, ExBorder, BtnBorder5 )" // left
+				3="gradient(x1-1, y0+5, x1  , y1-2, ExBorder, BtnBorder5 )" // right
+			}
+		}
+	    
+		 PageTab:selected
+		 {
+			textcolor="texthover"
+			font-family=basefont
+			font-size=13
+			font-weight=700
+			font-style=normal
+			inset="1 -2 0 0"
+			bgcolor="none"
+		    render_bg
+			{
+				0="gradient(x0+3   , y0+5, x1-1   , y1  , MainFrameBG3, MainFrameBG1 )"
+		        1="fill(    x0+2   , y0+4, x1     , y0+5, ExBorder )" // top
+		        2="fill(    x0+2   , y0+5, x0+3   , y1-1, ExBorder )" // left
+				3="fill(    x1-1   , y0+5, x1     , y1-1, ExBorder )" // right
+
+				4="fill(    x1     , y1-2, x1+3000, y1-1, ExBorder )"
+				5="fill(    x0-3000, y1-2, x0+2   , y1-1, ExBorder )"
+				
+				6="fill(    x1     , y1-1, x1+3000, y1  , MainFrameBG1 )"
+				7="fill(    x0-3000, y1-1, x0+2   , y1  , MainFrameBG1 )"
+			}
+		}
+	}
+
+	layout
+	{
+		place [!$OSX]  { control="frame_minimize,frame_maximize,frame_close" align=right margin-top=3 margin-right=2 spacing=-8 }
+		place [!$OSX] { control="ToolWindowSheet" x=0 y=0 height=max width=max margin-right=0 }
+		place [$OSX] { control="ToolWindowSheet" x=0 y=15 height=max width=max margin-right=0 }
+		place { control="ChatTabPanel" margin-left=7}
+	}
+}

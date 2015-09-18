@@ -1,0 +1,64 @@
+"resource/layout/settingssubstreaming_advanced_host.layout"
+{
+	controls
+	{
+		"DescriptionLabel"
+		{
+			ControlName="Label"
+			fieldName="DescriptionLabel"
+			wrap=1
+			labelText="#Steam_Settings_Streaming_AdvancedHostOptions_Description"
+		}
+
+		"EnableHardwareEncoding" { ControlName="CheckButton" fieldName="EnableHardwareEncoding" labelText="#Steam_Settings_Streaming_EnableHardwareEncoding" }
+		"EnableDWMCapture" { ControlName="CheckButton" fieldName="EnableDWMCapture" labelText="#Steam_Settings_Streaming_EnableDWMCapture" }
+
+		
+		"EnableTrafficPriorityLabel"
+		{
+			ControlName="Label"
+			fieldName="EnableTrafficPriorityLabel"
+			wrap=1
+			labelText="#Steam_Settings_Streaming_EnableTrafficPriority_Description"
+		}
+		"EnableTrafficPriority" { ControlName="CheckButton" fieldName="EnableTrafficPriority" labelText="#Steam_Settings_Streaming_EnableTrafficPriority" }
+
+		"SupportInformationLabel"
+		{
+			ControlName="URLLabel"
+			fieldName="SupportInformationLabel"
+			labelText="#Steam_Settings_Streaming_StreamingSupport"
+			URLText="https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"
+		}
+		
+		OKButton { ControlName="Button" fieldName="OKButton" command="Close" labelText="#PropertyDialog_OK" }
+	}
+	
+	style
+	{
+	}
+	
+	layout
+	{
+		region { name="buttons" width=max height=24 align="bottom" }
+	
+		place
+		{
+			control="DescriptionLabel,EnableHardwareEncoding,EnableDWMCapture,EnableTrafficPriorityLabel,EnableTrafficPriority"
+			dir=down
+			align=top
+			width=max
+			margin-left=10
+			margin-right=10
+			margin-top=30
+			spacing=0
+		}
+		place { control="SupportInformationLabel" region="buttons"
+						margin-left=10 margin-top=0
+						margin-bottom=2 spacing=10 }
+		place { control="OKButton" region="buttons"
+		        width=92 height=20 align=right
+						margin-right=4 margin-top=0
+						margin-bottom=2 spacing=10 }
+	}
+}

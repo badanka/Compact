@@ -1,0 +1,28 @@
+"resource/layout/chattitlepanel.layout"
+{
+	controls
+	{
+		"AvatarImage" { ControlName="ImagePanel" }
+		"NameLabel" { ControlName="Label" }
+		"StatusLabel" { ControlName="Label" style=statusappearance }
+		"LockImage" { ControlName="ImagePanel" }
+		"MenuButton" { ControlName= "CChatTitlePanelAffordance" }
+	}
+	
+	styles
+	{
+		statusappearance
+		{
+			font-style=lowercase
+		}
+	}
+	
+	//this is used for group chats
+	layout
+	{
+		place {	control="AvatarImage" x=0 y=2 align=left }
+		place {	control="NameLabel,MenuButton" x=66 y=7 align=left dir=right spacing=8 }
+		place {	control="LockImage" x=44 y=4 }
+		place {	control="StatusLabel" align=left x=44 y=22 }
+	}
+}

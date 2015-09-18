@@ -1,0 +1,89 @@
+"resource/layout/gamespage_details_friends_list.layout"
+{
+	controls
+	{
+		infolabelplural	{ controlname="Label" style="infolabel" }
+		infolabelsingular { controlname="Label" style="infolabel" }
+		friendlabelmore { controlname="Label" style="friendlabelmore" labeltext="#Steam_MoreFriends" textAlignment="center" tooltiptext="#Steam_ViewAllFriends" }
+	}
+
+	colors
+	{
+		// Note the margin/spacing/width values here must match what is used in placement below 
+		// for the image region.  The margin value should be computed by adding the margin of all containing
+		// regions for the images.  All these values also must be positive integers.
+		GameDetailsFriends.ImageAreaMargin "4"
+		GameDetailsFriends.ImageAreaSpacing "2"
+		GameDetailsFriends.ImageWidth "40"
+		
+		Tooltip.Anchor=Parent
+	}
+
+	styles
+	{
+		friendlabelmore
+		{
+			inset="-2 0 0 0"
+			font-size=17
+			textcolor="Text2"
+			font-family=basefont
+		     	render_bg
+		     	{
+			        // background fill
+			        0="gradient( x0+3, y0+3, x1-3, y1-1, Btnlight, Btndark )"
+		                
+			        // lines around
+			        1="fill( x0+2, y0+2, x1-2, y0+3, Btnborder1 )"  // top
+			        2="fill( x0+3, y1-1, x1-2, y1  , Btnborder2 )"  // bottom
+			        3="fill( x0+2, y0+3, x0+3, y1  , Btnborder1 )"  // left
+			        4="fill( x1-3, y0+3, x1-2, y1-1, Btnborder2 )"  // right
+    			}
+    		}   
+    		   
+		friendlabelmore:hover
+		{
+			inset="-2 0 0 0"
+			font-size=17
+			textcolor="TextHover"
+			font-family=basefont
+		    	 render_bg
+		    	 {
+			        // background fill
+			        0="gradient( x0+3, y0+3, x1-3, y1-1, Btnlighthover, Btndarkhover )"
+		                
+			        // lines around
+			        1="fill( x0+2, y0+2, x1-2, y0+3, Btnborder3 )"  // top
+			        2="fill( x0+3, y1-1, x1-2, y1  , Btnborder1 )"  // bottom
+			        3="fill( x0+2, y0+3, x0+3, y1  , Btnborder3 )"  // left
+			        4="fill( x1-3, y0+3, x1-2, y1-1, Btnborder1 )"  // right
+    			}
+    	}     
+		
+		infolabel
+		{
+			font-size=13
+			textcolor=Label
+		}	
+	}
+
+	layout
+	{
+		region { name=body margin=0 width=max height=max }
+		region { name=images region=body x=0 y=20 margin=0 width=max }
+
+
+		place 
+		{ 
+			region=images 
+			control=*friendimage,friendlabelmore
+			dir=right
+			width=40
+			height=40
+			spacing=2
+		}
+
+		// Only one of the next two will be visible at once		
+		place { region=body control=infolabelplural y=0 width=max }
+		place { region=body control=infolabelsingular y=0 width=max }
+	}
+}

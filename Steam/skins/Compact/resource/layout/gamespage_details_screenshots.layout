@@ -1,0 +1,52 @@
+"resource/layout/gamespage_details_screenshots.layout"
+{
+	controls
+	{
+		screenshotsdetails { controlname="CGamesPage_Details_Screenshots" style="screenshotsdetails" }
+
+		headerlabel { controlname="Label" style="gamedetails-headerlabel" labeltext="#Steam_Screenshots" }
+		
+		screenshotsarea { controlname="CScreenshotsPanel" }	
+
+		viewall	{ controlname="Button" labeltext="#Steam_ViewAllScreenshots" command="ViewAllScreenshots" }
+	}
+
+	colors
+	{
+		// Extra spacing beyond the flowing elements to account for header and button at the bottom
+		GameDetailsScreenshots.ExtraVerticalSpacing "69"
+
+		RichText.InsetX "0"
+		RichText.InsetY "3" 
+	}
+
+	styles
+	{
+		screenshotsdetails 
+		{ 
+			render_bg
+			{     
+				// background fill
+				0="fill( x0+1, y0+1, x1-1, y1-1, FrameBG2 )"
+                
+           		1="image( x0+1, y0+1, x0+262, y0+98, graphics/libdet_corner )"
+
+				// lines around header
+				2="gradient_horizontal( x0+1, y0, x1-1, y0+1, ExBorderLight, ExBorderLowLight )"  // top
+				3="gradient( x0, y0  , x0+1, y1, ExBorderLight, ExBorderLowLight )"  // left
+				4="fill( x0+1, y1-1, x1, y1, ExBorderLowLight )"  // bottom
+				5="fill( x1-1, y0  , x1, y1, ExBorderLowLight )"  // right
+			}
+		}
+	}
+
+	layout
+	{
+		region { name=body margin-left=10 margin-top=3 margin-bottom=10 margin-right=4 width=max height=max }
+
+		place { region=body control=headerlabel width=max y=3 }
+		place { region=body control=screenshotsarea dir=down y=26 width=max }
+
+		place { region=body control=viewall align=bottom margin-bottom=0 height=20 }
+	}
+}

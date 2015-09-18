@@ -1,0 +1,78 @@
+"resource/layout/overlay_friendsdetails.layout"
+{
+	controls
+	{
+		FriendsDetailPanel 
+		{ 
+			controlname="COverlay_Details_Friends" 
+			style=detailsbox
+		}
+		
+		AllFriendsButton
+		{
+			controlname=button
+			labeltext="#Overlay_Friends_ViewAll"
+		}
+		
+		ViewPlayersButton
+		{
+			controlname=button
+			labeltext="#Overlay_Friends_ViewPlayers"
+		}
+		
+		TitleText { controlname="label" labeltext="#Overlay_Taskbar_Friends" style=detailsboxtitle }
+		
+		TextThisManyFriends { controlname=label style=highlight labeltext="#Overlay_Friends_ThisManyOnline" }
+		
+		grid
+		{
+			alignment=left		
+			interiorspacing=2
+			style=FriendsGrid
+		}
+	}
+	
+	colors
+	{
+
+	}	
+	
+	styles
+	{
+	
+		button
+		{
+		font-size=13
+		font-family=basefont
+		font-weight=400
+		inset=0
+		}
+		
+		FriendsGrid
+		{
+			// Nerf the outline, etc that the main UI WrapPanel defines.	
+			render_bg 
+			{
+			}
+		}	
+		
+		highlight
+		{
+			textcolor=text
+		}
+	}
+	
+	layout
+	{
+		region { name=box margin-top=5 margin-bottom=5 margin-left=5 margin-right=10 width=max height=max }
+		region { name=friendspanels  }
+		
+		place { control="TitleText" region=box width=0 }
+		
+		place { controls=TextThisManyFriends region=box y=40  width=0}
+	
+		place { controls=grid region=friendspanels width=max height=max margin-left=4 margin-top=7 }
+		
+		place { controls=AllFriendsButton,ViewPlayersButton region=box margin-left=4 spacing=5 height=20 align=bottom }
+	}
+}
