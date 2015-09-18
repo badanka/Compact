@@ -9,6 +9,22 @@
 			command="fullscreen"
 			tooltiptext="#tooltip_view_fullscreen" 
 		}
+
+		"startvr"
+		{
+			"ControlName"		"Button"
+			style="VRButton"
+      			command="url steam://run/250820"
+     			tooltiptext="#tooltip_view_vr_start" 
+		}
+    
+		"exitvr"
+		{
+			"ControlName"		"Button"
+			style="VRButtonExit"
+			command="exitvr"
+			tooltiptext="#tooltip_view_vr_exit" 
+		}
 		
 		"New"
 		{
@@ -543,6 +559,78 @@
 				5="image_scale( x0+3, y1, x1, y1+3, graphics/flag_inactive_bottom )"
 			}
 		}	
+
+
+		Menu
+		{
+			bgcolor="MainFrameBG3"
+			padding-right=6
+			inset="2 2 2 2"
+      
+			render_bg
+			{
+				0="fill( x0+1, y0+1, x1-1, y1-1, MainFrameBG3  )"
+				
+				2="fill( x0  , y0  , x1  , y0+1, ExBorderDark )"	// top
+				3="fill( x0  , y1-1, x1  , y1  , ExBorderDark )"	// bottom
+				4="fill( x0  , y0+1, x0+1, y1-1, ExBorderDark )"	// left
+				5="fill( x1-1, y0+1, x1  , y1-1, ExBorderDark )"	// right
+			}
+		}
+
+
+
+		FullscreenButton [!$OSX]
+		{
+			padding-left=0
+			padding-top=0 
+			padding-right=0
+			padding-bottom=0
+		}
+
+		FullscreenButton [$OSX]
+		{
+			padding-left=0
+			padding-top=0
+			padding-right=0
+			padding-bottom=0
+		}
+		
+		VRButton [!$OSX]
+		{
+			padding-left=0
+			padding-top=6 
+			padding-right=0
+			padding-bottom=0
+		}
+    
+		VRButton [$OSX]
+		{
+			padding-left=0
+			padding-top=3 
+			padding-right=0
+			padding-bottom=0
+		}
+		
+		VRButtonExit [!$OSX]
+		{
+			padding-left=0
+			padding-top=6 
+			padding-right=0
+			padding-bottom=0
+		}
+    
+		VRButtonExit [$OSX]
+		{
+			padding-left=0
+			padding-top=3 
+			padding-right=0
+			padding-bottom=0
+		}
+    
+
+
+
 		
 		inboxmenuitem
 		{
@@ -609,11 +697,17 @@
 		
 		place [!$OSX] { control="MenuBar" align=top margin-top=0 }
 			
-		place { control="ParentalLockButton,InboxButton,view_friends" align=right margin-top=20 margin-right=36 height=26 spacing=3 }			//reserve 24+3 pixels for BPM button
+		place { control="ParentalLockButton,InboxButton,view_friends,startvr,exitvr" align=right margin-top=20 margin-right=36 height=26 spacing=3 }			//reserve 24+3 pixels for BPM button
 		
 		place [!$OSX] { control="universe_label" align=right margin-top=26 end-right="account_balance" margin-right=9 }	
 		place [!$OSX] { control="account_balance" align=right margin-top=26 end-right="ParentalLockButton" margin-right=9 }	
 		place [$OSX] { control="account_balance, universe_label" align=right margin-top=26 end-right="ParentalLockButton" margin-right=9 spacing=5 }	
+
+		place [!$OSX] { control="startvr" end-right="fullscreen" align=right margin-right=6 margin-top=1 }
+		place [$OSX] { control="startvr" end-right="fullscreen" align=right margin-right=6 margin-top=1 }
+	
+		place [!$OSX] { control="exitvr" end-right="fullscreen" align=right margin-right=6 margin-top=1 }
+		place [$OSX] { control="exitvr" end-right="fullscreen" align=right margin-right=6 margin-top=1 }
 
 		place { control="SupportAlert" align=right end-right="universe_label" margin-top=20 margin-right=16 height=26 }
 		

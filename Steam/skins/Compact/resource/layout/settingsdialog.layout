@@ -107,8 +107,8 @@
 		region { name="buttons" width=max height=24 align="bottom" }
 		
 		place { control="okbutton,cancelbutton" region="buttons"
-		        width=76 height=20 align=right y=2													//buttons 2 pixels too low since I can't the body region to not cover the
-				margin-right=4 margin-top=0															//buttons region
+		        width=76 height=20 align=right y=0													
+				margin-right=4 margin-top=0															
 				margin-bottom=0 spacing=4 }
 	}
 }
