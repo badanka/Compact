@@ -6,7 +6,6 @@
 		okbutton { controlname="OKButton" }	 
 		cancelbutton { controlname="CancelButton" }	 
 		settingslist { controlname="SettingsList" style="SettingsList" wide=100 }
-		settingslist { controlname="SettingsList" style="SettingsList" wide=180 }
 		sheet { controlname="Sheet" style="PropertySheet" }
 
 	}
@@ -15,8 +14,8 @@
 	{
 		CDialogSettings
 		{
-			minimum-width="556"
-			minimum-height="454"
+			minimum-width="560"
+			minimum-height="465"
 			render_bg
 			{     
 			}
