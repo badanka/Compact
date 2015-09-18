@@ -55,7 +55,7 @@
 
 	layout
 	{
-		region { name=body margin-left=10 margin-top=4 margin-bottom=0 margin-right=4 width=max height=max }
+		region { name=body margin-left=10 margin-top=4 margin-bottom=0 margin-right=1 width=max height=max }
 
 		place { region=body control=headerlabel width=max y=3 }
 		place { region=body control=mostrecent_area,everythinglabel,locked_area dir=down y=10 width=max }

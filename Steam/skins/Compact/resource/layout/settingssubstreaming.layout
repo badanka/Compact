@@ -76,10 +76,10 @@
 			width=max
 			margin-left=10
 			margin-right=10
-			margin-top=3
+			margin-top=6
 			spacing=6
 		}
-		place { control=EnableStreaming start="RemoteClientList" dir=down }
+		place { control=EnableStreaming start="RemoteClientList" margin-top=-2 dir=down }
 		
 		
 		place { region=bottom control=HostDivider width=max y=0 }

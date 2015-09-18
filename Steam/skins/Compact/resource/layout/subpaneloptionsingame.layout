@@ -16,9 +16,6 @@
 	
 		SetScreenshotFolderButton { ControlName=Button labelText="#Steam_SettingsInGameScreenshotFolder" 	command=SetScreenshotFolder }
 		
-		OverlayHomePageLabel { ControlName=Label labelText="#Overlay_SettingsHomepageLabel" }
-		OverlayHomePage { ControlName=TextEntry }
-
 		ShowIngameFPSLabel { ControlName=Label labelText="#Steam_Settings_Ingame_ShowFPS_Title" }
 		ShowIngameFPSCornerCombo { ControlName="ComboBox" fieldName="ShowIngameFPSCombo" editable="0" }
 		ShowIngameFPSContrastCheck { ControlName=CheckButton labelText="#Steam_Settings_Ingame_ShowFPS_HightContrast" style=checkbox }
@@ -53,7 +50,7 @@
 	
 	layout
 	{
-		region { name=box margin-top=-1 margin-bottom=20 margin-left=10 margin-right=10 width=max height=max }
+		region { name=box margin-top=2 margin-bottom=20 margin-left=10 margin-right=10 width=max height=max }
 		region { name=top region=box margin-top=0 }
 		region { name=topleft region=top y=56 width=190 }
 		region { name=topright region=top x=200 y=59 }
@@ -65,12 +62,9 @@
 		place { controls=HotKeySelector width=160 }
 		place { controls=HotKeySelectorLabel,HotKeySelector dir=down spacing=0 region=topleft height=20 }
 		
-		place { controls=OverlayHomePage width=160 }
-		place { controls=OverlayHomePageLabel,OverlayHomePage dir=down spacing=1 start=HotKeySelector margin-top=3 height=20 region=topleft }
-
 		place { controls=ShowIngameFPSCombo height=20 }
 		place { controls=ShowIngameFPSContrastCheck height=18 width=160 }
-		place { controls=ShowIngameFPSLabel,ShowIngameFPSCombo dir=down start=OverlayHomePage margin-top=6 spacing=5 width=max region=topleft }
+		place { controls=ShowIngameFPSLabel,ShowIngameFPSCombo dir=down start=HotKeySelector margin-top=6 spacing=5 width=max region=topleft }
 		place { controls=ShowIngameFPSContrastCheck dir=down start=ShowIngameFPSCombo  width=max region=topleft }
 			
 		place { controls=ScreenshotLabel region=topright }
@@ -86,7 +80,7 @@
 		place { controls=ScreenshotNotifyCheck,ScreenshotPlaySoundCheck,ScreenshotSaveUncompressedCheck dir=down start=ScreenshotActionLabel
 			margin-top=3 height=18 width=max region=topright spacing=0 }
 		
-		region { name=bottom region=box y=214 }
+		region { name=bottom region=box y=203 }
 		place { control=Divider1 region=bottom width=max }
 		place { controls="PingRateLabel" region=bottom start=Divider1 margin-top=6 width=max dir=down }
 		place { controls="PingRateCombo" region=bottom start=PingRateLabel margin-top=5 width=160 dir=down height=20 inset="0 1 0 0"}

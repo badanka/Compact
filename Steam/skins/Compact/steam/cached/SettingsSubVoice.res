@@ -372,22 +372,22 @@
 	
 	layout
 	{
-		place { control="Label1" x=10 y=3 }
+		place { control="Label1" x=10 y=6 }
 		place { control="DeviceName" start=Label1 height=20 width=218 margin-top=4 dir=down  }
-		place { control="ChangeDeviceButton,ReinitAudio" height=20 y=20 x=234 spacing=4 dir=down }
+		place { control="ChangeDeviceButton,ReinitAudio" height=20 y=23 x=234 spacing=4 dir=down }
 		
-		place { control="Divider1" width=max y=73 align=top-center margin-left=10 margin-right=10 }
+		place { control="Divider1" width=max y=76 align=top-center margin-left=10 margin-right=10 }
 		
-		place { control="MicrophoneLabel,MicrophoneVolume,SpeakerLabel,SpeakerVolume" y=83 margin-left=10 dir=down spacing=0 }
-		place { control="TestMicrophone" x=234 y=85 height=20 dir=down spacing=0 }
-		place { control="MicMeter" x=234 y=109 }
-		place { control="MicMeter2"x=234 y=109 }
-		place { control="MicBoost" x=231 y=130 }
+		place { control="MicrophoneLabel,MicrophoneVolume,SpeakerLabel,SpeakerVolume" y=86 margin-left=10 dir=down spacing=0 }
+		place { control="TestMicrophone" x=234 y=88 height=20 dir=down spacing=0 }
+		place { control="MicMeter" x=234 y=112 }
+		place { control="MicMeter2"x=234 y=112 }
+		place { control="MicBoost" x=231 y=133 }
 		
-		place { control="Divider2" width=max y=160 align=top-center margin-left=10 margin-right=10 }
+		place { control="Divider2" width=max y=163 align=top-center margin-left=10 margin-right=10 }
 		
-		place { control="WhenActiveLabel,TransmitMethodRadioButton1" y=169 margin-left=10 dir=down spacing=0 }
-		place { control="TransmitMethodRadioButton2,PushToTalkKeyLabel,PushToTalkKeyEntry" y=203 margin-left=10 dir=down spacing=0 }
+		place { control="WhenActiveLabel,TransmitMethodRadioButton1" y=172 margin-left=10 dir=down spacing=0 }
+		place { control="TransmitMethodRadioButton2,PushToTalkKeyLabel,PushToTalkKeyEntry" y=206 margin-left=10 dir=down spacing=0 }
 		
 		
 		place { control=RepairAudio height=0 }			//the "When an audio device is plugged in or removed..." message

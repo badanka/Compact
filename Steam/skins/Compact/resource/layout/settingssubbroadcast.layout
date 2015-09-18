@@ -22,13 +22,17 @@
 		"BitrateLimitHeader" { ControlName="Label" fieldName="BitrateLimitHeader" labelText="#Steam_Settings_Broadcast_BitrateHeader" group="HideWhenDisabled" }
 		"BitrateLimit" { ControlName="ComboBox" fieldName="BitrateLimit" group="HideWhenDisabled" editable="0" }
 		
+		"EncoderHeader" { ControlName="Label" fieldName="EncoderHeader" labelText="#Steam_Settings_Broadcast_EncoderHeader" group="HideWhenDisabled" }
+		"EncoderSetting" { ControlName="ComboBox" fieldName="EncoderSetting" group="HideWhenDisabled" editable="0" }
+		
 		"ShowChatHeader" { ControlName="Label" fieldName="ShowChatHeader" labelText="#Steam_Settings_Broadcast_ShowChat" group="HideWhenDisabled" }
 		"ShowChatCombo" { ControlName="ComboBox" fieldName="ShowChatCombo" group="HideWhenDisabled" editable="0" }
 		
 		"IncludeDesktop" { ControlName="CheckButton" fieldName="IncludeDesktop" group="HideWhenDisabled" }
+		"RecordSystemAudio" { ControlName="CheckButton" fieldName="RecordSystemAudio" group="HideWhenDisabled" }
 		"RecordMic" { ControlName="CheckButton" fieldName="RecordMic" group="HideWhenDisabled" }
 		"ConfigMic" { ControlName="URLLabel" fieldName="ConfigMic" labelText="#Steam_Settings_Broadcast_ConfigMic" URLText="steam://settings/voice" group="HideWhenDisabled" }
-		"EnableHardwareSupport" { ControlName="CheckButton" fieldName="EnableHardwareSupport" group="HideWhenDisabled" }
+		"EnableHardwareSupport" { ControlName="CheckButton" fieldName="EnableHardwareSupport" visible="0" }
 		"ShowDebugInfo" { ControlName="CheckButton" fieldName="ShowDebugInfo" group="HideWhenDisabled" }
 		"ShowReminder" { ControlName="CheckButton" fieldName="ShowReminder" group="HideWhenDisabled" }
 
@@ -37,10 +41,10 @@
 	
 	layout
 	{
-		place { control="BroadcastDisabledLabel" margin-left=10 margin-right=20 margin-top=3 width=max }
+		place { control="BroadcastDisabledLabel" margin-left=10 margin-right=20 margin-top=6 width=max }
 		place { start="BroadcastDisabledLabel" control="BroadcastDisabledSupportURL" dir=down margin-top=10 margin-right=20 width=max }
 		
-		place { control="BroadcastStatusHeader" margin-left=10 margin-right=20 margin-top=3 }
+		place { control="BroadcastStatusHeader" margin-left=10 margin-right=20 margin-top=6 }
 		place { start="BroadcastStatusHeader" control="BroadcastStatus" dir=right margin-left=4 }
 
 		place { start="BroadcastStatusHeader" margin-top=2 control="BroadcastHelpHeader" dir=down }
@@ -57,10 +61,13 @@
 		place { start="Dimensions" control="BitrateLimitHeader" dir=down margin-top=6 width=max }
 		place { start="BitrateLimitHeader" control="BitrateLimit" dir=down margin-top=4 width=250 height=20 }
 		
-		place { start="BitrateLimit" control="ShowChatHeader" dir=down margin-top=6 width=max }
+		place { start="BitrateLimit" control="EncoderHeader" dir=down margin-top=6 width=max }
+		place { start="EncoderHeader" control="EncoderSetting" dir=down margin-top=4 width=250 height=20 }
+		
+		place { start="EncoderSetting" control="ShowChatHeader" dir=down margin-top=6 width=max }
 		place { start="ShowChatHeader" control="ShowChatCombo" dir=down margin-top=4 width=250 height=20 }
 				
-		place { start="ShowChatCombo" control="IncludeDesktop,RecordMic,EnableHardwareSupport,ShowDebugInfo,ShowReminder" dir=down margin-top=5 height=18 }	
+		place { start="ShowChatCombo" control="IncludeDesktop,RecordSystemAudio,RecordMic,EnableHardwareSupport,ShowDebugInfo,ShowReminder" dir=down margin-top=5 height=18 }	
 		place { start="RecordMic" control="ConfigMic" dir=right margin-top=3  }	
 		place { control="RequiresRestartLabel" align=bottom margin-left=10 margin-right=10 width=max margin-bottom=6 }
 }

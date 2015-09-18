@@ -39,6 +39,7 @@
 
 		// Body contents
 		welcomedetails { controlname="CGamesPage_Details_Welcome" zpos="1" }
+		dlcdetails { controlname="CGamesPage_Details_DLC" zpos="1" }
 		friendsdetails { controlname="CGamesPage_Details_Friends" zpos="1"}
 		clouddetails { controlname="CGamesPage_Details_Cloud" zpos="1" }
 		communityfilesdetails { controlname="CGamesPage_Details_CommunityFiles" zpos="1" }
@@ -322,6 +323,23 @@
 		// Games list on left
 		place 	{ control=GamesList region=list width=265 height=max margin=0 }
 		
+		// Body contents
+				
+		//place { control=welcomedetails region=detailsbody width=max height=1 margin-top=4 margin-right=10 }
+		
+		place 	
+		{ 
+			control=clouddetails,turnnotifications,friendsdetails,achievementsdetails,dlcdetails,communityfilesdetails,newsdetails,screenshotsdetails,nonsteamdetails,welcomedetails
+			region=detailsbody 
+			dir=down 
+			width=max 
+			margin-right=10 
+			margin-left=0 
+			margin-top=4 
+			spacing=4 
+			margin-bottom=4 
+		}
+
 		// Details border
 		place 	{ control=DetailsBorder y=1 x=1 width=max height=max }
 
@@ -348,21 +366,5 @@
 			spacing=3 
 
 		}
-
-		// Body contents
-		place 	
-		{ 
-			control=clouddetails,turnnotifications,friendsdetails,achievementsdetails,communityfilesdetails,newsdetails,nonsteamdetails,screenshotsdetails
-			region=detailsbody 
-			dir=down 
-			width=max 
-			margin-right=10 
-			margin-left=0 
-			margin-top=4 
-			spacing=4 
-			margin-bottom=4 
-		}
-		
-		place { control=welcomedetails width=0 height= x=9999}
 	}
 }
