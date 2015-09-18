@@ -17,8 +17,9 @@
 		// The extra space needed vertical beyond the autocomputed size of the blurb contents
 		// this is used in code to make the vertical size of the panel fit the title/author/morelink
 		// and should be updated if you change vertical padding/margins/layout.
-		GameDetailsCommunityFile.ExtraVerticalSpacing "120"
-		GameDetailsCommunityFile.ExtraHorizontalSpacing "126"
+		GameDetailsCommunityFile.ExtraVerticalSpacing "106"
+		//GameDetailsCommunityFile.ExtraHorizontalSpacing "126"
+		GameDetailsCommunityFile.ExtraHorizontalSpacing "160"
 		GameDetailsCommunityFile.MaxTooltipWidth "300"
 		GameDetailsCommunityFile.MaxTooltipHeight "90"
 	}
@@ -35,11 +36,10 @@
 		{
 				render_bg
 				{     
-					// lines around
-					0="fill( x0  , y0  , x1  , y0+1, DarkImageBorder )"  // top
-					1="fill( x0  , y1-1, x1  , y1  , DarkImageBorder )"  // bottom
-					2="fill( x0  , y0  , x0+1, y1  , DarkImageBorder )"  // left
-					3="fill( x1-1, y0  , x1  , y1  , DarkImageBorder )"  // right
+					0="fill( x0  , y0  , x1  , y0+1, ExBorderLowLight )"  // t
+					1="fill( x0  , y1-1, x1  , y1  , ExBorderLowLight )"  // b
+					2="fill( x0  , y0  , x0+1, y1  , ExBorderLowLight )"  // l
+					3="fill( x1-1, y0  , x1  , y1  , ExBorderLowLight )"  // r
 		      }	
 		}	
     
@@ -47,7 +47,6 @@
 		{
 		      render_bg
 		      {     
-				// transparent background
 				0="fill( x0, y0, x1, y1, DarkImageOverlay )"
 		      }	
 		}	    
@@ -55,18 +54,18 @@
 
 	layout
 	{
-		place { region=body control=communityfile_name x=0 y=100 width=160 }
-		place { region=body control=communityfile_image_border x=0 y=0 width=160 height=90 }
-		place { region=body control=communityfile_image x=0 y=0 width=160 height=90 }
-		place { region=body control=communityfile_rating_image_background x=0 y=65 width=160 height=20 }
-		place { region=body control=communityfile_rating_image x=8 y=69 width=81 height=13 }
+		place { region=body control=communityfile_name 						x=4 y=93 width=152 }
+		place { region=body control=communityfile_image_border 				x=0 y=2  width=160 height=90 }
+		place { region=body control=communityfile_image 					x=0 y=2  width=160 height=90 }
+		place { region=body control=communityfile_rating_image_background 	x=1 y=67 width=158 height=20 }
+		place { region=body control=communityfile_rating_image 				x=8 y=70 width=83  height=13 }
 		place 
 		{ 
 			region=body 
 			control=friendimage
 			width=42
 			height=40
-			spacing=10
+			spacing=4
 			x=117
 			y=47
 		}		

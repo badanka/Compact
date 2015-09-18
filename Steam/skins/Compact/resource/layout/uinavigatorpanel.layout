@@ -156,13 +156,13 @@
 		
 		zoomslider
 		{
-			inset="0 -3 0 0"
+			inset="0 0 0 0"
 			textcolor=navlabel
 		}
 		
 		zoomslider:hover
 		{
-			inset="0 -3 0 0"
+			inset="0 0 0 0"
 			textcolor=TextHover
 		}
 		
@@ -839,8 +839,8 @@
  		place [!$OSX] { control="library_music_add_button" height=20 start="library_music_menu" dir=right y=1 x=4 }
 		 place [$OSX] { control="library_music_menu,library_music_add_button" align=left height=20 start="library_filters" dir=right margin-left=4 }
 
-		place [!$OSX] { control="library_zoom" align=left start="library_filters_grid" y=2 margin-left=12 height=18 }
-		 place [$OSX] { control="library_zoom" align=left start="library_filters_grid" y=2 margin-left=12 height=18 }
+		place [!$OSX] { control="library_zoom" align=left start="library_filters_grid" y=0 margin-left=12 height=18 }
+		 place [$OSX] { control="library_zoom" align=left start="library_filters_grid" y=0 margin-left=12 height=18 }
 
 		place [$OSX] { control="label_library_filters" align=left y=23 height=20 spacing=3 x=13 }
 
