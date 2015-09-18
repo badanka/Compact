@@ -30,7 +30,7 @@ steam.styles
 
 	// background colours
 		
-		MainFrameBG1="41 40 39 255"						// most frames are drawn like this (top to bottom): BG1-›BG2
+		MainFrameBG1="41 40 39 255"						// most frames are drawn like this (top to bottom): BG1-›BG2->BG1
 		MainFrameBG2="36 35 34 255"						// this includes friends, chat, group chat and main windows. 
 		MainFrameBG3="56 54 53 255"						
 		MainFrameBG4="29 28 27 255"						// this one is used in page frames 
@@ -68,19 +68,6 @@ steam.styles
 		InBorderSep="54 53 51 255"
 
 	// button colours
-		BtnLight="61 59 56 255"
-		BtnLightHover="76 74 71 255"
-		BtnDark="54 53 52 255"		
-		BtnDarkHover="61 60 56 255"		
-		BtnDarker="46 45 41 255"		
-		BtnDisabled="37 35 34 255"		
-		BtnBorder1="82 79 76 255"
-		BtnBorder2="64 62 61 255"
-		BtnBorder3="107 104 100 255"
-		BtnBorder3b="82 79 75 255"
-		BtnBorder4="29 25 24 255"
-		BtnBorder5="37 35 34 255"					
-		BtnBorder6="52 49 48 255"
 		
 		ScrollbarHandle="80 76 72 255"
 		ScrollbarHandle2="62 61 60 255"
@@ -89,7 +76,7 @@ steam.styles
 	// text colours
 		Text="209 207 205 255"
 		Text2="184 180 176 255"
-		TextDisabled="88 85 82 255"
+		TextDisabled="128 125 122 255"
 		TextHover="239 236 233 255"
 		TextPressed="149 147 145 255"
 		TextSelected="242 239 235 255"
@@ -119,6 +106,7 @@ steam.styles
 	// rename?
 		Focus="55 67 86 200"  			// background color of any selected menu or list item
 		Focus2="85 125 171 255"			// background color of view buttons and anything else in focus that needs more 'punch'
+		
 		Focus3="62 92 133 255"			
 		focus4="46 55 69 255"			// background color of highlighted game items 
 		focus5="55 67 86 64"			// background color of highlighted friends, translucent 
@@ -162,7 +150,7 @@ steam.styles
 	// remove?	
 		GridNA="33 32 30 100"
 		bordercolor="133 130 113 255"
-		buttontext=Text
+		buttontext=Text2
 		buttontextactive=TextHover
 		
 		ButtonBorder="112 109 105 255"
@@ -231,23 +219,7 @@ steam.styles
 		HeaderClient="57 53 49 255" // the color of the List box header in the main client window
 		HeaderDialog="95 92 90 255" // the color of the list box header in other windows
 		
-		
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-		
 		// colors pulled from steamscheme.res
 		"ClayBG"			"70 70 70 255"
 		"ClayButtonBG"		"87 88 88 255"        
@@ -383,205 +355,6 @@ steam.styles
 		image="graphics/icon_right_hover"    
 	}
 
-	Button
-	{     
-		bgcolor=none
-		textcolor="Text"
-		render_bg
-		{	
-			0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlight, Btndark )"
-			
-			1="fill(	x0  , y0  , x1  , y0+1, BtnBorder1 )"	//t
-			3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder1 )"	//l
-			2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder2 )"	//b
-			4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder2 )"	//r
-		}
-	}
-
-	"Page Button"
-	{     
-		textcolor="Text"
-		render_bg
-		{
-			0="gradient(x0 + 1, y0 + 1, x1 - 1, y1 - 1, Btnlight, Btndark )"
-			
-			1="fill(	x0  , y0  , x1  , y0+1, BtnBorder1 )"	//t
-			3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder1 )"	//l
-			2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder2 )"	//b
-			4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder2 )"	//r
-		}
-	}
-	
-	Button:hover
-	{   
-  		
-  		textcolor="TextHover"
-  		render_bg
-		{     
-			0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlighthover, Btndarkhover )"
-			
-			1="fill(	x0  , y0  , x1  , y0+1, BtnBorder3 )"	//t
-			3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder3 )"	//l
-			2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder3b )"	//b
-			4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder3b )"	//r
-		}
-	}
-
-	"Page Button:hover"
-	{   
-		textcolor="TextHover"
-		render_bg
-		{     
-			0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlighthover, Btndarkhover )"
-			
-			1="fill(	x0  , y0  , x1  , y0+1, BtnBorder3 )"	//t
-			3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder3 )"	//l
-			2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder3b )"	//b
-			4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder3b )"	//r
-		}
-	}
-    
-    Button:focus	//	focused with keyboard or last pressed button
-    {
-		textcolor="TextSelected"
-		render_bg
-		{
-			0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlighthover, Btndarkhover )"
-                
-			1="fill(	x0  , y0  , x1  , y0+1, BtnBorder3 )"	//t
-			3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder3 )"	//l
-			2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder3b )"	//b
-			4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder3b )"	//r
-		}
-    }
-    
-    "Page Button:focus"
-    {
-		textcolor="TextSelected"
-		render_bg
-		{     
-			0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlight, Btndark )"
-                
-			1="fill(	x0  , y0  , x1  , y0+1, BtnBorder1 )"	//t
-			3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder1 )"	//l
-			2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder1 )"	//b
-			4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder1 )"	//r
-		}
-    }
-    
-    Button:focus:hover
-    {
-		textcolor="TextPressed"
-		render_bg
-		{     
-			0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlighthover, Btndarkhover )"
-                
-			1="fill(	x0  , y0  , x1  , y0+1, BtnBorder1 )"	//t
-			3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder1 )"	//l
-			2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder1 )"	//b
-			4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder1 )"	//r
-		}
-    }
-
-    "Page Button:focus:hover"
-    {
-		textcolor="TextPressed"
-		render_bg
-		{     
-			0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlighthover, Btndarkhover )"
-                
-			1="fill(	x0  , y0  , x1  , y0+1, BtnBorder1 )"	//t
-			3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder1 )"	//l
-			2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder1 )"	//b
-			4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder1 )"	//r
-		}
-    }
-    
-    
-    Button:active // this is the left-mouse-currently-pressed state
-    {
-		textcolor="TextPressed"
-		render_bg
-		{     
-			0="gradient(x0+1, y0+1, x1-1, y1-1, Btndark, Btndarker )"
-                
-			1="fill(	x0  , y0  , x1  , y0+1, BtnBorder4 )"	//t
-			3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder4 )"	//l
-			2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder5 )"	//b
-			4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder5 )"	//r
-		}
-    }   
-    
-    "Page Button:active"
-    {
-		textcolor="TextPressed"
-		render_bg
-		{     
-			0="gradient(x0+1, y0+1, x1-1, y1-1, Btndark, Btndarker )"
-                
-			1="fill(	x0  , y0  , x1  , y0+1, BtnBorder4 )"	//t
-			3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder4 )"	//l
-			2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder5 )"	//b
-			4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder5 )"	//r
-		}
-    }
-    
-    Button:selected
-    {
-		textcolor="TextSelected"
-		render_bg
-		{     
-			0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlight, Btndark )"
-                
-			1="fill(	x0  , y0  , x1  , y0+1, BtnBorder3 )"	//t
-			3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder3 )"	//l
-			2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder3b )"	//b
-			4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder3b )"	//r
-		}
-    }
-
-    "Page Button:selected"
-    {
-		textcolor="TextSelected"
-		render_bg
-		{     
-			0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlight, Btndark )"
-                
-			1="fill(	x0  , y0  , x1  , y0+1, BtnBorder3 )"	//t
-			3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder3 )"	//l
-			2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder3b )"	//b
-			4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder3b )"	//r
-		}
-	}
-    
-    Button:disabled
-    {
-		textcolor="TextDisabled"
-		render_bg
-		{     
-			0="fill(	x0+1, y0+1, x1-1, y1-1, BtnDisabled )"
-                
-			1="fill(	x0  , y0  , x1  , y0+1, BtnBorder4 )"	//t
-			3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder4 )"	//l
-			2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder4 )"	//b
-			4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder4 )"	//r
-		}
-    }   
-    
-    "Page Button:disabled"
-    {     
-		textcolor="TextDisabled"
-		render_bg
-		{
-			0="fill(	x0+1, y0+1, x1-1, y1-1, BtnDisabled )"
-			
-			1="fill(	x0  , y0  , x1  , y0+1, BtnBorder4 )"	//t
-			3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder4 )"	//l
-			2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder4 )"	//b
-			4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder4 )"	//r
-		}
-    }
-         
 	CFriendsListSectionAffordance
 	{     
 		inset="0 0 2 0"
@@ -593,14 +366,14 @@ steam.styles
     //has no effect whatsoever
     CFriendsListSectionHeader
     {
-		inset="0 0 0 0"
-		bgcolor=none
-		font-family=basefont
-		font-size=13
-		font-size=13 [$OSX]
-		font-weight=400
-		font-style=lowercase
-		textcolor="text"
+		inset="0 2 0 0"
+	//	bgcolor=none
+	//	font-family=basefont
+	//	font-size=13
+	//	font-size=13 [$OSX]
+	//	font-weight=400
+	//	font-style=lowercase
+	//	textcolor="text"
     }
             
     CFriendPanel
@@ -612,6 +385,10 @@ steam.styles
 		font-size=13 [$OSX]
 		font-weight=400
 		textcolor="label"
+		padding-top=0
+		padding-left=0
+		padding-right=0
+		padding-bottom=0
     }
     
     CheckButton
@@ -698,46 +475,46 @@ steam.styles
 		}
     }
     
-        CheckButtonList:scrollbar
+	CheckButtonList:scrollbar
     {
         inset="1 1 1 1"
         textcolor="text2"
         bgcolor=none
-				render
-							{
-								//gradient to obscure content at top of scrolling region 
-								0="gradient( x0+1, y0, x1+1, y0 + 6, almostblack, none  )"
-								
-								//gradient to obscure content at bottom of scrolling region 
-								1="gradient( x0, y1 - 9, x1+1, y1-1, none, almostblack )"
-							}        
+		render
+		{
+			//gradient to obscure content at top of scrolling region 
+			0="gradient( x0+1, y0, x1+1, y0 + 6, almostblack, none  )"
+					
+			//gradient to obscure content at bottom of scrolling region 
+			1="gradient( x0, y1 - 9, x1+1, y1-1, none, almostblack )"
+		}        
         render_bg
         {     
-				// background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y0 +80, dialogbg, BackgroundStartOpaque )"
-        1="fill( x0 + 1, y0 + 80, x1 - 1, y1 - 1, BackgroundStartOpaque )"
-        2="gradient( x0 + 1, y0 + 1, x1 - 1, y0 + 30, backgroundstartsubtle, none )"
+			// background fill
+			0="gradient( x0 + 1, y0 + 1, x1 - 1, y0 +80, dialogbg, BackgroundStartOpaque )"
+			1="fill( x0 + 1, y0 + 80, x1 - 1, y1 - 1, BackgroundStartOpaque )"
+			2="gradient( x0 + 1, y0 + 1, x1 - 1, y0 + 30, backgroundstartsubtle, none )"
           
-        // lines around
-		3="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  //t
-		4="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  //b
-		5="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  //l
-		6="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  //r
+			// lines around
+			3="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  //t
+			4="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  //b
+			5="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  //l
+			6="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  //r
 
         
-        // single pixel fills in the corners
-		7="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
-		8="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
-		9="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
-		10="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
-			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
+			// single pixel fills in the corners
+			7="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
+			8="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
+			9="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
+			10="fill(x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
+			11="fill(x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
+			12="fill(x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
+			13="fill(x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
+			14="fill(x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
+			15="fill(x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
+			16="fill(x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
+			17="fill(x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
+			18="fill(x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
       }
   
     } 
@@ -791,243 +568,6 @@ steam.styles
     {textcolor="text2"}
     
     
-    ComboBox
-    {
-		inset="3 0 0 0"
-		textcolor="Text"
-		font-family=basefont
-		font-size="13"
-		selectedtextcolor="TextEntrySelected"
-		selectedbgcolor="TextSelectedBG"
-		render_bg
-		{     
-			0="fill( x0+1, y0+1 , x1-1, y1-1, Btndark )"
-			
-			1="fill( x0  , y0  , x1  , y0+1, BtnBorder2 )"  //t
-			2="fill( x0  , y0+1, x0+1, y1  , BtnBorder2 )"  //l
-			3="fill( x0+1, y1-1, x1  , y1  , BtnBorder2 )"  //b
-			4="fill( x1-1, y0+1, x1  , y1-1, BtnBorder2 )"  //r
-		}
-	}
-    
-	ComboBox:hover
-	{
-		selectedbgcolor="none"
-		selectedtextcolor="TextHover"
-		render_bg
-		{     
-			0="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, Btndarkhover )"
-			
-			1="fill( x0  , y0  , x1  , y0+1, BtnBorder3b )"  //t
-			2="fill( x0  , y1-1, x1  , y1  , BtnBorder3b )"  //b
-			3="fill( x0  , y0+1, x0+1, y1-1, BtnBorder3b )"  //l
-			4="fill( x1-1, y0+1, x1  , y1-1, BtnBorder3b )"  //r
-		}
-	}
-    
-	ComboBox:focus
-	{
-		selectedbgcolor="none"
-		selectedtextcolor="TextSelected"
-		render_bg
-		{     
-			0="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, Btndark )"
-			
-			1="fill( x0  , y0  , x1  , y0+1, BtnBorder2 )"  //t
-			3="fill( x0  , y0+1, x0+1, y1  , BtnBorder2 )"  //l
-			2="fill( x0+1, y1-1, x1  , y1  , BtnBorder2 )"  //b
-			4="fill( x1-1, y0+1, x1  , y1-1, BtnBorder2 )"  //r
-		}
-	}
-    
-	ComboBox:focus:hover
-	{
-		selectedbgcolor="none"
-		textcolor="TextSelected"
-		selectedtextcolor="Text"
-		render_bg
-		{     
-			0="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, Btndarkhover )"
-			
-			1="fill( x0  , y0  , x1  , y0+1, BtnBorder3 )"  //t
-			3="fill( x0  , y0+1, x0+1, y1  , BtnBorder3 )"  //l
-			2="fill( x0+1, y1-1, x1  , y1  , BtnBorder3 )"  //b
-			4="fill( x1-1, y0+1, x1  , y1-1, BtnBorder3 )"  //r
-		}
-	}
-
-	"Page ComboBox"
-	{
-		textcolor="Text"
-		render_bg
-		{     
-			0="fill( x0+1, y0+1 , x1-1, y1-1, Btndark )"
-		
-			2="fill( x0  , y0  , x1  , y0+1, BtnBorder2 )"  //t
-			3="fill( x0  , y0+1, x0+1, y1  , BtnBorder2 )"  //l
-			4="fill( x0+1, y1-1, x1  , y1  , BtnBorder2 )"  //b
-			5="fill( x1-1, y0+1, x1  , y1-1, BtnBorder2 )"  //r
-		}
-	}
-
-	"Page ComboBox:focus"
-	{
-		textcolor="TextSelected"
-		render_bg
-		{     
-			0="fill( x0+1, y0+1, x1-1, y1-1, Btndark )"
-			
-			1="fill( x0  , y0  , x1  , y0+1, BtnBorder2 )"  //t
-			3="fill( x0  , y0+1, x0+1, y1  , BtnBorder2 )"  //l
-			2="fill( x0+1, y1-1, x1  , y1  , BtnBorder2 )"  //b
-			4="fill( x1-1, y0+1, x1  , y1-1, BtnBorder2 )"  //r
-		}
-	}
-    
-    "Page ComboBox:hover"
-    {
-		selectedbgcolor="none"
-		textcolor="TextSelected"
-		selectedtextcolor="Text"
-		render_bg
-		{     
-			0="fill( x0+1, y0+1, x1-1, y1-1, Btndarkhover )"
-			
-			1="fill( x0  , y0  , x1  , y0+1, BtnBorder3b )"  //t
-			2="fill( x0  , y1-1, x1  , y1  , BtnBorder3b )"  //b
-			3="fill( x0  , y0+1, x0+1, y1-1, BtnBorder3b )"  //l
-			4="fill( x1-1, y0+1, x1  , y1-1, BtnBorder3b )"  //r
-		}
-    }
-    
-    "Page ComboBox:focus:hover"
-    {
-		textcolor="TextHover"
-		render_bg
-		{     
-			0="fill( x0+1, y0+1, x1-1, y1-1, Btndarkhover )"
-			
-			1="fill( x0  , y0  , x1  , y0+1, BtnBorder3 )"  //t
-			3="fill( x0  , y0+1, x0+1, y1  , BtnBorder3 )"  //l
-			2="fill( x0+1, y1-1, x1  , y1  , BtnBorder3 )"  //b
-			4="fill( x1-1, y0+1, x1  , y1-1, BtnBorder3 )"  //r
-		}
-    }
-    
-    "Page ComboBox:disabled"
-    {
-		textcolor="TextDisabled"
-		render_bg
-		{     
-			0="fill( x0+1, y0+1, x1-1, y1-1, BtnDisabled )"
-			
-			1="fill( x0  , y0  , x1  , y0+1, BtnBorder4 )"  //t
-			3="fill( x0  , y0+1, x0+1, y1  , BtnBorder4 )"  //l
-			2="fill( x0+1, y1-1, x1  , y1  , BtnBorder4 )"  //b
-			4="fill( x1-1, y0+1, x1  , y1-1, BtnBorder4 )"  //r
-		}
-    }
-
-    ComboBoxButton
-    {      
-		bgcolor=none
-		padding-left=2
-		inset="-1 -2 0 0"
-		image="graphics/icon_down_default"
-		render_bg 
-		{
-			0="fill( x0, y0 + 2, x0 + 1, y1 - 4, text2 )"
-		}
-    }
-    
-    ComboBoxButton:hover
-    {
-		image="graphics/icon_down_hover"
-		render_bg 
-		{
-			0="fill( x0, y0 + 2, x0 + 1, y1 - 4, texthover )"
-		}
-    }
-    
-    ComboBoxButton:focus
-    {
-		bgcolor=none
-		image="graphics/icon_down_focus"
-		render_bg 
-		{
-			0="fill( x0, y0 + 2, x0 + 1, y1 - 4, text )"
-		}
-    }
-    
-    ComboBoxButton:focus:hover
-    {
-		bgcolor=none
-		image="graphics/icon_down_default"
-		render_bg 
-		{
-			0="fill( x0, y0 + 2, x0 + 1, y1 - 4, texthover  )"
-		}
-    }
-
-	ComboBoxButton:disabled
-    {
-		bgcolor=none
-		image="graphics/icon_down_disabled"
-		render_bg 
-		{
-			0="fill( x0, y0 + 2, x0 + 1, y1 - 4, TextDisabled  )"
-		}
-    }
-
-    
-	"Page ComboBoxButton"
-	{
-		bgcolor=none
-		image="graphics/icon_down_default"
-		render_bg 
-		{
-			0="fill( x0, y0 + 2, x0 + 1, y1 - 4, text )"
-		}
-	}
-    
-	"Page ComboBoxButton:hover"
-	{
-		image="graphics/icon_down_hover"
-		render_bg 
-		{
-			0="fill( x0, y0 + 2, x0 + 1, y1 - 4, texthover  )"
-		}
-    }
-    
-	"Page ComboBoxButton:focus"
-	{
-		bgcolor=none
-		image="graphics/icon_down_focus"
-		render_bg 
-		{
-			0="fill( x0, y0 + 2, x0 + 1, y1 - 4, text  )"
-		}
-    }
-    
-	"Page ComboBoxButton:focus:hover"
-	{
-		bgcolor=none
-		image="graphics/icon_down_focus"
-		render_bg 
-		{
-			0="fill( x0, y0 + 2, x0 + 1, y1 - 4, texthover )"
-		}
-	}
-
-	"Page ComboBoxButton:disabled"
-    {
-		bgcolor=none
-		image="graphics/icon_down_disabled"
-		render_bg 
-		{
-			0="fill( x0, y0 + 2, x0 + 1, y1 - 4, TextDisabled  )"
-		}
-    }
 
     
 	Divider
@@ -1325,22 +865,7 @@ steam.styles
 			0="fill( x0, y0, x1+17, y1+1, FrameBG1 )" 			//16 pixels extra to cover the background behind the scrollbar
 		}
 	}
-	
-    //Downloads bar
-    GraphPanel
-    {
-		textcolor=Highlight5
-		bgcolor=none
-		//inset="0 -3 0 0"
-		render_bg 
-		{
-			1="fill( x0  , y0  , x1  , y0+1, InBorderShade )"  //t
-			2="fill( x0  , y1-1, x1  , y1  , InBorderLight )"  //b
-			3="fill( x0  , y0+1, x0+1, y1-1, InBorderShade )"  //l
-			4="fill( x1-1, y0+1, x1  , y1-1, InBorderLight )"  //r
-        }
-    }
-    
+  
     "HTML"
     {
         inset="1 1 2 0" 
@@ -1629,7 +1154,7 @@ steam.styles
     }
     
     //column headers in Game Info, Properties->DLC, Settings->In-Home Streaming, Games->Add non-Steam game etc.
-    //drawn 1 pixel lower to cover up a weird issue. unfortunately that makes one row black in Add non-Steam game menu
+    //drawn 1 pixel lower to cover up a weird issue
 	ListPanelColumnheader
 	{
 		font-family=basefont
@@ -1698,8 +1223,7 @@ steam.styles
 		bgcolor=none
 		render_bg
 		{
-			//0="gradient_horizontal( x0, y0-1, x1+1, y0  , none, focus4 )"
-			1="gradient_horizontal( x0, y1-2, x1+1, y1-1, none, focus4 )"
+			0="gradient_horizontal( x0, y1-2, x1+1, y1-1, none, focus4 )"
 		}    
 	}
     
@@ -1915,11 +1439,8 @@ steam.styles
 		font-weight=700
 		render_bg
 		{
-			//0="fill( x0+1, y0-1, x1-195, y0  , focus4  )"
-			//1="gradient_horizontal( x1-195, y0-1, x1-5, y0  , focus4, none  )"
-			
-			2="fill(				x0+1  , y1-2, x1-195, y1-1, focus4  )"
-			3="gradient_horizontal(	x1-195, y1-2, x1-5  , y1-1, focus4, none  )"
+			0="fill(				x0+1  , y1-2, x1-195, y1-1, focus4  )"
+			1="gradient_horizontal(	x1-195, y1-2, x1-5  , y1-1, focus4, none  )"
 		}    
     } 
     
@@ -2919,7 +2440,7 @@ steam.styles
       render_bg {}
       bgcolor=none
       image="graphics/icon_lib_collapse"
-      inset="-5 -1 -3 0"
+      inset="-5 1 -3 0"
     } 
     
     SectionedListPanelCollapser:hover
@@ -2937,12 +2458,14 @@ steam.styles
       image="graphics/icon_lib_expand_over"
     }
     
-    SectionedListPanelInterior								//affects the Invite to Game window in Steamworks games as well as the Friends list
+    
+    SectionedListPanelInterior
+    //affects the Invite to Game window in Steamworks games, 
+    //userlist in group chat windows and the downloads window (appdownloadpanel)
     {
 		inset="0 0 0 0"
 		bgcolor=FrameBG1
 		
-		//used to draw upper border line for userlist in group chat windows	
 		render
 		{
 			0="fill( x0  , y0  , x1  , y0+1, InBorderShade )"	//t
@@ -2952,15 +2475,23 @@ steam.styles
   
     Slider								//volume sliders in Settings
     {
-      font-family="basefont"
-      font-size="10"
-      font-weight="400"
-      textcolor="label"
+		font-family="basefont"
+		font-size="10"
+		font-weight="400"
+		textcolor="label"
+		render_bg
+		{
+			0="fill( x0  , y0+10, x1  , y0+11, label )"
+		}
     }
       
     Slider:focus
     {
-      textcolor="Text"  
+		textcolor="Text"  
+		render_bg
+		{
+			0="fill( x0  , y0+10, x1  , y0+11, label )"
+		}
     }
     
     StatusLabel
@@ -3024,6 +2555,7 @@ steam.styles
       bgcolor="TextEntryBG"
       selectedtextcolor="white"
       selectedbgcolor="TextSelectedBG"
+      font-family=basefont
       font-size="13"
 
       render
@@ -3323,6 +2855,7 @@ steam.styles
     {
       bgcolor=none
       render_bg {}
+      font-size=13
     }
     
     TreeNodeImage
@@ -3333,7 +2866,7 @@ steam.styles
     TreeViewSubPanel
     {
       bgcolor=FrameBG2
-
+      font-size=13
     }
   
     TreeNodeText
@@ -3411,9 +2944,9 @@ steam.styles
     // Steam-specific styles
     CConsoleHistory
     {
-      font-family="Lucida Console"
+      font-family="basefont"
       font-family="Monaco" [$OSX]
-      font-size=9
+      font-size=13
       textcolor="label"
       selectedtextcolor="TextSelected"
     }

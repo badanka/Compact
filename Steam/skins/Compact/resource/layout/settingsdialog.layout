@@ -68,7 +68,7 @@
 		
 		"SettingsList"
 		{
-			inset="-3 -14 0 0"
+			inset="-3 -17 0 0"
 			minimum-width="109"
 			minimum-height="427"
 			font-size=13
@@ -86,7 +86,9 @@
 			render
 			{				
 				//line to hide a bug here
-				1="fill(x0, y0-1, x1-1, y0, InBorderShade )"
+				//1="fill(x0, y0-1, x1-1, y0, InBorderShade )"
+				0="fill(x0  , y0+2, x0+1, y0+3, InBorderShade )"
+				1="fill(x0+1, y0+2, x1-1, y0+3, FrameBG1 )"
 			}
 			render_bg 
 			{}

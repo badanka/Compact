@@ -54,11 +54,11 @@
 
 		TracksInfoLabelStyle
 		{
-			padding-bottom=10
-			padding-top=10
-			padding-left=10
-			padding-right=10
-			font-size=15
+			padding-bottom=0
+			padding-top=0
+			padding-left=0
+			padding-right=0
+			font-size=13
 			textcolor=labeldisabled
 			font-family=basefont
 			font-weight=400 
@@ -69,7 +69,7 @@
 		{
 			padding-bottom=10
 			padding-top=0
-			font-size=15
+			font-size=13
 			textcolor=Text2
 			font-family=basefont
 			font-weight=400 
@@ -104,83 +104,23 @@
 			textcolor="texthover"
 			font-style="underline"
 		}
-		
-		
-		ActionButtonStyle
-		{   
-			inset="13 1 0 0"
-
-			font-family=basefont
-			font-size=13
-			font-weight=400
-			textcolor="Text"
-			bgcolor=none
-
-			render
-			{
-				1="image( x0, y0+4, x1, y1, graphics/icon_play )"
-			}
-				render_bg
-				{
-					0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlight, Btndark )"
-			
-					1="fill(	x0  , y0  , x1  , y0+1, BtnBorder1 )"	//t
-					3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder1 )"	//l
-					2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder2 )"	//b
-					4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder2 )"	//r
-				}
-		}
-			
-		ActionButtonStyle:hover
-		{
-			textcolor="TextHover"
-			render
-			{
-				0="image( x0, y0+4, x1, y1, graphics/icon_play )"
-			}	
-			render_bg
-			{
-				0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlighthover, Btndarkhover )"
-			
-				1="fill(	x0  , y0  , x1  , y0+1, BtnBorder3 )"	//t
-				3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder3 )"	//l
-				2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder3b )"	//b
-				4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder3b )"	//r
-			}			
-		}
-		
-		ActionButtonStyle:active
-		{
-			textcolor="TextPressed"
-			render
-			{
-				0="image( x0, y0+4, x1, y1, graphics/icon_play )"
-			}	
-			render_bg
-			{
-				0="gradient(x0+1, y0+1, x1-1, y1-1, Btndark, Btndarker )"
-                
-				1="fill(	x0  , y0  , x1  , y0+1, BtnBorder4 )"	//t
-				3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder4 )"	//l
-				2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder5 )"	//b
-				4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder5 )"	//r
-			}			
-		}
-}
+	}
+	
 	layout
 	{
 		region { name=bodyregion x=10 y=10 width=max height=max overflow=scroll-vertical }		
 		region { name=headerregion x=10 y=3 width=max height=max overflow=scroll-vertical }
-		region { name=leftcolumn x=20 width=200 overflow=scroll-vertical }
+		region { name=leftcolumn x=10 width=200 overflow=scroll-vertical }
 		region { name=trackcolumn width=max overflow=scroll-vertical }
 		
 		place { control="CoverImage" align=top width=200 height=200 }
 		
-		place { region=headerregion control=PlaylistTitleLabel,TracksInfoLabel,leftcolumn dir=down }
-		place { region=leftcolumn  dir=down start=TracksInfoLabel spacing=10
-			control=CoverImage,PlayPlaylistButton }
+		place { region=headerregion control=PlaylistTitleLabel }
+		place { region=leftcolumn control=TracksInfoLabel x=0 y=50 }
+		place { region=leftcolumn control=CoverImage start="TracksInfoLabel" dir=down }
+		place { region=leftcolumn control=PlayPlaylistButton  dir=down start="TracksInfoLabel" y=6 height=20 }
 		place { region=leftcolumn	dir=down start=PlayPlaylistButton 
-			control=AddPlaylistToQueueButton,AddRandomTracksToPlaylistButton y=6 }
+			control=AddPlaylistToQueueButton,AddRandomTracksToPlaylistButton y=0 }
 		place { region=trackcolumn control=*MusicPageDetailsPlaylistTrack dir=down start=TracksInfoLabel x=230 width=max }
 	}
 }

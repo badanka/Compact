@@ -16,7 +16,7 @@
 	colors
 	{
 		// Extra spacing beyond the flowing elements to account for header and button at the bottom
-		GameDetailsAchievements.ExtraVerticalSpacing "42"
+		GameDetailsAchievements.ExtraVerticalSpacing "23"
 
 		// This is additional extra vertical spacing when the "You've unlocked everything" label is set
 		// You should test with a game with everything unlocked if you change vertical spacing as this may
@@ -49,16 +49,17 @@
 		{
 			textcolor="Text"
 			font-size=13
-			padding-top=2
+			padding-top=0
+			padding-bottom=4
 		}	
 	}
 
 	layout
 	{
-		region { name=body margin-left=10 margin-top=4 margin-bottom=0 margin-right=1 width=max height=max }
+		region { name=body margin-left=10 margin-top=0 margin-bottom=0 margin-right=1 width=max height=max }
 
-		place { region=body control=headerlabel width=max y=3 }
-		place { region=body control=mostrecent_area,everythinglabel,locked_area dir=down y=10 width=max }
+		place { region=body control=headerlabel width=0 y=0 }
+		place { region=body control=mostrecent_area,everythinglabel,locked_area dir=down y=0 width=max }
 
 		place { region=body control=viewall align=bottom margin-bottom=10 height=20 }
 	}

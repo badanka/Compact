@@ -11,10 +11,10 @@
 	{
 		region { name="main" x=0 y=4 width=max height=max margin-bottom=0 }
 		
-		place { control="Description" width=428 height=52 x=0 y=2 }
-		place { control=TagChecks region=main y=58 width=462 height=256 margin-left=0 margin-right=0 }
+		place { control="Description" width=428 height=26 x=0 y=0 }
+		place { control="TagChecks" region=main y=26 width=462 height=292 margin-left=0 margin-right=0 }
 			
-		place { control="TextEntry" width=240 y=316 }
-		place { control="TextEntry,AddTagButton" y=318 region=main height=20 spacing=4 margin=0 width=max margin-right=0 }
+		place { control="TextEntry" width=278 }
+		place { control="TextEntry,AddTagButton" y=322 region=main height=20 spacing=4 margin=0 width=max margin-right=0 }
 	}
 }

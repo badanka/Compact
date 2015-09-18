@@ -39,8 +39,6 @@
 		{
 			bgcolor=none
 			inset="0 0 0 0"
-      		image="graphics/achievementbg_recent"    
-     		
 		}
 
 		mostrecent_label
@@ -100,14 +98,14 @@
 	{
 		region { name=body width=max height=max }
 
-		place { region=body control=mostrecent_label x=78 y=14 width=max }
-		place { region=body control=mostrecent_name x=78 y=32 width=max }
-		place { region=body control=mostrecent_unlockedsofar x=78 y=50 width=max }
+		place { region=body control=mostrecent_label x=78 y=11 width=max }
+		place { region=body control=mostrecent_name x=78 y=29 width=max }
+		place { region=body control=mostrecent_unlockedsofar x=78 y=47 width=max }
 
 		place { region=body control=mostrecent_background x=0 y=0 width=0 height=80 }
-		place { region=body control=mostrecent_image x=3 y=16 width=64 height=64 }
+		place { region=body control=mostrecent_image x=3 y=13 width=64 height=64 }
 
-		place { region=body control=progressbackground y=65 width=max margin-left=76 margin-right=9 height=14 }
-		place { region=body control=progressbarimage y=67 height=10 margin-left=78 margin-right=11 }
+		place { region=body control=progressbackground y=62 width=max margin-left=76 margin-right=9 height=14 }
+		place { region=body control=progressbarimage y=64 height=10 margin-left=78 margin-right=11 }
 	}
 }

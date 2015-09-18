@@ -7,110 +7,129 @@
 			style=CDownloadSummaryPanel
 			tall="120"
 		}
+		// don't bother changing style on any of these elements, it doesn't work
+		// ---------------------------------------------------------------------
 		
 		"header"
 		{
-			"ControlName"		"Label"
+			"ControlName"	"Label"
 			"labelText"		"#steam_downloads_networkusage"
-			style=bigtext
+			style=			"bigtext"
 		}
 
 		"download_rate"
 		{
-			"ControlName"	    "Label"
-			"labelText"	    "#steam_downloads_downloadrate"
-			style=bigtextlabel		  
+			"ControlName"	"Label"
+			"labelText"		"#steam_downloads_downloadrate"
+			style=			"bigtextlabel"		  
 	    }
 	
 	    "download_rate_value"
 	    {
-			"ControlName"	    "Label"
-			"labelText"	    "%CurrentDLRate%"
-			style=bigtextnumbers
+			"ControlName"	"Label"
+			"labelText"		"%CurrentDLRate%"
+			style=			"bigtext"
 	    }
 	
 		"peak_download_rate"
 		{
-			"ControlName"	 "Label"
-			"labelText"		 "#steam_downloads_peakdownloadrate"
-			style="bigtextlabel"
+			"ControlName"	"Label"
+			"labelText"		"#steam_downloads_peakdownloadrate"
+			style=			"bigtextlabel"
 		}
 	
 		"peak_download_rate_value"
 		{
-			"ControlName"	    "Label"
-			"labelText"	    "%PeakDLRate%"
-			style="bigtextnumbers"
+			"ControlName"	"Label"
+			"labelText"		"%PeakDLRate%"
+			style=			"bigtext"
 		}
 	
 		"total_downloaded"
 		{
-			"ControlName"	    "Label"
-			"labelText"	    "#steam_downloads_totaldownloaded"
-			style="bigtextlabel"
+			"ControlName"	"Label"
+			"labelText"		"#steam_downloads_totaldownloaded"
+			style=			"bigtext"
 		}
 		"total_downloaded_value"
 		{
-			"ControlName"	    "Label"
-			"labelText"	    "%TotalDownloaded%"
-			style="bigtextnumbers"
+			"ControlName"	"Label"
+			"labelText"		"%TotalDownloaded%"
+			style=			"bigtextnumbers"
 		}
-		
+
+		"disk_status_value"
+		{
+			"ControlName"	"Label"
+			"labelText"		"%DiskUsage%"
+			style=			"bigtext"
+		}
+
 		"disk_status_label"
 		{
-			"ControlName"	    "Label"
-			"labelText"	    "#steam_downloads_diskstatus_idle"
-			style="bigtextlabel"
+			"ControlName"	"Label"
+			"labelText"		"#steam_downloads_diskusage"
+			style=			"bigtextlabel"
 		}		
-
+		// ---------------------------------------------------------------------
+		
+		
 		"pauseresumeallbutton"
 		{
-			"ControlName"	    "Button"
-			style=PauseButton
+			"ControlName"	"Button"
+			style=			"PauseButton"
 		}
 	    
 		"throttling_label"
 		{
-			"ControlName"	    "Label"
+			"ControlName"	"Label"
 			"labelText"	    "#steam_downloads_throttling"
-			style="throttleLabel"
-			group = "ShowWhenThrottled"
+			style=			"throttleLabel"
+			group=			"ShowWhenThrottled"
 	    }
 	
 		"throttling_value"
 		{
-			"ControlName"	    "URLLabel"
+			"ControlName"	"URLLabel"
 			"URLText"		"steam://settings/downloads"
 			"labelText"	    "%throttle_value%"
-			style="throttleValue"
-			group = "ShowWhenThrottled"
+			style=			"throttleValue"
+			group=			"ShowWhenThrottled"
 		}		
 		
 		"blackout_label"
 		{
-			"ControlName"	    "Label"
+			"ControlName"	"Label"
 			"labelText"	    "#steam_downloads_autoupdate_window_label"
-			style="throttleLabel"
-			group = "ShowWhenAutoUpdateWindow"
+			style=			"throttleLabel"
+			group=			"ShowWhenAutoUpdateWindow"
 	    }
 	
 		"blackout_value"
 		{
-			"ControlName"	    "URLLabel"
+			"ControlName"	"URLLabel"
 			"URLText"		"steam://settings/downloads"
 			"labelText"	    "#steam_downloads_autoupdate_window_value"
-			style="throttleValue"
-			group = "ShowWhenAutoUpdateWindow"
+			style=			"throttleValue"
+			group=			"ShowWhenAutoUpdateWindow"
 		}			
 	    
-		graphpanel {	controlname="GraphPanel"	 style="infoGraphic" group="HideOnCompletion"  zpos="-1" }		   
+		net_graphpanel { controlname="GraphPanel" style="NetGraphPanel" group="HideOnCompletion"  zpos="-2" }
+		disc_graphpanel { controlname="GraphPanel" style="DiscGraphPanel" group="HideOnCompletion"  zpos="-1" }		 
+		
+		"disk_legend_label" { ControlName="Label" labelText="#steam_downloads_legenddisk" style="throttleLabel" }
+		"net_legend_label" { ControlName="Label" labelText="#steam_downloads_legendnet" style="throttleLabel" }
+		"disk_legend_panel" { ControlName="Panel" style="diskLegendPanel" }
+		"net_legend_panel" { ControlName="Panel" style="netLegendPanel" }
 	}
     
     
 	colors
 	{
+		panelBackground = "0 0 0 255"
 		panelBackgroundTransparent = "0 0 0 0"
 		downloadtextbg = "0 0 0 159"
+		diskusage = "253 200 38 255"
 	}
   
 	styles
@@ -122,11 +141,9 @@
 			
 			render_bg
 			{
-				// background fill
 				0="fill( x0+7, y0+7, x1-8, y1  , FrameBG2 )"
 				1="image( x0+7, y0+7, x0+267, y0+103, graphics/libdet_corner )"
 				
-				// lines around header
 				2="gradient_horizontal( x0+6, y0+6, x1-7, y0+7, ExBorderLight, ExBorderLowLight )"  // top
 				3="gradient( x0+6, y0+6, x0+7, y1, ExBorderLight, ExBorderLowLight )"  // left
 				5="fill( x1-8, y0+6, x1-7, y1, ExBorderLowLight )"  // right
@@ -136,14 +153,14 @@
 	   
 		throttleLabel
 		{
-			bgcolor	   none
+			bgcolor		downloadtextbg
 			font-size   "13"
-			textcolor   "propertysheetbg"
+			textcolor   "label2"
 			padding-top	"0"
 	    } 
 		throttleValue
 		{
-			bgcolor	   none
+			bgcolor		downloadtextbg
 			font-size   "13"
 			textcolor   "text"
 			padding-top	"0"
@@ -151,162 +168,90 @@
 		
 		container
 		{
-			bgcolor="none"
+			bgcolor=	"none"
 	   	}
 	
 		bigtext
 		{
-		 font-family=basefont
-		 font-size=13
-		 textcolor="text"
+			font-family=basefont
+			font-size=13
+			textcolor="text"
 		}
 		
 		bigtextlabel 
 		{
-		 font-family=basefont
-		 font-size=13
-		 textcolor="propertysheetbg"
+			font-family=basefont
+			font-size=13
+			textcolor="text"
 		}
 		
 		bigtextHeader 
 		{
-		 font-family=basefonthead
-		 font-size=15
-		 font-weight=700
-		 textcolor="label2"
+			font-family=basefonthead
+			font-size=15
+			font-weight=700
+			textcolor="label2"
 		}
 	
 		bigTextNumbers 
 		{
-		 font-family=basefont
-		 font-size="13"
-		 textcolor="text"
+			font-family=basefont
+			font-size="13"
+			textcolor="text"
+		}
+
+		GraphPanel
+		{
+			textcolor=Highlight5
+			bgcolor=none
+			render_bg 
+			{
+			}
 		}
 	
-		PauseButton
-		{   
-			inset="23 -1 0 0"
-			font-family=basefont
-			font-size=13
-			font-weight=400
-			textcolor="Text"
-			bgcolor=none
-			minimum-width="75"
-
-			render
-			{
-				1="image( x0+6, y0+2, x1, y1, graphics/icon_pause )"
-			}
-			render_bg
-			{
-				// background fill
-				0="gradient( x0+1, y0+1, x1-1, y1-1, Btnlight, Btndark )"
-                
-				// lines around
-				1="fill( x0  , y0  , x1  , y0+1, Btnborder1 )"  // top
-				3="fill( x0  , y0+1, x0+1, y1  , Btnborder1 )"  // left
-				2="fill( x0+1, y1-1, x1  , y1  , Btnborder2 )"  // bottom
-				4="fill( x1-1, y0+1, x1  , y1  , Btnborder2 )"  // right
-			}	
-		}
-	   
-		PauseButton:Hover
-		{	  
-			inset="23 -1 0 0"
-			font-family=basefont
-			font-size=13
-			font-weight=400
-			textcolor="TextHover"
-			bgcolor=none   
-			minimum-width="75"
-
-			render
-			{
-				0="image( x0+6, y0+2, x1, y1, graphics/icon_pause_hover )"
-			}
-			render_bg
-			{
-				// background fill
-				0="gradient( x0+1, y0+1, x1-1, y1-1, Btnlighthover, Btndarkhover )"
-                
-				// lines around
-				1="fill( x0  , y0  , x1  , y0+1, Btnborder3 )"  // top
-				3="fill( x0  , y0+1, x0+1, y1  , Btnborder3 )"  // left
-				2="fill( x0+1, y1-1, x1  , y1  , Btnborder1 )"  // bottom
-				4="fill( x1-1, y0+1, x1  , y1  , Btnborder1 )"  // right
-			}	
-		}
-			
-		ResumeButton
-		{	  
-			inset="23 -1 0 0"
-			font-family=basefont
-			font-size=13
-			font-weight=400
-			textcolor="Text"
-			bgcolor=none
-			minimum-width="75"
-
-			render
-			{
-				1="image( x0+6, y0+2, x1, y1, graphics/icon_install )"
-			}
-			render_bg
-			{
-				// background fill
-				0="gradient( x0+1, y0+1, x1-1, y1-1, Btnlight, Btndark )"
-                
-				// lines around
-				1="fill( x0  , y0  , x1  , y0+1, Btnborder1 )"  // top
-				3="fill( x0  , y0+1, x0+1, y1  , Btnborder1 )"  // left
-				2="fill( x0+1, y1-1, x1  , y1  , Btnborder2 )"  // bottom
-				4="fill( x1-1, y0+1, x1  , y1  , Btnborder2 )"  // right
-			}	
-		}
-	   
-		ResumeButton:Hover
-		{	  
-			inset="23 -1 0 0"
-			font-family=basefont
-			font-size=13
-			font-weight=400
-			textcolor="TextHover"
-			bgcolor=none   
-			minimum-width="75"
-
-			render
-			{
-				0="image( x0+6, y0+2, x1, y1, graphics/icon_install_hover )"
-			}
-			render_bg
-			{
-				// background fill
-				0="gradient( x0+1, y0+1, x1-1, y1-1, Btnlighthover, Btndarkhover )"
-                
-				// lines around
-				1="fill( x0  , y0  , x1  , y0+1, Btnborder3 )"  // top
-				3="fill( x0  , y0+1, x0+1, y1  , Btnborder3 )"  // left
-				2="fill( x0+1, y1-1, x1  , y1  , Btnborder1 )"  // bottom
-				4="fill( x1-1, y0+1, x1  , y1  , Btnborder1 )"  // right
-			}	
-		}
-		  
-		infoGraphic
+		NetGraphPanel
 		{
-			bgcolor   "none"
+			bgcolor   "none"	
 			textcolor "highlight5"
 			render_bg
 			{
-				0="fill( x0  , y0  , x1-2, y1  , black )"
-				
-				1="fill( x0-1, y0-1, x1-1, y0  , ExBorderDark )"	//t
-				2="fill( x0-1, y0  , x0  , y1+1, ExBorderDark )"	//l
-				3="fill( x1-2, y0  , x1-1, y1+1, ExBorderShade )"	//r
-				4="fill( x0  , y1  , x1-2, y1+1, ExBorderShade )"	//b
+				1="fill( x0  , y0-1, x1  , y0  , ExBorderDark )"  //t
+				3="fill( x0-1, y0-1, x0  , y1+1, ExBorderDark )"  //l
+				2="fill( x0  , y1  , x1  , y1+1, ExBorderShade )"  //b
+				4="fill( x1  , y0-1, x1+1, y1+1, ExBorderShade )"  //r
 			}
 			render
 			{
-				0="fill( x0  , y0  , x0+140, y0+50, downloadtextbg )"
+				0="gradient_horizontal( x0, y0, x0+200, y1, panelBackground, panelBackgroundTransparent )"
+			}
+		}
+
+		DiscGraphPanel
+		{
+			bgcolor   "none"	
+			textcolor="diskusage"
+			render_bg
+			{
+			}
+			render
+			{
+				0="gradient_horizontal( x0, y0, x0+200, y1, panelBackground, panelBackgroundTransparent )"
+			}
+		}
+		
+		DiskLegendPanel
+		{
+			render_bg
+			{
+				0="fill( x0, y0, x1,y1, diskusage )"
+			}
+		}
+		
+		NetLegendPanel
+		{
+			render_bg
+			{
+				0="fill( x0, y0, x1,y1, highlight5 )"
 			}
 		}
 	}
@@ -315,28 +260,41 @@
 	{
 		
 		//set aside some room for the header section
-		region { name=head	dir=down x=10 y=8 height=124 width=max }
-		region { name=graph width=1262 y=12 height=170 }			  
-		region { name=column1 x=0	y=22	 width=max  region=head }
-		region { name=column2 x=70	y=22	 width=max  region=head }
-		region { name=middle_column x=150 y=0 width=max  region=head }
-		
-		place { control="GraphPanel" region="head" x=8 width="max"	height="75" margin-top=26 margin-right=17 }				   
-		
-		// put NETWORK	USAGE in the top left
-		place { control="header"	region=head dir=down x=8	y=5	}
-		
-		// top right
-		place { control="pauseresumeallbutton" region=head align=right x=490 y=2 margin-right=18 height=20 }
-		
-		place { region=column1  control="download_rate,peak_download_rate,total_downloaded" dir=down margin-left=15 spacing=1 y=8 }
-		place { region=column2  control="download_rate_value,peak_download_rate_value,total_downloaded_value" dir=down margin-left=15 spacing=1 y=9 }
+		region { name=head	dir=down x=10 y=8 height=124 width=180 }
+		region { name=legend align=right start="pauseresumeallbutton" dir=down width=80 margin-top=50	}
 
-		place { region=column1  control="disk_status_label" x=8 y=82 align=top	}
 		
+		region { name=column1 x=0	y=20	width=max  region=head }
+		region { name=column2 x=109	y=20	width=76  region=head }
+		region { name=column3 x=0	y=74	width=184  region=head height=50 }
+		
+		// graph
+		place { control="net_graphpanel"  x=197 y=12 width="max" height="112" margin-right=9 end-right="pauseresumeallbutton" }				   
+		place { control="disc_graphpanel" x=197 y=12 width="max" height="112" margin-right=9 end-right="pauseresumeallbutton"  }
+		
+		// graph legend
+		place { control="disk_legend_panel" region=legend y=3 x=0 width=9 height=9 }
+		place { control="disk_legend_label" region=legend y=0 x=12 }
+		
+		place { control="net_legend_panel" region=legend y=16 x=0  width=9 height=9 }
+		place { control="net_legend_label" region=legend y=13 x=12 }
+					
+
+		
+		place { controls="disk_status_label,header" region=head dir=down x=8 y=6 spacing=2	}
+		place { region=head  control="disk_status_value,download_rate_value" dir=down align=right y=6 spacing=2 margin-right=4 }
+		
+		place { region=column1  control="peak_download_rate,total_downloaded" dir=down margin-left=15 spacing=2 y=16 }
+		place { region=column2  control="peak_download_rate_value,total_downloaded_value" dir=down align=right spacing=2 y=16 margin-right=4 }
+		place { region=column2  control="download_rate" y=50 width=0 }
+
+		place { control="pauseresumeallbutton" align=right y=11 margin-right=12 height=20 }
+
 		// throttling info
-		place { region=middle_column controls="blackout_label, blackout_value" y=5 spacing=4 }
-		place { region=middle_column control="throttling_label" start=blackout_value dir=right margin-left=16 }
-		place { region=middle_column control="throttling_value" start=throttling_label dir=right margin-left=4 }
+		place { control="throttling_label" y=14 align=right end-right="throttling_value" margin-right=3 }
+		place { control="throttling_value" y=14 align=right end-right="pauseresumeallbutton"margin-right=14 }
+		
+		
+		place { controls="blackout_label, blackout_value" x=197 y=14 dir=right spacing=3 }
 	}
 }

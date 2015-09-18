@@ -62,7 +62,7 @@
 		infolabel
 		{
 			font-size=13
-			textcolor=Label
+			textcolor=Text
 		}	
 	}
 

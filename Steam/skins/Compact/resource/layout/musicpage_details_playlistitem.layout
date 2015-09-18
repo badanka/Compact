@@ -11,7 +11,7 @@
 		PositionLabelStyle	
 		{ 
 			padding-bottom=0
-			padding-top=1
+			padding-top=0
 			font-size=13
 			textcolor=Labeldisabled
 			font-family=basefont
@@ -28,11 +28,13 @@
 			font-family=basefont
 			font-weight=400 
 			bgcolor=none		
+			render_bg {	0="gradient_horizontal( x0,y1+6,x1-6,y1+7,ExBorderShade,FrameBG1 )" }
 		}
 		
 		TrackLabelStyle:hover
 		{
 			textcolor="texthover"
+			font-style=underline
 		}
 	}
 	
@@ -41,8 +43,8 @@
 	{
 		region { name=panelregion width=max }
 		
-		place {	control="PositionLabel" width=40 region="panelregion"  }
-		place {	control="TrackLabel" x=50 region="panelregion" width=max }
+		place {	control="PositionLabel" width=24 region="panelregion"  }
+		place {	control="TrackLabel" x=34 region="panelregion" width=max }
 	}
 	
 }
