@@ -79,11 +79,9 @@
 			bgcolor=none
 			render
 			{				
-
 			}
 			render_bg 
 			{				
-
 			}
 		}
 		
@@ -102,15 +100,16 @@
 
 		ArtistStyle
 		{
-			padding-bottom=5
-			padding-top=10
+			padding-bottom=8
+			padding-top=8
 			padding-left=10
 			padding-right=10
-			font-size=20
+			font-size=24
 			textcolor=Text
-			font-family=basefont
+			font-family=basefontheader
 			font-weight=400 
-			bgcolor=none
+			bgcolor=FrameBG2
+			minimum-width=208 
 		}
 		
 		TracksInfoStyle
@@ -179,35 +178,45 @@
 
 			render
 			{
-				1="image( x0, y0+4, x1, y1, graphics/icon_play )"
+				1="image( x0, y0+3, x1, y1, graphics/icon_play )"
 			}
 			
 			render_bg
 			{
 				0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlight, Btndark )"
-				1="fill(	x0  , y0  , x1  , y0+1, BtnBorder1 )"	//t
-				3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder1 )"	//l
-				2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder2 )"	//b
-				4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder2 )"	//r
+			
+				1="fill( x0+1, y0  , x1-1, y0+1, BtnBorder1 )"		// t
+				2="fill( x0  , y0+1, x0+1, y1-1, BtnBorder1 )"		// l
+				3="fill( x0+1, y1-1, x1-1, y1  , BtnBorder1 )"		// b
+				4="fill( x1-1, y0+1, x1  , y1-1, BtnBorder1 )"		// r
+    			
+    			5="fill( x0  , y0  , x0+1, y0+1, BtnBorder2 )"		// tl
+				6="fill( x1-1, y0  , x1  , y0+1, BtnBorder2 )"		// tr
+    			7="fill( x0  , y1-1, x0+1, y1  , BtnBorder2 )"		// bl
+    			8="fill( x1-1, y1-1, x1  , y1  , BtnBorder2 )"		// br
 			}
 		}
 		
-			
 		ActionButtonStyle:hover
 		{
 			textcolor="TextHover"
 			render
 			{
-				0="image( x0, y0+4, x1, y1, graphics/icon_play )"
+				0="image( x0, y0+3, x1, y1, graphics/icon_play )"
 			}	
 			render_bg
 			{
 				0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlighthover, Btndarkhover )"
-			
-				1="fill(	x0  , y0  , x1  , y0+1, BtnBorder3 )"	//t
-				3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder3 )"	//l
-				2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder3b )"	//b
-				4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder3b )"	//r
+				
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder1 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder1 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder1 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder1 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder2 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder2 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder2 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder2 )"	//br
 			}			
 		}
 		
@@ -216,34 +225,35 @@
 			textcolor="TextPressed"
 			render
 			{
-				0="image( x0, y0+4, x1, y1, graphics/icon_play )"
+				0="image( x0, y0+3, x1, y1, graphics/icon_play )"
 			}	
 			render_bg
 			{
 				0="gradient(x0+1, y0+1, x1-1, y1-1, Btndark, Btndarker )"
-                
-				1="fill(	x0  , y0  , x1  , y0+1, BtnBorder4 )"	//t
-				3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder4 )"	//l
-				2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder5 )"	//b
-				4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder5 )"	//r
+	                
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder1 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder1 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder1 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder1 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder2 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder2 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder2 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder2 )"	//br
 			}			
 		}
 	}
 
 	layout
 	{
-		region { name=bodyregion x=10 y=10 width=max height=max overflow=scroll-vertical }		
-		region { name=headerregion x=10 y=3 width=max height=max overflow=scroll-vertical }
-		region { name=leftcolumn x=20 width=200 overflow=scroll-vertical }
-		region { name=trackcolumn width=max overflow=scroll-vertical }
+		region { name=music x=10 y=6 width=max height=max }
+		place { region=music control=ArtistLabel,AlbumTitleLabel x=0 y=0 dir=right }
+		place { region=music control=CoverImage x=0 y=48 height=200 width=200 }
+		place { region=music control=TracksInfoLabel start="CoverImage" y=4 dir=down }
 		
-		place { control="CoverImage" align=top width=200 height=200 }
-		
-		place { region=headerregion control=AlbumTitleLabel,ArtistLabel,leftcolumn dir=down }
-		place { region=leftcolumn  dir=down start=ArtistLabel spacing=10
-			control=CoverImage,TracksInfoLabel,PlayTracksButton }
-		place { region=leftcolumn	dir=down start=PlayTracksButton 
-			control=PlayAlbumButton,AddTracksToQueueButton,AddTracksToPlaylistButton,AddAlbumToQueueButton,AddAlbumToPlaylistButton,ShowAlbumButton,ShowAlbumInSystemButton }
-		place { region=trackcolumn control=*MusicPageDetailsTrack dir=down start=ArtistLabel x=230 width=max }
+		place { region=music control=*MusicPageDetailsTrack dir=down x=200 y=48 width=max }
+				
+		place { region=music control=PlayTracksButton,PlayAlbumButton start="TracksInfoLabel" dir=down y=6 height=20 }
+		place { region=music control=AddTracksToQueueButton,AddTracksToPlaylistButton,AddAlbumToQueueButton,AddAlbumToPlaylistButton,ShowAlbumButton,ShowAlbumInSystemButton x=0 y=291 spacing=-4 dir=down }
 	}
 }

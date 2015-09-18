@@ -81,12 +81,14 @@
 			{
 				//gradient to obscure content at bottom of scrolling region 
 				//0="gradient( x0+1, y1-9, x1-14, y1  , none, red )"
+				0="fill( x0+1, y1, x1-3, y1+1, blue )"
 			}
 			
 			render_bg
 			{
 				//gradient behind the scrollbar
-				0="gradient( x0+1, y1-9, x1-14, y1  , FrameShade, none )"
+				//0="gradient( x0+1, y1-9, x1-14, y1  , FrameShade, none )"
+				//0="gradient( x1-25, y1-9, x1-14, y1  , red, blue )"
 			}
 		}	
 	}

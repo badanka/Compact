@@ -13,7 +13,7 @@
 
 	colors
 	{
-		GameDetailsFriends.ExtraVerticalSpacing=66	
+		GameDetailsFriends.ExtraVerticalSpacing=49	
 	}
 
 	styles
@@ -39,19 +39,19 @@
 		infolabel
 		{
 			font-size=13
-			textcolor=Label
+			textcolor=Text
 		}	
 		
 		friendlabelmore
 		{
 			inset="-3 0 0 0"
-			font-size=18
+			font-size=13
 			textcolor="Text2"
 			font-family=basefont
 	     	render_bg
 	     	{
 				// background fill
-		        0="gradient( x0+3, y0+3, x1-3, y1-1, Btnlight, Btndark )"
+		        0="gradient( x0+3, y0+3, x1-3, y1-1, red, Btndark )"
                 
 				// lines around
 		        1="fill( x0+2, y0+2, x1-2, y0+3, Btnborder1 )"  // top
@@ -64,7 +64,7 @@
 		friendlabelmore:hover
 		{
 			inset="-3 0 0 0"
-			font-size=18
+			font-size=13
 			textcolor="TextHover"
 			font-family=basefont
 		    	 render_bg
@@ -84,12 +84,12 @@
 	layout
 	{
 		region { name=body margin-left=10 margin-top=0 margin-bottom=10 margin-right=4 width=max height=max }
-		place { region=body control=headerlabel width=max y=7 }
+		place { region=body control=headerlabel width=0 y=7 }
 		
 		place 
 		{ 
 			region=body
-			y=25
+			y=8
 			width=max
 			height=58
 			control=listplayingnow,listplayever

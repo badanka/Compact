@@ -25,11 +25,12 @@
 			font-size=13
 			font-family=basefont
 		}
+		
 	}
 
 	layout
 	{
-		place { region=body control=workshop_description x=0 y=60 width=195 height=36 }
+		place { region=body control=workshop_description x=0 y=57 width=195 height=39 }
 		place { region=body control=workshop_banner x=0 y=0 width=195 height=52 }
 	}
 }

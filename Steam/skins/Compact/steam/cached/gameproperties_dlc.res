@@ -72,7 +72,7 @@
 	{
 		place { control="DescriptionLabel" x=10 y=10 }
 		
-		place { control="StoreDLCURL" x=10 y=70 }
-		place { control="ContentList" x=4 y=90 width=max height=max margin-right=4 margin-bottom=4 }
+		place { control="StoreDLCURL" x=10 y=62 }
+		place { control="ContentList" x=4 y=80 width=max height=max margin-right=4 margin-bottom=4 }
 	}
 }

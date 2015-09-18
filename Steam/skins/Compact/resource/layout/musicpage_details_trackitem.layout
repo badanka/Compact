@@ -11,8 +11,8 @@
 		PositionLabelStyle	
 		{ 
 			padding-bottom=0
-			padding-top=1
-			font-size=14
+			padding-top=0
+			font-size=13
 			textcolor=Labeldisabled
 			font-family=basefont
 			font-weight=400 
@@ -27,12 +27,13 @@
 			textcolor=Text2
 			font-family=basefont
 			font-weight=400 
-			bgcolor=none		
+			bgcolor=none	
 		}
 		
 		TrackLabelStyle:hover
 		{
 			textcolor="text"
+			font-style=underline
 		}
 	}
 	
@@ -40,7 +41,7 @@
 	{
 		region { name=panelregion width=max }
 		
-		place {	control="PositionLabel" width=40 region="panelregion"  }
-		place {	control="TrackLabel" x=50 region="panelregion" width=max }
+		place {	control="PositionLabel" width=24 region="panelregion"  }
+		place {	control="TrackLabel" x=34 region="panelregion" width=max }
 	}
 }

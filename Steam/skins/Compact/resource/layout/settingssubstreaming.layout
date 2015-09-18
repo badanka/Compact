@@ -66,7 +66,7 @@
 	
 	layout
 	{
-		region { name=bottom margin-top=205 width=max height=max margin-left=10 margin-right=10 }
+		region { name=bottom width=max height=max y=206 margin-left=10 margin-right=10 }
 
 		place
 		{
@@ -74,32 +74,34 @@
 			dir=down
 			align=top
 			width=max
+			margin-top=6
 			margin-left=10
 			margin-right=10
-			margin-top=6
 			spacing=6
 		}
-		place { control=EnableStreaming start="RemoteClientList" margin-top=-2 dir=down }
+		place { control=EnableStreaming start="RemoteClientList" dir=down y=3 height=18 }
 		
+		place { region=bottom control=HostDivider start="EnableStreaming" dir=down width=max y=0 }
 		
-		place { region=bottom control=HostDivider width=max y=0 }
-		place { region=bottom control=HostLabel width=max y=8 }
-		place { region=bottom control=UnsupportedPlatform width=max y=27 }
-		place { region=bottom control=AdvancedHostOptions height=20 y=27 }
+		place { region=bottom control=HostLabel width=max start="HostDivider" dir=down y=6 }
+		place { region=bottom control=UnsupportedPlatform width=max start="HostLabel" dir=down y=6 }
+		place { region=bottom control=AdvancedHostOptions height=20 start="HostLabel" dir=down y=6 }
 		
-		place { region=bottom control=ClientDivider width=max y=56 }
-		place { region=bottom control=ClientLabel width=max y=64 }
+		place { region=bottom control=ClientDivider width=max start="AdvancedHostOptions" dir=down y=11 }
+		place { region=bottom control=ClientLabel width=max start="ClientDivider" dir=down y=6 }
+		place { region=bottom control=QualityFast start="ClientLabel" dir=down height=18 y=3 }
 		place
 		{
-			control="QualityFast,QualityBalanced,QualityBeautiful"
+			control="QualityBalanced,QualityBeautiful"
 			region=bottom
-			align=top
 			width=max
+			height=18 
+			x=10
 			spacing=10
-			y=75
+			start="QualityFast"
 		}
-		place { region=bottom control=AdvancedClientOptions start="QualityFast" dir=down height=20 }
+		place { region=bottom control=AdvancedClientOptions start="QualityFast" dir=down height=20 y=6 }
 		
-		place { region=bottom control=SupportInformationLabel start="AdvancedClientOptions" dir=down margin-top=20 }
+		place { region=bottom control=SupportInformationLabel align=bottom }
 	}
 }

@@ -446,14 +446,13 @@
 	
 		Button
 		{
-			//minimum-width=152
 			minimum-width=166
 		}
 	}
 	
 	layout
 	{
-		place { control="ImagePanelLogo" x=8 y=40 width=176 height=48 }
+		place { control="ImagePanelLogo" x=16 y=40 width=176 height=48 }
 		
 		place { control="UserNameLabel" y=103 align=right end-right="UserNameEdit" margin-right=6}			//username label
 		place { control="UserNameEdit" x=112 y=100 width=max height=20 margin-right=22 }					//username text entry
@@ -462,17 +461,17 @@
 		place { control="PasswordEdit" x=112 y=125 width=max height=20 margin-right=22 }					//password text entry
 
 		place { control="SavePasswordCheck" x=112 y=148 height=20 }
-		place { control="LoginButton, CancelButton" dir=right y=187 spacing=4 height=20 align=right margin-right=22 }
+		place { control="LoginButton, CancelButton" dir=right y=196 spacing=4 height=20 align=right margin-right=22 }
 		
-		place { control="Divider1" y=255 width=max align=top-center margin-left=22 margin-right=22}
+		place { control="Divider1" y=226 width=max align=top-center margin-left=22 margin-right=22}
 		
-		place { control="Label2" x=32 y=264 }					//register new account label
-		place { control="Label3" x=32 y=288 }					//PSN label
-		place { control="Label4" x=32 y=310 }					//
+		place { control="Label2" start="Divider1" dir=down y=13 }				//register new account label
+		place { control="Label4" start="Label2" dir=down y=11 }					//forgotten login credentials
+		place { control="Label3" start="Label4" dir=down y=11  }					//PSN label
 		
-		place { control="CreateNewAccountButton" height=20 y=264 align=right margin-right=22 }
-		place { control="PSNAccountSetupButton"  height=20 y=288 align=right margin-right=22 }
-		place { control="LostPasswordButton"     height=20 y=310 align=right margin-right=22 }
+		place { control="CreateNewAccountButton" start="Divider1" dir=down x=260 y=10  height=20 }
+		place { control="LostPasswordButton"     start="CreateNewAccountButton" dir=down y=4 height=20 }
+		place { control="PSNAccountSetupButton"  start="LostPasswordButton" dir=down y=4 height=20 }
 		
 		
 	}

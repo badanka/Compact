@@ -112,10 +112,10 @@
 	{
 		place { control="Label1" y=2 width=max }
 		
-		place { control="ValveSurveySummaryText" start=Label1 dir=down y=4 width=max height=max margin-bottom=28 }
+		place { control="ValveSurveySummaryText" x=0 y=19 width=max height=max margin-bottom=34 }
 
-		region { name=bottom align=bottom height=29 }
+		region { name=bottom align=bottom height=40 }
 		place {	control="URLLabel1" region=bottom height=20 margin-top=4 margin-right=8 }
-		place {	control="Button1" region=bottom align=right height=20 width=84 margin-right=4 margin-bottom=4 margin-top=4 }
+		place {	control="Button1" region=bottom y=20 align=right height=20 width=84 margin-right=4 }
 	}
 }

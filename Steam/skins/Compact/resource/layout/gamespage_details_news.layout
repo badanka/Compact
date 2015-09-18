@@ -14,7 +14,7 @@
 		// This is needed to determine how much space is needed veritically for the header and button
 		// in addition to the autocomputed height for the *newsitem panels, adjust it if you change vertical
 		// spacing of this controls layout.
-		GameDetailsNewsContainer.ExtraVerticalSpacing "64"
+		GameDetailsNewsContainer.ExtraVerticalSpacing "43"
 	}
 
 	styles
@@ -40,8 +40,8 @@
 	layout
 	{
 		region { name=body margin-left=10 margin-top=3 margin-bottom=10 margin-right=4 width=max height=max }
-		place { region=body control=headerlabel width=max y=4 }
-		place { region=body y=23 y=0 control=*newsitem dir=down width=max }
+		place { region=body control=headerlabel width=0 y=0 }
+		place { region=body y=2 y=0 control=*newsitem dir=down width=max }
 		place { region=body align=bottom control=viewall height=20 }
 	}
 }

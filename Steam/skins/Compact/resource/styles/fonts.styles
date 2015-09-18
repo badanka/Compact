@@ -15,12 +15,9 @@ fonts.styles
 	styles
 	{
 		//	------------------------------------------
-		//	
-		//		steam.styles
-		//	
+		//	steam.styles
 		//	------------------------------------------
 		  
-		    
 		//	---------------------
 		//		buttons
 		//	---------------------
@@ -30,55 +27,26 @@ fonts.styles
 			font-family=basefont
 			font-size=13
 			font-weight=400
-			textcolor="Text2"
-		}
-		Button:hover
-		{   
-	  		textcolor="TextHover"
-		}
-	    Button:focus
-	    {
-			textcolor="Text"
-		}
-	    Button:active
-	    {
-			textcolor="TextPressed"
-		}
-	    Button:selected
-	    {
-			textcolor="Text"
-		}
-	    Button:disabled
-	    {
-			textcolor="LabelDisabled"
 		}
 		"Page Button"
 		{     
 			font-family=basefont
 			font-size=13
 			font-weight=400
-			textcolor="Text2"
 		}
-	  	"Page Button:hover"
-		{   
-	  		textcolor="TextHover"
-		}
-	    "Page Button:focus"
-	    {
-			textcolor="Text"
-		}
-	    "Page Button:active"
-	    {
-			textcolor="TextPressed"
-		}
-	    "Page Button:selected"
-	    {
-			textcolor="Text"
-		}
-	    "Page Button:disabled"
-	    {
-			textcolor="LabelDisabled"
-		}
+		
+		ComboBox
+		{
+ 			font-family=basefont
+ 			font-size="13"
+ 		}
+ 	   
+		"Page ComboBox"
+		{
+ 			font-family=basefont
+ 			font-size="13"
+    	}
+
 		
 		//	---------------------
 		//		category headers
@@ -115,11 +83,89 @@ fonts.styles
 			font-weight=400
 			textcolor="text"
 		}
+
 		
 		//	------------------------------------------
-		//	
-		//		gamespage_details_news_item.layout
-		//	
+		//	appdownloadpanel.layout
+		//	------------------------------------------
+
+		DetailsLaunchButton
+		{   
+			font-family=basefont
+			font-size=13
+			font-weight=400
+		}
+	
+		DetailsLaunchButton:Hover
+		{   
+			font-family=basefont
+			font-size=13
+			font-weight=400
+		}
+		
+		DetailsLaunchButton:Disabled
+		{   
+			font-family=basefont
+			font-size=13
+			font-weight=400
+		}
+
+		topOfQueueButton
+		{   
+			font-family=basefont
+			font-size=13
+			font-weight=400
+		}			
+		
+		SmRemoveButton
+		{   
+			font-family=basefont
+			font-size=13
+			font-weight=400
+		}
+		
+		SmRemoveButton:Hover
+		{   
+			font-family=basefont
+			font-size=13
+			font-weight=400
+		}
+
+		//	------------------------------------------
+		// downloadsummarypanel.layout
+		//	------------------------------------------
+
+		PauseButton
+		{   
+			font-family=basefont
+			font-size=13
+			font-weight=400
+		}
+	   
+		PauseButton:Hover
+		{	  
+			font-family=basefont
+			font-size=13
+			font-weight=400
+		}
+			
+		ResumeButton
+		{	  
+			font-family=basefont
+			font-size=13
+			font-weight=400
+		}
+	   
+		ResumeButton:Hover
+		{	  
+			font-family=basefont
+			font-size=13
+			font-weight=400
+		}
+
+
+		//	------------------------------------------
+		//	gamespage_details_news_item.layout
 		//	------------------------------------------
 			
 		
@@ -167,11 +213,46 @@ fonts.styles
 		{	
 			font-style="underline"
 		}
+
+
+		//	------------------------------------------
+		//	gamespage_grid.chrome.layout
+		//	------------------------------------------
+
+		CUILaunchButton
+		{   
+			font-family=basefont
+			font-size=16
+			font-weight=400
+		}
+		
+		CUILaunchButton:Hover
+		{   
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			font-style=normal
+		}
+	
+		CUIDetailsButton
+		{   
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			font-style=normal
+		}
+		
+		CUIDetailsButton:Hover
+		{   
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			font-style=normal
+		}
+	
 	
 		//	------------------------------------------
-		//	
-		//		overlaydashboard.layout
-		//	
+		//	overlaydashboard.layout
 		//	------------------------------------------
 	
 		topbar
@@ -182,5 +263,25 @@ fonts.styles
 			font-weight=700
 			textcolor=text
 		}
+
+		//	------------------------------------------
+		//	uinavigatorpanel.layout
+		//	------------------------------------------
+
+		NavLabel2  [!$OSX]
+		{
+			font-family=basefont
+			font-size=13
+			font-weight=400
+		}	
+		
+		NavLabel2        [$OSX]
+		{
+			font-family=basefont
+			font-size=13
+			font-weight=400
+		}	
+
+
 	}
 }
