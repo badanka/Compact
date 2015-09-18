@@ -101,6 +101,9 @@ steam.styles
 		TextGlowHoverSm="128 123 120 255"
 		TextGlowSelectedSm="145 142 140 255"
 		
+		TitleText="166 164 161 255"
+		TitleTextFocus="239 236 233 255"
+		
 		ChatText1="166 164 161 255"
 		ChatText2="106 104 101 255"
 
@@ -125,7 +128,7 @@ steam.styles
 		Highlight1="236 202 43 255"		// installing color
 		Highlight2="236 202 43 255" 	// installing hover color 
 		Highlight3="173 69 71 255"  	// red for errors, blocked, etc.
-		Highlight5="116 143 197 127" 		// progress bar, e.g. "preparing game files for installation"
+		Highlight5="116 143 197 127" 	// progress bar, e.g. "preparing game files for installation"
 		Highlight7="153 184 255 255"	// hover colour on items in library
 		Highlight8="81 78 77 255"		// download progress colour background
 		
@@ -146,7 +149,9 @@ steam.styles
 		Friends.SectionHeader	"Label"
 		Friends.NoAvatarOver	"Text"
 		Friends.IgnoredColor	"Highlight3"
-		
+		Friends.GoldenColor      "255 255 99 255"
+		Friends.GoldenHoverColor "255 255 180 255"
+
 		ChatDialog.URLColor		"text"
 		ChatOwnTextColor		"ChatText1"
 		ChatDialog.HistoryColor	"124 124 124 255"
@@ -1253,7 +1258,7 @@ steam.styles
 		padding-right="0" [$OSX]
 		font-size=13
 		font-weight=400
-		textcolor="label"
+		textcolor="TitleText"
 		bgcolor="none"
 		render_bg
 		{
@@ -1273,8 +1278,8 @@ steam.styles
 		font-size=13
 		font-weight=400
 		bgcolor="none"
-		textcolor="texthover"
-		textcolor="texthover" [$OSX]
+		textcolor="TitleTextFocus"
+		textcolor="TitleTextFocus" [$OSX]
 	    render_bg
 	    {
 			//full path added by design, Steam won't load these images otherwise
@@ -2104,19 +2109,19 @@ steam.styles
     
 	"MenuBar MenuButton" 
 	{
-		textcolor="label"
+		textcolor="TitleText"
 		padding-right=2
 		inset="2 3 2 0"
 	}
 	
  	"MenuBar MenuButton:frameFocus" 
 	{
-		textcolor="Text"
+		textcolor="TitleTextFocus"
 	}
 	
 	"MenuBar MenuButton:frameFocus:hover" 
 	{
-		textcolor="texthover"
+		textcolor="TitleTextFocus"
 		bgcolor=none
 		font-style="outerglow"
 		font-outerglow-color="focus"
@@ -2126,7 +2131,7 @@ steam.styles
 	
 	"MenuBar MenuButton:frameFocus:selected" 
 	{
-		textcolor="texthover"
+		textcolor="TitleTextFocus"
 		bgcolor=none
 		font-style="outerglow"
 		font-outerglow-color="focus"
@@ -2238,8 +2243,6 @@ steam.styles
 		bgcolor="none"
 		render_bg
 		{
-			//0="fill( x0  , y0  , x1  , y1  , MainFrameBG2 )"
-			
 			0="gradient(x0  , y0   , x1  , y0+16, MainFrameBG1, MainFrameBG2 )"
 			1="fill( 	x0  , y0+16, x1  , y1   , MainFrameBG2 )"
 		}
@@ -3083,7 +3086,6 @@ steam.styles
 		inset="0 0 0 0"
 	}
     
-    
     // password entry box in the login dialog
     TextEntryLarge
     {
@@ -3097,8 +3099,8 @@ steam.styles
       shadowtextcolor="Text"  // this is the cursor color
 
       inset-left="4"
-      inset-top="5"
-      inset-bottom="5"
+      inset-top="0"
+      inset-bottom="2"
       render
       {
 		1="fill( x0    , y0    , x1    , y0 + 1, BtnBorder6 )"  //t
@@ -3405,21 +3407,6 @@ steam.styles
       textcolor="white"
       font-style=underline
     }  
-
-	URLLabelSimple2
-    {
-      textcolor="labelfocus"
-      bgcolor="none"
-      font-family=basefont
-      font-size=13
-      font-weight=400
-    }
-    
-    URLLabelSimple2:Hover
-    {
-      textcolor="white"
-      font-style=underline
-    }  
     
     // Steam-specific styles
     CConsoleHistory
@@ -3501,7 +3488,7 @@ steam.styles
 	FullscreenButton
     {
       bgcolor=none
-      inset="-5 -1 0 0"
+      inset="-5 0 0 0"
       render_bg={}
       image="graphics/icon_button_bigpicture3"
     }
@@ -3915,7 +3902,16 @@ steam.styles
    	{
    		textcolor="TextDisabled"
    	}
+    friends_offline:hover
+   	{
+   		textcolor="TextDisabled"
+   	}
+
    	friends_online
+   	{
+   		textcolor="Friends.OnlineColor"
+   	}
+   	friends_online:hover
    	{
    		textcolor="Friends.OnlineColor"
    	}
@@ -3923,6 +3919,21 @@ steam.styles
    	{
    		textcolor="Friends.InGameColor"
    	}
+   	friends_ingame:hover
+   	{
+   		textcolor="Friends.InGameColor"
+   	}
+
+   	friends_golden
+   	{
+   		textcolor="Friends.GoldenColor"
+   	}
+   	   	
+   	friends_golden:hover
+   	{
+   		textcolor="Friends.GoldenHoverColor"
+   	}
+
    	friends_ignored
    	{
    		textcolor="Friends.IgnoredColor"

@@ -114,6 +114,7 @@
 		library_filters_details		{ ControlName=Label style="ViewDetailButton" tooltiptext="#tooltip_view_details"	group=views }
 
 		library_music_menu			{ ControlName=MenuButton labelText="#Music_Nav_Menu_Artists" style="NavLabel2" showDownArrow=0 align=left group=music }
+		library_music_add_button {	ControlName=Button labelText=""	tooltiptext="#Music_Playlist_Details_Menu_Add" style="MusicAddButton" group=music_add_button visible=false }
 		library_music_player_icon	{ ControlName=URLLabel style="MusicPlayerIcon" tooltiptext="#music_tooltip_view_player" URLtext="steam://open/musicplayer" align=right group=music }
 
 		emailreminderbar { zpos=1 }
@@ -264,6 +265,28 @@
 			padding-right=-1
 		}
 		
+		MusicAddButton
+		{
+			font-size=14
+			font-size=13 [$OSX]
+			font-family=basefont
+			textcolor="labelfocus"
+			font-style=uppercase
+			render_bg
+			{
+				0="image( x0, y0 + 2, x1, y1, graphics/icon_collapse )"
+			}
+		}
+		
+		MusicAddButton:hover
+		{
+			textcolor="white"
+			render_bg
+			{
+				0="image( x0, y0 + 2, x1, y1, graphics/icon_collapse_over )"
+			}
+		}			
+
 		MusicPlayerIcon
 		{
 			bgcolor="none"
@@ -884,8 +907,8 @@
 
 		place { control="library_filters_details,library_filters_list,library_filters_grid," align=left start="library_filters" dir=right height=20 spacing=4 margin-left=12 width=20 }
 
- 		place [!$OSX] { control="library_music_menu" align=left height=20 start="library_filters" dir=right margin-left=4 }
-		 place [$OSX] { control="library_music_menu" align=left height=20 start="library_filters" dir=right margin-left=4 }
+ 		place [!$OSX] { control="library_music_menu,library_music_add_button" align=left height=20 start="library_filters" dir=right margin-left=4 spacing=2 }
+		 place [$OSX] { control="library_music_menu,library_music_add_button" align=left height=20 start="library_filters" dir=right margin-left=4 }
 
 		place [!$OSX] { control="library_zoom" align=left start="library_filters_grid" y=2 margin-left=12 height=18 }
 		 place [$OSX] { control="library_zoom" align=left start="library_filters_grid" y=2 margin-left=12 height=18 }

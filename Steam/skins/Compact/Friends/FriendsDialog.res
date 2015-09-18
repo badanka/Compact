@@ -388,15 +388,13 @@
 		place { control="frame_captiongrip" margin=2 width=max height=38 }
 		place [!$OSX] { control="MenuBar" margin-left=0 height=20 margin-top=2 }
 		
-		place { control="friends_search"  width=112 height=16 }	
+		place	{ control="FriendPanelSelf" x=10 y=25 width=max }
+		place	{ control="FriendsDialogSheet" start="FriendPanelSelf"align=left margin-top=-11 margin-left=-8 margin-right=1 margin-bottom=17 width=max height=max dir=down   }
+
+		place { control="friends_search_icon" margin-left=-3 margin-right=1 start="FriendsDialogSheet" dir=down height=18 y=0 align=bottom margin-bottom=1 }
+		place { control="friends_search" start=friends_search_icon dir=right width=max height=17 margin-right=1 y=0 margin-bottom=1 width=max }
 
 		place	{ control="NoFriendsAddFriendButton" x=10 y=128 height=20 width=96 }
-		place	{ control="FriendPanelSelf,FriendsDialogSheet" y=25 align=left margin-left=2 margin-right=1 margin-bottom=17 width=max height=max dir=down spacing=-11 }
-		place	{ control="FriendPanelSelf" x=10 y=25 }
-
-		place { control="friends_search_icon" margin-left=-3 margin-right=1 start=FriendsDialogSheet dir=down height=18 y=0 align=bottom margin-bottom=1 }
-		place { control="friends_search" start=friends_search_icon dir=right height=17 margin-right=1 y=0 margin-bottom=1 width=max }
-
 		place	{ control="addFriendsButton" width=0 height=0 x=9999 }
  	}
 }

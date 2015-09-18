@@ -1,0 +1,186 @@
+"resource/layout/musicpage_details_playlist.layout"
+{
+	controls
+	{
+		PlaylistTitleLabel { controlname="Label" style="PlaylistTitleStyle" }
+		TracksInfoLabel { controlname="Label" style="TracksInfoLabelStyle" }
+		CoverImage { controlname="ImagePanel" style="CoverStyle" scaling=fit}
+		
+		PlayPlaylistButton { 
+			controlname="Button" 
+			labeltext="#Music_Playlist_Details_Play" 
+			style="ActionButtonStyle"
+			command="PlaylistPlayAction"
+		}
+		
+		AddPlaylistToQueueButton
+		{
+			controlname="Button" 
+			labelText="#Music_Playlist_Details_AddToQueue" 
+			style="AdditionalActionButtonStyle"
+			command="PlaylistAddToQueueAction"
+		}	
+
+		AddRandomTracksToPlaylistButton
+		{
+			controlname="Button" 
+			labelText="#Music_Playlist_Details_AddRandomTrack" 
+			style="AdditionalActionButtonStyle"
+			command="PlaylistAddRandomTracksAction"
+		}	
+		
+	}
+
+	styles
+	{
+		CMusicPage_Details_Playlist
+		{
+			bgcolor=none
+
+		}
+		
+		PlaylistTitleStyle
+		{
+			padding-bottom=8
+			padding-top=8
+			padding-left=10
+			padding-right=10
+			font-size=24
+			textcolor=Text
+			font-family=basefontheader
+			font-weight=400 
+			bgcolor=FrameBG2
+		}
+
+		TracksInfoLabelStyle
+		{
+			padding-bottom=10
+			padding-top=10
+			padding-left=10
+			padding-right=10
+			font-size=15
+			textcolor=labeldisabled
+			font-family=basefont
+			font-weight=400 
+			bgcolor=none
+		}
+		
+		TrackStyle
+		{
+			padding-bottom=10
+			padding-top=0
+			font-size=15
+			textcolor=Text2
+			font-family=basefont
+			font-weight=400 
+			bgcolor=none
+		}
+		
+		TrackStyle:hover
+		{
+			textcolor="text"
+		}
+		
+		CoverStyle
+		{
+
+		}
+		
+		AdditionalActionButtonStyle
+		{
+			font-size=13
+			font-size=13 [$OSX]
+			font-family=basefont
+			textcolor="text"
+			padding-right=0
+			padding-left=-6
+			padding-top=0
+			padding-bottom=0
+			render_bg	{}
+		}
+		
+		AdditionalActionButtonStyle:hover
+		{
+			textcolor="texthover"
+			font-style="underline"
+		}
+		
+		
+		ActionButtonStyle
+		{   
+			inset="13 1 0 0"
+
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="Text"
+			bgcolor=none
+
+			render
+			{
+				1="image( x0, y0+4, x1, y1, graphics/icon_play )"
+			}
+				render_bg
+				{
+					0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlight, Btndark )"
+			
+					1="fill(	x0  , y0  , x1  , y0+1, BtnBorder1 )"	//t
+					3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder1 )"	//l
+					2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder2 )"	//b
+					4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder2 )"	//r
+				}
+		}
+			
+		ActionButtonStyle:hover
+		{
+			textcolor="TextHover"
+			render
+			{
+				0="image( x0, y0+4, x1, y1, graphics/icon_play )"
+			}	
+			render_bg
+			{
+				0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlighthover, Btndarkhover )"
+			
+				1="fill(	x0  , y0  , x1  , y0+1, BtnBorder3 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder3 )"	//l
+				2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder3b )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder3b )"	//r
+			}			
+		}
+		
+		ActionButtonStyle:active
+		{
+			textcolor="TextPressed"
+			render
+			{
+				0="image( x0, y0+4, x1, y1, graphics/icon_play )"
+			}	
+			render_bg
+			{
+				0="gradient(x0+1, y0+1, x1-1, y1-1, Btndark, Btndarker )"
+                
+				1="fill(	x0  , y0  , x1  , y0+1, BtnBorder4 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1  , BtnBorder4 )"	//l
+				2="fill(	x0+1, y1-1, x1  , y1  , BtnBorder5 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1  , BtnBorder5 )"	//r
+			}			
+		}
+}
+	layout
+	{
+		region { name=bodyregion x=10 y=10 width=max height=max overflow=scroll-vertical }		
+		region { name=headerregion x=10 y=3 width=max height=max overflow=scroll-vertical }
+		region { name=leftcolumn x=20 width=200 overflow=scroll-vertical }
+		region { name=trackcolumn width=max overflow=scroll-vertical }
+		
+		place { control="CoverImage" align=top width=200 height=200 }
+		
+		place { region=headerregion control=PlaylistTitleLabel,TracksInfoLabel,leftcolumn dir=down }
+		place { region=leftcolumn  dir=down start=TracksInfoLabel spacing=10
+			control=CoverImage,PlayPlaylistButton }
+		place { region=leftcolumn	dir=down start=PlayPlaylistButton 
+			control=AddPlaylistToQueueButton,AddRandomTracksToPlaylistButton y=6 }
+		place { region=trackcolumn control=*MusicPageDetailsPlaylistTrack dir=down start=TracksInfoLabel x=230 width=max }
+	}
+}
