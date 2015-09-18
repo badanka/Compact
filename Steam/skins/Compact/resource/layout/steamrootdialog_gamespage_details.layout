@@ -46,6 +46,7 @@
 		newsdetails { controlname="CGamesPage_Details_News" zpos="1"}
 		nonsteamdetails { controlname="CGamesPage_Details_NonSteam" zpos="1"}
 		screenshotsdetails { controlname="CGamesPage_Details_Screenshots" zpos="1"}
+		turnnotifications { controlname="CGamesPage_Details_TurnNotifications" zpos="1" visible="0" }
 
 		// Empty list contents
 		emptylisttext { controlname="RichText" style="emptylisttext" }
@@ -351,7 +352,7 @@
 		// Body contents
 		place 	
 		{ 
-			control=clouddetails,friendsdetails,achievementsdetails,communityfilesdetails,newsdetails,nonsteamdetails,screenshotsdetails
+			control=clouddetails,turnnotifications,friendsdetails,achievementsdetails,communityfilesdetails,newsdetails,nonsteamdetails,screenshotsdetails
 			region=detailsbody 
 			dir=down 
 			width=max 

@@ -177,8 +177,8 @@
 		// Hold/Resume
 		//place { control="VoiceBar" y=20 height=18 width=max margin-left=8 margin-right=25 }
 				
-		place { control="GameInviteBar,TradeInviteBar,ChatInfoBar,VoiceBar" height=16 }
-		place { control="GameInviteBar,TradeInviteBar,ChatInfoBar,VoiceBar,ChatHistory" y=42 width=max height=max dir=down margin-left=2 margin-right=2 margin-bottom=35 spacing=4 }
+		place { control="GameInviteBar,TradeInviteBar,ChatInfoBar,VoiceBar,BIBar,BABar" height=16 }
+		place { control="GameInviteBar,TradeInviteBar,ChatInfoBar,VoiceBar,BIBar,BABar,ChatHistory" y=42 width=max height=max dir=down margin-left=2 margin-right=2 margin-bottom=35 spacing=4 }
 
 		region { name="chathistorybottom" y=42 width=max height=max align=bottom margin-bottom=33 }
 		

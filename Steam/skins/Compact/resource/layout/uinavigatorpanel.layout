@@ -51,14 +51,6 @@
 			group="stop"
 		}
 		
-		"Home"
-		{
-			"ControlName"		"Button"
-			command="Home"
-			style="HomeButton"
-			group="home"
-		}
-		
 		"label_store"
 		{
 			"ControlName"		"Label"
@@ -891,7 +883,7 @@
 		place [!$OSX] { control="back,forward" align=left y=22 height=19 width=20 spacing=0 margin-left=3 }
 		place [$OSX] { control="back,forward" align=left y=22 height=19 width=20 spacing=0 margin-left=3 }
 
-		place { control="refresh,stop,home,URLStatusImage,EVCert,URLBar" align=left x=46 y=21 height=20 width=max spacing=4 margin-left=3 margin-right=40 }
+		place { control="refresh,stop,URLStatusImage,EVCert,URLBar" align=left x=46 y=21 height=20 width=max spacing=4 margin-left=3 margin-right=40 }
 
  		place { control="library_zoom" width=82 height=16 y=25  }
 

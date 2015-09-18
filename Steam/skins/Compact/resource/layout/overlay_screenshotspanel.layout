@@ -2,11 +2,6 @@
 {
 	controls
 	{
-		ScreenshotsDetailPanel 
-		{ 
-			controlname="COverlay_Screenshots_Panel" 
-			style=detailsbox
-		}
 		TitleText { controlname="label" labeltext="#Overlay_Screenshots_Panel_Title" style=detailsboxtitle }
 		InstructionText { controlname="label" labeltext="#Overlay_Screenshots_Press_Hotkey"  style=highlight }
 
@@ -15,10 +10,7 @@
 
 	}
 	
-	colors
-	{
-
-	}	
+	colors {}	
 	
 	styles
 	{

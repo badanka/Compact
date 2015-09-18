@@ -49,6 +49,7 @@
 
 			NotificationHeader { ControlName="Label" labelText="#Music_Settings_Notification_Header" style="HeaderText" }
 			NotificationPlaylistNowPlayingCheckbox { ControlName="CheckButton" labelText="#Music_Settings_NotificationPlaylistNowPlaying" }
+			EnableMediaKeysCheckbox { ControlName="CheckButton" labelText="#Music_Settings_EnableMediaKeys" }
 			
 			LoggingHeader { ControlName="Label" labelText="#Music_Settings_Logging_Header" style="HeaderText" }
 			LoggingCrawlingCheckbox { ControlName="CheckButton" labelText="#Music_Settings_LoggingCrawling" }
@@ -94,6 +95,7 @@
 		
 		place { control=VolumeHeader region=content y=244 }
 		place { control=VolumeSlider region=content y=264 height=18 width=165 }
+		place { control=EnableMediaKeysCheckbox region=content y=264 x=215 }
 		place { control=VolumeDivider region=content y=291 width=max }
 		
 		place { control=PauseMusicHeader region=content y=299 }

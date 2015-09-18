@@ -19,7 +19,9 @@ gameoverlay.styles
 		
 		detailsboxtitle
 		{
-			font-size=30
+			font-family=basefonthead
+			font-size=15
+			textcolor="text"
 		}
 	}
 }

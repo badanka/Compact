@@ -42,13 +42,13 @@
 	
 	layout
 	{
-		region { name=title margin-top=0 margin-bottom=0 margin-left=0 margin-right=0 width=max height=0 }
-		region { name=actions y=165  margin-top=0 margin-bottom=0 margin-left=0 margin-right=0 width=max height=24 }
+		region { name=title width=max }
+		region { name=actions y=66  margin-top=0 margin-bottom=0 margin-left=0 margin-right=0 width=max height=24 }
 		place { control="TitleText" region=title width=0 }
 		place { control="NumGuidesText" region=title y=40 width=0 }
 
-		place { region=box control=*guideitem y=96 x=0 width=max height=20 margin-left=2 margin-right=2 dir=down spacing=2 }
+		place { region=box control=*guideitem y=0 x=0 width=max height=20 margin-left=2 margin-right=3 dir=down spacing=2 }
 
-		place { control="ViewGuides" region="actions" height=18 align=bottom margin-bottom=1 }
+		place { control="ViewGuides" region="actions" height=20 align=bottom }
 	}
 }

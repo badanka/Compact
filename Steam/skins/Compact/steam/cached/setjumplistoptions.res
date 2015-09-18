@@ -156,12 +156,30 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}
+	"ShowMyGames"
+	{
+		"ControlName"		"CheckButton"
+		"fieldName"		"ShowMyGames"
+		"xpos"		"30"
+		"ypos"		"210"
+		"wide"		"475"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"7"
+		"paintbackground"		"1"
+		"labelText"		"#app_task_games"
+		"textAlignment"		"west"
+		"wrap"		"0"
+	}
 	"ShowCommunity"
 	{
 		"ControlName"		"CheckButton"
 		"fieldName"		"ShowCommunity"
 		"xpos"		"30"
-		"ypos"		"220"
+		"ypos"		"235"
 		"wide"		"475"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -192,24 +210,7 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}
-	"ShowMyGames"
-	{
-		"ControlName"		"CheckButton"
-		"fieldName"		"ShowMyGames"
-		"xpos"		"30"
-		"ypos"		"245"
-		"wide"		"475"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"7"
-		"paintbackground"		"1"
-		"labelText"		"#app_task_games"
-		"textAlignment"		"west"
-		"wrap"		"0"
-	}
+	
 	"ShowServers"
 	{
 		"ControlName"		"CheckButton"
@@ -228,60 +229,7 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}
-	"ShowNews"
-	{
-		"ControlName"		"CheckButton"
-		"fieldName"		"ShowNews"
-		"xpos"		"30"
-		"ypos"		"295"
-		"wide"		"475"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"9"
-		"paintbackground"		"1"
-		"labelText"		"#app_task_news"
-		"textAlignment"		"west"
-		"wrap"		"0"
-	}
-	"ShowSettings"
-	{
-		"ControlName"		"CheckButton"
-		"fieldName"		"ShowSettings"
-		"xpos"		"30"
-		"ypos"		"320"
-		"wide"		"475"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"10"
-		"paintbackground"		"1"
-		"labelText"		"#app_settings"
-		"textAlignment"		"west"
-		"wrap"		"0"
-	}
-	"ShowBigPicture"
-	{
-		"ControlName"		"CheckButton"
-		"fieldName"		"ShowBigPicture"
-		"xpos"		"30"
-		"ypos"		"345"
-		"wide"		"475"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"12"
-		"paintbackground"		"1"
-		"labelText"		"#app_task_BigPicture"
-		"textAlignment"		"west"
-		"wrap"		"0"
-	}		
+	
 	"ShowFriends"
 	{
 		"ControlName"		"CheckButton"
@@ -300,6 +248,80 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}
+	"ShowMusicPlayer"
+	{
+		"ControlName"		"CheckButton"
+		"fieldName"		"ShowMusicPlayer"
+		"xpos"		"30"
+		"ypos"		"345"
+		"wide"		"475"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"12"
+		"paintbackground"		"1"
+		"labelText"		"#app_task_MusicPlayer"
+		"textAlignment"		"west"
+		"wrap"		"0"
+	}		
+	"ShowScreenshots"
+	{
+		"ControlName"		"CheckButton"
+		"fieldName"		"ShowScreenshots"
+		"xpos"		"30"
+		"ypos"		"420"
+		"wide"		"475"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"12"
+		"paintbackground"		"1"
+		"labelText"		"#app_task_screenshots"
+		"textAlignment"		"west"
+		"wrap"		"0"
+	}
+	
+	"ShowSettings"
+	{
+		"ControlName"		"CheckButton"
+		"fieldName"		"ShowSettings"
+		"xpos"		"30"
+		"ypos"		"320"
+		"wide"		"475"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"10"
+		"paintbackground"		"1"
+		"labelText"		"#app_settings"
+		"textAlignment"		"west"
+		"wrap"		"0"
+	}
+	
+	"ShowBigPicture"
+	{
+		"ControlName"		"CheckButton"
+		"fieldName"		"ShowBigPicture"
+		"xpos"		"30"
+		"ypos"		"345"
+		"wide"		"475"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"12"
+		"paintbackground"		"1"
+		"labelText"		"#app_task_BigPicture"
+		"textAlignment"		"west"
+		"wrap"		"0"
+	}		
 	"ShowExit"
 	{
 		"ControlName"		"CheckButton"
@@ -318,24 +340,7 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}	
-	"ShowScreenshots"
-	{
-		"ControlName"		"CheckButton"
-		"fieldName"		"ShowScreenshots"
-		"xpos"		"30"
-		"ypos"		"420"
-		"wide"		"475"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"12"
-		"paintbackground"		"1"
-		"labelText"		"#app_task_screenshots"
-		"textAlignment"		"west"
-		"wrap"		"0"
-	}		
+			
 	"Divider2"
 	{
 		"ControlName"		"Divider"
@@ -392,11 +397,12 @@
         "Default"       "0"
     }
 
+
 	layout 
 	{
 		place { controls="Label1,ShowOnlineStatus,ShowAwayStatus,ShowBusyStatus,ShowAppearOfflineStatus" dir=down height=20 x=20 y=28 spacing=1 }
 		place { control=Divider1 y=137 align=top-center }
-		place { controls="Label2, ShowStore,ShowCommunity,ShowFriendActivity,ShowMyGames,ShowServers,ShowNews,ShowSettings,ShowScreenshots,ShowBigPicture,ShowFriends,ShowExit" dir=down height=20 x=20 y=144 spacing=1 }
+		place { controls="Label2,ShowStore,ShowMyGames,ShowCommunity,ShowFriendActivity,ShowFriends,ShowMusicPlayer,ShowScreenshots,ShowServers,ShowSettings,ShowBigPicture,ShowExit" dir=down height=20 x=20 y=145 }
 		
 		region { name="bottom" align=bottom height=26 }
 		place { control="OKButton,CancelButton" region=bottom align=right width=76 height=20 margin-top=2 margin-right=4 spacing=5 }

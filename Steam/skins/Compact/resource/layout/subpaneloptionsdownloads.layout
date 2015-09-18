@@ -9,8 +9,16 @@
 		RegionInfoLabel {	controlname=label labeltext=#Steam_RegionInfo wrap=1		}
 		ManageInstalledappsLabel { controlname=label labeltext=#SteamUI_ContentMgr_ManageInstalledAppsInfo }
 				
-		ThrottleRates {	controlname=combobox	}	
-		DownloadRegionCombo {	controlname=combobox	}
+		ThrottleRates
+		{
+			controlname=combobox
+			editable="0"
+		}	
+		DownloadRegionCombo
+		{
+			controlname=combobox
+			editable="0"
+		}
 		
 		ManageInstalledApps
 		{
