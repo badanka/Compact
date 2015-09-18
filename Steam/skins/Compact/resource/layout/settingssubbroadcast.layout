@@ -1,0 +1,50 @@
+"resource/layout/settingssubbroadcast.layout"
+{
+	controls
+	{
+		"BroadcastDisabledLabel" { ControlName="Label" fieldName="BroadcastDisabledLabel" labelText="#Steam_Settings_Broadcast_Disabled_System" }
+		"BroadcastDisabledSupportURL" { ControlName="URLLabel" fieldName="BroadcastDisabledSupportURL" }
+		
+		"BroadcastStatusHeader" { ControlName="Label" fieldName="BroadcastStatusHeader" labelText="#Steam_Settings_Broadcast_StatusHeader" group="HideWhenDisabled" }
+		"BroadcastStatus" { ControlName="URLLabel" labeltext="#Steam_Settings_Broadcast_StatusNotBroadcast" style="rightcolumnlink" fieldName="BroadcastStatus" group="HideWhenDisabled" }
+
+		"PermissionsHeader" { ControlName="Label" fieldName="PermissionsHeader" labelText="#Steam_Settings_Broadcast_PermissionsHeader" group="HideWhenDisabled" }
+		"Permissions" { ControlName="ComboBox" fieldName="Permissions" group="HideWhenDisabled" editable="0" }			
+		
+		"DimensionsHeader" { ControlName="Label" fieldName="DimensionsHeader" labelText="#Steam_Settings_Broadcast_DimensionsHeader" group="HideWhenDisabled" }
+		"Dimensions" { ControlName="ComboBox" fieldName="Dimensions" group="HideWhenDisabled" editable="0" }
+		
+		"BitrateLimitHeader" { ControlName="Label" fieldName="BitrateLimitHeader" labelText="#Steam_Settings_Broadcast_BitrateHeader" group="HideWhenDisabled" }
+		"BitrateLimit" { ControlName="ComboBox" fieldName="BitrateLimit" group="HideWhenDisabled" editable="0" }
+		
+		"ShowChatHeader" { ControlName="Label" fieldName="ShowChatHeader" labelText="#Steam_Settings_Broadcast_ShowChat" group="HideWhenDisabled" }
+		"ShowChatCombo" { ControlName="ComboBox" fieldName="ShowChatCombo" group="HideWhenDisabled" editable="0" }
+		
+		"IncludeDesktop" { ControlName="CheckButton" fieldName="IncludeDesktop" group="HideWhenDisabled" }
+		"RecordMic" { ControlName="CheckButton" fieldName="RecordMic" group="HideWhenDisabled" }
+		"ShowDebugInfo" { ControlName="CheckButton" fieldName="ShowDebugInfo" group="HideWhenDisabled" }
+	}
+	
+	layout
+	{
+		place { control="BroadcastDisabledLabel" margin-left=10 margin-right=20 margin-top=10 width=max }
+		place { start="BroadcastDisabledLabel" control="BroadcastDisabledSupportURL" dir=down margin-top=10 margin-right=20 width=max }
+		
+		place { control="BroadcastStatusHeader" margin-left=10 margin-right=20 margin-top=10 }
+		place { start="BroadcastStatusHeader" control="BroadcastStatus" dir=right margin-left=4 }
+
+		place { start="BroadcastStatusHeader" control="PermissionsHeader" dir=down margin-right=20 margin-top=10 width=max }
+		place { start="PermissionsHeader" control="Permissions" dir=down margin-top=4 width=250 height=20 }			
+		
+		place { start="Permissions" control="DimensionsHeader" dir=down margin-top=10 width=max }
+		place { start="DimensionsHeader" control="Dimensions" dir=down margin-top=4 width=250 height=20 }
+		
+		place { start="Dimensions" control="BitrateLimitHeader" dir=down margin-top=10 width=max }
+		place { start="BitrateLimitHeader" control="BitrateLimit" dir=down margin-top=4 width=250 height=20 }
+		
+		place { start="BitrateLimit" control="ShowChatHeader" dir=down margin-top=10 width=max }
+		place { start="ShowChatHeader" control="ShowChatCombo" dir=down margin-top=4 width=250 height=20 }
+				
+		place { start="ShowChatCombo" control="IncludeDesktop,RecordMic,ShowDebugInfo" dir=down margin-top=10 width=400 height=18 }	
+	}
+}
