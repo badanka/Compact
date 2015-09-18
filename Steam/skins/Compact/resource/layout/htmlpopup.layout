@@ -1,0 +1,138 @@
+"resource/layout/htmlpopup.layout"
+{
+	controls
+	{
+		HTMLPopup { controlname="HTMLPopup" frametitle="" }
+		htmlpopupchild	{ controlname="HTML" zpos=1 }
+		URLBar		{ controlname="TextEntry" style="TextEntryURL" enabled=false }
+		EVCert	{ controlname="Label" style="LabelEVCert" visible=false }
+		StatusText { controlname="Label" }
+		
+		URLStatusImage	{ controlname="ImagePanel" style="URLStatusImage"  }
+		StopButton	{ controlname="Button"  command="WebStop" labeltext="" style="StopButton" }
+		ReloadButton	{ controlname="Button" command="WebReload" labeltext="" style="ReloadButton" }
+		ForwardButton	{ controlname="Button" command="WebForward" labeltext="" style="ForwardButtonSm" }
+		BackButton	{ controlname="Button" command="WebBack" style="BackButtonSm" }
+		PageLoadThrobber { controlname="ImagePanel" image="graphics/rampDown_4" }
+	}
+	
+	styles
+	{
+		BackButtonSm
+		{
+			bgcolor=none
+			inset="0 0 0 0"
+			render_bg={}
+			image="graphics/icon_arrow_back"
+		}
+		BackButtonSm:hover
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/icon_arrow_back_over"
+		}
+		BackButtonSm:active
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/icon_arrow_back_down"
+		}
+		BackButtonSm:disabled
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/icon_arrow_back_disabled"
+		}
+		ForwardButtonSm
+		{
+			bgcolor=none
+			inset="-1 0 0 0"
+			render_bg={}
+			image="graphics/icon_arrow_forward"
+		}
+		
+		ForwardButtonSm:hover
+		{
+			inset="-1 0 0 0"
+			bgcolor=none
+			render_bg={}
+			image="graphics/icon_arrow_forward_over"
+		}
+		ForwardButtonSm:active
+		{
+			inset="-1 0 0 0"
+			bgcolor=none
+			render_bg={}
+			image="graphics/icon_forward_arrow_down"
+		}
+		ForwardButtonSm:disabled
+		{
+			inset="-1 0 0 0"
+			bgcolor=none
+			render_bg={}
+			image="graphics/icon_arrow_forward_disabled"
+		}
+		
+		TextEntryURL
+		{
+			font-family=basefont
+			font-size=13
+			textcolor="text2"
+			font-weight=400
+			bgcolor="none"
+			selectedtextcolor="TextEntrySelected"
+			selectedbgcolor="TextSelectedBG"
+			shadowtextcolor="Text"	// this is the cursor color
+			inset-left=2
+			inset-top=-1		
+		}
+		
+		TextEntryURL:Hover
+		{
+			textcolor="text"
+		}
+			
+		LabelEVCert
+		{
+			font-family=basefont
+			font-size=13
+			textcolor="darkclientbg"
+			font-weight=400
+			bgcolor="html.secureurl"
+			inset-left=4
+			inset-right=4
+			inset-top=-1		
+		}
+		
+		URLStatusImage
+		{
+			bgcolor=none
+			inset="0 0 0 0"
+			render_bg={}
+			image="graphics/html_lock_disabled"
+		}
+
+		URLBarSecure
+		{
+			textcolor="html.secureurl"
+		}
+
+		URLBarBrokenSecure
+		{
+			textcolor="html.insecureurl"
+		}
+	}
+	
+	layout
+	{
+		place { control="htmlpopupchild"  	width=max height=max margin-top=46 margin-left=0 margin-right=0 margin-bottom=0 }
+		place { control="StatusText" align=bottom height=24 margin-left=9 margin-bottom=1 }
+		place { control="PageLoadThrobber" align=right margin-top=24 margin-right=10 width=20 height=20 }	
+	
+		place { control="BackButton,ForwardButton,ReloadButton,StopButton,URLStatusImage,EVCert,URLBar" x=0 y=24 height=22 width=max spacing=0 margin-right=10 }
+
+
+	}
+	
+}
+

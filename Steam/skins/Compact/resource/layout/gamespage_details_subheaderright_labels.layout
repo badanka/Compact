@@ -1,0 +1,50 @@
+"resource/layout/gamespage_details_subheaderright_labels.layout"
+{
+	controls
+	{
+		contributioncount { controlname="Label" style="headertext" labeltext="" zpos="2" }
+		contributionlabel { controlname="Label" style="headertext2" labeltext="#steam_details_contributioncount" zpos="2" }
+	}
+	
+	colors
+	{
+		contributiontext="166 188 206 255"
+	}
+	
+
+	styles
+	{
+		headertext
+		{
+			padding-left=0
+			padding-bottom=1
+			padding-top=0
+			font-size=13
+			textcolor=Text
+			font-style=regular;
+		}
+		
+		headertext2
+		{
+			padding-left=0
+			padding-bottom=1
+			padding-top=0
+			font-size=13
+			textcolor=Text
+			font-style=regular;
+		}
+	}
+
+	layout
+	{
+		region { name="subheaderlabels" y=1 x=0 width=max height=max }
+
+		place { 
+			control=contributioncount,contributionlabel
+			region=subheaderlabels
+			dir=down
+			align=right
+			spacing=-1
+		}
+	}
+}

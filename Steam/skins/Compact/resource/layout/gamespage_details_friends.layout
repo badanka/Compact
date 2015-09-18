@@ -1,0 +1,102 @@
+"resource/layout/gamespage_details_friends.layout"
+{
+	controls
+	{
+		friendsdetails { controlname="CGamesPage_Details_Friends" style="friendsdetails" }
+		
+		headerlabel { controlname="Label" style="gamedetails-headerlabel" labeltext="#Steam_Friends" }
+		listplayingnow	{ controlname="CGamesPage_Details_Friends_List" }
+		listplayever	{ controlname="CGamesPage_Details_Friends_List" }
+
+		viewall { controlname="Button" style="viewallbutton" labeltext="#Steam_ViewAllFriends" command="OpenFriendsDialog" }
+	}
+
+	colors
+	{
+		GameDetailsFriends.ExtraVerticalSpacing=66	
+	}
+
+	styles
+	{
+		friendsdetails
+		{
+			render_bg
+			{     
+				// background fill
+				0="fill( x0+1, y0+1, x1-1, y1-1, FrameBG2 )"
+                
+           		1="image( x0+1, y0+1, x0+262, y0+98, graphics/libdet_corner )"
+
+				// lines around
+				2="gradient_horizontal( x0+1, y0, x1-1, y0+1, ExBorderLight, ExBorderLowLight )"  // top
+				
+				3="gradient( x0, y0  , x0+1, y1, ExBorderLight, ExBorderLowLight )"  // left
+				4="fill( x0+1, y1-1, x1, y1, ExBorderLowLight )"  // bottom
+				5="fill( x1-1, y0  , x1, y1, ExBorderLowLight )"  // right
+			}
+		}
+
+		infolabel
+		{
+			font-size=13
+			textcolor=Label
+		}	
+		
+		friendlabelmore
+		{
+			inset="-3 0 0 0"
+			font-size=18
+			textcolor="Text2"
+			font-family=basefont
+	     	render_bg
+	     	{
+				// background fill
+		        0="gradient( x0+3, y0+3, x1-3, y1-1, Btnlight, Btndark )"
+                
+				// lines around
+		        1="fill( x0+2, y0+2, x1-2, y0+3, Btnborder1 )"  // top
+		        2="fill( x0+3, y1-1, x1-2, y1  , Btnborder2 )"  // bottom
+		        3="fill( x0+2, y0+3, x0+3, y1  , Btnborder1 )"  // left
+		        4="fill( x1-3, y0+3, x1-2, y1-1, Btnborder2 )"  // right
+ 			}
+   		}   
+    		   
+		friendlabelmore:hover
+		{
+			inset="-3 0 0 0"
+			font-size=18
+			textcolor="TextHover"
+			font-family=basefont
+		    	 render_bg
+		    	 {
+			        // background fill
+			        0="gradient( x0+3, y0+3, x1-3, y1-1, Btnlighthover, Btndarkhover )"
+		                
+			        // lines around
+			        1="fill( x0+2, y0+2, x1-2, y0+3, Btnborder3 )"  // top
+			        2="fill( x0+3, y1-1, x1-2, y1  , Btnborder1 )"  // bottom
+			        3="fill( x0+2, y0+3, x0+3, y1  , Btnborder3 )"  // left
+			        4="fill( x1-3, y0+3, x1-2, y1-1, Btnborder1 )"  // right
+    			}
+    	}     
+	}
+
+	layout
+	{
+		region { name=body margin-left=10 margin-top=0 margin-bottom=10 margin-right=4 width=max height=max }
+		place { region=body control=headerlabel width=max y=7 }
+		
+		place 
+		{ 
+			region=body
+			y=25
+			width=max
+			height=58
+			control=listplayingnow,listplayever
+			dir=down
+			spacing=6
+			margin=0
+		}
+		place {	region=body control=viewall align=bottom height=20 }
+	}
+}

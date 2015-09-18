@@ -1,0 +1,30 @@
+"resource/layout/screenshotdeletedialog.layout"
+{
+	controls
+	{
+		ScreenshotDeleteDialog { controlname="Frame" title="#steam_screenshotdelete_title" style="ScreenshotDeleteDialog" }
+		Warning { controlname="ImagePanel" image="resource/icon_warning_yellow" }
+		WarningText { controlname="Label" labeltext="#steam_are_you_sure_delete_screenshot" wrap=1 }
+		DeleteFromCloudBox { controlname="CheckButton" labelText="#steam_also_delete_from_cloud" }
+		Delete { controlname="Button" command="DeleteScreenshot" labeltext="#steam_delete" }
+		Cancel { controlname="Button" command="Cancel" labeltext="#vgui_cancel" }
+	}
+	
+	styles
+	{
+		ScreenshotDeleteDialog
+		{
+			minimum-width=325	
+			minimum-height=110
+		}
+
+	}
+	
+	layout
+	{
+		place { control="Warning" x=10 y=30}
+		place { control="WarningText,DeleteFromCloudBox" x=75 y=32 width=max margin-right=15 dir=down }
+		place { control="Delete,Cancel" y=85 align=right margin-right=4 height=20 spacing=5 }
+	}
+
+}

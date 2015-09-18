@@ -1,0 +1,363 @@
+"resource/layout/ugcdownloadpanel.layout"
+{
+	controls
+	{
+		// this just sets the height
+		appsubscriptionsdownloadpanel {	tall="110" }
+		ugcdownloadpanel {	style="panelStyle" }
+
+		// black fill, used on the background
+
+		workshopminibanner { controlname="ImagePanel" zpos="2" image="resource/workshop_minibanner" }
+
+		// top row
+		namelabel	{ controlname="Label"	labelText="#steam_subscribed_files" style="ModuleHeading" }
+		dashlabel	{ controlname="Label"	labelText="" }
+		updatetypelabel	{ controlname="Label"	labelText="#steam_downloads_updating" style=ModuleHeading2 }
+		starttimelabel	{ controlname="Label"	labelText="#steam_downloads_initiated" style=Label2}
+		starttimefield	{ controlname="Label"	labelText="%time_started%" style=Label}
+		pauseresumebutton	{ controlname="Button" style="SmPauseButton" tooltiptext="#steam_downloads_pause" }
+
+		// second row
+		downloadtotallabel	{ controlname="Label"	labelText="#steam_downloads_gamesize_update" style="label2" }
+		downloadtotalfield	{ controlname="Label"	labelText="%download_totals%" style="label" }
+		downloadfileslabel { controlname="Label" labelText="#steam_subscribed_files_complete" style="Label2" }
+		downloadfilesfield { controlname="Label" labeltext="%download_files_totals%" style="label" }
+
+		timeremaininglabel	{ controlname="Label"	labelText="#steam_downloads_timeremaining" style="label2" group="HideOnCompletion" }
+		timeremainingfield	{ controlname="Label"	labelText="%time_remaining%"  style="label" group="HideOnCompletion" }
+
+		downloadprogressbar	{ controlname="ProgressBar" style="SlimProgressBar" barinset=0 continuous=1 group="HideOnCompletion" }
+
+
+		// right pane
+		graphdownloadrate	{ controlname="Label"	labelText="#steam_downloads_currentrate" zpos="1" style="label2" group="HideOnCompletion" }
+		
+		//
+		viewmodsbutton { controlname="Button" labelText="#steam_downloads_view_on_workshop" style=ViewModsButton command=ViewMods }
+	}
+
+	
+	colors
+	{
+	}
+
+	styles
+	{
+		panelStyle
+		{
+			bgcolor=FrameBG1
+			render_bg
+			{
+				0="fill( x0+17, y0+14, x1-9, y1-17 , MainFrameBG2 )"
+			}			
+		}
+		
+		panelStyleHighlight
+		{
+			bgcolor=FrameBG1
+			render_bg
+			{
+				0="fill( x0+17, y0+14, x1-9, y1-17 , focus5 )"
+				
+				1="fill( x0+14, y0+11, x1-6 , y0+12 , focus4 )"	//t
+				2="fill( x0+14, y1-15, x1-6 , y1-14 , focus4 )"	//b
+				3="fill( x0+14, y0+12, x0+15, y1-15 , focus4 )"	//l
+				4="fill( x1-7 , y0+12, x1-6 , y1-15 , focus4 )"	//r
+			}			
+		}
+
+		links
+		{
+			font-size=13
+			font-style=normal
+			textcolor="text"
+			font-family=basefont
+			padding-left=10
+			padding-top=0
+			padding-bottom=0
+		}
+
+		links:hover
+		{
+			font-size=13
+			font-style=normal
+			textcolor="white"
+			font-family=basefont
+			padding-left=10
+			padding-top=0
+			padding-bottom=0
+		}
+
+		rightcolumnlink:hover
+		{
+			textcolor=TextHover
+		}
+
+		label2
+		{
+			bgcolor			none
+			font-size		"13"
+			textcolor		"label2"
+			padding-top		"0"
+		}
+
+		ModuleHeading
+		{
+			font-family	basefonthead
+			bgcolor="none"
+			font-size	"15"
+			textcolor	"text"
+			padding-top	"0"
+			font-weight	"400"
+		}
+
+		ModuleHeading2
+		{
+			font-family	basefonthead
+			bgcolor="none"
+			font-size	"15"
+			textcolor	"label"
+			padding-top	"0"
+			font-weight	"400"
+		}
+
+		panelBgColorActive
+		{
+			bgcolor="FrameBG1"
+		}
+
+
+		graphdownloadrate
+		{
+			font-family		"basefont"
+			font-size="13"
+		}
+
+		SmPauseButton
+		{
+
+			inset="30 0 0 0"
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="Text"
+			bgcolor=none
+
+			render
+			{
+				1="image( x0+2, y0+3, x1, y1, graphics/icon_pause )"
+			}
+		}
+
+		SmPauseButton:Hover
+		{
+			inset="30 0 0 0"
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="TextHover"
+			bgcolor=none
+			render
+			{
+				1="image( x0+2, y0+3, x1, y1, graphics/icon_pause_hover )"
+			}
+		}
+
+		SmResumeButton
+		{
+
+			inset="30 0 0 0"
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="Text"
+			bgcolor=none
+			render
+			{
+				1="image( x0+1, y0+3, x1, y1, graphics/icon_install  )"
+			}
+		}
+
+		SmResumeButton:Hover
+		{
+			inset="30 0 0 0"
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="TextHover"
+			bgcolor=none
+			render
+			{
+				1="image( x0+1, y0+3, x1, y1, graphics/icon_install_hover )"
+			}
+		}
+
+		SmRemoveButton
+		{
+			inset="30 0 0 0"
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="Text"
+			bgcolor=none
+			render
+			{
+				1="image( x0+2, y0+3, x1, y1, graphics/icon_close )"
+			}
+		}
+
+		SmRemoveButton:Hover
+		{
+			inset="30 0 0 0"
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="TextHover"
+			bgcolor=none
+			render
+			{
+				1="image( x0+2, y0+3, x1, y1, graphics/icon_close_hover )"
+			}
+		}
+
+		SlimProgressBar
+		{
+			render_bg
+			{
+				0="fill( x0+1, y0+1, x1-1, y1-1, dark )"			//body
+				
+				1="fill( x0  , y0-1, x1  , y0  , InBorderShade )"	//outer top
+				2="fill( x0  , y1  , x1  , y1+1, InBorderShade )"	//outer bottom
+				3="fill( x0-1, y0-1, x0  , y1+1, InBorderShade )"	//outer left
+				4="fill( x1  , y0-1, x1+1, y1+1, InBorderShade )"	//outer right
+				
+				5="fill( x0  , y0  , x1  , y0+1, FrameBG1 )"		//top
+				6="fill( x0  , y1-1, x1  , y1  , FrameBG1 )"		//bottom
+				7="fill( x0  , y0  , x0+1, y1  , FrameBG1 )"		//left
+				8="fill( x1-1, y0  , x1  , y1  , FrameBG1 )"		//right
+			}
+			render
+			{
+			}
+		}
+
+		
+		ViewModsButton
+		{   
+
+			inset="23 0 0 0"
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="Text"
+			bgcolor=none
+
+			render
+			{
+				1="image( x0+6, y0+2, x1, y1, graphics/icon_workshop )"
+			}
+			render_bg
+			{
+				// background fill
+				0="gradient( x0+1, y0+1, x1-1, y1-1, Btnlight, Btndark )"
+                
+				// lines around
+				1="fill( x0    , y0    , x1, y0 + 1, Btnborder1 )"  // top
+				3="fill( x0    , y0 + 1, x0 + 1, y1, Btnborder1 )"  // left
+				2="fill( x0 + 1, y1 - 1, x1, y1    , Btnborder2 )"  // bottom
+				4="fill( x1 - 1, y0 + 1, x1    , y1, Btnborder2 )"  // right
+			}	
+		}
+	
+		ViewModsButton:Hover
+		{   
+			inset="23 0 0 0"
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="TextHover"
+			bgcolor=none   
+
+			render
+			{
+				1="image( x0+6, y0+2, x1, y1, graphics/icon_workshop_hover )"
+			}
+			render_bg
+			{
+				// background fill
+				0="gradient( x0+1, y0+1, x1-1, y1-1, Btnlighthover, Btndarkhover )"
+                
+				// lines around
+				1="fill( x0  , y0  , x1  , y0+1, Btnborder3 )"  // top
+				3="fill( x0  , y0+1, x0+1, y1  , Btnborder3 )"  // left
+				2="fill( x0+1, y1-1, x1  , y1  , Btnborder1 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1  , Btnborder1 )"  // right
+			}	
+		}
+		
+		ViewModsButton:Disabled
+		{   
+			inset="23 0 0 0"
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="LabelDisabled"
+			bgcolor=none   
+
+			render
+			{
+				1="image( x0+6, y0+2, x1, y1, graphics/icon_workshop )"
+			}
+			render_bg
+			{
+				// background fill
+				0="fill( x0+1, y0+1, x1-1, y1-1, Btndarker )"
+                
+				// lines around
+				1="fill( x0  , y0  , x1  , y0+1, Btnborder4 )"  // top
+				3="fill( x0  , y0+1, x0+1, y1  , Btnborder4 )"  // left
+				2="fill( x0+1, y1-1, x1  , y1  , Btnborder4 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1  , Btnborder4 )"  // right
+			}
+		}
+	}
+
+
+	layout
+	{
+		region	{ name="top" width="1262" height=40 }
+		region	{ name="mid" width="1262" margin-top=2 height=140 }
+		region { name="column3a" x=380 width=max }
+		region { name="column3b" x=480 width=max }
+		region { name="column4" align=right width=max overflow=allow-horizontal }
+		region	{ name="bottom" width="1262" y=45 height=63 width=400 }
+
+
+		// top section
+		place { control="updatetypelabel" region="top" margin-top=25 align=right	region=top margin-right=20 spacing=15 }
+		place { control="pauseresumebutton" region="bottom" x=492 region=bottom spacing=10 margin-right=20 margin-top=0 width=20 height=20 align=right}
+
+		// fill in the middle section
+		place { control="namelabel" region="mid" x=221 margin-top=23 }
+		place { control="gameimage" region="mid" margin-left=27 margin-top=22 width=184 height=69 }
+		place { control="viewmodsbutton" region="mid" x=221 align=top margin-top=46 spacing=6 height=20 }
+		
+		place { control="downloadtotallabel"	region="column3a" x=0 align=top margin-top=41 }
+		place { control="downloadtotalfield"	region="column3b" x=5 align=top margin-top=41 }
+		place { control="downloadprogressbar"	region="column3b" x=1 margin-top=42 height=12 width=200 }
+		place { control="timecompletedlabel"	region="column3a" x=0 align=top margin-top=56 }
+		place { control="timecompletedfield"	region="column3b" x=5 align=top margin-top=56 }
+		place { control="starttimelabel"		region="column3a" x=0 align=top margin-top=56 }
+		place { control="starttimefield"		region="column3b" x=5 align=top margin-top=56 }
+		place { control="downloadfileslabel" 	region="column3a" x=0 align=top margin-top=71 }
+		place { control="downloadfilesfield" 	region="column3b" x=5 align=top margin-top=71 }
+		place { control="timeremaininglabel" 	region="column3a" x=0 align=top margin-top=86 }
+		place { control="timeremainingfield" 	region="column3b" x=5 align=top margin-top=86 }
+		
+		place { control="graphdownloadrate" region="column4" margin-top=71 align=right region=top margin-right=20 }
+		
+		
+		place { control="workshopminibanner" region="mid" margin-left=20 margin-top=82 width=0  }
+	}
+}

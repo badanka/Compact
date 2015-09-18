@@ -1,0 +1,65 @@
+"resource/layout/gamespage_details_achievements.layout"
+{
+	controls
+	{
+		achievementsdetails { controlname="CGamesPage_Details_Achievements" style="achievementsdetails" }
+
+		headerlabel { controlname="Label" style="gamedetails-headerlabel" labeltext="#Steam_Achievements" }
+		
+		mostrecent_area { controlname="CAchievementsMostRecentPanel" }
+		everythinglabel { controlname="Label" style="everythinglabel" labeltext="#Steam_EverythingAchieved" }
+		locked_area { controlname="CAchievementsLockedPanel" }	
+
+		viewall	{ controlname="Button" labeltext="#Steam_ViewAllAchievements" command="ViewAllAchievements" }
+	}
+
+	colors
+	{
+		// Extra spacing beyond the flowing elements to account for header and button at the bottom
+		GameDetailsAchievements.ExtraVerticalSpacing "42"
+
+		// This is additional extra vertical spacing when the "You've unlocked everything" label is set
+		// You should test with a game with everything unlocked if you change vertical spacing as this may
+		// need adjustment.
+		GameDetailsAchievements.EverythingExtraSpacing "9"
+		RichText.InsetX "0"
+		RichText.InsetY "5" 
+	}
+
+	styles
+	{
+		achievementsdetails 
+		{ 
+			render_bg
+			{     
+				// background fill
+				0="fill( x0+1, y0+1, x1-1, y1-1, FrameBG2 )"
+                
+           		1="image( x0+1, y0+1, x0+262, y0+98, graphics/libdet_corner )"
+
+				// lines around
+				2="gradient_horizontal( x0+1, y0, x1-1, y0+1, ExBorderLight, ExBorderLowLight )"  // top
+				3="gradient( x0, y0  , x0+1, y1, ExBorderLight, ExBorderLowLight )"  // left
+				4="fill( x0+1, y1-1, x1, y1, ExBorderLowLight )"  // bottom
+				5="fill( x1-1, y0  , x1, y1, ExBorderLowLight )"  // right
+			}
+		}
+
+		everythinglabel
+		{
+			textcolor="Text"
+			font-size=13
+			padding-top=2
+		}	
+	}
+
+	layout
+	{
+		region { name=body margin-left=10 margin-top=4 margin-bottom=0 margin-right=4 width=max height=max }
+
+		place { region=body control=headerlabel width=max y=3 }
+		place { region=body control=mostrecent_area,everythinglabel,locked_area dir=down y=10 width=max }
+
+		place { region=body control=viewall align=bottom margin-bottom=10 height=20 }
+	}
+}

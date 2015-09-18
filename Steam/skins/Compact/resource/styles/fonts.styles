@@ -1,0 +1,186 @@
+fonts.styles
+{
+	colors
+	{
+		basefont="Tahoma"
+		basefontbold="Arial Bold"
+		basefontalt="Arial"
+		basefonthead="Verdana"
+		basefontheader="Arial"
+		basefontsmall="Small Fonts"
+		basefont="Helvetica" [$OSX]
+		basefontbold="Helvetica Bold" [$OSX]
+	}
+	  
+	styles
+	{
+		//	------------------------------------------
+		//	
+		//		steam.styles
+		//	
+		//	------------------------------------------
+		  
+		    
+		//	---------------------
+		//		buttons
+		//	---------------------
+		
+		Button
+		{     
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="Text2"
+		}
+		Button:hover
+		{   
+	  		textcolor="TextHover"
+		}
+	    Button:focus
+	    {
+			textcolor="Text"
+		}
+	    Button:active
+	    {
+			textcolor="TextPressed"
+		}
+	    Button:selected
+	    {
+			textcolor="Text"
+		}
+	    Button:disabled
+	    {
+			textcolor="LabelDisabled"
+		}
+		"Page Button"
+		{     
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="Text2"
+		}
+	  	"Page Button:hover"
+		{   
+	  		textcolor="TextHover"
+		}
+	    "Page Button:focus"
+	    {
+			textcolor="Text"
+		}
+	    "Page Button:active"
+	    {
+			textcolor="TextPressed"
+		}
+	    "Page Button:selected"
+	    {
+			textcolor="Text"
+		}
+	    "Page Button:disabled"
+	    {
+			textcolor="LabelDisabled"
+		}
+		
+		//	---------------------
+		//		category headers
+		//	---------------------
+	
+		gamedetails-headerlabel
+		{
+			font-size="15"
+			font-family=basefonthead
+			font-weight=400
+			textcolor="text"
+		}
+	
+		gamedetails-headerlabel-red
+		{
+			font-size="15"
+			font-family=basefonthead
+			font-weight=400
+			textcolor="text"
+		}
+	 	
+	 	gamedetails-headerlabel-green
+		{
+			font-size="15"
+			font-family=basefonthead
+			font-weight=400
+			textcolor="text"
+		}
+	
+		gamedetails-headerlabel-blue
+		{
+			font-size="15"
+			font-family=basefonthead
+			font-weight=400
+			textcolor="text"
+		}
+		
+		//	------------------------------------------
+		//	
+		//		gamespage_details_news_item.layout
+		//	
+		//	------------------------------------------
+			
+		
+		title_label
+		{
+			font-family="basefonthead"
+			font-size="15"
+			font-weight=400
+		}
+	
+		date_and_author
+		{
+			font-size=13
+		}
+	 	
+	 	newsitem_body
+		{
+			font-family="basefont"
+			font-size=13
+		}
+			
+		"newsitem_body url"
+		{
+			font-size=13
+		}
+		
+		"newsitem_body url:hover"
+		{
+			font-style="underline"
+		}
+		
+		"newsitem_body bold"
+		{
+			font-weight=700
+		}
+		
+		more_link
+		{
+			font-family="basefont"
+			font-size=13
+			font-weight=400
+		}
+	
+		more_link:hover
+		{	
+			font-style="underline"
+		}
+	
+		//	------------------------------------------
+		//	
+		//		overlaydashboard.layout
+		//	
+		//	------------------------------------------
+	
+		topbar
+		{
+			font-size=36
+			font-family=basefontbold
+			font-style=antialias
+			font-weight=700
+			textcolor=text
+		}
+	}
+}

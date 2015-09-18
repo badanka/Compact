@@ -1,0 +1,87 @@
+"resource/layout/subpaneloptionsingame.layout"
+{
+	controls
+	{
+		TitleLabel { controlname=label labeltext="#Steam_SettingsInGameTitle" style=highlight }
+		EnableOverlayCheck {	ControlName=CheckButton labelText="#Overlay_SettingsEnable" }
+		HotKeySelector {	ControlName=HotKeyEntry	}
+		ScreenshotHotKeySelector { ControlName=HotKeyEntry }
+		DescriptionLabel	{ ControlName=Label labeltext="#Overlay_SettingsDescription" wrap=1  }
+		HotKeySelectorLabel {	ControlName=Label labelText="#Overlay_SettingsHotKeyLabel" }
+		ScreenshotLabel {	ControlName=Label labelText="#Overlay_SettingsScreenshotHotKeyLabel"	}
+		ScreenshotActionLabel 	{	ControlName=Label	labelText="#Overlay_SettingsScreenshotActionLabel" }
+		ScreenshotNotifyCheck { ControlName=CheckButton labelText="#Friends_DisplayNotification" style=checkbox }
+		ScreenshotPlaySoundCheck { ControlName=CheckButton labelText="#Friends_PlayASound" }
+		ScreenshotSaveUncompressedCheck { ControlName=CheckButton labelText="#Overlay_SaveUncompressed" }
+	
+		SetScreenshotFolderButton { ControlName=Button labelText="#Steam_SettingsInGameScreenshotFolder" 	command=SetScreenshotFolder }
+		
+		OverlayHomePageLabel { ControlName=Label labelText="#Overlay_SettingsHomepageLabel" }
+		OverlayHomePage { ControlName=TextEntry }
+	
+		Divider1 { ControlName=Divider	}
+		PingRateLabel {	controlname=label	labeltext=#Steam_ServerBrowserPingRateLabel wrap=1 style=highlight		}
+		PingRateInfo {	controlname=label	labeltext=#Steam_ServerBrowserPingRateInfo wrap=1		}		
+		PingRateCombo
+		{
+			controlname=combobox
+		}		
+	}
+	
+	colors
+	{
+	}	
+	
+	styles
+	{
+		highlight
+		{
+			textcolor=Text
+		}	
+		
+		checkbox
+		{
+			padding-top=0
+			padding-bottom=0
+		}
+	}
+	
+	layout
+	{
+		region { name=box margin-top=-1 margin-bottom=20 margin-left=10 margin-right=10 width=max height=max }
+		region { name=top region=box margin-top=0 }
+		region { name=topleft region=top y=56 width=190 }
+		region { name=topright region=top x=200 y=59 }
+		
+		
+		place { controls=DescriptionLabel width=390 region=top margin-top=4 }
+		place { controls=EnableOverlayCheck region=top start=DescriptionLabel dir=down height=20 margin-top=4 }
+	
+		place { controls=HotKeySelector width=160 }
+		place { controls=HotKeySelectorLabel,HotKeySelector dir=down spacing=0 region=topleft height=20 }
+		
+		place { controls=OverlayHomePage width=160 }
+		place { controls=OverlayHomePageLabel,OverlayHomePage dir=down spacing=1 start=HotKeySelector margin-top=5 height=20 region=topleft }
+			
+		place { controls=ScreenshotLabel region=topright }
+		place { controls=ScreenshotHotKeySelector,SetScreenshotFolderButton 
+			dir=down 
+			start=ScreenshotLabel
+			margin-top=4
+			spacing=5
+			width=160
+			height=20
+			region=topright }
+		place { control=ScreenshotActionLabel region=topright start=SetScreenshotFolderButton dir=down margin-top=5 }
+		place { controls=ScreenshotNotifyCheck,ScreenshotPlaySoundCheck,ScreenshotSaveUncompressedCheck dir=down start=ScreenshotActionLabel
+			margin-top=3 height=18 width=max region=topright spacing=0 }
+		
+		region { name=bottom region=box y=203 }
+		place { control=Divider1 region=bottom width=max }
+		place { controls="PingRateLabel" region=bottom start=Divider1 margin-top=7 width=max dir=down }
+		place { controls="PingRateCombo" region=bottom start=PingRateLabel margin-top=5 width=160 dir=down height=20 inset="0 1 0 0"}
+		place { controls="PingRateInfo" region=bottom start=PingRateCombo margin-top=5 width=250 dir=down }				
+			
+		place { controls=TitleLabel width=0 }
+	}
+}

@@ -1,0 +1,105 @@
+"resource/layout/gamespage_details_subheaderright.layout"
+{
+	controls
+	{
+		subheaderlabels { controlname="CDetailsSubHeaderLabelsRightPanel" }
+
+		gamehubbutton { controlname="Button" labeltext="#steam_gamehub" style="DetailsButton" }
+	}
+
+	colors
+	{
+		GameDetailsSubHeader.HorizontalSpacing=10
+		GameDetailsSubHeader.VerticalMargin=5
+		gamehubbgtop="67 90 122 255"
+		gamehubbgbottom="54 74 99 255"
+		gamehubborder="74 100 133 255"
+	}
+
+	styles
+	{
+		CDetailsGameSubHeaderRightPanel
+		{
+			bgcolor=none
+		}
+
+		DetailsButton
+		{   
+			inset="0 0 0 0"
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="Text"
+			font-style=regular
+			bgcolor=none
+
+			render_bg
+			{
+				// background fill
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, Btnlight, Btndarker )"
+					
+				// lines around
+				1="fill( x0    , y0    , x1, y0 + 1, Btnborder1 )"  // top
+				3="fill( x0    , y0 + 1, x0 + 1, y1, Btnborder1 )"  // left
+				2="fill( x0 + 1, y1 - 1, x1, y1    , Btnborder2 )"  // bottom
+				4="fill( x1 - 1, y0 + 1, x1    , y1, Btnborder2 )"  // right
+			}	
+		}
+		
+		DetailsButton:hover
+		{
+			textcolor="TextHover"
+			bgcolor=none
+			render_bg
+			{
+				// background fill
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, Btnlighthover, Btndarkhover )"
+                
+				// lines around
+				1="fill( x0    , y0    , x1, y0 + 1, Btnborder3 )"  // top
+				3="fill( x0    , y0 + 1, x0 + 1, y1, Btnborder3 )"  // left
+				2="fill( x0 + 1, y1 - 1, x1, y1    , Btnborder1 )"  // bottom
+				4="fill( x1 - 1, y0 + 1, x1    , y1, Btnborder1 )"  // right
+			}	
+		}
+		
+		DetailsButton:active
+		{
+			inset="0 0 0 0"
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="TextPressed"
+			font-style=regular
+			bgcolor=none
+			
+			render_bg
+			{
+				// background fill
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, Btndark, Btndarker )"
+					
+				// lines around
+				1="fill( x0    , y0    , x1, y0 + 1, Btnborder4 )"  // top
+				3="fill( x0    , y0 + 1, x0 + 1, y1, Btnborder4 )"  // left
+				2="fill( x0 + 1, y1 - 1, x1, y1    , Btnborder5 )"  // bottom
+				4="fill( x1 - 1, y0 + 1, x1    , y1, Btnborder5 )"  // right
+			}	
+		}
+	}
+
+	layout
+	{
+		// Y offset here should match the vertical padding value above in the colors section
+		region { name="header" y=5 x=0 width=0 height=max }
+
+		place { 
+			control=subheaderlabels,gamehubbutton
+			region=header
+			dir=right
+			align=left-center
+			margin-left=10
+			margin-right=10
+			spacing=10
+		}
+	}
+}

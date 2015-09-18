@@ -1,0 +1,90 @@
+linux.styles
+{
+	colors
+	{
+		basefont="Liberation Sans"
+		basefonthead="Liberation Sans"
+		//basefontheader="Arial"
+		//basefontsmall="Small Fonts"
+	}
+  
+	styles
+	{
+		gamedetails-headerlabel
+		{
+			font-size="15"
+			font-style="normal"
+			font-family=basefonthead
+			font-weight=400
+			textcolor="text"
+		}
+
+		gamedetails-headerlabel-red
+		{
+			font-size="15"
+			font-style="normal"
+			font-family=basefonthead
+			font-weight=400
+			textcolor="text"
+		}
+ 	
+ 		gamedetails-headerlabel-green
+		{
+			font-size="15"
+			font-style="normal"
+			font-family=basefonthead
+			font-weight=400
+			textcolor="text"
+		}
+
+		gamedetails-headerlabel-blue
+		{
+			font-size="15"
+			font-style="normal"
+			font-family=basefonthead
+			font-weight=400
+			textcolor="text"
+		}
+	
+		title_label
+		{
+			font-family="basefonthead"
+			font-size="14"
+			textcolor="Text"
+			font-weight=400
+		}
+		
+		topbar
+		{
+			font-size=24
+			font-family=basefonthead
+			font-style=antialias
+			font-weight=700
+			textcolor=text
+		}
+		
+		//menu bar, Steam/View/Games/Help
+		"MenuBar MenuButton" 
+		{
+			textcolor="label"
+			padding-top=1
+			padding-right=2
+			inset="2 4 2 0"
+			font-style="normal"
+		}
+		
+		CUINavButton  [!$OSX]
+		{
+			textcolor="TextGlowSelected2"
+			font-family=basefont
+			font-size=13
+			font-weight=700 
+			inset="1 -3 0 0"
+			padding-top=1
+			font-style="outerglow"
+			font-outerglow-color="FrameBG3"
+			font-outerglow-offset=2
+			font-outerglow-filtersize=5
+		}
+	}
+}

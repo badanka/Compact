@@ -1,0 +1,98 @@
+"resource/layout/settingssubmusic.layout"
+{
+	controls
+	{
+			LibraryHeader { controlname="Label" labelText="#Music_Settings_Library_Header" style="HeaderText" }			
+			LibraryList { controlname=ListPanel tabposition=1 style="LibraryListStyle" }
+			
+			AddLibraryButton {
+				controlname="Button" 
+				labeltext="#Music_Settings_Library_Add" 
+				style="ActionButtonStyle"
+				command="AddEntryToLibraryAction"
+			}
+			RemoveLibraryButton {
+				controlname="Button" 
+				labeltext="#Music_Settings_Library_Remove" 
+				style="ActionButtonStyle"
+				command="RemoveSelectedEntryFromLibraryAction"
+			}			
+			
+			LibraryDivider { ControlName="divider" }
+			
+			DatabaseHeader { controlname="Label" labelText="#Music_Settings_Database_Header" style="HeaderText" }
+			DatabaseCrawlAtStartup { ControlName="CheckButton" labelText="#Music_Settings_Database_CrawlAtStartup" }
+			DatabaseInfoLabel  { controlname="Label" labelText="#Music_Settings_Database_XAlbumsWithYTracks" style="DescriptionLabel" }
+			ResetDatabaseButton {
+				controlname="Button" 
+				labeltext="#Music_Settings_Database_ResetDatabase" 
+				style="ActionButtonStyle"
+				command="ResetDatabaseAction"
+			}
+			DatabaseDivider { ControlName="divider" }
+			
+			VolumeHeader { ControlName="Label" labelText="#Music_Settings_Volume_Header" style="HeaderText" }		
+			VolumeSlider { ControlName="Slider" style="VolumeSliderStyle" }
+			VolumeDivider { ControlName="divider" }
+			
+			PauseMusicHeader { ControlName="Label" labelText="#Music_Settings_PauseMusic_Header" style="HeaderText" }
+			PauseMusicWhenStartingApplicationCheckbox { ControlName="CheckButton" labelText="#Music_Settings_PauseMusicWhenStartingApplication" }
+			PauseMusicWhenVoiceChatCheckbox { ControlName="CheckButton" labelText="#Music_Settings_PauseMusicWhenVoiceChat" }
+
+			NotificationHeader { ControlName="Label" labelText="#Music_Settings_Notification_Header" style="HeaderText" }
+			NotificationPlaylistNowPlayingCheckbox { ControlName="CheckButton" labelText="#Music_Settings_NotificationPlaylistNowPlaying" }
+			
+			LoggingHeader { ControlName="Label" labelText="#Music_Settings_Logging_Header" style="HeaderText" }
+			LoggingCrawlingCheckbox { ControlName="CheckButton" labelText="#Music_Settings_LoggingCrawling" }
+	}
+	
+	styles
+	{
+		LibraryListStyle
+		{
+			bgcolor="none"
+			font-size=13
+			padding-left=2
+			padding-right=2
+			inset="0 -1 -4 -2"
+		}
+		
+		HeaderText
+		{
+			textcolor=text
+			font-family=basefont
+			font-weight=400
+		}
+		
+		VolumeSliderStyle	{ bgcolor=none font-family=basefont font-size=16	}
+	}
+	
+	layout
+	{
+		region { name=content height=max width=max margin-left=10 margin-right=10 }		
+		
+		place { control=LibraryHeader region=content y=3 }
+		place { control=LibraryList region=content width=max y=22 height=95}
+		
+		place { control=AddLibraryButton,RemoveLibraryButton region=content y=126 dir=right height=20 spacing=10 }
+		place { control=LibraryDivider region=content y=155 width=max }
+		
+		place { control=DatabaseHeader region=content y=163 }
+		place { control=DatabaseCrawlAtStartup region=content y=176 }	
+		place { control=ResetDatabaseButton,DatabaseInfoLabel region=content y=207 dir=right height=20 spacing=10 }
+		place { control=DatabaseDivider region=content y=236 width=max }
+		
+		place { control=VolumeHeader region=content y=244 }
+		place { control=VolumeSlider region=content y=264 height=18 width=165 }
+		place { control=VolumeDivider region=content y=291 width=max }
+		
+		place { control=PauseMusicHeader region=content y=299 }
+		place { control=PauseMusicWhenStartingApplicationCheckbox region=content y=317 height=18 }
+		place { control=PauseMusicWhenVoiceChatCheckbox region=content y=335 height=18 }
+		place { control=LoggingHeader region=content y=299 x=240}
+		place { control=LoggingCrawlingCheckbox region=content y=317 x=240 height=18 }
+		place { control=NotificationHeader region=content y=359 }
+		place { control=NotificationPlaylistNowPlayingCheckbox region=content y=377 height=18 }
+		
+	}
+}
