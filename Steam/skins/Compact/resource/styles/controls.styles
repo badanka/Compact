@@ -1,0 +1,1465 @@
+controls.styles
+{
+	colors
+	{
+		BtnLight="66 64 61 255"
+		BtnLightHover="91 89 86 255"
+		BtnDark="60 59 57 255"		
+		BtnDarkHover="70 69 67 255"		
+		BtnDarker="51 50 46 255"		
+		BtnDisabled="42 40 39 255"		
+		BtnBorder1="82 79 76 255"
+		BtnBorder2="64 62 61 255"
+		BtnBorder3="107 104 100 255"
+		BtnBorder3b="82 79 75 255"
+		BtnBorder4="29 25 24 255"
+		BtnBorder5="37 35 34 255"					
+		BtnBorder6="52 49 48 255"
+
+		installfill1=	" 70  82 126 255"	// fill
+		installfill2=	" 90 102 146 255"	// fill
+		installfill3=	"110 122 166 255"	// hover fill
+		installborder1=	"105 117 161 255"	// border
+		installborder2=	" 70  82 126 255"	// corner
+		installtxt=		"230 242 251 255"	// text
+
+		playfill1=		" 30 116  52 255"	// fill
+		playfill2=		" 50 136  72 255"	// fill
+		playfill3=		" 70 176  92 255"	// hover fill
+		playborder1=	" 65 171  87 255"	// border
+		playborder2=	" 50 136  52 255"	// corner
+		playtxt=		"230 251 242 255"	// text
+
+		buyfill1=		"122  91   2 255"	// fill
+		buyfill2=		"142 111  22 255"	// fill
+		buyfill3=		"162 131  42 255"	// hover fill
+		buyborder1=		"197 166  77 255"	// border
+		buyborder2=		"142 111  22 255"	// corner
+		buytxt=			"251 231 172 255"	// text
+	}
+	  
+	styles
+	{
+		//	------------------------------------------
+		//	steam.styles
+		//	------------------------------------------
+
+		Button
+		{     
+			textcolor="Text"
+			bgcolor=none
+			render_bg
+			{	
+				0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlight, Btndark )"
+			
+				1="fill( x0+1, y0  , x1-1, y0+1, BtnBorder1 )"		// t
+				2="fill( x0  , y0+1, x0+1, y1-1, BtnBorder1 )"		// l
+				3="fill( x0+1, y1-1, x1-1, y1  , BtnBorder1 )"		// b
+				4="fill( x1-1, y0+1, x1  , y1-1, BtnBorder1 )"		// r
+    			
+    			5="fill( x0  , y0  , x0+1, y0+1, BtnBorder2 )"		// tl
+				6="fill( x1-1, y0  , x1  , y0+1, BtnBorder2 )"		// tr
+    			7="fill( x0  , y1-1, x0+1, y1  , BtnBorder2 )"		// bl
+    			8="fill( x1-1, y1-1, x1  , y1  , BtnBorder2 )"		// br
+			}
+		}
+
+		"Page Button"
+		{     
+			textcolor="Text"
+			render_bg
+			{
+				0="gradient(x0 + 1, y0 + 1, x1 - 1, y1 - 1, Btnlight, Btndark )"
+				
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder1 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder1 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder1 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder1 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder2 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder2 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder2 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder2 )"	//br
+			}
+		}
+	
+		Button:hover
+		{   
+			textcolor="TextHover"
+			render_bg
+			{     
+				0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlighthover, Btndarkhover )"
+				
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder1 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder1 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder1 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder1 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder2 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder2 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder2 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder2 )"	//br
+			}	
+		}	
+
+		"Page Button:hover"
+		{   
+			textcolor="TextHover"
+			render_bg
+			{     
+				0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlighthover, Btndarkhover )"
+				
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder1 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder1 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder1 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder1 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder2 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder2 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder2 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder2 )"	//br
+			}	
+		}
+	    
+	    Button:focus	//	focused with keyboard or last pressed button
+	    {
+			textcolor="TextSelected"
+			render_bg
+			{
+				0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlight, Btndark )"
+	                
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder1 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder1 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder1 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder1 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder2 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder2 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder2 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder2 )"	//br
+			}
+	    }
+	    
+	    "Page Button:focus"
+	    {
+			textcolor="TextSelected"
+			render_bg
+			{     
+				0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlight, Btndark )"
+	                
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder1 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder1 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder1 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder1 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder2 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder2 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder2 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder2 )"	//br
+			}
+	    }
+	    
+	    Button:focus:hover
+	    {
+			textcolor="TextSelected"
+			render_bg
+			{     
+				0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlighthover, Btndarkhover )"
+	                
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder1 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder1 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder1 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder1 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder2 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder2 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder2 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder2 )"	//br
+			}
+	    }
+	
+	    "Page Button:focus:hover"
+	    {
+			textcolor="TextSelected"
+			render_bg
+			{     
+				0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlighthover, Btndarkhover )"
+	                
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder1 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder1 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder1 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder1 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder2 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder2 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder2 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder2 )"	//br
+			}
+	    }
+	    
+	    
+	    Button:active // this is the left-mouse-currently-pressed state
+	    {
+			textcolor="TextPressed"
+			render_bg
+			{     
+				0="gradient(x0+1, y0+1, x1-1, y1-1, Btndark, Btndarker )"
+	                
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder1 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder1 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder1 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder1 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder2 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder2 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder2 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder2 )"	//br
+			}
+	    }   
+	    
+	    "Page Button:active"
+	    {
+			textcolor="TextPressed"
+			render_bg
+			{     
+				0="gradient(x0+1, y0+1, x1-1, y1-1, Btndark, Btndarker )"
+	                
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder1 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder1 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder1 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder1 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder2 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder2 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder2 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder2 )"	//br
+			}
+	    }
+	    
+	    Button:selected
+	    {
+			textcolor="TextSelected"
+			render_bg
+			{     
+				0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlight, Btndark )"
+	                
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder1 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder1 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder1 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder1 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder2 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder2 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder2 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder2 )"	//br
+			}
+	    }
+	
+	    "Page Button:selected"
+	    {
+			textcolor="TextSelected"
+			render_bg
+			{     
+				0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlight, Btndark )"
+	                
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder1 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder1 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder1 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder1 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder2 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder2 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder2 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder2 )"	//br
+			}
+		}
+	    
+	    Button:disabled
+	    {
+			textcolor="TextDisabled"
+			render_bg
+			{     
+				0="fill(	x0+1, y0+1, x1-1, y1-1, BtnDisabled )"
+	                
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder4 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder4 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder4 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder4 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder4 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder4 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder4 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder4 )"	//br
+			}
+	    }   
+	    
+        "Page Button:disabled"
+	    {     
+			textcolor="TextDisabled"
+			render_bg
+			{
+				0="fill(	x0+1, y0+1, x1-1, y1-1, BtnDisabled )"
+	                
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder4 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder4 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder4 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder4 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder4 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder4 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder4 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder4 )"	//br
+			}
+	    }
+	    
+	    "CRegisterCDKeyWizard Button"
+	    {
+			maximum-height=20
+	    }
+			  
+        ComboBox
+		{
+ 			inset="3 0 0 0"
+ 			textcolor="Text"
+ 			selectedtextcolor="TextEntrySelected"
+ 			//selectedbgcolor="TextSelectedBG"
+ 			render_bg
+ 			{     
+ 				0="fill( x0+1, y0+1 , x1-1, y1-1, Btndark )"
+			
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder2 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder2 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder2 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder2 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder6 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder6 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder6 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder6 )"	//br
+     		}
+ 		}
+ 	   
+		"Page ComboBox"
+		{
+			textcolor="Text"
+			render_bg
+			{     
+				0="fill( x0+1, y0+1 , x1-1, y1-1, Btndark )"
+			
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder2 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder2 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder2 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder2 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder6 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder6 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder6 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder6 )"	//br
+    		}
+    	}
+ 	
+ 		ComboBox:hover
+ 		{
+ 			textcolor="TextHover"
+ 			selectedbgcolor="none"
+ 			selectedtextcolor="TextHover"
+ 			render_bg
+ 			{     
+ 				0="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, Btndarkhover )"
+ 				
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder2 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder2 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder2 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder2 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder6 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder6 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder6 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder6 )"	//br
+			}
+		}
+	    
+	    "Page ComboBox:hover"
+	    {
+			selectedbgcolor="none"
+ 			textcolor="TextHover"
+			selectedtextcolor="Text"
+			render_bg
+			{     
+				0="fill( x0+1, y0+1, x1-1, y1-1, Btndarkhover )"
+				
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder2 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder2 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder2 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder2 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder6 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder6 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder6 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder6 )"	//br
+    		}
+	    }
+
+		ComboBox:focus
+		{
+			selectedbgcolor="none"
+			selectedtextcolor="TextSelected"
+			render_bg
+			{     
+				0="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, Btndark )"
+				
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder2 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder2 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder2 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder2 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder6 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder6 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder6 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder6 )"	//br
+    		}
+		}
+	    
+		"Page ComboBox:focus"
+		{
+			textcolor="TextSelected"
+			render_bg
+			{     
+				0="fill( x0+1, y0+1, x1-1, y1-1, Btndark )"
+				
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder2 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder2 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder2 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder2 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder6 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder6 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder6 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder6 )"	//br
+    		}
+		}
+	    
+
+		ComboBox:focus:hover
+		{
+			selectedbgcolor="none"
+ 			textcolor="TextHover"
+			selectedtextcolor="Text"
+			render_bg
+			{     
+				0="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, Btndarkhover )"
+				
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder2 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder2 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder2 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder2 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder6 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder6 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder6 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder6 )"	//br
+			}
+		}
+	
+	    "Page ComboBox:focus:hover"
+	    {
+			textcolor="TextHover"
+			render_bg
+			{     
+				0="fill( x0+1, y0+1, x1-1, y1-1, Btndarkhover )"
+				
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder2 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder2 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder2 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder2 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder6 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder6 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder6 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder6 )"	//br
+			}
+	    }
+	    
+	    "Page ComboBox:disabled"
+	    {
+			textcolor="TextDisabled"
+			render_bg
+			{     
+				0="fill( x0+1, y0+1, x1-1, y1-1, BtnDisabled )"
+				
+				1="fill( x0  , y0  , x1  , y0+1, BtnBorder4 )"  //t
+				2="fill( x0  , y0+1, x0+1, y1  , BtnBorder4 )"  //l
+				3="fill( x0+1, y1-1, x1  , y1  , BtnBorder4 )"  //b
+    			4="fill( x1-1, y0+1, x1  , y1-1, BtnBorder4 )"  //r
+    		}
+        }
+	
+	    ComboBoxButton
+	    {      
+			bgcolor=none
+			padding-left=2
+			inset="-1 -2 0 0"
+			image="graphics/icon_down_default"
+			render_bg 
+			{
+				0="fill( x0, y0 + 2, x0 + 1, y1 - 4, text2 )"
+			}
+	    }
+        
+ 	   ComboBoxButton:hover
+ 	   {
+ 			image="graphics/icon_down_hover"
+ 			render_bg 
+ 			{
+ 				0="fill( x0, y0 + 2, x0 + 1, y1 - 4, texthover )"
+ 			}
+ 	   }
+ 	   
+ 	   ComboBoxButton:focus
+ 	   {
+ 			bgcolor=none
+ 			image="graphics/icon_down_focus"
+     		render_bg 
+     		{
+     			0="fill( x0, y0 + 2, x0 + 1, y1 - 4, text )"
+ 			}
+ 	   }
+ 	   
+ 	   ComboBoxButton:focus:hover
+ 	   {
+ 			bgcolor=none
+ 			image="graphics/icon_down_default"
+ 			render_bg 
+ 			{
+ 				0="fill( x0, y0 + 2, x0 + 1, y1 - 4, texthover  )"
+ 			}
+ 	   }
+     
+		ComboBoxButton:disabled
+ 	   {
+ 			bgcolor=none
+ 			image="graphics/icon_down_disabled"
+ 			render_bg 
+ 			{
+ 				0="fill( x0, y0 + 2, x0 + 1, y1 - 4, TextDisabled  )"
+ 			}
+ 	   }
+ 	
+ 	   
+ 		"Page ComboBoxButton"
+ 		{
+ 			bgcolor=none
+     		image="graphics/icon_down_default"
+     		render_bg 
+     		{
+ 				0="fill( x0, y0 + 2, x0 + 1, y1 - 4, text )"
+ 			}
+ 		}
+ 	   
+ 		"Page ComboBoxButton:hover"
+ 		{
+ 			image="graphics/icon_down_hover"
+ 			render_bg 
+ 			{
+ 				0="fill( x0, y0 + 2, x0 + 1, y1 - 4, texthover  )"
+ 			}
+		}
+        
+		"Page ComboBoxButton:focus"
+		{
+			bgcolor=none
+			image="graphics/icon_down_focus"
+			render_bg 
+			{
+				0="fill( x0, y0 + 2, x0 + 1, y1 - 4, text  )"
+			}
+	    }
+	    
+		"Page ComboBoxButton:focus:hover"
+		{
+			bgcolor=none
+    		image="graphics/icon_down_focus"
+    		render_bg 
+    		{
+				0="fill( x0, y0 + 2, x0 + 1, y1 - 4, texthover )"
+			}
+		}
+	
+		"Page ComboBoxButton:disabled"
+	    {
+			bgcolor=none
+			image="graphics/icon_down_disabled"
+			render_bg 
+			{
+				0="fill( x0, y0 + 2, x0 + 1, y1 - 4, TextDisabled  )"
+			}
+        }
+
+
+		//	------------------------------------------
+		//	appdownloadpanel.layout
+		//	------------------------------------------
+	
+		DetailsLaunchButton
+		{   
+			inset="23 0 0 0"
+			bgcolor=none
+			textcolor=playtxt
+			render
+			{
+				1="image( x0+6, y0+3, x1  , y1  , graphics/icon_play )"
+			}
+			
+			render_bg
+			{
+    			0="gradient( x0+1, y0+1, x1-1, y1-1, playfill2, playfill1 )"
+	            
+				1="fill( x0+1, y0  , x1-1, y0+1, playborder1 )"  // top
+				2="fill( x0  , y0+1, x0+1, y1-1, playborder1 )"  // left
+				3="fill( x0+1, y1-1, x1-1, y1  , playborder1 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1-1, playborder1 )"  // right
+    			
+    			5="fill( x0  , y0  , x0+1, y0+1, playborder2 )"  // TL corner
+				6="fill( x1-1, y0  , x1  , y0+1, playborder2 )"  // TR corner
+    			7="fill( x0  , y1-1, x0+1, y1  , playborder2 )"  // BL corner
+    			8="fill( x1-1, y1-1, x1  , y1  , playborder2 )"  // BR corner
+			}	
+		}
+	
+		DetailsLaunchButton:Hover
+		{   
+			inset="23 0 0 0"
+			bgcolor=none   
+			textcolor=playtxt
+			render
+			{
+				1="image( x0+6, y0+3, x1  , y1  , graphics/icon_play_hover )"
+			}
+			render_bg
+			{
+				0="gradient( x0+1, y0+1, x1-1, y1-1, playfill3, playfill2 )"
+            
+				1="fill( x0+1, y0  , x1-1, y0+1, playborder1 )"  // top
+				2="fill( x0  , y0+1, x0+1, y1-1, playborder1 )"  // left
+				3="fill( x0+1, y1-1, x1-1, y1  , playborder1 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1-1, playborder1 )"  // right
+				
+				5="fill( x0  , y0  , x0+1, y0+1, playborder2 )"  // TL corner
+				6="fill( x1-1, y0  , x1  , y0+1, playborder2 )"  // TR corner
+				7="fill( x0  , y1-1, x0+1, y1  , playborder2 )"  // BL corner
+				8="fill( x1-1, y1-1, x1  , y1  , playborder2 )"  // BR corner
+			}	
+		}
+		
+		DetailsLaunchButton:Disabled
+		{   
+			inset="23 0 0 0"
+			textcolor="LabelDisabled"
+			bgcolor=none   
+
+			render
+			{
+				1="image( x0+6, y0+3, x1, y1, graphics/icon_play )"
+			}
+			
+			render_bg
+			{
+				0="fill(	x0+1, y0+1, x1-1, y1-1, BtnDisabled )"
+	                
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder4 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder4 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder4 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder4 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder4 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder4 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder4 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder4 )"	//br
+			}
+		}
+
+		topOfQueueButton
+		{   
+		
+			inset="30 0 0 0"
+			textcolor="Text"
+			bgcolor=none
+
+			render
+			{
+				1="image( x0+2, y0+3, x1, y1, graphics/icon_install )"
+			}
+		}			
+		
+		SmRemoveButton
+		{   
+		
+			inset="0 0 0 0"
+			textcolor="Text"
+			bgcolor=none
+
+			render
+			{
+				1="image( x0+2, y0+3, x1, y1, graphics/icon_close )"
+			}
+		}
+		
+		SmRemoveButton:Hover
+		{   
+			inset="0 0 0 0"
+			textcolor="TextHover"
+			bgcolor=none   
+			render
+			{
+				1="image( x0+2, y0+3, x1, y1, graphics/icon_close_hover )"
+			}
+		}
+
+
+
+		//	------------------------------------------
+		// downloadsummarypanel.layout
+		//	------------------------------------------
+
+		PauseButton
+		{   
+			inset="23 -1 0 0"
+			textcolor="Text"
+			bgcolor=none
+			minimum-width="75"
+
+			render
+			{
+				1="image( x0+6, y0+2, x1, y1, graphics/icon_pause )"
+			}
+			render_bg
+			{
+				0="gradient( x0+1, y0+1, x1-1, y1-1, Btnlight, Btndark )"
+                
+				1="fill( x0+1, y0  , x1-1, y0+1, btnborder1 )"  // top
+				2="fill( x0  , y0+1, x0+1, y1-1, btnborder1 )"  // left
+				3="fill( x0+1, y1-1, x1-1, y1  , btnborder1 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1-1, btnborder1 )"  // right
+    			
+    			5="fill( x0  , y0  , x0+1, y0+1, btnborder2 )"  // TL corner
+				6="fill( x1-1, y0  , x1  , y0+1, btnborder2 )"  // TR corner
+    			7="fill( x0  , y1-1, x0+1, y1  , btnborder2 )"  // BL corner
+    			8="fill( x1-1, y1-1, x1  , y1  , btnborder2 )"  // BR corner
+			}	
+		}
+	   
+		PauseButton:Hover
+		{	  
+			inset="23 -1 0 0"
+			textcolor="TextHover"
+			bgcolor=none   
+			minimum-width="75"
+
+			render
+			{
+				0="image( x0+6, y0+2, x1, y1, graphics/icon_pause_hover )"
+			}
+			render_bg
+			{
+				0="gradient( x0+1, y0+1, x1-1, y1-1, Btnlighthover, Btndarkhover )"
+                
+				1="fill( x0+1, y0  , x1-1, y0+1, btnborder1 )"  // top
+				2="fill( x0  , y0+1, x0+1, y1-1, btnborder1 )"  // left
+				3="fill( x0+1, y1-1, x1-1, y1  , btnborder1 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1-1, btnborder1 )"  // right
+    			
+    			5="fill( x0  , y0  , x0+1, y0+1, btnborder2 )"  // TL corner
+				6="fill( x1-1, y0  , x1  , y0+1, btnborder2 )"  // TR corner
+    			7="fill( x0  , y1-1, x0+1, y1  , btnborder2 )"  // BL corner
+    			8="fill( x1-1, y1-1, x1  , y1  , btnborder2 )"  // BR corner
+			}	
+		}
+			
+		ResumeButton
+		{	  
+			inset="23 -1 0 0"
+			textcolor="Text"
+			bgcolor=none
+			minimum-width="75"
+
+			render
+			{
+				1="image( x0+6, y0+2, x1, y1, graphics/icon_install )"
+			}
+			render_bg
+			{
+				0="gradient( x0+1, y0+1, x1-1, y1-1, Btnlight, Btndark )"
+                
+				1="fill( x0+1, y0  , x1-1, y0+1, btnborder1 )"  // top
+				2="fill( x0  , y0+1, x0+1, y1-1, btnborder1 )"  // left
+				3="fill( x0+1, y1-1, x1-1, y1  , btnborder1 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1-1, btnborder1 )"  // right
+    			
+    			5="fill( x0  , y0  , x0+1, y0+1, btnborder2 )"  // TL corner
+				6="fill( x1-1, y0  , x1  , y0+1, btnborder2 )"  // TR corner
+    			7="fill( x0  , y1-1, x0+1, y1  , btnborder2 )"  // BL corner
+    			8="fill( x1-1, y1-1, x1  , y1  , btnborder2 )"  // BR corner
+			}	
+		}
+	   
+		ResumeButton:Hover
+		{	  
+			inset="23 -1 0 0"
+			textcolor="TextHover"
+			bgcolor=none   
+			minimum-width="75"
+
+			render
+			{
+				0="image( x0+6, y0+2, x1, y1, graphics/icon_install_hover )"
+			}
+			render_bg
+			{
+				0="gradient( x0+1, y0+1, x1-1, y1-1, Btnlighthover, Btndarkhover )"
+                
+				1="fill( x0+1, y0  , x1-1, y0+1, btnborder1 )"  // top
+				2="fill( x0  , y0+1, x0+1, y1-1, btnborder1 )"  // left
+				3="fill( x0+1, y1-1, x1-1, y1  , btnborder1 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1-1, btnborder1 )"  // right
+    			
+    			5="fill( x0  , y0  , x0+1, y0+1, btnborder2 )"  // TL corner
+				6="fill( x1-1, y0  , x1  , y0+1, btnborder2 )"  // TR corner
+    			7="fill( x0  , y1-1, x0+1, y1  , btnborder2 )"  // BL corner
+    			8="fill( x1-1, y1-1, x1  , y1  , btnborder2 )"  // BR corner
+			}	
+		}
+
+			
+		//	------------------------------------------
+		//	gamespage_details_subheader.layout
+		//	------------------------------------------
+
+		ClientListButton
+		{
+			inset="-6 0 0 0"
+			// minimum-width=20
+		// minimum-height set by code to match actual height of Launch button
+		// Do not set either minimum-width or -height here or it will override the code and the layout will break
+		bgcolor=none
+		render_bg
+			{
+				0="gradient( x0+1, y0+2, x1-1, y1-1, Btnlight, Btndarker )"
+				
+				1="fill( x0  , y0  , x1  . y0+1, Btnborder1 )"  // top
+				3="fill( x0  , y0+1, x0+1, y1  , Btnborder1 )"  // left
+				2="fill( x0+1, y1-1, x1-1, y1  , Btnborder2 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1  , Btnborder2 )"  // right
+			}
+		}
+			
+		ClientListButton:hover
+		{
+			inset="-6 0 0 0"
+ 			textcolor="TextHover"
+			bgcolor=none
+			render_bg
+			{
+				0="gradient( x0+1, y0+2, x1-1, y1-1, Btnlighthover, Btndarkhover )"
+	            
+				1="fill( x0  , y0  , x1  , y0+1, Btnborder3 )"  // top
+				3="fill( x0  , y0+1, x0+1, y1  , Btnborder3 )"  // left
+				2="fill( x0+1, y1-1, x1-1, y1  , Btnborder1 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1  , Btnborder1 )"  // right
+			}
+		}	
+	
+		DetailsButton
+		{   
+			inset="-3 -1 0 0"
+			textcolor="Text"
+			bgcolor=none
+	
+			render_bg
+			{
+				0="gradient( x0+1, y0+2, x1-1, y1-1, Btnlight, Btndarker )"
+	            
+				1="fill( x0  , y0  , x1  . y0+1, Btnborder1 )"  // top
+				3="fill( x0  , y0+1, x0+1, y1  , Btnborder1 )"  // left
+				2="fill( x0+1, y1-1, x1-1, y1  , Btnborder2 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1  , Btnborder2 )"  // right
+			}	
+		}
+		
+		DetailsButton:hover
+		{
+			textcolor="TextHover"
+			bgcolor=none
+			render_bg
+			{
+				0="gradient( x0+1, y0+2, x1-1, y1-1, Btnlighthover, Btndarkhover )"
+	            
+				1="fill( x0  , y0  , x1  , y0+1, Btnborder3 )"  // top
+				3="fill( x0  , y0+1, x0+1, y1  , Btnborder3 )"  // left
+				2="fill( x0+1, y1-1, x1-1, y1  , Btnborder1 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1  , Btnborder1 )"  // right
+			}	
+		}
+		
+		DetailsButton:selected
+		{
+			inset="-3 -1 0 0"
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="TextHover"
+			font-style=regular
+			bgcolor=none
+			render_bg
+			{
+				0="gradient( x0+1, y0+2, x1-1, y1-1, Btnlighthover, Btndarkhover )"
+					
+				1="fill( x0  , y0   , x1  , y0+1, Btnborder3 )"  // top
+				3="fill( x0  , y0+ 1, x0+1, y1  , Btnborder3 )"  // left
+				2="fill( x0+1, y1- 1, x1-1, y1  , Btnborder1 )"  // bottom
+				4="fill( x1-1, y0+ 1, x1  , y1  , Btnborder1 )"  // right
+			}	
+		}
+	
+		DetailsButton:active
+		{
+			inset="-3 -1 0 0"
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="TextPressed"
+			font-style=regular
+			bgcolor=none
+			render_bg
+			{
+				0="gradient( x0+1, y0+2, x1-1, y1-1, Btndark, Btndarker )"
+					
+				1="fill( x0  , y0  , x1  , y0+1, Btnborder4 )"  // top
+				3="fill( x0  , y0+1, x0+1, y1  , Btnborder4 )"  // left
+				2="fill( x0+1, y1-1, x1-1, y1  , Btnborder5 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1  , Btnborder5 )"  // right
+			}	
+		}
+		
+	
+		DetailsLaunchButton
+		{   
+			inset="23 -1 0 0"
+			bgcolor=none
+			textcolor=playtxt
+			render
+			{
+				1="image( x0+6, y0+3, x1  , y1  , graphics/icon_play )"
+			}
+			
+			render_bg
+			{
+    			0="gradient( x0+1, y0+1, x1-1, y1-1, playfill2, playfill1 )"
+	            
+				1="fill( x0+1, y0  , x1-1, y0+1, playborder1 )"  // top
+				2="fill( x0  , y0+1, x0+1, y1-1, playborder1 )"  // left
+				3="fill( x0+1, y1-1, x1-1, y1  , playborder1 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1-1, playborder1 )"  // right
+
+    			5="fill( x0  , y0  , x0+1, y0+1, playborder2 )"  // TL corner
+				6="fill( x1-1, y0  , x1  , y0+1, playborder2 )"  // TR corner
+    			7="fill( x0  , y1-1, x0+1, y1  , playborder2 )"  // BL corner
+    			8="fill( x1-1, y1-1, x1  , y1  , playborder2 )"  // BR corner
+			}	
+		}
+	
+		DetailsLaunchButton:Hover
+    	{   
+			inset="23 -1 0 0"
+			bgcolor=none   
+			textcolor=playtxt
+			render
+			{
+				1="image( x0+6, y0+3, x1  , y1  , graphics/icon_play_hover )"
+			}
+			render_bg
+			{
+				0="gradient( x0+1, y0+1, x1-1, y1-1, playfill3, playfill2 )"
+            
+				1="fill( x0+1, y0  , x1-1, y0+1, playborder1 )"  // top
+				2="fill( x0  , y0+1, x0+1, y1-1, playborder1 )"  // left
+				3="fill( x0+1, y1-1, x1-1, y1  , playborder1 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1-1, playborder1 )"  // right
+
+				5="fill( x0  , y0  , x0+1, y0+1, playborder2 )"  // TL corner
+				6="fill( x1-1, y0  , x1  , y0+1, playborder2 )"  // TR corner
+				7="fill( x0  , y1-1, x0+1, y1  , playborder2 )"  // BL corner
+				8="fill( x1-1, y1-1, x1  , y1  , playborder2 )"  // BR corner
+			}	
+		}
+		
+		DetailsLaunchButton:selected
+		{   
+			inset="23 -1 0 0"
+			bgcolor=none   
+			render
+			{
+				1="image( x0+6, y0+3, x1  , y1  , graphics/icon_play_hover )"
+			}
+	
+			render_bg
+			{
+				0="gradient( x0+1, y0+1, x1-1, y1-1, playfill3, playfill2 )"
+	            
+				1="fill( x0+1, y0  , x1-1, y0+1, playborder1 )"  // top
+				2="fill( x0  , y0+1, x0+1, y1-1, playborder1 )"  // left
+				3="fill( x0+1, y1-1, x1-1, y1  , playborder1 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1-1, playborder1 )"  // right
+
+				5="fill( x0  , y0  , x0+1, y0+1, playborder2 )"  // TL corner
+				6="fill( x1-1, y0  , x1  , y0+1, playborder2 )"  // TR corner
+				7="fill( x0  , y1-1, x0+1, y1  , playborder2 )"  // BL corner
+				8="fill( x1-1, y1-1, x1  , y1  , playborder2 )"  // BR corner
+			}	
+		}
+	
+		DetailsLaunchButton:active
+		{   
+			inset="23 -1 0 0"
+			bgcolor=none  
+			render
+			{
+				1="image( x0+6, y0 + 3, x1, y1, graphics/icon_play )"
+			}
+			render_bg
+		{
+				0="fill( x0+1, y0+1, x1-1, y1-1, playfill1 )"
+	            
+				1="fill( x0+1, y0  , x1-1, y0+1, playfill2 )"  // top
+				2="fill( x0  , y0+1, x0+1, y1-1, playfill2 )"  // left
+				3="fill( x0+1, y1-1, x1-1, y1  , playfill2 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1-1, playfill2 )"  // right
+
+				5="fill( x0  , y0  , x0+1, y0+1, playfill1 )"  // TL corner
+				6="fill( x1-1, y0  , x1  , y0+1, playfill1 )"  // TR corner
+				7="fill( x0  , y1-1, x0+1, y1  , playfill1 )"  // BL corner
+				8="fill( x1-1, y1-1, x1  , y1  , playfill1 )"  // BR corner
+			}	
+		}
+	
+		DetailsInstallButton
+		{  
+			
+			inset="23 -1 0 0"
+			bgcolor=none   
+			textcolor=installtxt
+			render
+			{
+				1="image( x0+6, y0+2, x1  , y1  , graphics/icon_install)"
+			}
+			render_bg
+			{
+				0="gradient( x0+1, y0+1, x1-1, y1-1, installfill2, installfill1 )"
+	            
+				1="fill( x0+1, y0  , x1-1, y0+1, installborder1 )"  // top
+				2="fill( x0  , y0+1, x0+1, y1-1, installborder1 )"  // left
+				3="fill( x0+1, y1-1, x1-1, y1  , installborder1 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1-1, installborder1 )"  // right
+
+				5="fill( x0  , y0  , x0+1, y0+1, installborder2 )"  // TL corner
+				6="fill( x1-1, y0  , x1  , y0+1, installborder2 )"  // TR corner
+				7="fill( x0  , y1-1, x0+1, y1  , installborder2 )"  // BL corner
+				8="fill( x1-1, y1-1, x1  , y1  , installborder2 )"  // BR corner
+			}	
+		}
+		
+		DetailsInstallButton:hover
+		{  
+			inset="23 -1 0 0"
+			bgcolor=none   
+			textcolor=installtxt
+	
+			render
+			{
+				1="image( x0+6, y0+2, x1  , y1  , graphics/icon_install_hover )"
+			}
+			render_bg
+			{
+				0="gradient( x0+1, y0+1, x1-1, y1-1, installfill3, installfill2 )"
+	            
+				1="fill( x0+1, y0  , x1-1, y0+1, installborder1 )"  // top
+				2="fill( x0  , y0+1, x0+1, y1-1, installborder1 )"  // left
+				3="fill( x0+1, y1-1, x1-1, y1  , installborder1 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1-1, installborder1 )"  // right
+
+				5="fill( x0  , y0  , x0+1, y0+1, installborder2 )"  // TL corner
+    			6="fill( x1-1, y0  , x1  , y0+1, installborder2 )"  // TR corner
+				7="fill( x0  , y1-1, x0+1, y1  , installborder2 )"  // BL corner
+				8="fill( x1-1, y1-1, x1  , y1  , installborder2 )"  // BR corner
+			}	
+		}
+	
+    	DetailsInstallButton:selected
+		{  
+    		inset="23 -1 0 0"
+    		bgcolor=none   
+			render
+			{
+				1="image( x0+6, y0+2, x1  , y1  , graphics/icon_install_hover )"
+			}
+    		render_bg
+			{
+				0="gradient( x0+1, y0+1, x1-1, y1-1, installfill3, installfill2 )"
+	            
+				1="fill( x0+1, y0  , x1-1, y0+1, installborder1 )"  // top
+				2="fill( x0  , y0+1, x0+1, y1-1, installborder1 )"  // left
+				3="fill( x0+1, y1-1, x1-1, y1  , installborder1 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1-1, installborder1 )"  // right
+
+				5="fill( x0  , y0  , x0+1, y0+1, installborder2 )"  // TL corner
+				6="fill( x1-1, y0  , x1  , y0+1, installborder2 )"  // TR corner
+				7="fill( x0  , y1-1, x0+1, y1  , installborder2 )"  // BL corner
+				8="fill( x1-1, y1-1, x1  , y1  , installborder2 )"  // BR corner
+			}	
+		}
+	
+		DetailsInstallButton:active
+		{  
+			inset="23 -1 0 0"
+			bgcolor=none   
+			render
+			{
+				1="image( x0+6, y0+2, x1  , y1  , graphics/icon_install )"
+			}
+			render_bg
+			{
+				0="fill( x0+1, y0+1, x1-1, y1-1, installfill1 )"
+	            
+				1="fill( x0+1, y0  , x1-1, y0+1, installfill2 )"  // top
+				2="fill( x0  , y0+1, x0+1, y1-1, installfill2 )"  // left
+				3="fill( x0+1, y1-1, x1-1, y1  , installfill2 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1-1, installfill2 )"  // right
+
+				5="fill( x0  , y0  , x0+1, y0+1, installfill1 )"  // TL corner
+				6="fill( x1-1, y0  , x1  , y0+1, installfill1 )"  // TR corner
+				7="fill( x0  , y1-1, x0+1, y1  , installfill1 )"  // BL corner
+				8="fill( x1-1, y1-1, x1  , y1  , installfill1 )"  // BR corner
+			}	
+		}
+	
+		DetailsBuyButton
+		{   
+			inset="23 -1 0 0"
+			bgcolor=none
+			textcolor=buytxt
+			render
+			{
+				1="image( x0+6, y0+2, x1  , y1  , graphics/icon_buy )"
+			}
+			render_bg
+			{
+				0="gradient( x0+1, y0+1, x1-1, y1-1, buyfill2, buyfill1 )"
+	            
+				1="fill( x0+1, y0  , x1-1, y0+1, buyborder1 )"  // top
+				2="fill( x0  , y0+1, x0+1, y1-1, buyborder1 )"  // left
+				3="fill( x0+1, y1-1, x1-1, y1  , buyborder1 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1-1, buyborder1 )"  // right
+				
+				5="fill( x0  , y0  , x0+1, y0+1, buyborder2 )"  // TL corner
+				6="fill( x1-1, y0  , x1  , y0+1, buyborder2 )"  // TR corner
+				7="fill( x0  , y1-1, x0+1, y1  , buyborder2 )"  // BL corner
+				8="fill( x1-1, y1-1, x1  , y1  , buyborder2 )"  // BR corner
+			}	
+		}
+		
+		DetailsBuyButton:hover
+		{   
+			inset="23 -1 0 0"
+			bgcolor=none   
+			textcolor=buytxt
+			render
+			{
+				1="image( x0+6, y0+2, x1  , y1  , graphics/icon_buy_hover )"
+			}
+			render_bg
+			{
+				0="gradient( x0+1, y0+1, x1-1, y1-1, buyfill3, buyfill2 )"
+	            
+				1="fill( x0+1, y0  , x1-1, y0+1, buyborder1 )"  // top
+				2="fill( x0  , y0+1, x0+1, y1-1, buyborder1 )"  // left
+				3="fill( x0+1, y1-1, x1-1, y1  , buyborder1 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1-1, buyborder1 )"  // right
+
+				5="fill( x0  , y0  , x0+1, y0+1, buyborder2 )"  // TL corner
+				6="fill( x1-1, y0  , x1  , y0+1, buyborder2 )"  // TR corner
+				7="fill( x0  , y1-1, x0+1, y1  , buyborder2 )"  // BL corner
+				8="fill( x1-1, y1-1, x1  , y1  , buyborder2 )"  // BR corner
+			}	
+		}
+	
+		DetailsBuyButton:selected
+		{   
+			inset="23 -1 0 0"
+			bgcolor=none   
+			render
+			{
+				1="image( x0+6, y0+2, x1  , y1  , graphics/icon_buy_hover )"
+			}
+			render_bg
+			{
+				0="gradient( x0+1, y0+1, x1-1, y1-1, buyfill3, buyfill2 )"
+	            
+				1="fill( x0+1, y0  , x1-1, y0+1, buyborder1 )"  // top
+				2="fill( x0  , y0+1, x0+1, y1-1, buyborder1 )"  // left
+				3="fill( x0+1, y1-1, x1-1, y1  , buyborder1 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1-1, buyborder1 )"  // right
+
+				5="fill( x0  , y0  , x0+1, y0+1, buyborder2 )"  // TL corner
+				6="fill( x1-1, y0  , x1  , y0+1, buyborder2 )"  // TR corner
+				7="fill( x0  , y1-1, x0+1, y1  , buyborder2 )"  // BL corner
+				8="fill( x1-1, y1-1, x1  , y1  , buyborder2 )"  // BR corner
+			}	
+		}
+	
+		DetailsBuyButton:active
+		{   
+			inset="23 -1 0 0"
+			bgcolor=none   
+    		render
+			{
+				1="image( x0+6, y0+2, x1  , y1  , graphics/icon_buy )"
+			}
+			render_bg
+			{
+    			0="fill( x0+1, y0+1, x1-1, y1-1, buyfill1 )"
+           
+    			1="fill( x0+1, y0  , x1-1, y0+1, buyfill2 )"  // top
+    			2="fill( x0  , y0+1, x0+1, y1-1, buyfill2 )"  // left
+				3="fill( x0+1, y1-1, x1-1, y1  , buyfill2 )"  // bottom
+				4="fill( x1-1, y0+1, x1  , y1-1, buyfill2 )"  // right
+
+				5="fill( x0  , y0  , x0+1, y0+1, buyfill1 )"  // TL corner
+				6="fill( x1-1, y0  , x1  , y0+1, buyfill1 )"  // TR corner
+    			7="fill( x0  , y1-1, x0+1, y1  , buyfill1 )"  // BL corner
+				8="fill( x1-1, y1-1, x1  , y1  , buyfill1 )"  // BR corner
+			}
+		}	
+
+
+		//	------------------------------------------
+		//	gamespage_grid.chrome.layout
+		//	------------------------------------------
+
+		CUILaunchButton
+		{   
+			textcolor="Text"
+			bgcolor=none   
+			padding-left=35
+			inset="0 -1 0 0"
+      
+				render
+				{
+					1="image( x0 + 7, y0 + 2, x1, y1, graphics/icon_play )"
+				}
+      
+				render_bg
+				{
+					0="gradient( x0 , y0  , x1  , y1  , Btnlight, Btndark )"		
+
+					1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder1 )"		// t
+					2="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder1 )"		// l
+					3="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder1 )"		// b
+					4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder1 )"		// r
+
+					5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder2 )"		// tl
+					6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder2 )"		// tr
+					7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder2 )"		// bl
+					8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder2 )"		// br
+				}
+		}
+		
+		CUILaunchButton:Hover
+		{   
+			textcolor="TextHover"
+			padding-left=35
+			bgcolor=none   
+      
+			render
+			{
+				1="image(	x0+7, y0+2, x1  , y1  , graphics/icon_play_hover )"
+			} 				
+			
+			render_bg
+			{
+				0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlighthover, Btndarkhover )"		
+				
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder1 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder1 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder1 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder1 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder2 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder2 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder2 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder2 )"	//br
+			}
+		}
+	
+		CUIDetailsButton
+		{   
+			textcolor="Text"
+			bgcolor=none   
+			padding-left=35
+			inset="0 -1 0 0"
+      
+			render
+			{
+					1="image(	x0+7, y0+2, x1  , y1  , graphics/icon_details )"
+			}
+      
+			render_bg
+			{
+					0="gradient(x0 , y0  , x1  , y1  , Btnlight, Btndark )"		
+
+					1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder1 )"		// t
+					2="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder1 )"		// l
+					3="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder1 )"		// b
+					4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder1 )"		// r
+
+					5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder2 )"		// tl
+					6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder2 )"		// tr
+					7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder2 )"		// bl
+					8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder2 )"		// br
+			}
+		}
+		
+		CUIDetailsButton:Hover
+		{   
+			textcolor="white"
+			bgcolor=none   
+      
+			render
+			{
+				1="image(	x0+7, y0+2, x1  , y1  , graphics/icon_details_hover )"
+			}
+			
+			
+			render_bg
+			{
+				0="gradient(x0+1, y0+1, x1-1, y1-1, Btnlighthover, Btndarkhover )"		
+				
+				1="fill(	x0+1, y0  , x1-1, y0+1, BtnBorder1 )"	//t
+				3="fill(	x0  , y0+1, x0+1, y1-1, BtnBorder1 )"	//l
+				2="fill(	x0+1, y1-1, x1-1, y1  , BtnBorder1 )"	//b
+				4="fill(	x1-1, y0+1, x1  , y1-1, BtnBorder1 )"	//r
+				
+				5="fill(	x0  , y0  , x0+1, y0+1, BtnBorder2 )"	//tl
+				6="fill(	x1-1, y0  , x1  , y0+1, BtnBorder2 )"	//tr
+				7="fill(	x0  , y1-1, x0+1, y1  , BtnBorder2 )"	//bl
+				8="fill(	x1-1, y1-1, x1  , y1  , BtnBorder2 )"	//br
+			}
+		}
+	
+		"GameItem_Updating CUINavButton:hover"
+		{
+			textcolor="TextHover"
+		}
+
+
+		//	------------------------------------------
+		//	uinavigatorpanel.layout
+		//	------------------------------------------
+	
+		NavLabel2  [!$OSX]
+		{
+			textcolor="Text"
+			padding-right=10
+			
+			render_bg
+     		{    
+				0="gradient(x0+1, y0+3, x1-1, y1-3, Btnlight, Btndark )"
+			
+				1="fill( x0+1, y0+2, x1-1, y0+3, BtnBorder1 )"		// t
+				2="fill( x0  , y0+3, x0+1, y1-3, BtnBorder1 )"		// l
+				3="fill( x0+1, y1-3, x1-1, y1-2, BtnBorder1 )"		// b
+				4="fill( x1-1, y0+3, x1  , y1-3, BtnBorder1 )"		// r
+
+    			5="fill( x0  , y0+2, x0+1, y0+3, BtnBorder2 )"		// tl
+				6="fill( x1-1, y0+2, x1  , y0+3, BtnBorder2 )"		// tr
+    			7="fill( x0  , y1-3, x0+1, y1-2, BtnBorder2 )"		// bl
+    			8="fill( x1-1, y1-3, x1  , y1-2, BtnBorder2 )"		// br
+				
+				9="image( x1-13, y0+8, x1-3, y0+13, graphics/downarrow_1 )"
+     		}
+		}	
+		
+		NavLabel2        [$OSX]
+		{
+			textcolor="Text"
+			padding-right=10
+			
+			render_bg
+     		{    
+				0="gradient(x0+1, y0+3, x1-1, y1-3, Btnlight, Btndark )"
+				
+				1="fill( x0+1, y0+2, x1-1, y0+3, BtnBorder1 )"		// t
+				2="fill( x0  , y0+3, x0+1, y1-3, BtnBorder1 )"		// l
+				3="fill( x0+1, y1-3, x1-1, y1-2, BtnBorder1 )"		// b
+				4="fill( x1-1, y0+3, x1  , y1-3, BtnBorder1 )"		// r
+                         
+    			5="fill( x0  , y0+2, x0+1, y0+3, BtnBorder2 )"		// tl
+				6="fill( x1-1, y0+2, x1  , y0+3, BtnBorder2 )"		// tr
+    			7="fill( x0  , y1-3, x0+1, y1-2, BtnBorder2 )"		// bl
+    			8="fill( x1-1, y1-3, x1  , y1-2, BtnBorder2 )"		// br
+				
+				9="image( x1-13, y0+8, x1-3, y0+13, graphics/downarrow_1 )"
+			}
+		}	
+
+		NavLabel2:hover
+		{
+			textcolor="TextHover"
+			padding-right=10
+			
+			render_bg
+     		{    
+				0="gradient(x0+1, y0+3, x1-1, y1-3, Btnlighthover, Btndarkhover )"
+				
+				1="fill(	x0+1, y0+2, x1-1, y0+3, BtnBorder1 )"	//t
+				3="fill(	x0  , y0+3, x0+1, y1-3, BtnBorder1 )"	//l
+				2="fill(	x0+1, y1-3, x1-1, y1-2, BtnBorder1 )"	//b
+				4="fill(	x1-1, y0+3, x1  , y1-3, BtnBorder1 )"	//r
+				            
+				5="fill(	x0  , y0+2, x0+1, y0+3, BtnBorder2 )"	//tl
+				6="fill(	x1-1, y0+2, x1  , y0+3, BtnBorder2 )"	//tr
+				7="fill(	x0  , y1-3, x0+1, y1-2, BtnBorder2 )"	//bl
+				8="fill(	x1-1, y1-3, x1  , y1-2, BtnBorder2 )"	//br
+
+				9="image( x1-13, y0+8, x1-3, y0+13, graphics/downarrow_2 )"
+     		}
+		}	
+		
+		NavLabel2:selected
+		{
+			textcolor="TextSelected"
+			padding-right=10
+
+			render_bg
+     		{    
+				0="gradient(x0+1, y0+3, x1-1, y1-3, Btnlight, Btndark )"
+				
+				1="fill(	x0+1, y0+2, x1-1, y0+3, BtnBorder1 )"	//t
+				3="fill(	x0  , y0+3, x0+1, y1-3, BtnBorder1 )"	//l
+				2="fill(	x0+1, y1-3, x1-1, y1-2, BtnBorder1 )"	//b
+				4="fill(	x1-1, y0+3, x1  , y1-3, BtnBorder1 )"	//r
+				            
+				5="fill(	x0  , y0+2, x0+1, y0+3, BtnBorder2 )"	//tl
+				6="fill(	x1-1, y0+2, x1  , y0+3, BtnBorder2 )"	//tr
+				7="fill(	x0  , y1-3, x0+1, y1-2, BtnBorder2 )"	//bl
+				8="fill(	x1-1, y1-3, x1  , y1-2, BtnBorder2 )"	//br
+				
+				9="image( x1-13, y0+8, x1-3, y0+13, graphics/downarrow_3 )"
+     		}
+		}
+
+	
+	}
+}
+	
+	
+	
+	

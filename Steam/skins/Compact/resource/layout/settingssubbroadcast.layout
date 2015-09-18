@@ -11,7 +11,7 @@
 		"BroadcastHelpHeader" { ControlName="Label" fieldName="BroadcastHelpHeader" labelText="#Steam_Settings_Broadcast_HelpHeader" group="HideWhenUnavailable" }
 		"BroadcastHelpURL" { ControlName="URLLabel" fieldName="BroadcastHelpURL" labelText="#Steam_Settings_Broadcast_HelpURL_Desc" URLText="#Steam_Settings_Broadcast_HelpURL_URL" group="HideWhenUnavailable" }
 		
-		"Divider1" { ControlName="Divider"	}				
+		"Divider1" { ControlName="Divider" group="HideWhenUnavailable" }				
 
 		"PermissionsHeader" { ControlName="Label" fieldName="PermissionsHeader" labelText="#Steam_Settings_Broadcast_PermissionsHeader" group="HideWhenDisabled" }
 		"Permissions" { ControlName="ComboBox" fieldName="Permissions" group="HideWhenDisabled" editable="0" }			
@@ -45,7 +45,7 @@
 		place { start="BroadcastDisabledLabel" control="BroadcastDisabledSupportURL" dir=down margin-top=10 margin-right=20 width=max }
 		
 		place { control="BroadcastStatusHeader" margin-left=10 margin-right=20 margin-top=6 }
-		place { start="BroadcastStatusHeader" control="BroadcastStatus" dir=right margin-left=4 }
+		place { start="BroadcastStatusHeader" control="BroadcastStatus" dir=right x=10 }
 
 		place { start="BroadcastStatusHeader" margin-top=2 control="BroadcastHelpHeader" dir=down }
 		place { start="BroadcastStatus" control="BroadcastHelpURL" dir=down margin-top=2 }

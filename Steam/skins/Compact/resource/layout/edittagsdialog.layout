@@ -1,0 +1,12 @@
+"resource/layout/edittagsdialog.layout"
+{
+	controls
+	{
+	}
+	
+	layout
+	{
+		region { name="bottom" align=bottom height=28 }
+		place { control="OKButton,CancelButton" region=bottom width=90 height=20 spacing=5 margin-right=4 margin-top=4 align=right }
+	}
+}

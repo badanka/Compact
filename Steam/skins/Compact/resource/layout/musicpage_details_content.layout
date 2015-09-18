@@ -30,7 +30,7 @@
 		
 		AlbumOrArtistListStyle
 		{
-			render_bg { }
+			//render_bg { }
 		}
 		
 		EmptyDatabaseText
@@ -54,8 +54,18 @@
 			{
 			}
 			render_bg
-			{
-				 0="fill( x0+2, y0+2, x1-1, y1 - 1, red )"
+			{     
+				// background fill
+				0="fill( x0+1, y0+1, x1-1, y1-1, FrameBG2 )"
+                
+           		1="image( x0+1, y0+1, x0+262, y0+98, graphics/libdet_corner )"
+
+				// lines around
+				2="gradient_horizontal( x0+1, y0, x1-1, y0+1, ExBorderLight, ExBorderLowLight )"  // top
+				
+				3="gradient( x0, y0  , x0+1, y1, ExBorderLight, ExBorderLowLight )"  // left
+				4="fill( x0+1, y1-1, x1, y1, ExBorderLowLight )"  // bottom
+				5="fill( x1-1, y0  , x1, y1, ExBorderLowLight )"  // right
 			}
 		}
 		
@@ -145,9 +155,8 @@
 	{
 		region { name="background" x=0 y=0 width=0 height=0 }
 		region { name="list" y=2 x=1 width=275 height=max margin-bottom=0 }
-		region { name="details"
-			y=1 x=275 width=max height=max overflow=scroll-vertical 
-			margin-left=1 margin-top=1 margin-bottom=1 margin-right=-1 dir=down }
+		region { name="details" overflow=scroll-vertical
+			y=1 x=275 width=max height=max margin-left=1 margin-top=1 margin-bottom=1 margin-right=-1 dir=down }
 		
 		place	{ control=EmptyDatabaseText x=0 y=0 width=max height=max margin=10 }
 		place	{ control=CrawlingText x=0 y=0 width=max height=max margin=10 }

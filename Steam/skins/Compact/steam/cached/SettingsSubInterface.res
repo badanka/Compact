@@ -360,9 +360,9 @@
 		place { control="Label2,FavoriteWindowCombo" start=Divider1 margin-top=7 dir=down spacing=4 }
 		
 		place { control="Label3,SkinCombo" start=FavoriteWindowCombo y=6 dir=down margin-right=10 spacing=4 }
-		place { control="AutoLaunchCheck,BigPictureModeCheck,DWriteCheck,UrlBarCheck,H264HWAccelCheck" start=SkinCombo y=5 height=18 spacing=0 width=max dir=down }
+		place { control="AutoLaunchCheck,BigPictureModeCheck,DWriteCheck,H264HWAccelCheck,UrlBarCheck" start=SkinCombo y=5 height=18 spacing=0 width=max dir=down }
 		
-		place { control="Divider2" start=H264HWAccelCheck dir=down width=max margin-top=7 margin-right=10 }
+		place { control="Divider2" start=UrlBarCheck dir=down width=max margin-top=7 margin-right=10 }
 		
 		place { control="NotifyAvailableGamesCheck" start=Divider2 dir=down margin-top=6 height=26 width=max margin-right=10 }
 		place { control="SetJumpListOptionsButton" start=NotifyAvailableGamesCheck margin-top=11 dir=down height=20 }

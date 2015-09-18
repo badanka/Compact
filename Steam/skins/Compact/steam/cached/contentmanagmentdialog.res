@@ -1,13 +1,13 @@
-"steam/cached/AddShortcutDialog.res"
+"steam/cached/contentmanagmentdialog.res"
 {
-	"AddShortcutDialog"
+	"contentmanagmentdialog"
 	{
-		"ControlName"		"CAddShortcutDialog"
-		"fieldName"		"AddShortcutDialog"
+		"ControlName"		"CContentManagmentDialog"
+		"fieldName"		"ContentManagmentDialog"
 		"xpos"		"794"
 		"ypos"		"447"
-		"wide"		"700"
-		"tall"		"420"
+		"wide"		"512"
+		"tall"		"200"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
 		"visible"		"1"
@@ -15,7 +15,7 @@
 		"tabPosition"		"0"
 		"paintbackground"		"1"
 		"settitlebarvisible"		"1"
-		"title"		"#SteamUI_PickShortcutTitle"
+		"title"		"#SteamUI_ContentMgr_Title"
 	}
 	"Label1"
 	{
@@ -31,20 +31,20 @@
 		"enabled"		"1"
 		"tabPosition"		"0"
 		"paintbackground"		"1"
-		"labelText"		"#SteamUI_AddGameLabel"
+		"labelText"		"#SteamUI_ContentMgr_Text"
 		"textAlignment"		"north-west"
 		"dulltext"		"0"
 		"brighttext"		"0"
 		"wrap"		"1"
 	}
-	"AppList"
+	"InstallFoldersList"
 	{
 		"ControlName"		"ListPanel"
-		"fieldName"		"AppList"
+		"fieldName"		"InstallFoldersList"
 		"xpos"		"10"
 		"ypos"		"64"
-		"wide"		"681"
-		"tall"		"288"
+		"wide"		"492"
+		"tall"		"120"
 		"AutoResize"		"3"
 		"PinCorner"		"0"
 		"visible"		"1"
@@ -52,16 +52,18 @@
 		"tabPosition"		"0"
 		"paintbackground"		"1"
 	}
-	"BrowseButton"
+	
+	"AddFolderButton"
 	{
 		"ControlName"		"Button"
-		"fieldName"		"BrowseButton"
-		"xpos"		"291"
-		"ypos"		"362"
-		"wide"		"92"
+		"fieldName"		"AddFolderButton"
+		"labelText"		"#SteamUI_ContentMgr_AddInstallFolder"
+		"xpos"		"10"
+		"ypos"		"200"
+		"wide"		"160"
 		"tall"		"24"
 		"AutoResize"		"0"
-		"PinCorner"		"3"
+		"PinCorner"		"2"
 		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"		"0"
@@ -69,17 +71,20 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 		"Default"		"0"
+		"command" "AddInstallFolder"
 	}
-	"AddSelectedButton"
+	
+	"RemoveFolderButton"
 	{
 		"ControlName"		"Button"
-		"fieldName"		"AddSelectedButton"
-		"xpos"		"393"
-		"ypos"		"362"
-		"wide"		"195"
+		"fieldName"		"RemoveFolderButton"
+		"labelText"		"#SteamUI_ContentMgr_RemoveInstallFolder"
+		"xpos"		"180"
+		"ypos"		"200"
+		"wide"		"160"
 		"tall"		"24"
 		"AutoResize"		"0"
-		"PinCorner"		"3"
+		"PinCorner"		"2"
 		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"		"0"
@@ -87,13 +92,16 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 		"Default"		"0"
+		"command" "RemoveInstallFolder"
 	}
+	
+	
 	"CloseButton"
 	{
 		"ControlName"		"Button"
 		"fieldName"		"CloseButton"
-		"xpos"		"599"
-		"ypos"		"362"
+		"xpos"		"408"
+		"ypos"		"200"
 		"wide"		"92"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -102,13 +110,13 @@
 		"enabled"		"1"
 		"tabPosition"		"0"
 		"paintbackground"		"1"
-		"labelText"		"#vgui_cancel"
+		"labelText"		"#vgui_close"
 		"textAlignment"		"west"
 		"wrap"		"0"
 		"Command"		"Close"
 		"Default"		"0"
 	}
-	
+
 	styles
 	{
 		ListPanelColumnHeader
@@ -120,15 +128,26 @@
 				2="fill		(x0  , y1-1, x1  , y1  , InBorderShade )"				// bottom
 			}   
 		}
+		
+		ListPanel
+		{
+		}
+
+		CContentManagmentDialog
+		{
+		}
 	}
 	
 	layout
 	{
-		place { control="Label1" height=0 }
-		place { control="AppList" height=max width=max x=0 margin-left=2 margin-right=2 margin-top=28 margin-bottom=28 }
+		place { control="Label1" y=26 x=11 }
 
-		region { name="bottom" align=bottom height=28 }
-		place { control="BrowseButton,AddSelectedButton,CloseButton" region=bottom height=20 spacing=5 margin-right=4 margin-top=4 align=right }	
-
+		region { name="bottom" align=bottom height=24 }
+	
+		place { control="InstallFoldersList" width=max height=max margin-top=45 margin-left=2 margin-right=2 margin-bottom=26 }
+		
+		place { control="AddFolderButton,RemoveFolderButton" region="bottom" spacing=4 height=20 align=left margin-left=2 margin-top=2 }
+		place { control="CloseButton" region="bottom" height=20 width=76 align=right margin-top=2  margin-right=2 }
+		
 	}
 }
