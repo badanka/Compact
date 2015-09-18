@@ -2,11 +2,11 @@
 {
 	controls
 	{
-		"ImageLogo"
+		"fullscreen"
 		{
-			"ControlName" 	"Label"
-			style="ClientLogo"
-			zpos=-5
+			"ControlName"		"Button"
+			style="FullscreenButton"
+			command="fullscreen"
 		}
 		
 		"New"
@@ -119,12 +119,31 @@
 	
 	styles
 	{    
-		ClientLogo
+		AccountBalanceStyle
 		{
-			bgcolor=none
-			render_bg={}
-			image="graphics/piston"
-			inset="0 0 0 0"
+		      textcolor="labelfocus"
+		      bgcolor="none"
+		      font-family=basefont
+		      font-size=13
+		      font-weight=400
+		      font-style=regular
+		}
+
+		AccountBalanceStyle [$OSX]
+		{
+			textcolor="labeldisabled"
+			bgcolor="none"
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			font-style=regular
+			inset="0 1 0 0"
+		}
+    
+		AccountBalanceStyle:Hover
+		{
+			textcolor="white"
+			font-style=underline
 		}
 		
 		RootMenu
@@ -189,7 +208,7 @@
 		ClientTitle [$OSX]
 		{
 			font-family=basefont
-			font-size=15
+			font-size=13
       		font-weight=400
       		textcolor="textdisabled"
       		bgcolor="none"
@@ -199,7 +218,7 @@
 		ClientTitle:FrameFocus [$OSX]
 		{
 			font-family=basefont
-   			font-size=15
+   			font-size=13
    			font-weight=400
    			textcolor="texthover"
    			bgcolor="none"
@@ -382,7 +401,7 @@
 			render {}
 			render_bg 
 			{
-				0="image( x0, y0+5, x0, y1, resource/notfamilyview_1 )"
+				0="image( x0, y0+5, x0, y1, resource/familyview_1 )"
 			}
 		}
 		
@@ -394,7 +413,7 @@
 			render {}
 			render_bg 
 			{
-				0="image( x0, y0+5, x0, y1, resource/notfamilyview_2 )"
+				0="image( x0, y0+5, x0, y1, resource/familyview_2 )"
 			}
 		}
 		
@@ -423,7 +442,26 @@
 			}
 		}
 		
-		inbox_button
+		inbox_button [!$OSX]
+		{
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			font-style=none
+			textcolor=labelfocus
+			padding-left=2
+			padding-right=8
+			padding-top=3
+			
+			inset="-8 -3 8 0"
+			render {}
+			render_bg 
+			{
+				0="image( x1-20, y0+5, x1, y1, graphics/notification_1 )"
+			}
+		}
+
+		inbox_button [$OSX]
 		{
 			font-family=basefont
 			font-size=13
@@ -586,11 +624,11 @@
 		place { control="frame_captiongrip" margin=2 width=max height=104 }
 		//place { control="frame_grip" margin=0 width=2 height=2 }
 		
+		place [!$OSX] { control="fullscreen" tooltiptext="#tooltip_view_fullscreen" align=right y=22 height=20 spacing=0 margin-right=0 margin-top=1 width=30 region="bigpicture"}
+		place [$OSX] { control="fullscreen" tooltiptext="#tooltip_view_fullscreen" align=right y=22 height=20 spacing=0 margin-right=8 margin-top=1 width=30 region="bigpicture"}
+
 		
 		//hidden elements
-		place [!$OSX] { control="ImageLogo" align=right x=650 y=0 width=0 height=0 }
-		place [$OSX] { control="ImageLogo" align=right x=650 y=0 width=0 height=0 }	
-		
 		place { control="account_URL,add_game,FriendPanel,online_friends" align=right x=9999 height=0 }
 
 		place [!$OSX] { control="account_balance_seperator" align=right x=9999 width=0 }	

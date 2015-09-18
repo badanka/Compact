@@ -17,11 +17,19 @@
 				style="ActionButtonStyle"
 				command="RemoveSelectedEntryFromLibraryAction"
 			}			
-			
+			StartCrawlingButton 
+			{
+				controlname="Button" 
+				labeltext="#Music_Settings_Library_StartCrawling" 
+				style="ActionButtonStyle"
+				command="StartCrawlingAction"
+			}		
+
 			LibraryDivider { ControlName="divider" }
 			
 			DatabaseHeader { controlname="Label" labelText="#Music_Settings_Database_Header" style="HeaderText" }
 			DatabaseCrawlAtStartup { ControlName="CheckButton" labelText="#Music_Settings_Database_CrawlAtStartup" }
+			DatabaseCrawlSteamInstallFolders { ControlName="CheckButton" labelText="#Music_Settings_CrawlSteamInstallFolders" }						
 			DatabaseInfoLabel  { controlname="Label" labelText="#Music_Settings_Database_XAlbumsWithYTracks" style="DescriptionLabel" }
 			ResetDatabaseButton {
 				controlname="Button" 
@@ -74,11 +82,13 @@
 		place { control=LibraryHeader region=content y=3 }
 		place { control=LibraryList region=content width=max y=22 height=95}
 		
-		place { control=AddLibraryButton,RemoveLibraryButton region=content y=126 dir=right height=20 spacing=10 }
+		place { control=AddLibraryButton,RemoveLibraryButton,StartCrawlingButton region=content y=126 dir=right height=20 spacing=4 }
 		place { control=LibraryDivider region=content y=155 width=max }
 		
 		place { control=DatabaseHeader region=content y=163 }
 		place { control=DatabaseCrawlAtStartup region=content y=176 }	
+		place { control=DatabaseCrawlSteamInstallFolders region=content y=176 x=215 }
+		
 		place { control=ResetDatabaseButton,DatabaseInfoLabel region=content y=207 dir=right height=20 spacing=10 }
 		place { control=DatabaseDivider region=content y=236 width=max }
 		
@@ -89,8 +99,8 @@
 		place { control=PauseMusicHeader region=content y=299 }
 		place { control=PauseMusicWhenStartingApplicationCheckbox region=content y=317 height=18 }
 		place { control=PauseMusicWhenVoiceChatCheckbox region=content y=335 height=18 }
-		place { control=LoggingHeader region=content y=299 x=240}
-		place { control=LoggingCrawlingCheckbox region=content y=317 x=240 height=18 }
+		place { control=LoggingHeader region=content y=299 x=215}
+		place { control=LoggingCrawlingCheckbox region=content y=317 x=215 height=18 }
 		place { control=NotificationHeader region=content y=359 }
 		place { control=NotificationPlaylistNowPlayingCheckbox region=content y=377 height=18 }
 		
