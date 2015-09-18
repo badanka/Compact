@@ -1,0 +1,913 @@
+"resource/layout/uinavigatorpanel.layout"
+{
+	controls
+	{		
+		"subnavgroup_library"
+		{
+			"ControlName"		"imagepanel"
+			style="grouper"
+			group="library"
+			zpos="-4"
+		}
+		
+		"PageLoadThrobber"
+		{
+			"ControlName"		"ThrobberImagePanel"
+			style="Panel_transparent"
+			zpos="-2"
+			"group" "urlthrobber"
+		}
+		"Back"
+		{
+			"ControlName"		"Button"
+			style="BackButton"
+			command="Back"
+		}
+		"Forward"
+		{
+			"ControlName"		"Button"
+			style="ForwardButton"
+			command="Forward"
+		}
+		"fullscreen"
+		{
+			"ControlName"		"Button"
+			style="FullscreenButton"
+			command="fullscreen"
+		}
+
+		"refresh"
+		{
+			"ControlName"		"Button"
+			command="Refresh"
+			style="ReloadButton"
+			group="Refresh"
+		}
+		"Stop"
+		{
+			"ControlName"		"Button"
+			command="Stop"
+			style="StopButton"
+			group="stop"
+		}
+		
+		"Home"
+		{
+			"ControlName"		"Button"
+			command="Home"
+			style="HomeButton"
+			group="home"
+		}
+		
+		"label_store"
+		{
+			"ControlName"		"Label"
+			"labelText"		"#steam_store"
+			style="CuinavButton"
+		}
+		
+		"label_library"
+		{
+			"ControlName"		"Label"
+			"labelText"		"#steam_library"
+			style="CuiNavButton"
+		}
+
+		"label_community"
+		{
+			"ControlName"		"Label"
+			"labelText"		"#steam_community"
+			style="CuiNavButton"
+		}
+		
+		"label_me"
+		{
+			"ControlName"		"Label"
+			"labelText"		"ME"
+			style="CuiNavButton"
+		}
+
+		"URLBar"
+		{
+			"ControlName"		"TextEntry"
+			style="TextEntryURL"
+			group="url"
+		}
+		
+		"WebPanel"
+		{
+			style="WebPanelStyle"
+		}
+
+		library_filters				{ ControlName=MenuButton labelText="#steam_library_filter_allgames" style="NavLabel2" showDownArrow=1 group=library }
+		
+		library_search				{ ControlName=TextEntry maxchars=16 hintText="#steam_library_search" style="LibrarySearch" group=library tabposition=2 }
+		label_search_icon			{ ControlName=Label style="LibrarySearchIcon" group=library zpos="4" }
+
+		label_library_zoom			{ ControlName=Label labelText="#steam_library_zoom"	style="NavLabelZoom" group=zoom }
+		library_zoom				{ ControlName=Slider showbar="1" showticks="0" style=zoomslider group=zoom zpos="4" }
+		label_zoom_separator		{ ControlName=Label labelText="  |  " style="LibrarySeparator" group=zoom }
+
+		label_library_view			{ ControlName=Label labelText="#steam_library_views"	style="NavLabelView" group=views }
+		library_filters_list		{ ControlName=Label style="ViewListButton"	tooltiptext="#tooltip_view_list"	group=views }
+		library_filters_grid		{ ControlName=Label style="ViewGridButton" 	tooltiptext="#tooltip_view_grid"	group=views }
+		library_filters_details		{ ControlName=Label style="ViewDetailButton" tooltiptext="#tooltip_view_details"	group=views }
+
+		library_music_menu			{ ControlName=MenuButton labelText="#Music_Nav_Menu_Artists" style="NavLabel2" showDownArrow=0 align=left group=music }
+		library_music_player_icon	{ ControlName=URLLabel style="MusicPlayerIcon" tooltiptext="#music_tooltip_view_player" URLtext="steam://open/musicplayer" align=right group=music }
+
+		emailreminderbar { zpos=1 }
+
+		EVCert	{ controlname="Label" style="LabelEVCert" visible=false }		
+		URLStatusImage	{ controlname="ImagePanel" style="URLStatusImage" group="urlsec" }
+	}
+	
+	styles
+	{
+		FullscreenButton
+		{
+			padding-left=0
+			padding-top=0
+			padding-right=0
+			padding-bottom=0
+		}
+		
+		//search bar background
+		grouper
+		{
+			bgcolor=none
+			render_bg
+			{
+				// background fill
+				0="fill( x0+1  , y0+3, x0+174, y1-4, FrameBG1 )"
+	            
+				1="fill( x0    , y0+3, x0+175, y0+4, ExBorder )"	//top
+				2="fill( x0    , y0+4, x0+1  , y1-3, ExBorder )"	//left
+				3="fill( x0+174, y0+4, x0+175, y1-3, ExBorder )"	//right
+				4="fill( x0    , y1-4, x0+175, y1-3, ExBorder )"	//bottom
+			}
+		}
+		
+		headertextlarge
+		{
+			padding-left=5
+			padding-top=3
+			padding-right=10
+			padding-bottom=3
+			font-size=20
+			textcolor=Text
+			font-weight=400
+			bgcolor=DarkDialogBGTransparent
+			minimum-width=200
+		}
+		
+		zoomslider
+		{
+			inset="0 -3 0 0"
+			textcolor=navlabel
+		}
+		
+		zoomslider:hover
+		{
+			inset="0 -3 0 0"
+			textcolor=TextHover
+		}
+		
+		LibrarySeparator
+		{
+			padding-left=0
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			textcolor=LabelDisabled
+			inset="0 -1 0 0"
+		}
+		
+		TextEntry
+		{
+			font-family=basefont
+			font-size=13
+			textcolor="Text"
+			font-weight=400
+			inset-left=4
+			inset-top=1
+			bgcolor="none"
+			selectedtextcolor="white"
+			selectedbgcolor="TextSelectedBG"
+			shadowtextcolor="Text"  // this is the cursor color
+			render {}
+		}
+		
+		TextEntry:hover
+		{
+			textcolor="TextHover"
+		}   
+	      
+		TextEntry:active
+		{
+			textcolor="TextHover"
+		}   
+	      
+		TextEntry:selected
+		{
+			textcolor="TextHover"
+	    }   
+
+		LibrarySearch
+		{
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="text"
+		}
+		
+		LibrarySearch:empty
+		{
+			font-style=italic
+			textcolor="LabelDisabled"
+		}
+		
+		LibrarySearch:hover
+		{	
+			textcolor="texthover"	
+		}
+		
+		LibrarySearch:empty:hover
+		{
+			font-style=italic
+			textcolor="texthover"
+		}
+			
+		LibrarySearch:disabled
+		{
+			font-style=italic
+			textcolor="None"
+		}
+
+		LibrarySearchIcon
+		{
+			bgcolor="none"
+			inset="-2 3 0 0"
+			render_bg={}
+			image="graphics/icon_button_search"
+			padding-left=0
+			padding-right=-1		
+		}
+
+		LibrarySearchIcon:disabled
+		{
+			bgcolor="none"
+			inset="-2 3 0 0"
+			render_bg={}
+			image="none"
+			padding-left=0
+			padding-right=-1
+		}
+		
+		MusicPlayerIcon
+		{
+			bgcolor="none"
+			inset="-1 0 0 0"
+			render_bg={}
+			image="graphics/icon_button_music_1"
+			padding-left=0
+			padding-right=-1
+			padding-top=-1
+		}
+		
+		MusicPlayerIcon:hover
+		{
+			bgcolor="none"
+			inset="-1 0 0 0"
+			render_bg={}
+			image="graphics/icon_button_music_2"
+			padding-left=0
+			padding-right=-1
+			padding-top=-1
+		}
+		
+		MusicPlayerIcon:selected
+		{
+			bgcolor="none"
+			inset="-1 0 0 0"
+			render_bg={}
+			image="graphics/icon_button_music_3"
+			padding-left=0
+			padding-right=-1
+			padding-top=-1
+		}
+			
+		LibraryShow [!$OSX]
+		{
+			padding-left=0
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="LabelDisabled"
+			font-style=regular
+		}
+		
+		LibraryShow [$OSX]
+		{
+			padding-left=0
+			font-family=basefont
+			font-size=13 
+			font-weight=400
+			textcolor="LabelDisabled"
+			font-style=regular 
+		}
+		
+		NavLabel
+		{
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="Label"
+			font-style=regular
+		}	
+		
+		NavLabelView [!$OSX]
+		{
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="LabelDisabled"
+			font-style=regular
+			padding-left=0
+		}
+		
+		NavLabelView [$OSX]
+		{
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="LabelDisabled"
+			font-style=regular
+			padding-left=0
+		}
+
+		NavLabelZoom  [$OSX]
+		{
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="LabelDisabled"
+			font-style=regular
+			padding-right=5
+		}
+		
+		NavLabelZoom [!$OSX]
+		{
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="LabelDisabled"
+			font-style=regular
+			padding-right=5
+		}
+	
+		NavLabel2  [!$OSX]
+		{
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="Label"
+			padding-right=10
+			
+			render_bg
+     		{    
+				0="gradient(x0+1, y0+3, x1-1, y1-3, Btnlight, Btndark )"
+			
+				1="fill(x0  , y0+2, x1  , y0+3, BtnBorder1 )"  // top
+				2="fill(x0  , y0+3, x0+1, y1-2, BtnBorder1 )"  // left
+				3="fill(x0+1, y1-3, x1  , y1-2, BtnBorder2 )"  // bottom
+				4="fill(x1-1, y0+3, x1  , y1-3, BtnBorder2 )"  // right
+				
+				5="image( x1-13, y0+8, x1-3, y0+13, graphics/downarrow_1 )"
+     		}
+		}	
+		
+		NavLabel2        [$OSX]
+		{
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="Label"
+			padding-right=10
+			
+			render_bg
+     		{    
+				0="gradient(x0+1, y0+3, x1-1, y1-3, Btnlight, Btndark )"
+				
+				1="fill(x0  , y0+2, x1  , y0+3, BtnBorder1 )"  // top
+				2="fill(x0  , y0+3, x0+1, y1-2, BtnBorder1 )"  // left
+				3="fill(x0+1, y1-3, x1  , y1-2, BtnBorder2 )"  // bottom
+				4="fill(x1-1, y0+3, x1  , y1-3, BtnBorder2 )"  // right
+			}
+		}	
+
+		NavLabel2:hover
+		{
+			textcolor="TextHover"
+			padding-right=10
+			
+			render_bg
+     		{    
+				0="gradient(x0+1, y0+3, x1-1, y1-3, Btnlighthover, Btndarkhover )"
+				
+				1="fill(x0  , y0+2, x1  , y0+3, BtnBorder3 )"  // top
+				2="fill(x0  , y0+3, x0+1, y1-2, BtnBorder3 )"  // left
+				3="fill(x0+1, y1-3, x1  , y1-2, BtnBorder1 )"  // bottom
+				4="fill(x1-1, y0+3, x1  , y1-3, BtnBorder1 )"  // right
+
+				5="image( x1-13, y0+8, x1-3, y0+13, graphics/downarrow_2 )"
+     		}
+		}	
+		
+		NavLabel2:selected
+		{
+			textcolor="white"
+			padding-right=10
+
+			render_bg
+     		{    
+				0="gradient(x0+1, y0+3, x1-1, y1-3, Btndark, Btndarker )"
+				
+				1="fill(x0  , y0+2, x1  , y0+3, BtnBorder4 )"  // top
+				2="fill(x0  , y0+3, x0+1, y1-2, BtnBorder4 )"  // left
+				3="fill(x0+1, y1-3, x1  , y1-2, BtnBorder5 )"  // bottom
+				4="fill(x1-1, y0+3, x1  , y1-3, BtnBorder5 )"  // right
+				
+				5="image( x1-13, y0+8, x1-3, y0+13, graphics/downarrow_3 )"
+     		}
+		}
+		
+		Panel_transparent
+		{
+			bgcolor="none"
+		}
+
+		ViewDetailButton
+		{
+			bgcolor="none"
+			inset="1 0 0 0"
+			render_bg={}
+			image="graphics/icon_button_detail"
+			padding-left=0
+			padding-right=0
+		}
+		
+		ViewDetailButton:hover
+		{
+			bgcolor="none"
+			render_bg={}
+			image="graphics/icon_button_detail_over"
+		}
+
+		ViewDetailButton:active
+		{
+			bgcolor="none"
+			render_bg={}
+			image="graphics/icon_button_detail_down"
+		}
+		
+		ViewDetailButton:selected
+		{
+			bgcolor="none"
+			render_bg={}
+			image="graphics/icon_button_detail_down"
+			render_bg
+     		{    
+     			// background 
+		        	0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, focus, focus2 )"
+		        	
+		        	// lines around
+		        	1="fill( x0, y0 + 1, x1, y0 + 2, focus2 )"  // top
+		        	2="fill( x0, y1 - 2, x1, y1 - 1, focus )"  // bottom
+		        	3="gradient( x0, y0 + 2, x0 + 1, y1 - 2, focus2, focus )"  // left
+		        	4="gradient( x1 - 1, y0 + 2, x1, y1 - 2, focus2, focus )"  // right
+     		}
+		}
+
+		ViewDetailButton:disabled
+		{
+			bgcolor="ButtonFace"
+			render_bg={}
+			image="graphics/icon_button_detail_disabled"
+		}
+		
+		ViewGridButton
+		{
+			bgcolor="none"
+			inset="1 0 0 0"
+			render_bg={}
+			image="graphics/icon_button_grid"
+			padding-left=0
+			padding-right=0
+		}
+		
+		ViewGridButton:hover
+		{
+			bgcolor="none"
+			render_bg={}
+			image="graphics/icon_button_grid_over"
+		}
+
+		ViewGridButton:active
+		{
+			bgcolor="none"
+			render_bg={}
+			image="graphics/icon_button_grid_down"
+		}
+		
+		ViewGridButton:selected
+		{
+			bgcolor="none"
+			render_bg={}
+			image="graphics/icon_button_grid_down"
+			render_bg
+     		{    
+    				// background 
+		        	0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, focus, focus2 )"
+		        	
+		        	// lines around
+		        	1="fill( x0, y0 + 1, x1, y0 + 2, focus2 )"  // top
+		        	2="fill( x0, y1 - 2, x1, y1 - 1, focus )"  // bottom
+		        	3="gradient( x0, y0 + 2, x0 + 1, y1 - 2, focus2, focus )"  // left
+		        	4="gradient( x1 - 1, y0 + 2, x1, y1 - 2, focus2, focus )"  // right
+     		}
+		}
+		
+		ViewGridButton:disabled
+		{
+			bgcolor="none"
+			render_bg={}
+			image="graphics/icon_button_grid_disabled"
+		}
+		
+		ViewListButton
+		{
+			bgcolor="none"
+			inset="1 0 0 0"
+			render_bg={}
+			image="graphics/icon_button_list"
+			padding-left=0
+			padding-right=0
+		}
+		
+		ViewListButton:hover
+		{
+			bgcolor="none"
+			render_bg={}
+			image="graphics/icon_button_list_over"
+		}
+
+		ViewListButton:active
+		{
+			bgcolor="none"
+			render_bg={}
+			image="graphics/icon_button_list_down"
+		}
+		
+		ViewListButton:selected
+		{
+			bgcolor="none"
+			render_bg={}
+			image="graphics/icon_button_list_down"
+			render_bg
+     		{    
+		        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, focus, focus2 )"
+		        
+		        1="fill(     x0  , y0+1, x1  , y0+2, focus2 )"			// top
+		        2="fill(     x0  , y1-2, x1  , y1-1, focus )"			// bottom
+		        3="gradient( x0  , y0+2, x0+1, y1-2, focus2, focus )"	// left
+		        4="gradient( x1-1, y0+2, x1  , y1-2, focus2, focus )"	// right
+     		}
+		}
+		
+		ViewListButton:disabled
+		{
+			bgcolor="none"
+			render_bg={}
+			image="graphics/icon_button_list_disabled"
+		}
+		
+		WebPanelStyle			//store and community section
+		{
+			bgcolor="none"
+			render_bg 
+			{
+				0="fill( x0  , y0  , x1-1, y0+1, InborderShade )"  // top
+			}
+		}
+		
+		TextEntryURL [!$OSX]
+		{
+			font-family=basefont
+			font-size=13
+			textcolor="label"
+			font-weight=400
+			bgcolor="none"
+			selectedtextcolor="TextEntrySelected"
+			selectedbgcolor="TextSelectedBG"
+			shadowtextcolor="Text"	// this is the cursor color
+			render {}			
+		}
+
+		TextEntryURL [$OSX]
+		{
+			font-family=basefont
+			font-size=13
+			textcolor="label"
+			font-weight=400
+			bgcolor="none"
+			selectedtextcolor="TextEntrySelected"
+			selectedbgcolor="TextSelectedBG"
+			shadowtextcolor="Text"	// this is the cursor color
+			render {}			
+		}
+	
+		"CSteamRootDialog TextEntryURL"
+		{
+			textcolor="buttonborder"
+		}
+
+		"CSteamRootDialog TextEntryURL:hover"
+		{
+			textcolor="texthover"
+		}
+		
+		CUINavButtonNew
+		{
+			textcolor="133 176 223 255"
+			font-weight=700
+			font-size=16
+		}
+
+		CUINavButton  [!$OSX]
+		{
+			textcolor="TextGlowSelected2"
+			bgcolor="none"
+			font-family=basefont
+			font-size=13
+			font-weight=700 
+			inset="1 -3 0 0"
+
+			render_bg
+			{	
+				0="fill(x0-5, y0+1, x1+6, y1-3, FrameBG3 )"
+		        1="fill(x0-8, y1-1, x1+9, y1, ExBorder )"	// bottom
+			}
+		}
+
+		CUINavButton  [$OSX]
+		{
+			textcolor="TextGlowSelected2"
+			bgcolor="none"
+			font-family=basefont
+			font-size=13
+			font-weight=700 
+			inset="1 -3 0 0"
+			
+			render_bg
+			{	
+				0="fill(x0-5, y0+1, x1+6, y1-3, FrameBG3 )"
+		        1="fill(x0-8, y1-1, x1+9, y1, ExBorder )"	// bottom
+			}
+		}
+		
+		CUINavButton:disabled
+		{
+			textcolor="TextDisabled"
+			bgcolor="none"
+			font-family=basefont
+			font-size=13
+			font-weight=700 
+		}
+		
+		CUINavButton:hover
+		{
+			textcolor="texthover"
+			inset="1 -3 0 0"
+			
+			render_bg
+			{
+				0="gradient(x0-4, y0+1, x1+5, y1-1, Titlebar, MainFrameBG2 )"
+		        
+		        1="fill(    x0-5, y0  , x1+6, y0+1, ExBorder )"				// top
+		        2="fill(    x0-8, y1-1, x1+9, y1  , ExBorder )"				// bottom
+		        3="gradient(x0-5, y0+1, x0-4, y1-1, ExBorder, BtnBorder5 )"	// left
+				4="gradient(x1+5, y0+1, x1+6, y1-1, ExBorder, BtnBorder5 )"	// right
+			}
+		}
+		
+		CUINavButton:disabled:hover
+		{
+			textcolor="TextDisabled"
+		}
+		
+		CUINavButton:selected
+		{
+			textcolor="white"
+			bgcolor=none
+			font-family=basefont
+			font-size=13
+			font-weight=700 
+			font-style="normal"
+			inset="1 -3 0 0"
+			
+			render_bg
+			{
+				0="gradient(x0-4, y0+1, x1+5, y1, MainFrameBG3, MainFrameBG1 )"
+		        
+		        1="fill(x0-5, y0  , x1+6   , y0+1, ExBorder )"	// top
+		        2="fill(x0-5, y0+1, x0-4   , y1-1, ExBorder )"	// left
+				3="fill(x1+5, y0+1, x1+6   , y1-1, ExBorder )"	// right
+		        4="fill(x1+5, y1-1, x1+3000, y1  , ExBorder )"	// bottom-right
+		        5="fill(x0-8, y1-1, x0-4   , y1  , ExBorder )"	// bottom-left
+			}
+		}
+
+		CUINavButton2  [!$OSX]
+		{
+			textcolor="TextGlowSelected2"
+			bgcolor="none"
+			font-family=basefont
+			font-size=13
+			font-weight=400 
+			inset="1 0 0 0"
+			minimum-width=45
+			padding-left=2
+			padding-right=2
+
+			render_bg
+			{
+				//0="fill(x0-5, y0+1, x1+6, y1-3, FrameBG3 )"
+				0="fill(x0-5, y0+1, x1+6, y1-3, red )"
+		        1="fill(x0-8, y1-1, x1+9, y1, ExBorder )"	// bottom
+			}
+		}
+
+		CUINavButton2  [$OSX]
+		{
+			textcolor="TextGlowSelected2"
+			bgcolor="none"
+			font-family=basefont
+			font-size=13
+			font-weight=400 
+			inset="1 0 0 0"
+			
+			render_bg
+			{	
+				0="fill(x0-5, y0  , x1+6, y1-3, FrameBG3 )"
+				
+		        1="fill(x0-8, y1-1, x1+9, y1  , ExBorder )"	// bottom
+			}
+		}
+
+
+		CUINavButton2:hover
+		{
+			textcolor="texthover"
+			inset="1 0 0 0"
+			font-style="outerglow"
+			
+			render_bg
+			{
+		        0="gradient(x0, y0+3, x1+2, y1-3, Titlebar, MainFrameBG2 )"
+			}
+		}
+		
+		CUINavButton2:selected
+		{
+			textcolor="white"
+			bgcolor=none
+			font-family=basefont
+			font-size=13
+			font-weight=400 
+			font-style="normal"
+			inset="1 0 0 0"
+			
+			render_bg
+			{
+				0="gradient(x0, y0+3, x1+2, y1-3, MainFrameBG3, MainFrameBG1 )"
+			}
+		}
+
+		CUINavigatorPanel
+		{			
+			bgcolor="none"
+		}
+		
+		"CSteamRootDialog CGameFilterMenuButton"
+		{
+			inset="3 0 0 0"
+			padding-left="-3"
+		}
+		
+		"CGamesPage_Mini CGameFilterMenuButton"
+		{
+			inset="3 0 0 0"
+			padding-left="0"
+		}	
+		LabelEVCert [!$OSX]
+		{
+			font-family=basefont
+			font-size=13
+			textcolor="darkclientbg"
+			font-weight=400
+			bgcolor="html.secureurl"
+			inset-left=4
+			inset-right=4
+			inset-top=0
+		}
+
+		LabelEVCert [$OSX]
+		{
+			font-family=basefont
+			font-size=13
+			textcolor="darkclientbg"
+			font-weight=400
+			bgcolor="html.secureurl"
+			inset-left=3
+			inset-right=4
+			inset-top=3	
+		}	
+		
+		URLStatusImage
+		{
+			bgcolor=none
+			inset="0 0 0 0"
+			render_bg={}
+			image="graphics/html_lock_disabled"
+		}
+
+		URLBarSecure
+		{
+			textcolor="html.secureurl"
+		}
+
+		URLBarBrokenSecure
+		{
+			textcolor="html.insecureurl"
+		}		
+	}
+	
+	layout
+	{
+		place { control="label_store,label_library,label_community,label_me,label_console" x=0 y=1 spacing=13 margin-left="9" height=20 } 
+		place { control="label_community_new" start="label_console" x="9999" width=0 height=0 }
+
+        region { name="bigpicture" width=32 align=right margin-right=3 margin-top=0 height=22 }
+
+		place { control="fullscreen" tooltiptext="#tooltip_view_list" align=right y=0 height=22 region="bigpicture"}
+		place { control="library_music_player_icon" align=right height=16 width=16 y=23 margin-right=8 }
+
+		place { control="PageLoadThrobber" align=right y=21 height=20 width=20  margin-right=8 }
+
+		place [!$OSX] { control="back,forward" align=left y=22 height=19 width=20 spacing=0 margin-left=3 }
+		place [$OSX] { control="back,forward" align=left y=22 height=19 width=20 spacing=0 margin-left=3 }
+
+		place { control="refresh,stop,home,URLStatusImage,EVCert,URLBar" align=left x=46 y=21 height=20 width=max spacing=4 margin-left=3 margin-right=40 }
+
+ 		place { control="library_zoom" width=82 height=16 y=25  }
+
+		//the actual search box
+		place { control="subnavgroup_library" align=left y=20 height=22 width=max margin-left=47 margin-right=64 }
+
+		place { control="library_search" width=144 }
+		place [!$OSX] { control="label_search_icon,library_search" align=left y=19 height=20 x=51 }
+		 place [$OSX] { control="label_search_icon,library_search" align=left y=19 height=20 x=51 }
+
+	    region { name="dropdown" width=90 x=224 y=21  height=20 }
+		place { control="library_filters" align=left spacing=1 region="dropdown" }
+
+		place { control="library_filters_details,library_filters_list,library_filters_grid," align=left start="library_filters" dir=right height=20 spacing=4 margin-left=12 width=20 }
+
+ 		place [!$OSX] { control="library_music_menu" align=left height=20 start="library_filters" dir=right margin-left=4 }
+		 place [$OSX] { control="library_music_menu" align=left height=20 start="library_filters" dir=right margin-left=4 }
+
+		place [!$OSX] { control="library_zoom" align=left start="library_filters_grid" y=2 margin-left=12 height=18 }
+		 place [$OSX] { control="library_zoom" align=left start="library_filters_grid" y=2 margin-left=12 height=18 }
+
+		place [$OSX] { control="label_library_filters" align=left y=23 height=20 spacing=3 x=13 }
+
+ 	  	place { control=emailreminderbar margin-top=41 margin-left=0 margin-right=0 width=max height=32 }
+
+		place [!$OSX] { control="label_library_show,label_library_zoom,label_zoom_separator,label_library_view" x=99999 y=0 height=0 }
+		 place [$OSX] { control="label_library_show,label_library_zoom,label_zoom_separator,label_library_view" x=99999 height=0 width=0 }
+
+		// content pages
+		place { control=DownloadsPage 		width=max height=max margin-top=0 margin-left=2 margin-right=1  margin-bottom=3 start=emailreminderbar dir=down }
+		place { control=ScreenshotsPage 	width=max height=max margin-top=0 margin-left=0 margin-right=0  margin-bottom=0 start=emailreminderbar dir=down }
+		place { control=GamesPage_List 		width=max height=max margin-top=0 margin-left=1 margin-right=0  margin-bottom=0 start=emailreminderbar dir=down }
+		place { control=GamesPage_Details 	width=max height=max margin-top=0 margin-left=0 margin-right=0  margin-bottom=0 start=emailreminderbar dir=down }
+		place { control=GamesPage_Grid 		width=max height=max margin-top=0 margin-left=2 margin-right=1  margin-bottom=3 start=emailreminderbar dir=down }
+		place { control=WebPanel 			width=max height=max margin-top=0 margin-left=2 margin-right=1  margin-bottom=3 start=emailreminderbar dir=down }
+		place { control=MusicPage_Details 	width=max height=max margin-top=0 margin-left=2 margin-right=3  margin-bottom=3 start=emailreminderbar dir=down }
+		place { control=ConsolePage 		width=max height=max margin-top=0 margin-left=0 margin-right=0  margin-bottom=0 start=emailreminderbar dir=down }
+
+		place { control=MediaPage 			width=max height=max margin-top=1 margin-left=0 margin-right=28 margin-bottom=0 start=emailreminderbar dir=down }
+		place { control=ToolsPage 			width=max height=max margin-top=1 margin-left=2 margin-right=1  margin-bottom=1 start=emailreminderbar dir=down }
+	}
+}

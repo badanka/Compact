@@ -1,0 +1,55 @@
+"resource/layout/parentallockdialog.layout"
+{
+	controls
+	{
+		ParentalLockDialog { controlname="Frame" title="#steam_parental_locktitle" style="ParentalLockDialog" }
+
+		Instructions { controlname="Label" style="Hey" labeltext="#steam_parental_lockinstructions" wrap=1 }
+
+		KeyImage { controlname="Label" style="Key" zpos=-4 }
+
+		OK { controlname="Button" tabposition=1 command="DoParentalLock" labeltext="#PropertyDialog_OK" default=1 }
+		Cancel { controlname="Button" tabposition=2 command="Close" labeltext="#PropertyDialog_Cancel" }
+	}
+	
+	styles
+	{
+		ParentalLockDialog
+		{
+			minimum-width = 400
+			minimum-height = 125
+		}
+
+		Hey
+		{
+			font-size=13
+		}
+
+		Key
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/keybg"
+			inset="20 20 0 0"
+		}
+	}
+	
+	layout
+	{
+		region { name="top" width=max height=89 margin=10 margin-top=32 }
+		//region { name="middle" width=max height=25 y=100 margin=10 }
+		region { name="bottom" width=max align=bottom height=28 align="bottom" }
+
+		place { control="KeyImage" region="top" align=left x=85 y=0 width=0 height=0 margin-top=-30 margin-right=0}	
+
+		place { control="Instructions" region="top" align=center width=max }
+		
+		// bottom: OK/cancel
+		place { control="OK,Cancel" region="bottom" align=right
+						width=92 height=20 align=right
+						margin-right=6 margin-top=4
+						margin-bottom=0 spacing=6 }
+	}
+
+}
+

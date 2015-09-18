@@ -1,0 +1,64 @@
+"resource/layout/gamespage_details_welcome.layout"
+{
+	controls
+	{
+		welcomedetails { controlname="CGamesPage_Details_Welcome" style="nonsteamdetails" }
+		headerlabel { controlname="Label" style="gamedetails-headerlabel" labeltext="#Steam_Welcome" }
+		bodybasic { controlname="RichText" style="bodycontent" }
+		bodynofriends { controlname="RichText" style="bodycontent" }
+		bodyhelp { controlname="RichText" style="bodycontent" }
+	}
+
+	colors
+	{
+
+		RichText.InsetX "0"
+		RichText.InsetY "1" 
+		GameDetailsWelcome.ExtraVerticalSpacing "52"		// DO NOT CHANGE THIS. Previously set to 40, resulted in one core being constantly at 100% activity
+															// since Steam version 1407449906_140807 
+		GameDetailsWelcome.WelcomeTextSpacing "0"
+	}
+
+	styles
+	{
+		nonsteamdetails 
+		{ 
+			render_bg
+			{     
+				// background fill
+				0="fill( x0+1, y0+1, x1-1, y1-1, FrameBG2 )"
+                
+                //this can't be drawn, because Steam will put it in top-left corner of the details view if you actually DO have friends
+           		//1="image( x0+1, y0+1, x0+262, y0+72, graphics/libdet_corner_1 )"
+
+				// lines around header
+				3="gradient_horizontal( x0+1, y0, x1-1, y0+1, ExBorderLight, ExBorderLowLight )"  // top
+				
+				8="gradient( x0, y0, x0+1, y1, ExBorderLight, ExBorderLowLight )"  // left
+				10="fill( x1-1, y0, x1, y1, ExBorderLowLight )"  // right
+				9="fill( x0+1, y1-1, x1, y1, ExBorderLowLight )"  // bottom
+			}
+		}
+
+		bodycontent
+		{
+			textcolor="Label"
+			selectedtextcolor="Label"	
+			font-size=13
+			render_bg {}
+		}
+
+		"RichText url"
+		{
+			font-size=13
+		}
+	}
+
+	layout
+	{
+		region { name=body margin-left=10 margin-top=3 margin-bottom=6 margin-right=4 width=max height=max }
+		place { region=body control=headerlabel width=max y=3 }
+		place { region=body y=31 control=bodybasic,bodynofriends,bodyhelp dir=down width=max spacing=4 }
+	}
+
+}

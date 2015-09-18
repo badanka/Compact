@@ -1,0 +1,41 @@
+"resource/layout/friendpanel_compact.layout"
+{
+	
+	controls
+	{
+		MenuButton
+		{
+		style=menuButtonStyle
+		}
+		AvatarOverlayImage
+		{
+			zpos=2
+		}
+	}
+	styles
+	{
+		menuButtonStyle
+		{
+		inset="-7 2 0 0"
+		padding=3
+		}
+		CFriendPanel:hover 
+		{
+		render_bg {}
+		}
+
+	}
+	
+	 custom layout
+	layout
+	{
+		place { control="AvatarOverlayImage"	margin-right=2 y=3 width=40 height=40	align=right }
+		place { control="AvatarImage"					margin-right=6 y=7 		width=32 height=32	align=right	}
+		place { control="MenuButton,NameLabel,FriendsNameInstanceLabel,ClanStatusImage" margin-right=54 y=32 align=right }
+		
+		place { control="StatusLabel"		margin-right=54 y=20 align=right }
+		place { control="GameLabel"			margin-right=54 y=32 align=right }
+		
+		place { control="ControlPanelLink" margin-right=54 y=34 align=right  }
+	}
+}

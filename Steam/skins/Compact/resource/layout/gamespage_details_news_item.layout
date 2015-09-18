@@ -1,0 +1,89 @@
+"resource/layout/gamespage_details_news_item.layout"
+{
+	controls
+	{
+		newsitem_title { controlname="Label" style="title_label" }
+		newsitem_dateandauthor { controlname="Label" style="date_and_author" }
+		newsitem_body { controlname="RichText" style="newsitem_body" }
+		newsitem_more { controlname="URLLabel" style="more_link" labeltext="#steam_newscontinued" }
+	}
+	colors
+	{
+		// The extra space needed vertical beyond the autocomputed size of the blurb contents
+		// this is used in code to make the vertical size of the panel fit the title/author/morelink
+		// and should be updated if you change vertical padding/margins/layout.
+		GameDetailsNewsItem.ExtraVerticalSpacing "56"
+
+		// Override base style rich text x inset inside this control
+		RichText.InsetX "0"
+		RichText.InsetY "2" 
+	}
+	
+	styles
+	{
+		title_label
+		{
+			font-family="basefonthead"
+			font-size="15"
+			textcolor="Text"
+			font-weight=400
+		}
+
+		date_and_author
+		{
+			font-size=13
+			textcolor="label2"
+		}
+
+		title_label
+		{
+			textcolor="Text"
+			font-weight=400
+		}
+		newsitem_body
+		{
+			textcolor="Label"
+			selectedtextcolor="Label"
+			selectedbgcolor="Focus"	
+			render_bg {}
+		}
+		
+		"newsitem_body url"
+		{
+			selectedtextcolor="textselected"	
+		}
+		
+		"newsitem_body url:hover"
+		{
+			textcolor="textselected"
+			selectedtextcolor="label"	
+		}
+		
+		"newsitem_body bold"
+		{
+			textcolor="Label"
+			selectedtextcolor="Label"	
+		}
+		
+		more_link
+		{
+			textcolor="textselected"
+			selectedtextcolor="Label"	
+		}
+		
+		more_link:hover
+		{
+			font-style="underline"
+			textcolor="textselected"
+		}
+	}
+
+	layout
+	{
+		region { name=body margin=0 width=max }
+		place { region=body control=newsitem_title x=0 y=2 width=max height=16 margin-right=4 }
+		place { region=body y=20 control=newsitem_dateandauthor width=max height=11 }
+		place { region=body y=35 control=newsitem_body width=max margin-left=4 margin-right=4 }
+		place { region=body control=newsitem_more align=bottom margin-left=4 margin-bottom=5 }
+	}
+}

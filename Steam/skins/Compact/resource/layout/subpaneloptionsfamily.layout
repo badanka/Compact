@@ -1,0 +1,66 @@
+"resource/layout/subpaneloptionscloud.layout"
+{
+	controls
+	{
+		FamilySharingTitle { controlname=label	labeltext=#Steam_Settings_Family_Sharing_Title style=highlight}
+				
+		FamilySharingTextState { controlname=label labeltext=#Steam_Settings_Family_Sharing_StateNotAuthorized wrap=1 }
+		
+		AuthorizeDeviceButton { controlname=button	labelText=#Steam_Settings_Family_Sharing_AuthorizeDevice command=AuthorizeDevice }
+		DeauthorizeDeviceButton { controlname=button	labelText=#Steam_Settings_Family_Sharing_DeauthorizeDevice command=DeauthorizeDevice }
+		
+		BorrowersLabel { controlname=label labeltext=#Steam_Settings_Family_Sharing_Borrowers wrap=1 }
+		BorrowersList { controlname=listpanel }
+				
+		ManageSharingButton { controlname=button	labelText=#Steam_Settings_Family_Sharing_ManageSharing command=ManageSharing }
+				
+		FamilyOptionsTitle { controlname=label	labeltext=#Steam_Settings_Family_Options_Title style=highlight }
+		FamilyOptionsText { controlname=label	labeltext=#Steam_Settings_Family_Options_Text	wrap=1 }
+		
+		ManageOptionsButton { controlname=button	labelText=#Steam_Parental_Manage command=ManageParental }
+		ShowNotificationsCheck { ControlName=checkbutton labeltext=#Steam_Settings_Family_Show_Notifications }
+	
+		Divider1 { ControlName=Divider	}				
+	}
+	
+	colors
+	{
+	}	
+	
+	styles
+	{
+		highlight
+		{
+			textcolor=Text
+		}	
+		
+		padded
+		{
+			padding-top=0
+		}
+	}
+	
+	layout
+	{
+		
+		region { name=box margin-top=3 margin-bottom=3 margin-left=10 margin-right=10 width=max height=max }
+		
+		place { controls="FamilyOptionsText" region=box width=max height=28 dir=down }
+		place { controls="ManageOptionsButton" region=box start=FamilyOptionsText margin-top=4 height=20 dir=down }
+		
+		place { controls="Divider1" region=box start=ManageOptionsButton dir=down margin-top=9 width=max }
+		
+		place { controls="FamilySharingTextState" region=box start=Divider1  margin-top=6 width=max height=88 dir=down }
+		place { controls="AuthorizeDeviceButton," region=box margin-top=4 start=FamilySharingTextState height=20 dir=down }
+		place { controls="DeauthorizeDeviceButton" region=box margin-top=4 start=FamilySharingTextState height=20 dir=down }
+		place { controls="ManageSharingButton" region=box margin-top=4 margin-left=159 start=FamilySharingTextState height=20 dir=down }
+				
+		place { controls="BorrowersLabel" region=box start=FamilySharingTextState margin-top=33 width=max height=28 dir=down }
+		place { controls="BorrowersList" region=box start=BorrowersLabel width=max height=126 margin-top=4 dir=down }
+		place { controls="ShowNotificationsCheck" region=box start=BorrowersList margin-top=3 dir=down height=18 }
+		
+		
+		place { controls="FamilyOptionsTitle" width=0 }
+		place { controls="FamilySharingTitle" width=0 }
+	}
+}
