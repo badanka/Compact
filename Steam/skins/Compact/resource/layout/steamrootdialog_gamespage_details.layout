@@ -315,7 +315,7 @@
 		region	{ name="headertext" region=details y=4 x=0 width=805 height=max margin-right=45 }
 		
 		region	{ name="rightcolumn" region=details y=97 height=max width=805 overflow=allow-vertical }
-		region  { name="detailsbody" region=details y=103 width=805 margin-right=125 overflow=allow-vertical }
+		region  { name="detailsbody" region=details y=100 width=805 margin-right=125 overflow=allow-vertical }
 
 		// Empty list text, which goes across regions
 		place	{ control=emptylisttext x=0 y=0 width=max height=max margin=10  margin-left=0}
@@ -349,7 +349,7 @@
 		place 	{ control=headerimageb width=1024 height=768 x=-105 y=1 start="detailsbody" }
 				
 		// Header text
-		place 	{ control=gametitleheader region=headertext dir=down width=690 height=51 margin-right=90 }
+		place 	{ control=gametitleheader region=headertext dir=down width=690 height=48 margin-right=90 }
 		place	{ control=gamesubheader start=gametitleheader region=headertext dir=down width=690 height=48 margin-right=90 }
 
 

@@ -1377,6 +1377,7 @@ steam.styles
     {     
        	inset="3 0 3 0"
 		bgcolor=none
+		textcolor="text"
 		render_bg {}
 		padding-top=0
 		padding-bottom=0
@@ -1543,17 +1544,17 @@ steam.styles
 	Menu							//also affects dividers in the Steam/View/Games/Help titlebar menu
     {
 		bgcolor="MainFrameBG3"
-		padding-right=4
+		padding-right=6
 		inset="1 1 1 1"
       
 		render_bg
 		{
 			0="fill( x0+1, y0+1, x1-1, y1-1, MainFrameBG3  )"
 		
-			1="fill( x0  , y0  , x1  , y0+1, ExBorderLowLight )"	//t
-			2="fill( x0  , y1-1, x1  , y1  , ExBorderShade )"		//b
-			3="fill( x0  , y0+1, x0+1, y1-1, ExBorderLowLight )"	//l
-			4="fill( x1-1, y0+1, x1  , y1-1, ExBorderShade )"		//r
+			1="fill( x0  , y0  , x1  , y0+1, ExBorderDark )"	//t
+			2="fill( x0  , y1-1, x1  , y1  , ExBorderDark )"	//b
+			3="fill( x0  , y0+1, x0+1, y1-1, ExBorderDark )"	//l
+			4="fill( x1-1, y0+1, x1  , y1-1, ExBorderDark )"	//r
 		}
 		render {}
 		corner_rounding=0
@@ -3045,6 +3046,62 @@ steam.styles
       bgcolor=none
       render_bg={}
       image="graphics/icon_button_fullscreen_disabled"
+    }
+
+    VRButton
+    {
+      bgcolor=none
+      render_bg={}
+      image="graphics/icon_vr"
+    }  
+
+    VRButton:hover
+    {
+      bgcolor=none
+      render_bg={}
+      image="graphics/icon_vr_over"
+    }
+	
+    VRButton:active
+    {
+      bgcolor=none
+      render_bg={}
+      image="graphics/icon_vr_down"
+    }
+	
+    VRButton:disabled
+    {
+      bgcolor=none
+      render_bg={}
+      image="graphics/icon_vr_disabled"
+    }
+    
+    VRButtonExit
+    {
+      bgcolor=none
+      render_bg={}
+      image="graphics/icon_vr_happy"
+    }  
+
+    VRButtonExit:hover
+    {
+      bgcolor=none
+      render_bg={}
+      image="graphics/icon_vr_happy_over"
+    }
+	
+    VRButtonExit:active
+    {
+      bgcolor=none
+      render_bg={}
+      image="graphics/icon_vr_happy_down"
+    }
+	
+    VRButtonExit:disabled
+    {
+      bgcolor=none
+      render_bg={}
+      image="graphics/icon_vr_disabled"
     }
 
     ForwardButton

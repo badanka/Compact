@@ -261,7 +261,7 @@
 		
 		//set aside some room for the header section
 		region { name=head	dir=down x=10 y=8 height=124 width=180 }
-		region { name=legend align=right start="pauseresumeallbutton" dir=down width=80 margin-top=50	}
+		region { name=legend align=right dir=down width=90 margin-top=0	}
 
 		
 		region { name=column1 x=0	y=20	width=max  region=head }
@@ -273,14 +273,12 @@
 		place { control="disc_graphpanel" x=197 y=12 width="max" height="112" margin-right=9 end-right="pauseresumeallbutton"  }
 		
 		// graph legend
-		place { control="disk_legend_panel" region=legend y=3 x=0 width=9 height=9 }
-		place { control="disk_legend_label" region=legend y=0 x=12 }
+		place { control="disk_legend_panel" region=legend y=39 x=0 width=9 height=9 }
+		place { control="disk_legend_label" region=legend y=36 x=12 }
 		
-		place { control="net_legend_panel" region=legend y=16 x=0  width=9 height=9 }
-		place { control="net_legend_label" region=legend y=13 x=12 }
+		place { control="net_legend_panel" region=legend y=54 x=0  width=9 height=9 }
+		place { control="net_legend_label" region=legend y=51 x=12 }
 					
-
-		
 		place { controls="disk_status_label,header" region=head dir=down x=8 y=6 spacing=2	}
 		place { region=head  control="disk_status_value,download_rate_value" dir=down align=right y=6 spacing=2 margin-right=4 }
 		
@@ -288,7 +286,7 @@
 		place { region=column2  control="peak_download_rate_value,total_downloaded_value" dir=down align=right spacing=2 y=16 margin-right=4 }
 		place { region=column2  control="download_rate" y=50 width=0 }
 
-		place { control="pauseresumeallbutton" align=right y=11 margin-right=12 height=20 }
+		place { control="pauseresumeallbutton" region=legend y=11 margin-right=9 height=20 }
 
 		// throttling info
 		place { control="throttling_label" y=14 align=right end-right="throttling_value" margin-right=3 }

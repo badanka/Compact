@@ -17,12 +17,9 @@
 		{
 			render_bg
 			{     
-				// background fill
 				0="fill( x0+1, y0+1, x1-1  , y1    , FrameBG2 )"
-				1="image(x0+1, y0+1, x0+262, y0+51, graphics/libdet_corner_1 )"
+				1="image(x0+1, y0+1, x0+262, y0+48, graphics/libdet_corner_1 )"
 
-                
-				// lines around
 				2="gradient_horizontal( x0, y0, x1, y0+1, ExBorderLight, ExBorderLowLight )"  // top
 				3="gradient( x0, y0+1, x0+1, y1, ExBorderLight, ExBorderLowLight )"  // left
 				4="fill( x1-1, y0+1, x1, y1, ExBorderLowLight )"  // right
@@ -31,8 +28,8 @@
 
 		headertextlarge
 		{
-			padding-bottom=5
-			padding-top=8
+			padding-bottom=0
+			padding-top=1
 			font-size=24
 			textcolor=Text
 			font-family=basefontheader
@@ -43,7 +40,7 @@
 
 	layout
 	{
-		region { name="header" y=3   x=0 width=max height=max }
+		region { name="header" y=4   x=0 width=max height=max }
 
 		place { 
 			control=iconimage,gametitlelabel

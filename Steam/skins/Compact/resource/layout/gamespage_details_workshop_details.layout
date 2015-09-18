@@ -9,8 +9,8 @@
 	
 	colors
 	{
-		WorkshopDetailsPanel.ExtraVerticalSpacing "120"
-		WorkshopDetailsPanel.ExtraHorizontalSpacing "195"
+		WorkshopDetailsPanel.ExtraVerticalSpacing "106"
+		WorkshopDetailsPanel.ExtraHorizontalSpacing "96"
 		RichText.InsetX "0"
 		RichText.InsetY "0" 		
 	}
@@ -25,12 +25,11 @@
 			font-size=13
 			font-family=basefont
 		}
-		
 	}
 
 	layout
 	{
-		place { region=body control=workshop_description x=0 y=57 width=195 height=39 }
-		place { region=body control=workshop_banner x=0 y=0 width=195 height=52 }
+		place { region=body control=workshop_description x=10 y=0 width=116 height=56 }
+		place { region=body control=workshop_banner x=0 y=0 width=0 height=0 }
 	}
 }
