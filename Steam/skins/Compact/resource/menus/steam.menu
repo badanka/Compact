@@ -11,6 +11,7 @@
 		Divider							{}
 		GoOnline						{	text="#SteamUI_OfflineMode_GoOnline"	command="goonline" }
 		GoOffline						{	text="#SteamUI_OfflineMode_GoOffline"	command="gooffline" }
+		Restart							{	text="Restart"							command="RestartSteam" }
 
 		Divider							{}
 		
@@ -43,7 +44,7 @@
 		Divider				[!$OSX]		{}
 		StartVR							{	text="#steam_menu_startvr"				command="startvr" }
 		Divider							{}
-		MusicDetails					{	text="#steam_menu_view_music_details"			shellcmd="steam://nav/music/details" }
+		MusicDetails					{	text="#steam_menu_view_music_details"	shellcmd="steam://nav/music/details" }
 		MusicPlayer						{	text="#steam_menu_view_musicplayer"		shellcmd="steam://open/musicplayer" }
 		Divider							{}
 		ViewPlayerList					{	text="#steam_menu_view_players"			shellcmd="steam://friends/players" }
@@ -78,7 +79,7 @@
 		
 		Support							{	text="#steam_menu_support"				command="Support" }
 		Divider							{}
-		Compact							{ text="Steam Compact 1.5.26"				command="" }
+		Compact							{ text="Steam Compact 1.5.27"				command="" }
 		CompactForum					{ text="Steam Compact Forum Thread"			shellcmd="steam://openurl/http://forums.steampowered.com/forums/showthread.php?t=1279345" }
 		CompactGroup					{ text="Steam Compact Community Group"		shellcmd="steam://openurl/http://steamcommunity.com/groups/SteamCompact" }
 		Divider							{}
