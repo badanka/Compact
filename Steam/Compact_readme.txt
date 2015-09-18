@@ -1,7 +1,7 @@
 	————————————————————————————————————————————————————————————————————
 	Steam Compact
-	1.5.22
-	2015-01-27
+	1.5.26
+	2015-02-19
 	————————————————————————————————————————————————————————————————————
 	
 	For support and the latest updates go to:
@@ -11,5 +11,10 @@
 	
 	http://forums.steampowered.com/forums/showthread.php?t=1279345
 	or go to Help -> Steam Compact Forum Thread in your Steam client.
+	
+	Linux users:
+	For proper font usage in Steam you need to open the included
+	settings.ini file and follow the instructions before using this
+	skin.
 	
 	————————————————————————————————————————————————————————————————————

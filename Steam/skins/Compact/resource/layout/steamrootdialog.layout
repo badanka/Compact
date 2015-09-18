@@ -190,13 +190,13 @@
 				
 				4="fill		( x0+2  , y0+64, x1-2, y1-2, FrameBG1 )"						//solid colour to cover the entire background (except when there's a scrollbar, in which case it only covers the area behind that)
 				
-				5="fill		( x1-3  , y0+64, x1-2, y1  , InBorderShade )"	//right border
-				6="gradient	( x1-2  , y0+64, x1-1, y1  , MainFrameBG2, MainFrameBG1 )"	//right
+				5="fill		( x1-3  , y0+64, x1-2, y1  , InBorderShade )"					//right border
+				6="gradient	( x1-2  , y0+64, x1-1, y1  , MainFrameBG2, MainFrameBG1 )"		//right
 				
-				7="gradient	( x0+1  , y0+64, x0+2, y1  , MainFrameBG2, MainFrameBG1 )"	//left border
+				7="gradient	( x0+1  , y0+64, x0+2, y1  , MainFrameBG2, MainFrameBG1 )"		//left border
 				8="fill		( x0+2  , y0+64, x0+3, y1  , InBorderShade )"					//left
 				
-				9="fill		( x0+2  , y1-3 , x1-2, y1-2, InBorderShade )"				//bottom border
+				9="fill		( x0+2  , y1-3 , x1-2, y1-2, InBorderShade )"					//bottom border
 				10="fill		( x0+1  , y1-2 , x1-1, y1-1, MainFrameBG1 )"				//bottom
 			}
 		}		

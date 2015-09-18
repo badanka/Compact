@@ -509,21 +509,21 @@
 	
 	layout
 	{
-		place { control="AccountLink" align=right y=3 margin-right=10 }
-		place { control="SecurityIcon" y=18 align=right margin-right=7 }											//Steam Guard icon
+		place { control="AccountLink" align=right y=6 margin-right=10 }
+		place { control="SecurityIcon" y=21 align=right margin-right=7 }											//Steam Guard icon
 			
 		
-		place { control="LogOutLabel"			margin-left=10  y=2  height=16 end-right="AccountInfo" }			//account name label (yes, really)
-		place { control="AccountInfo"			margin-left=120 y=2  height=16 }									//account name
+		place { control="LogOutLabel"			margin-left=10  y=5  height=16 end-right="AccountInfo" }			//account name label (yes, really)
+		place { control="AccountInfo"			margin-left=120 y=5  height=16 }									//account name
 		
-		place { control="ContactEmailLabel" 	margin-left=10  y=19 height=16 end-right="EmailInfo" }				//contact e-mail
-		place { control="EmailInfo"				margin-left=120 y=19 height=16 }									//e-mail address
+		place { control="ContactEmailLabel" 	margin-left=10  y=22 height=16 end-right="EmailInfo" }				//contact e-mail
+		place { control="EmailInfo"				margin-left=120 y=22 height=16 }									//e-mail address
 		
-		place { control="SecurityStatusLabel"	margin-left=10  y=36 height=16 end-right="SecurityStatusState" }	//security status
-		place { control="SecurityStatusState"	margin-left=120 y=36 height=16 }									//state of security status
+		place { control="SecurityStatusLabel"	margin-left=10  y=39 height=16 end-right="SecurityStatusState" }	//security status
+		place { control="SecurityStatusState"	margin-left=120 y=39 height=16 }									//state of security status
 		
-		place { control="Label2"				margin-left=10  y=53 height=16 end-right="VACStatusLabel" }			//VAC status
-		place { control="VACStatusLabel"		margin-left=120 y=54 height=16 }									//state of VAC status
+		place { control="Label2"				margin-left=10  y=56 height=16 end-right="VACStatusLabel" }			//VAC status
+		place { control="VACStatusLabel"		margin-left=120 y=57 height=16 }									//state of VAC status
 		
 		place { start=Label2 control="ChangeUserButton,ManageSecurityButton,ChangePasswordButton,ChangeContactEmailButton" y=4 width=236 height=20 dir=down spacing=4 }
 

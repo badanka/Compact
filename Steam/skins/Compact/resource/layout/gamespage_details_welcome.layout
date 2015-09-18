@@ -29,14 +29,14 @@
 				0="fill( x0+1, y0+1, x1-1, y1-1, FrameBG2 )"
                 
                 //this can't be drawn, because Steam will put it in top-left corner of the details view if you actually DO have friends
-           		//1="image( x0+1, y0+1, x0+262, y0+72, graphics/libdet_corner_1 )"
+           		1="image( x0+1, y0+1, x0+262, y0+72, graphics/libdet_corner_1 )"
 
 				// lines around header
 				3="gradient_horizontal( x0+1, y0, x1-1, y0+1, ExBorderLight, ExBorderLowLight )"  // top
 				
 				8="gradient( x0, y0, x0+1, y1, ExBorderLight, ExBorderLowLight )"  // left
-				10="fill( x1-1, y0, x1, y1, ExBorderLowLight )"  // right
-				9="fill( x0+1, y1-1, x1, y1, ExBorderLowLight )"  // bottom
+				9="fill( x1-1, y0, x1, y1, ExBorderLowLight )"  // right
+				10="fill( x0+1, y1-1, x1, y1, ExBorderLowLight )"  // bottom
 			}
 		}
 
@@ -56,9 +56,9 @@
 
 	layout
 	{
-		region { name=body margin-left=10 margin-top=3 margin-bottom=6 margin-right=4 width=max height=max }
-		place { region=body control=headerlabel width=max y=3 }
-		place { region=body y=31 control=bodybasic,bodynofriends,bodyhelp dir=down width=max spacing=4 }
+		region { name=body margin-left=10 margin-top=3 margin-bottom=6 margin-right=4 }
+		
+		place { region=body control=headerlabel width=max y=4 }
+		place { region=body y=21 control=bodybasic,bodynofriends,bodyhelp dir=down width=max spacing=1 }
 	}
-
 }

@@ -43,7 +43,7 @@
 	layout
 	{
 		
-		region { name=box margin-top=3 margin-bottom=3 margin-left=10 margin-right=10 width=max height=max }
+		region { name=box margin-top=6 margin-bottom=3 margin-left=10 margin-right=10 width=max height=max }
 		
 		place { controls="FamilyOptionsText" region=box width=max height=28 dir=down }
 		place { controls="ManageOptionsButton" region=box start=FamilyOptionsText margin-top=4 height=20 dir=down }

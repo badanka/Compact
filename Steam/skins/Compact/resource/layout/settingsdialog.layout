@@ -6,6 +6,7 @@
 		okbutton { controlname="OKButton" }	 
 		cancelbutton { controlname="CancelButton" }	 
 		settingslist { controlname="SettingsList" style="SettingsList" wide=100 }
+		settingslist { controlname="SettingsList" style="SettingsList" wide=180 }
 		sheet { controlname="Sheet" style="PropertySheet" }
 
 	}
@@ -49,10 +50,10 @@
 			{
 				0="gradient_horizontal( x0   , y0   , x0+75, y0+1 , ExBorderHighlight,	ExBorderLight )"	//top
 				1="gradient_horizontal( x0+75, y0   , x1+1 , y0+1 , ExBorderLight,		ExBorderShade )"	//top
-	
+		
 				2="gradient(			x0   , y0   , x0+1 , y0+50, ExBorderHighlight,	ExBorderLight )"	//left
 				3="gradient(			x0   , y0+50, x0+1 , y1   , ExBorderLight,		ExBorderShade )"	//left
-
+		
 				4="gradient(			x1-1 , y0   , x1   , y1   , ExBorderShade,		ExBorderDark )"		//right 
 				5="gradient_horizontal( x0   , y1-1 , x1+1 , y1   , ExBorderShade,		ExBorderDark )"		//bottom
 				
@@ -65,6 +66,7 @@
 			minimum-width="404"
 			minimum-height="408"
 		}
+		
 		"SettingsList"
 		{
 			inset="-3 -14 0 0"
@@ -94,17 +96,18 @@
 	
 	layout
 	{
-		region { name="body" margin-left=111 margin-right=0 margin-bottom=27 margin-top=24 }		
+		region { name="body" margin-left=0 margin-right=0 margin-bottom=3 }							//body and buttons regions overlapping in order to get the
+																									//settingslist to reach all the way to the bottom
+		
+		place { control="settingslist,sheet" region=body width=max height=max }
+		place { control="settingslist" width=111 margin-left=2 margin-top=24  margin-right=2 }
+		place { control="sheet" y=24 margin-left=113 margin-bottom=24 }								//using y=24 since margin-top doesn't work
 
-		place { control="settingslist" end-right=sheet width=111 height=max margin-left=2 margin-bottom=3 margin-top=24 }
-		place { control="sheet" region=body width=max height=max }
-		
-		
 		region { name="buttons" width=max height=24 align="bottom" }
 		
 		place { control="okbutton,cancelbutton" region="buttons"
-		        width=76 height=20 align=right y=0
-				margin-right=4 margin-top=0
+		        width=76 height=20 align=right y=2													//buttons 2 pixels too low since I can't the body region to not cover the
+				margin-right=4 margin-top=0															//buttons region
 				margin-bottom=0 spacing=4 }
 	}
 }

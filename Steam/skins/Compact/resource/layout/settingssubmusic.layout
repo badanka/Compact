@@ -78,7 +78,7 @@
 	
 	layout
 	{
-		region { name=content height=max width=max margin-left=10 margin-right=10 }		
+		region { name=content height=max width=max margin-top=3 margin-left=10 margin-right=10 }		
 		
 		place { control=LibraryHeader region=content y=3 }
 		place { control=LibraryList region=content width=max y=22 height=95}
