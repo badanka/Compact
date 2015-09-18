@@ -2,15 +2,15 @@
 {
 	controls
 	{
-		launchbutton { controlname="Button" labeltext="#Steam_LaunchGame" style="detailsLaunchButton" tabposition=1 command="RunGameAction" }
 		subheaderlabels { controlname="CDetailsSubHeaderLabelsPanel" }
+		launchbutton { controlname="Button" labeltext="#Steam_LaunchGame" style="detailsLaunchButton" tabposition=1 command="RunGameAction" }
 		clientlist { controlname="ClientListButton" labeltext="" style="ClientListButton" tabposition=2 zpos=100 }
 	}
 
 	colors
 	{
-		GameDetailsSubHeader.HorizontalSpacing=15
-		GameDetailsSubHeader.VerticalMargin=0
+		GameDetailsSubHeader.HorizontalSpacing=10
+		GameDetailsSubHeader.VerticalMargin=10
 	}
 
 	styles

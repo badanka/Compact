@@ -251,12 +251,32 @@
 		"Default"		"0"
 		"selected"		"0"
 	}
+	"H264HWAccelCheck" [$WINDOWS]
+	{
+		"ControlName"		"CheckButton"
+		"fieldName"		"H264HWAccelCheck"
+		"xpos"		"17"
+		"ypos"		"360"
+		"wide"		"430"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"7"
+		"paintbackground"		"1"
+		"labelText"		"#Steam_UseH264HWAccel_Option"
+		"textAlignment"		"west"
+		"wrap"		"0"
+		"Default"		"0"
+		"selected"		"0"
+	}
 	"Divider2"
 	{
 		"ControlName"		"Divider"
 		"fieldName"		"Divider2"
 		"xpos"		"20"
-		"ypos"		"369"
+		"ypos"		"390"
 		"wide"		"440"
 		"tall"		"2"
 		"AutoResize"		"0"
@@ -271,7 +291,7 @@
 		"ControlName"		"CheckButton"
 		"fieldName"		"NotifyAvailableGamesCheck"
 		"xpos"		"17"
-		"ypos"		"381"
+		"ypos"		"406"
 		"wide"		"430"
 		"tall"		"40"
 		"AutoResize"		"0"
@@ -310,7 +330,7 @@
 		"ControlName"		"Button"
 		"fieldName"		"SetJumpListOptionsButton"
 		"xpos"		"20"
-		"ypos"		"434"
+		"ypos"		"454"
 		"wide"		"235"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -333,16 +353,16 @@
 		place { control="SkinCombo" width=200 height=20 }
 		place { control="Label1" width=0 }
 		
-		place { control="Label4,LanguageCombo,TranslationLabel" y=3 margin-left=10 dir=down spacing=6 }
+		place { control="Label4,LanguageCombo,TranslationLabel" y=6 margin-left=10 dir=down spacing=6 }
 		
 		place { control="Divider1" start=TranslationLabel width=max dir=down margin-top=7 margin-right=10 }
 		
 		place { control="Label2,FavoriteWindowCombo" start=Divider1 margin-top=7 dir=down spacing=4 }
 		
 		place { control="Label3,SkinCombo" start=FavoriteWindowCombo y=6 dir=down margin-right=10 spacing=4 }
-		place { control="AutoLaunchCheck,BigPictureModeCheck,DWriteCheck,UrlBarCheck" start=SkinCombo y=5 height=18 spacing=0 width=max dir=down }
+		place { control="AutoLaunchCheck,BigPictureModeCheck,DWriteCheck,UrlBarCheck,H264HWAccelCheck" start=SkinCombo y=5 height=18 spacing=0 width=max dir=down }
 		
-		place { control="Divider2" start=UrlBarCheck dir=down width=max margin-top=7 margin-right=10 }
+		place { control="Divider2" start=H264HWAccelCheck dir=down width=max margin-top=7 margin-right=10 }
 		
 		place { control="NotifyAvailableGamesCheck" start=Divider2 dir=down margin-top=6 height=26 width=max margin-right=10 }
 		place { control="SetJumpListOptionsButton" start=NotifyAvailableGamesCheck margin-top=11 dir=down height=20 }
