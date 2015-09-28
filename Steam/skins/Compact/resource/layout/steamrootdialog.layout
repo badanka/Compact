@@ -712,6 +712,7 @@
 		place { control="SupportAlert" align=right end-right="universe_label" margin-top=20 margin-right=16 height=26 }
 		
 		place [$WIN32]  { control="frame_minimize,frame_maximize,frame_close" align=right margin-top=2 margin-right=2 spacing=-8 }
+		place [!$OSX]  { control="frame_minimize,frame_maximize,frame_close" align=right margin-top=2 margin-right=2 spacing=-8 }
 
 		region { name=bottom align=bottom width=max height=16 }
 			
