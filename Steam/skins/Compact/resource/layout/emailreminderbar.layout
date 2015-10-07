@@ -58,7 +58,7 @@
 			
 			render {}
 			render_bg {
-				0="image_scale( x0+3, y0+2, x1-3, y1+1, graphics/emailreminder_center )"
+				0="image_scale( x0+3, y0+2, x1-3, y1+1, graphics/emailreminder_bg )"
 			}
 		}
 		

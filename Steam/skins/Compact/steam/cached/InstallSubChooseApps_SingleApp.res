@@ -17,28 +17,73 @@
 		"WizardWide"		"0"
 		"WizardTall"		"0"
 	}
-	"GameCheckButtonList"
+	
+	"Label1"
 	{
-		"ControlName"		"CheckButtonList"
-		"fieldName"		"GameCheckButtonList"
-		"xpos"		"40"
-		"ypos"		"114"
-		"wide"		"280"
-		"tall"		"30"
+		"ControlName"		"Label"
+		"fieldName"		"Label1"
+		"xpos"		"10"
+		"ypos"		"24"
+		"wide"		"340"
+		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
-		"visible"		"0"
+		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"		"0"
 		"paintbackground"		"1"
+		"labelText"		"#Steam_InstallGameInfo"
+		"textAlignment"		"north-west"
+		"wrap"		"1"
 	}
+	
+	"CreateShortcutCheck"
+	{
+		"ControlName"		"CheckButton"
+		"fieldName"		"CreateShortcutCheck"
+		"xpos"		"16"
+		"ypos"		"60"
+		"wide"		"390"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"labelText"		"#Steam_Install_CreateDesktopShortcut"
+		"textAlignment"		"west"
+		"wrap"		"0"
+		"Default"		"0"
+	}
+	
+	"CreateStartMenuShortcutCheck"
+	{
+		"ControlName"		"CheckButton"
+		"fieldName"		"CreateStartMenuShortcutCheck"
+		"xpos"		"16"
+		"ypos"		"84"
+		"wide"		"390"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"labelText"		"#Steam_Install_CreateStartMenuShortcut"
+		"textAlignment"		"west"
+		"wrap"		"0"
+		"Default"		"0"
+	}
+	
 	"InstallSize"
 	{
 		"ControlName"		"Label"
 		"fieldName"		"InstallSize"
-		"xpos"		"24"
-		"ypos"		"80"
-		"wide"		"187"
+		"xpos"		"10"
+		"ypos"		"128"
+		"wide"		"186"
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
@@ -50,13 +95,33 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}
+	
+	"InstallSizeLabel"
+	{
+		"ControlName"		"Label"
+		"fieldName"		"InstallSizeLabel"
+		"xpos"		"200"
+		"ypos"		"128"
+		"wide"		"80"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"labelText"		"42 MB"
+		"textAlignment"		"west"
+		"wrap"		"0"
+	}
+	
 	"DriveSpace"
 	{
 		"ControlName"		"Label"
 		"fieldName"		"DriveSpace"
-		"xpos"		"24"
-		"ypos"		"106"
-		"wide"		"184"
+		"xpos"		"10"
+		"ypos"		"152"
+		"wide"		"186"
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
@@ -68,13 +133,14 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}
+	
 	"DriveSpaceLabel"
 	{
 		"ControlName"		"Label"
 		"fieldName"		"DriveSpaceLabel"
-		"xpos"		"220"
-		"ypos"		"106"
-		"wide"		"200"
+		"xpos"		"200"
+		"ypos"		"152"
+		"wide"		"80"
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
@@ -86,66 +152,13 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}
-	"InstallSizeLabel"
-	{
-		"ControlName"		"Label"
-		"fieldName"		"InstallSizeLabel"
-		"xpos"		"220"
-		"ypos"		"80"
-		"wide"		"200"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"labelText"		"380 MB"
-		"textAlignment"		"west"
-		"wrap"		"0"
-	}
-	"Label1"
-	{
-		"ControlName"		"Label"
-		"fieldName"		"Label1"
-		"xpos"		"24"
-		"ypos"		"22"
-		"wide"		"410"
-		"tall"		"40"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"labelText"		"#Steam_InstallGameInfo"
-		"textAlignment"		"north-west"
-		"wrap"		"1"
-	}
-	"DownloadTimeInfo"
-	{
-		"ControlName"		"Label"
-		"fieldName"		"DownloadTimeInfo"
-		"xpos"		"220"
-		"ypos"		"138"
-		"wide"		"200"
-		"tall"		"48"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"labelText"		"#Steam_InstallDownloadTime_Info"
-		"textAlignment"		"north-west"
-		"wrap"		"1"
-	}
+	
 	"DownloadTimeLabel"
 	{
 		"ControlName"		"Label"
 		"fieldName"		"DownloadTimeLabel"
-		"xpos"		"24"
-		"ypos"		"133"
+		"xpos"		"10"
+		"ypos"		"176"
 		"wide"		"189"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -158,13 +171,32 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}
-	
+		
+	"DownloadTimeInfo"
+	{
+		"ControlName"		"Label"
+		"fieldName"		"DownloadTimeInfo"
+		"xpos"		"200"
+		"ypos"		"176"
+		"wide"		"200"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"labelText"		"#Steam_InstallDownloadTime_Info"
+		"textAlignment"		"west"
+		"wrap"		"0"
+	}
+		
 	"InstallFolderLabel"
 	{
 		"ControlName"		"Label"
 		"fieldName"		"InstallFolderLabel"
-		"xpos"		"24"
-		"ypos"		"164"
+		"xpos"		"10"
+		"ypos"		"200"
 		"wide"		"200"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -182,9 +214,9 @@
 	{
 		"ControlName"		"ComboBox"
 		"fieldName"		"InstallFolderCombo"
-		"xpos"		"24"
-		"ypos"		"192"
-		"wide"		"400"
+		"xpos"		"10"
+		"ypos"		"232"
+		"wide"		"432"
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
@@ -195,12 +227,27 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}
-		layout
+	layout
 	{
-		place { control="InstallFolderCombo" x=24 y=192 margin-right=24 width=max height=20 }
+		place { control="Label1" x=10 y=10 margin-right=10 width=max }
+		place { control="CreateShortcutCheck" x=10 y=26 margin-right=10 height=18 }
+		place { control="CreateStartMenuShortcutCheck" x=10 y=44 margin-right=10 height=18 }
+		
+		place { control="InstallSize" x=10 y=68 }
+		place { control="InstallSizeLabel" x=200 y=68 }
+		
+		place { control="DriveSpace" start="InstallSize" dir=down y=5 }
+		place { control="DriveSpaceLabel" start="InstallSizeLabel"dir=down y=5 }
+
+		place { control="DownloadTimeLabel" start="DriveSpace" dir=down y=5 }
+		place { control="DownloadTimeInfo" start="DriveSpaceLabel"dir=down y=5 }
+		
+		
+		place { control="InstallFolderLabel" start="DownloadTimeLabel" dir=down y=5 }
+		
+		place { control="InstallFolderCombo" start="InstallFolderLabel" dir=down y=5 width=max height=20 margin-right=10 }
 		
 		region { name=bottom align=bottom height=24 }
 		place { control="InstallButton,Button1" region=bottom align=right height=20 spacing=4 }
 	}
-
 }

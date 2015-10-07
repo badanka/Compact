@@ -1,0 +1,8 @@
+"resource/layout/welcometosteamdialog.layout"
+{
+		layout
+	{
+		region { name=bottom align=bottom height=24 }
+		place { control="PrevButton,NextButton,CancelButton" region=bottom width=72 align=right height=20 spacing=4 margin-right=4 }
+	}
+}
