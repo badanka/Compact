@@ -99,7 +99,7 @@
 		region	{ name="detailpanels" region=overlay align=bottom width=max height=232 }
 		region	{ name="taskbar" region=overlay width="max" height=75 align=bottom }
 
-		place { controls="LegacyCDKeyButton,DLCButton,GuideButton,GameGroupsButton,ChatRoomButton,WebSiteButton,WorkshopButton,RecommendButton" align=bottom margin-left=2  region=detailpanelsnew dir=down spacing=2 } 
+		place { controls="LegacyCDKeyButton,DLCButton,GuideButton,GameGroupsButton,ChatRoomButton,WebSiteButton,WorkshopButton,RecommendButton" align=bottom margin-left=2  region=detailpanelsnew dir=down spacing=2 margin-bottom=52 } 
 		
 		//width 415 instead of 495 to hide the "So Close" achievement icon	
 		place { controls="AchievementsDetailPanel" align=right region=right width=415 height=81 }
