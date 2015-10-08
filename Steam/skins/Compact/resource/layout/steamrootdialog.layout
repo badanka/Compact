@@ -703,11 +703,11 @@
 		place [!$OSX] { control="account_balance" align=right margin-top=26 end-right="ParentalLockButton" margin-right=9 }	
 		place [$OSX] { control="account_balance, universe_label" align=right margin-top=26 end-right="ParentalLockButton" margin-right=9 spacing=5 }	
 
-		place [!$OSX] { control="startvr" end-right="fullscreen" align=right margin-right=6 margin-top=1 }
-		place [$OSX] { control="startvr" end-right="fullscreen" align=right margin-right=6 margin-top=1 }
+		place [!$OSX] { control="startvr" end-right="fullscreen" align=right margin-right=6 margin-top=16 }
+		place [$OSX] { control="startvr" end-right="fullscreen" align=right margin-right=6 margin-top=16 }
 	
-		place [!$OSX] { control="exitvr" end-right="fullscreen" align=right margin-right=6 margin-top=1 }
-		place [$OSX] { control="exitvr" end-right="fullscreen" align=right margin-right=6 margin-top=1 }
+		place [!$OSX] { control="exitvr" end-right="fullscreen" align=right margin-right=6 margin-top=16 }
+		place [$OSX] { control="exitvr" end-right="fullscreen" align=right margin-right=6 margin-top=16 }
 
 		place { control="SupportAlert" align=right end-right="universe_label" margin-top=20 margin-right=16 height=26 }
 		
