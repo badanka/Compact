@@ -53,6 +53,7 @@
 		ViewPlayerList					{	text="#steam_menu_view_players"			shellcmd="steam://friends/players" }
 		Servers							{	text="#steam_menu_servers"				shellcmd="steam://open/servers" }
 		Screenshots						{	text="#steam_screenshots"				command="Screenshots" }
+		NewForYou						{	text="#SteamUI_GameProperties_UpdateNews"		shellcmd="steam://open/newforyou" }
 		Divider							{}
 		UserForums						{	text="#steam_forums"					command="Forums" }
 	}
@@ -82,7 +83,7 @@
 		
 		Support							{	text="#steam_menu_support"					command="Support" }
 		Divider							{}
-		Compact							{ 	text="Steam Compact 1.5.62 [GitHub]"		shellcmd="steam://openurl/http://badanka.github.io/Compact/" }
+		Compact							{ 	text="Steam Compact 1.5.64 [GitHub]"		shellcmd="steam://openurl/http://badanka.github.io/Compact/" }
 		CompactForum					{ 	text="Steam Compact Forum Thread"			shellcmd="steam://openurl/http://forums.steampowered.com/forums/showthread.php?t=1279345" }
 		CompactGroup					{ 	text="Steam Compact Community Group"		shellcmd="steam://openurl/http://steamcommunity.com/groups/SteamCompact" }
 		Divider							{}
