@@ -977,6 +977,18 @@ steam.styles
 			selectedtextcolor="white"
 		}
 		
+		"GameItem_Running"
+		{
+			textcolor="Friends.InGameColor"
+			selectedtextcolor="white"
+		}
+
+		"GameItem_Running:hover"
+		{
+			textcolor="white"
+			selectedtextcolor="white"
+		}
+
 		"GameItem_Shortcut"
 		{
 			textcolor="text"
