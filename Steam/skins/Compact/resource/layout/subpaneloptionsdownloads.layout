@@ -34,7 +34,8 @@
 		AutoUpdateTimeRestrictEnd { controlname=combobox }
 		AllowDownloadsDuringGameplayCheckbox { controlname=checkbutton labeltext=#Steam_AllowDownloadsDuringGameplay }
 		AllowDownloadsDuringGameplayInfo { controlname=label labeltext=#Steam_AllowDownloadsDuringGameplayDetails wrap=1 style=padded }
-
+		ThrottleDownloadsWhileStreamingCheckbox { controlname=checkbutton labeltext=#Steam_ThrottleDownloadsWhileStreaming }
+		ThrottleDownloadsWhileStreamingInfo { controlname=label labeltext=#Steam_ThrottleDownloadsWhileStreamingDetails wrap=1 style=padded }
 		
 		Divider1 { ControlName=Divider	}				
 		Divider2 { ControlName=Divider	}				
@@ -76,15 +77,18 @@
 		
 		place { controls="AutoUpdateTimeRestrictCheckbox" region=box start=RestrictionsLabel y=1 dir=down  }
 		place { controls="AutoUpdateTimeRestrictStartLabel" region=box start=AutoUpdateTimeRestrictCheckbox y=-3 dir=down margin-top=0 }
-		place { controls="AutoUpdateTimeRestrictStart" region=box start=AutoUpdateTimeRestrictStartLabel y=2 dir=right margin-left=4 width=77 height=21 }
+		place { controls="AutoUpdateTimeRestrictStart" region=box start=AutoUpdateTimeRestrictStartLabel y=2 dir=right margin-left=4 width=77 height=20 }
 		place { controls="AutoUpdateTimeRestrictEndLabel" region=box start=AutoUpdateTimeRestrictStart y=-2 dir=right margin-left=10 }
-		place { controls="AutoUpdateTimeRestrictEnd" region=box start=AutoUpdateTimeRestrictEndLabel y=2 dir=right margin-left=4 width=77 height=21 }
+		place { controls="AutoUpdateTimeRestrictEnd" region=box start=AutoUpdateTimeRestrictEndLabel y=2 dir=right margin-left=4 width=77 height=20 }
 		
-		place { controls="ThrottleRatesLabel" region=box start=AutoUpdateTimeRestrictStartLabel dir=down margin-top=9 }
-		place { controls="ThrottleRates" region=box start=ThrottleRatesLabel dir=down width=208 height=21 margin-top=5 }
+		place { controls="ThrottleRatesLabel" region=box start=RestrictionsLabel dir=down margin-top=9 margin-left=230 }
+		place { controls="ThrottleRates" region=box start=ThrottleRatesLabel dir=down margin-top=7 width=235 height=20 }
 		
-		place { controls="AllowDownloadsDuringGameplayCheckbox" region=box start=ThrottleRates dir=down height=18 margin-top=5 }
-		place { controls="AllowDownloadsDuringGameplayInfo" region=box start="AllowDownloadsDuringGameplayCheckbox" dir=down width=450 }
+		place { controls="AllowDownloadsDuringGameplayCheckbox" region=box start=AutoUpdateTimeRestrictStartLabel height=18 dir=down margin-top=10 }
+		place { controls="AllowDownloadsDuringGameplayInfo" region=box start=AllowDownloadsDuringGameplayCheckbox y=-3 dir=down width=450 }
+		
+		place { controls="ThrottleDownloadsWhileStreamingCheckbox" region=box start=AllowDownloadsDuringGameplayInfo height=18 dir=down margin-top=10 }
+		place { controls="ThrottleDownloadsWhileStreamingInfo" region=box start=ThrottleDownloadsWhileStreamingCheckbox y=-3 dir=down width=450 }
 
 
 		place { controls="LibrariesLabel" width=0 }
