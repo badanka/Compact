@@ -4,6 +4,7 @@
 	{
 		TitleLabel { controlname=label labeltext="#Steam_SettingsInGameTitle" style=highlight }
 		EnableOverlayCheck {	ControlName=CheckButton labelText="#Overlay_SettingsEnable" }
+		EnableSCTenFootOverlayCheck {	ControlName=CheckButton labelText="#Overlay_SettingsSCTenfootEnable" }
 		HotKeySelector {	ControlName=HotKeyEntry	}
 		ScreenshotHotKeySelector { ControlName=HotKeyEntry }
 		DescriptionLabel	{ ControlName=Label labeltext="#Overlay_SettingsDescription" wrap=1  }
@@ -52,12 +53,12 @@
 	{
 		region { name=box margin-top=2 margin-bottom=20 margin-left=10 margin-right=10 width=max height=max }
 		region { name=top region=box margin-top=0 }
-		region { name=topleft region=top y=56 width=190 }
-		region { name=topright region=top x=200 y=59 }
+		region { name=topleft region=top y=74 width=190 }
+		region { name=topright region=top x=200 y=77 }
 		
 		
 		place { controls=DescriptionLabel width=390 region=top margin-top=4 }
-		place { controls=EnableOverlayCheck region=top start=DescriptionLabel dir=down height=20 margin-top=4 }
+		place { controls=EnableOverlayCheck,EnableSCTenFootOverlayCheck region=top start=DescriptionLabel dir=down height=18 margin-top=3 spacing=0 }
 	
 		place { controls=HotKeySelector width=160 }
 		place { controls=HotKeySelectorLabel,HotKeySelector dir=down spacing=0 region=topleft height=20 }
@@ -80,7 +81,7 @@
 		place { controls=ScreenshotNotifyCheck,ScreenshotPlaySoundCheck,ScreenshotSaveUncompressedCheck dir=down start=ScreenshotActionLabel
 			margin-top=3 height=18 width=max region=topright spacing=0 }
 		
-		region { name=bottom region=box y=203 }
+		region { name=bottom region=box y=221 }
 		place { control=Divider1 region=bottom width=max }
 		place { controls="PingRateLabel" region=bottom start=Divider1 margin-top=6 width=max dir=down }
 		place { controls="PingRateCombo" region=bottom start=PingRateLabel margin-top=5 width=160 dir=down height=20 inset="0 1 0 0"}
