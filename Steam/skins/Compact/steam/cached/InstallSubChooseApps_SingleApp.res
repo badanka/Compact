@@ -230,11 +230,10 @@
 	layout
 	{
 		place { control="Label1" x=10 y=10 margin-right=10 width=max }
-		place { control="CreateShortcutCheck" x=10 y=26 margin-right=10 height=18 }
-		place { control="CreateStartMenuShortcutCheck" x=10 y=44 margin-right=10 height=18 }
+		place { control="CreateShortcutCheck,CreateStartMenuShortcutCheck" start="Label1" dir=down margin-top=3 height=18 spacing=0 }
 		
-		place { control="InstallSize" x=10 y=68 }
-		place { control="InstallSizeLabel" x=200 y=68 }
+		place { control="InstallSize" start="CreateStartMenuShortcutCheck" dir=down margin-top=6 }
+		place { control="InstallSizeLabel" start="CreateStartMenuShortcutCheck" dir=down margin-top=6 x=190 }
 		
 		place { control="DriveSpace" start="InstallSize" dir=down y=5 }
 		place { control="DriveSpaceLabel" start="InstallSizeLabel"dir=down y=5 }
@@ -248,6 +247,6 @@
 		place { control="InstallFolderCombo" start="InstallFolderLabel" dir=down y=5 width=max height=20 margin-right=10 }
 		
 		region { name=bottom align=bottom height=24 }
-		place { control="InstallButton,Button1" region=bottom align=right height=20 spacing=4 }
+		place { control="PrevButton,NextButton,CancelButton" region=bottom align=right height=20 spacing=4 }
 	}
 }

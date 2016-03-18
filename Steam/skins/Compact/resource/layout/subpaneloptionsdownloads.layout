@@ -36,6 +36,7 @@
 		AllowDownloadsDuringGameplayInfo { controlname=label labeltext=#Steam_AllowDownloadsDuringGameplayDetails wrap=1 style=padded }
 		ThrottleDownloadsWhileStreamingCheckbox { controlname=checkbutton labeltext=#Steam_ThrottleDownloadsWhileStreaming }
 		ThrottleDownloadsWhileStreamingInfo { controlname=label labeltext=#Steam_ThrottleDownloadsWhileStreamingDetails wrap=1 style=padded }
+		DownloadRatesInBitsCheckbox { controlname=checkbutton labeltext=#Steam_DownloadRatesInBits }
 		
 		Divider1 { ControlName=Divider	}				
 		Divider2 { ControlName=Divider	}				
@@ -90,6 +91,7 @@
 		place { controls="ThrottleDownloadsWhileStreamingCheckbox" region=box start=AllowDownloadsDuringGameplayInfo height=18 dir=down margin-top=10 }
 		place { controls="ThrottleDownloadsWhileStreamingInfo" region=box start=ThrottleDownloadsWhileStreamingCheckbox y=-3 dir=down width=450 }
 
+		place { controls="DownloadRatesInBitsCheckbox" region=box start=ThrottleDownloadsWhileStreamingInfo height=18 dir=down margin-top=10 }
 
 		place { controls="LibrariesLabel" width=0 }
 	}

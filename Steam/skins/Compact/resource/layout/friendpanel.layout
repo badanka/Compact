@@ -68,6 +68,18 @@
 			tooltiptext="#Friends_WebStatus_Tooltip"
 		}
 
+		VRStatusImage
+		{
+			style="VRStatusStyle"
+			tooltiptext="#Friends_VRStatusStatus_Tooltip"
+		}
+
+		VRStatusImageInGame
+		{
+			style="VRStatusStyleInGame"
+			tooltiptext="#Friends_VRStatusStatus_Tooltip"
+		}
+
 		StatusLabel
 		{
 			style="statusStyle"
@@ -224,6 +236,18 @@
 			image="graphics/icon_status_mobile_ingame"
 			padding-left=4
 		}
+		
+		VRStatusStyle
+		{
+			image="graphics/icon_vr_online"
+			padding-left=4
+		}
+
+		VRStatusStyleInGame
+		{
+			image="graphics/icon_vr_happy"
+			padding-left=4
+		}
 	}
 	
 	layout
@@ -234,7 +258,7 @@
 		place { control="ClanStatusImage,NameLabel,FriendsNameInstanceLabel" x=42 y=1 }
 		place { control="MenuButton" x=42 y=6  height=0 }
 		
-		place { control="StatusLabel,BigPictureStatusImage,MobileStatusImage,WebStatusImage,BigPictureStatusImageInGame,MobileStatusImageInGame,WebStatusImageInGame"		x=52 y=13 }
+		place { control="StatusLabel,BigPictureStatusImage,VRStatusImage,MobileStatusImage,WebStatusImage,BigPictureStatusImageInGame,MobileStatusImageInGame,WebStatusImageInGame"		x=52 y=13 }
 		place { control="GameLabel"			x=52 y=25 }
 
 		// these controls are shown for friendship requests

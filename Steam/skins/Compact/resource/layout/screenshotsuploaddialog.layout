@@ -21,7 +21,6 @@
 		shared_to_facebook_ok_label { controlname="Label" labeltext="#Overlay_ToBeSharedToFacebook" visible="1" wrap="1" }
 		shared_to_facebook_no_multi_label { controlname="Label" labeltext="#Overlay_WontBeSharedToFacebook" visible="1" wrap="1" }
 		shared_to_facebook_no_private_label { controlname="Label" labeltext="#Overlay_PrivateScreenshot" visible="1" wrap="1" }
-
 		share_to_facebook_check_button { controlname="CheckButton" labeltext="#Overlay_Share" visible="1" command="changesharetofacebook" }
 
 	}
@@ -63,10 +62,14 @@
 		place { control="error_info" x=25 y=40 width=max }
 		place { control="upload_progress" y=75 width=max margin-left=25 margin-right=25 height=3 }
 		
-		place { control="upload_size" x=25 y=65 }
-		place { control="storage_remaining" x=25 y=80 }
-		place { control="upload_size_info" x=145 y=65 }
-		place { control="storage_remaining_info" x=145 y=80 }
+		region	{ name="leftcolumn" x=25 y=65 width=180 } 
+		place { control="upload_size" region="leftcolumn" width=max }
+		place { control="storage_remaining" region="leftcolumn" y=15 width=max }
+		
+		region	{ name="rightcolumn" x=180 y=65 width=180 }
+		place { control="upload_size_info" region="rightcolumn" width=max }
+		place { control="storage_remaining_info" region="rightcolumn" y=15 width=max }
+		
 		place { control="visiblity_label" x=25 y=110 }
 		place { control="visibility_options" start="visiblity_label" y=-3 x=5 height=20 dir=right }
 		place { control="share_to_facebook_check_button" x=25 y=140 }
