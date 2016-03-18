@@ -810,9 +810,6 @@
 		place { control="label_store,label_library,label_community,label_me,label_console" x=0 y=1 spacing=13 margin-left="9" height=20 } 
 		place { control="label_community_new" start="label_console" x="9999" width=0 height=0 }
 
-        region { name="bigpicture" width=32 align=right margin-right=3 margin-top=0 height=22 }
-
-		place { control="fullscreen" tooltiptext="#tooltip_view_list" align=right y=0 height=22 region="bigpicture"}
 		place { control="library_music_player_icon" align=right height=16 width=16 y=23 margin-right=8 }
 
 		place { control="PageLoadThrobber" align=right y=21 height=20 width=20  margin-right=8 }
