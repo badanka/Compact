@@ -16,6 +16,9 @@
 		"ResolutionLabel" { ControlName="Label" associate="ResolutionLimit" labelText="#Steam_Settings_Streaming_Resolution" }
 		"ResolutionLimit" { ControlName="ComboBox" fieldName="ResolutionLimit" style="ResolutionLimit" editable="0" }
 
+		"AudioChannelsLabel" { ControlName="Label" associate="AudioChannelSelect" labelText="#Steam_Settings_Streaming_AudioChannelSelect" }
+		"AudioChannelSelect" { ControlName="ComboBox" fieldName="AudioChannelSelect" editable="0" }
+
 		"EnableHardwareDecoding" { ControlName="CheckButton" fieldName="EnableHardwareDecoding" labelText="#Steam_Settings_Streaming_EnableHardwareDecoding" }
 		"EnableDebugOverlay" { ControlName="CheckButton" fieldName="EnableDebugOverlay" labelText="#Steam_Settings_Streaming_EnableDebugOverlay" }
 		
@@ -47,6 +50,7 @@
 			align=top
 			width=256
 			height=20
+			margin-top=8
 			margin-right=10
 			spacing=0
 		}
@@ -63,11 +67,22 @@
 			spacing=0
 		}
 
+		place
+		{
+			control="AudioChannelsLabel,AudioChannelSelect"
+			start="ResolutionLimit"
+			dir=down
+			width=256
+			height=20
+			margin-top=3
+			margin-right=10
+			spacing=0
+		}
 		
 		place
 		{
 			control="EnableHardwareDecoding,EnableDebugOverlay"
-			start="ResolutionLimit"
+			start="AudioChannelSelect"
 			dir=down
 			width=256
 			height=18

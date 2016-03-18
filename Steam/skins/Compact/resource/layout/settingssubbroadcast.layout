@@ -32,7 +32,6 @@
 		"RecordSystemAudio" { ControlName="CheckButton" fieldName="RecordSystemAudio" group="HideWhenDisabled" }
 		"RecordMic" { ControlName="CheckButton" fieldName="RecordMic" group="HideWhenDisabled" }
 		"ConfigMic" { ControlName="URLLabel" fieldName="ConfigMic" labelText="#Steam_Settings_Broadcast_ConfigMic" URLText="steam://settings/voice" group="HideWhenDisabled" }
-		"EnableHardwareSupport" { ControlName="CheckButton" fieldName="EnableHardwareSupport" visible="0" }
 		"ShowDebugInfo" { ControlName="CheckButton" fieldName="ShowDebugInfo" group="HideWhenDisabled" }
 		"ShowReminder" { ControlName="CheckButton" fieldName="ShowReminder" group="HideWhenDisabled" }
 
@@ -75,7 +74,7 @@
 		place { start="EncoderSetting" control="ShowChatHeader" dir=down margin-top=6 width=max }
 		place { start="ShowChatHeader" control="ShowChatCombo" dir=down margin-top=4 width=250 height=20 }
 				
-		place { start="ShowChatCombo" control="IncludeDesktop,RecordSystemAudio,RecordMic,EnableHardwareSupport,ShowDebugInfo,ShowReminder" dir=down margin-top=5 height=18 }	
+		place { start="ShowChatCombo" control="IncludeDesktop,RecordSystemAudio,RecordMic,ShowDebugInfo,ShowReminder" dir=down margin-top=5 height=18 }	
 		place { start="RecordMic" control="ConfigMic" dir=right margin-top=3  }	
 		place { control="RequiresRestartLabel" align=bottom margin-left=10 margin-right=10 width=max margin-bottom=6 }
 }
