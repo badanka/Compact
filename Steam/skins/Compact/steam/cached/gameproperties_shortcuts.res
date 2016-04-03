@@ -173,7 +173,7 @@
 		"ControlName"		"Button"
 		"fieldName"		"LaunchOptionsButton"
 		"xpos"		"12"
-		"ypos"		"258"
+		"ypos"		"284"
 		"wide"		"200"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -188,6 +188,25 @@
 		"Command"		"SetLaunchOptions"
 		"Default"		"0"
 		"selected"		"0"
+	}
+	"EnableDesktopGameTheater"
+	{
+		"ControlName"		"CheckButton"
+		"fieldName"		"EnableDesktopGameTheater"
+		"xpos"		"12"
+		"ypos"		"218"
+		"wide"		"400"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"labelText"		"#Overlay_SettingsDesktopGameTheaterCheck"
+		"textAlignment"		"west"
+		"wrap"		"0"
+		"Default"		"0"
 	}
 	
 	layout
