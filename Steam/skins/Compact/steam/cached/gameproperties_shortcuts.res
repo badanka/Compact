@@ -199,11 +199,30 @@
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
-		"visible"		"1"
+		"visible"		"0"
 		"enabled"		"1"
 		"tabPosition"		"0"
 		"paintbackground"		"1"
 		"labelText"		"#Overlay_SettingsDesktopGameTheaterCheck"
+		"textAlignment"		"west"
+		"wrap"		"0"
+		"Default"		"0"
+	}
+	"IsVRShortcut"
+	{
+		"ControlName"	"CheckButton"
+		"fieldName"		"IsVRShortcut"
+		"xpos"		"12"
+		"ypos"		"218"
+		"wide"		"400"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"labelText"		"#Overlay_SettingsIsVRShortcut"
 		"textAlignment"		"west"
 		"wrap"		"0"
 		"Default"		"0"
@@ -226,6 +245,6 @@
 		place { control="FindTarget" height=20 start="StartIn" dir=down margin-top=8 region="body" }
 		place { control="LaunchOptionsButton" height=20 start="FindTarget" dir=down margin-top=4 region="body" }
 	
-		
+		place { control="IsVRShortcut" height=16 start="LaunchOptionsButton" dir=down margin-top=6 region="body" }
 	}
 }
