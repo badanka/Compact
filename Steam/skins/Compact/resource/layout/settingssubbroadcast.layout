@@ -43,20 +43,6 @@
 		place { control="BroadcastDisabledLabel,BroadcastStatusHeader,BroadcastDisabledSupportURL,BroadcastStatus" margin-left=10 spacing=4 margin-right=20 margin-top=6 width=max }
 		place { control="BroadcastHelpHeader,BroadcastHelpURL" margin-left=10 spacing=4 margin-right=20 margin-top=21 width=max }
 		
-		
-		
-		//place { control="BroadcastDisabledLabel" margin-left=10 margin-right=20 margin-top=6 width=max }
-		//place { start="BroadcastDisabledLabel" control="BroadcastDisabledSupportURL" dir=down margin-top=10 margin-right=20 width=max }
-		
-		//place { control="BroadcastStatusHeader" margin-left=10 margin-right=20 margin-top=6 }
-		//place { start="BroadcastStatusHeader" control="BroadcastStatus" dir=right x=10 }
-
-		//place { start="BroadcastStatusHeader" margin-top=2 control="BroadcastHelpHeader" dir=down }
-		//place { start="BroadcastStatus" control="BroadcastHelpURL" dir=down margin-top=2 }
-
-
-
-
 		place { start="BroadcastStatusHeader" control="Divider1" dir=down margin-top=22 width=max margin-right=10 }						
 
 		place { start="Divider1" control="PermissionsHeader" dir=down margin-right=20 margin-top=7 width=max }
