@@ -8,6 +8,7 @@
 		OverlayHomePageLabel { ControlName=Label labelText="#Overlay_SettingsHomepageLabel" }
 		OverlayHomePage { ControlName=TextEntry }
 		
+		ClearWebCacheButton { ControlName=Button labelText="#Steam_SettingsBrowserClearWebCache" 	command=ClearWebCache }
 		ClearAllCookiesButton { ControlName=Button labelText="#Steam_SettingsBrowserClearAllCookies" 	command=ClearCookies }
 
 	}
@@ -36,7 +37,7 @@
 		place { start=DescriptionLabel controls=OverlayHomePageLabel dir=down margin-top=10 width=200 }
 		place { start=OverlayHomePageLabel controls=OverlayHomePage dir=down margin-top=4 width=240 }
 		place { start=OverlayHomePage controls=Divider1 dir=down region=bottom width=max margin-top=9 margin-right=10 }
-		place { controls=ClearAllCookiesButton height=20 width=240 region=bottom start=Divider1 dir=down margin-top=10 }
+		place { controls=ClearWebCacheButton,ClearAllCookiesButton start=Divider1 dir=down height=20 region=bottom margin-top=10 height=20 spacing=4 }
 		
 	}
 }

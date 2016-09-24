@@ -261,7 +261,7 @@
 		
 		//set aside some room for the header section
 		region { name=head	dir=down x=10 y=8 height=124 width=180 }
-		region { name=legend align=right dir=down width=90 margin-top=0	}
+		region { name=legend align=right dir=down width=100 margin-top=0	}
 
 		
 		region { name=column1 x=0	y=20	width=max  region=head }
@@ -286,7 +286,7 @@
 		place { region=column2  control="peak_download_rate_value,total_downloaded_value" dir=down align=right spacing=2 y=16 margin-right=4 }
 		place { region=column2  control="download_rate" y=50 width=0 }
 
-		place { control="pauseresumeallbutton" region=legend y=11 margin-right=9 height=20 }
+		place { control="pauseresumeallbutton" region=legend y=11 margin-right=13 height=20 width=max }
 
 		// throttling info
 		place { control="throttling_label" y=14 align=right end-right="throttling_value" margin-right=3 }

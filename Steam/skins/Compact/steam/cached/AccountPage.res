@@ -120,27 +120,24 @@
 		"Default"		"0"
 		"selected"		"0"
 	}
-	"VACInfoLinkImage"
+	"VacInfoURL"
 	{
-		"ControlName"		"ImagePanel"
-		"fieldName"		"VACInfoLinkImage"
-		"xpos"		"468"
-		"ypos"		"58"
-		"wide"		"28"
-		"tall"		"28"
+		"ControlName"		"URLLabel"
+		"fieldName"		"VacInfoLink"
+		"labelText"		"#Steam_NoVacBanOnAccount"
+		"URLText"		"Steam://url/HelpVacBans/"
+		"xpos"		"136"
+		"ypos"		"67"
+		"wide"		"340"
+		"tall"		"42"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
-		"visible"		"0"
+		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"		"0"
 		"paintbackground"		"1"
-		"image"		"graphics/icon_click_for_details"
-		"fillcolor"		""
-		"gradientStart"		""
-		"gradientEnd"		""
-		"gradientVertical"		"0"
-		"scaleImage"		"0"
-		"zpos"			"2"
+		"textAlignment"		"north-west"
+		"wrap"		"1"
 	}
 	
 	"SecurityStatusLabel"
@@ -397,24 +394,6 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}
-	"VACStatusLabel"
-	{
-		"ControlName"		"Label"
-		"fieldName"		"VACStatusLabel"
-		"xpos"		"136"
-		"ypos"		"67"
-		"wide"		"340"
-		"tall"		"42"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"labelText"		"#VAC_NoBans"
-		"textAlignment"		"north-west"
-		"wrap"		"1"
-	}
 	"Divider2"
 	{
 		"ControlName"		"Divider"
@@ -522,8 +501,8 @@
 		place { control="SecurityStatusLabel"	margin-left=10  y=39 height=16 end-right="SecurityStatusState" }	//security status
 		place { control="SecurityStatusState"	margin-left=120 y=39 height=16 }									//state of security status
 		
-		place { control="Label2"				margin-left=10  y=56 height=16 end-right="VACStatusLabel" }			//VAC status
-		place { control="VACStatusLabel"		margin-left=120 y=57 height=16 }									//state of VAC status
+		place { control="Label2"				margin-left=10  y=56 height=16 end-right="VacInfoLink" }			//VAC status
+		place { control="VacInfoLink"			margin-left=120 y=57 height=16 }									//state of VAC status
 		
 		place { start=Label2 control="ChangeUserButton,ManageSecurityButton,ChangePasswordButton,ChangeContactEmailButton" y=4 width=236 height=20 dir=down spacing=4 }
 
