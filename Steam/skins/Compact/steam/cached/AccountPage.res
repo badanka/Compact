@@ -517,6 +517,6 @@
 		place { control="Divider2" align=top-center width=max margin-top=9 margin-left=10 margin-right=10 start="ChangeBetaButton" dir=down }						
 		
 		place { control="NoPersonalInfoCheck" start="Divider2" height=18 margin-top=3 dir=down }	//don't save your account credentials
-		place { control="Label1" start="NoPersonalInfoCheck" margin-top=2 dir=down }				//warning about not saving your account credentials
+		place { control="Label1" start="NoPersonalInfoCheck" margin-top=2 margin-left=27 dir=down }				//warning about not saving your account credentials
 	}
 }

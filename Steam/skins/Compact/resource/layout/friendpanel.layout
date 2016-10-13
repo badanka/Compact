@@ -219,6 +219,12 @@
 			padding-left=4
 		}
 
+		VRStatusStyle
+		{
+			image="graphics/icon_status_vr"
+			padding-left=4
+		}		
+
 		WebStatusStyleInGame
 		{
 			image="graphics/icon_status_web_ingame"
@@ -236,16 +242,10 @@
 			image="graphics/icon_status_mobile_ingame"
 			padding-left=4
 		}
-		
-		VRStatusStyle
-		{
-			image="graphics/icon_vr_online"
-			padding-left=4
-		}
 
 		VRStatusStyleInGame
 		{
-			image="graphics/icon_vr_happy"
+			image="graphics/icon_status_vr_ingame"
 			padding-left=4
 		}
 	}

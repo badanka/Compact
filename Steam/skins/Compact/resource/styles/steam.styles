@@ -2981,7 +2981,9 @@ steam.styles
 		{
 			font-family="basefont"
 			font-family="Monaco" [$OSX]
-			font-size=13
+			font-size=9
+			font-family="DejaVu Sans Mono" [$LINUX]
+			font-size=12 [$LINUX]
 			textcolor="label"
 			selectedtextcolor="TextSelected"
 		}
@@ -3330,6 +3332,8 @@ steam.styles
 		{
 			textcolor="Highlight3"
 			font-size=13
+			font-family="DejaVu Sans Mono" [$LINUX]
+			font-size=12 [$LINUX]
 			selectedtextcolor="TextSelected"
 			selectedbgcolor="Focus"
 		}
@@ -3338,6 +3342,8 @@ steam.styles
 		{
 	 		font-family="basefont"
 			font-size=13
+			font-family="DejaVu Sans Mono" [$LINUX]
+			font-size=12 [$LINUX]
 			textcolor="text"
 			selectedtextcolor="TextSelected"	
 			selectedbgcolor="Focus"
