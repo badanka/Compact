@@ -36,7 +36,7 @@
 		{
 			font-size=13
 			textcolor=Text
-			margin-left="1"
+			inset="0 1 0 0"
 		}
 
 		achievementlabelmore
