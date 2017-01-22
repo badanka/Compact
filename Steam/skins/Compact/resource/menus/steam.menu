@@ -83,7 +83,7 @@
 		
 		Support							{	text="#steam_menu_support"					command="Support" }
 		Divider							{}
-		Compact							{ 	text="Steam Compact 1.5.79 [GitHub]"		shellcmd="steam://openurl/http://badanka.github.io/Compact/" }
+		Compact							{ 	text="Steam Compact 1.5.83 [GitHub]"		shellcmd="steam://openurl/http://badanka.github.io/Compact/" }
 		CompactForum					{ 	text="Steam Compact Forum Thread"			shellcmd="steam://openurl/http://forums.steampowered.com/forums/showthread.php?t=1279345" }
 		CompactGroup					{ 	text="Steam Compact Community Group"		shellcmd="steam://openurl/http://steamcommunity.com/groups/SteamCompact" }
 		Divider							{}
