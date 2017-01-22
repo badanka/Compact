@@ -4,6 +4,7 @@ description: A skin for the Steam client, by seq
 google_analytics: 
 show_downloads: true
 theme: jekyll-theme-midnight
+"zip_url": "https://github.com/badanka/Compact/releases/latest"
 
 gems:
   - jekyll-mentions
