@@ -496,7 +496,7 @@
 		//top
 		region { name=top margin-bottom=28 }
 		region { name=left region=top x=0 y=30 margin-left=10 width=100 }
-		region { name=right region=top x=102 y=30 margin-right=10 width=311 }
+		region { name=right region=top x=102 y=30 margin-right=10 width=max }
 
 		//left
 		place { region=left control=ServerIPLabel x=0 y=3 align=right }
