@@ -38,14 +38,60 @@
 		"gradientVertical"		"0"
 		"scaleImage"		"0"
 	}
-		
+
+	"PasswordCapsLockLabel"
+	{
+		"ControlName"		"Label"
+		"fieldName"		"PasswordCapsLockLabel"
+		"xpos"		"218"
+		"ypos"		"123"
+		"wide"		"150"
+		"tall"		"24"
+		"AutoResize"		"1"
+		"PinCorner"		"1"
+		"visible"		"0"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"labelText"		"#Steam_Login_CapsLockWarning"
+		"textAlignment"		"east"
+		"wrap"		"0"
+		"zpos"		"-1"
+	}
+
+
+	"PasswordCapsLockImage"
+	{
+		"ControlName"		"ImagePanel"
+		"fieldName"		"PasswordCapsLockImage"
+		"xpos"		"370"
+		"ypos"		"125"
+		"wide"		"19"
+		"tall"		"19"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"0"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"image"		"resource/icon_warning"
+		"fillcolor"		""
+		"gradientStart"		""
+		"gradientEnd"		""
+		"gradientVertical"		"0"
+		"scaleImage"		"1"
+		"zpos"		"-1"
+	}
+
+
+
 	"PasswordEdit"
 	{
 		"ControlName"		"TextEntry"
 		"fieldName"		"PasswordEdit"
 		"xpos"		"116"
 		"ypos"		"122"
-		"wide"		"281"
+		"wide"		"331"
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
@@ -66,7 +112,7 @@
 		"fieldName"		"UserNameEdit"
 		"xpos"		"116"
 		"ypos"		"88"
-		"wide"		"281"
+		"wide"		"331"
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
@@ -86,7 +132,7 @@
 		"fieldName"		"LoginButton"
 		"xpos"		"115"
 		"ypos"		"184"
-		"wide"		"136"
+		"wide"		"161"
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
@@ -122,22 +168,6 @@
 		"Default"		"0"
 		"selected"		"0"
 	}
-	"SysMenu"
-	{
-		"ControlName"		"Menu"
-		"fieldName"		"SysMenu"
-		"xpos"		"0"
-		"ypos"		"0"
-		"zpos"		"1"
-		"wide"		"64"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"0"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-	}
 	"UserNameLabel"
 	{
 		"ControlName"		"Label"
@@ -157,10 +187,10 @@
 		"associate"		"UserNameEdit"
 		"wrap"		"0"
 	}
-	"Unnamed dialog1"
+	"PasswordLabel"
 	{
 		"ControlName"		"Label"
-		"fieldName"		"Unnamed dialog1"
+		"fieldName"		"PasswordLabel"
 		"xpos"		"6"
 		"ypos"		"122"
 		"wide"		"100"
@@ -180,9 +210,9 @@
 	{
 		"ControlName"		"Button"
 		"fieldName"		"CancelButton"
-		"xpos"		"261"
+		"xpos"		"286"
 		"ypos"		"184"
-		"wide"		"136"
+		"wide"		"161"
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
@@ -202,8 +232,8 @@
 		"ControlName"		"Button"
 		"fieldName"		"CreateNewAccountButton"
 		"xpos"		"210"
-		"ypos"		"240"
-		"wide"		"187"
+		"ypos"		"272"
+		"wide"		"237"
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
@@ -218,40 +248,19 @@
 		"Default"		"0"
 		"selected"		"0"
 	}
-	"PSNAccountSetupButton"
-	{
-		"ControlName"		"Button"
-		"fieldName"		"PSNAccountSetupButton"		
-		"xpos"		"210"
-		"ypos"		"272"
-		"wide"		"187"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"7"
-		"paintbackground"		"1"
-		"labelText"		"#Steam_Login_PSNAccountSetup"
-		"textAlignment"		"west"
-		"wrap"		"0"
-		"Command"		"PSNAccountSetup"
-		"Default"		"0"
-		"selected"		"0"
-	}
 	"LostPasswordButton"
 	{
 		"ControlName"		"Button"
 		"fieldName"		"LostPasswordButton"
 		"xpos"		"210"
-		"ypos"		"304"
-		"wide"		"187"
+		"ypos"		"240"
+		"wide"		"237"
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
 		"visible"		"1"
 		"enabled"		"1"
-		"tabPosition"		"7"
+		"tabPosition"		"8"
 		"paintbackground"		"1"
 		"labelText"		"#Steam_Login_RetrievePassword"
 		"textAlignment"		"west"
@@ -265,7 +274,7 @@
 		"ControlName"		"Label"
 		"fieldName"		"Label2"
 		"xpos"		"16"
-		"ypos"		"240"
+		"ypos"		"272"
 		"wide"		"184"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -279,31 +288,12 @@
 		"textAlignment"		"east"
 		"wrap"		"0"
 	}
-	"Label3"
-	{
-		"ControlName"		"Label"
-		"fieldName"		"Label3"
-		"xpos"		"16"
-		"ypos"		"272"
-		"wide"		"184"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"borderset"		"LabelDull"
-		"labelText"		"#Steam_Login_PS3Players"		
-		"textAlignment"		"east"
-		"wrap"		"0"
-	}
 	"Label4"
 	{
 		"ControlName"		"Label"
 		"fieldName"		"Label4"
 		"xpos"		"16"
-		"ypos"		"304"
+		"ypos"		"240"
 		"wide"		"184"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -321,9 +311,9 @@
 	{
 		"ControlName"		"Divider"
 		"fieldName"		"Divider1"
-		"xpos"		"25"
+		"xpos"		"26"
 		"ypos"		"224"
-		"wide"		"372"
+		"wide"		"420"
 		"tall"		"1"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
@@ -365,7 +355,7 @@
 		"enabled"		"1"
 		"tabPosition"		"0"
 		"paintbackground"		"1"
-		"image"		"graphics/intel_security_01"
+		"image"		"graphics/logo6"
 		"fillcolor"		""
 		"gradientStart"		""
 		"gradientEnd"		""
@@ -427,6 +417,30 @@
 		"wrap"		"1"
 		"style"		"loginprocess_style_body"
 	}
+	"LoginErrorText"
+	{
+		"ControlName"		"Label"
+		"fieldName"		"LoginErrorText"
+		"xpos"		"30"
+		"ypos"		"224"
+		"wide"		"412"
+		"tall"		"44"
+		"AutoResize"		"1"
+		"PinCorner"		"0"
+		"visible"		"0"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"0"
+		"labelText"		""
+		"textAlignment"		"west"
+		"wrap"		"1"
+		"style"		"loginerror_style_body"
+	}
+
+	color
+	{
+		redborder="169 72 71 255"
+	}
 		
 	styles
 	{
@@ -444,6 +458,15 @@
 			"font-style"	"regular"
 		}
 	
+		"loginerror_style_body"
+		{
+			"font-size"		"13"
+			textcolor=white
+			bgcolor=none
+			margin-left=8
+			margin-right=8
+		}
+	
 		Button
 		{
 			minimum-width=166
@@ -454,10 +477,10 @@
 	{
 		place { control="ImagePanelLogo" x=16 y=40 width=176 height=48 }
 		
-		place { control="UserNameLabel" y=103 align=right end-right="UserNameEdit" margin-right=6}			//username label
+		place { control="UserNameLabel" y=103 align=right end-right="UserNameEdit" margin-right=6 }			//username label
 		place { control="UserNameEdit" x=112 y=100 width=max height=20 margin-right=22 }					//username text entry
 		
-		//place { control="Unnamed dialog1" x=112 y=128 width=max height=20 margin-right=22 }				//not affected by layout code, so included for reference only
+		place { control="PasswordLabel" y=128 align=right end-right="PasswordEdit" margin-right=6}			//password label
 		place { control="PasswordEdit" x=112 y=125 width=max height=20 margin-right=22 }					//password text entry
 
 		place { control="SavePasswordCheck" x=112 y=148 height=20 }
@@ -467,12 +490,11 @@
 		
 		place { control="Label2" start="Divider1" dir=down y=13 }				//register new account label
 		place { control="Label4" start="Label2" dir=down y=11 }					//forgotten login credentials
-		place { control="Label3" start="Label4" dir=down y=11  }					//PSN label
 		
 		place { control="CreateNewAccountButton" start="Divider1" dir=down x=260 y=10  height=20 }
 		place { control="LostPasswordButton"     start="CreateNewAccountButton" dir=down y=4 height=20 }
-		place { control="PSNAccountSetupButton"  start="LostPasswordButton" dir=down y=4 height=20 }
 		
+		place { control="LoginErrorText" start="Label4" dir=down y=25  }					//wrong password or account name
 		
 	}
 }
