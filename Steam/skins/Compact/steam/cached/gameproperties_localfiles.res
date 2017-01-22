@@ -138,11 +138,33 @@
 		"Default"		"0"
 	}
 	
+	"MoveInstallFolder"
+	{
+		"ControlName"		"Button"
+		"fieldName"		"MoveInstallFolder"
+		"xpos"		"24"
+		"ypos"		"186"
+		"wide"		"256"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"0"
+		"enabled"		"1"
+		"tabPosition"		"4"
+		"paintbackground"		"1"
+		"labelText"		"#Steam_GamePropertiesMoveFolder"
+		"textAlignment"		"west"
+		"wrap"		"0"
+		"Command"		"MoveInstallFolder"
+		"Default"		"0"
+	}
+
+	
 	layout
 	{
-		place { control="DiskUsageLabel" x=10 y=10 }
-		place { control="BackupButton,DeleteButton,VerifyButton,DefragButton,OpenInstallFolder" start="DiskUsageLabel" y=8 width=200 height=20 dir=down spacing=4 }
-		place { control="BuildIDLabel" start="OpenInstallFolder" dir=down y=6 }
+		place { control="BuildIDLabel" x=10 y=10 }
+		place { control="DiskUsageLabel" start="BuildIDLabel" dir=down y=2 }
+		place { control="BackupButton,DeleteButton,VerifyButton,DefragButton,OpenInstallFolder,MoveInstallFolder" start="DiskUsageLabel" y=8 width=200 height=20 dir=down spacing=4 }
 		
 	}
 }
