@@ -3,7 +3,6 @@ description: A skin for the Steam client, by seq
 google_analytics: 
 show_downloads: true
 theme: jekyll-theme-midnight
-"releases": [ latest ]
 
 gems:
   - jekyll-mentions

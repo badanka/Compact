@@ -11,10 +11,6 @@ The directory structure in the .zip file lets you quite quickly figure out where
 **Linux users**: Read the included readme for instructions how to install this skin on Linux. 
 A few issues with fonts requires some manual work. Please let me know if you experience any issues with this, I haven't tested it much myself.
 
- {% for release in site.github.releases %} 
-  * [{{ release.name }}]({{ release.html_url }}) 
-{% endfor %}
-
 ***
 
 ### Information about current version (updated January 22, 2017)
@@ -29,7 +25,7 @@ Changes since previous version include:<br>
 ***
 
 ### Support or Contact
-Having any issues? Either report it in the [GitHub issue tracker](https://github.com/badanka/Compact/issues) or in the [Steam Community Group](http://steamcommunity.com/groups/SteamCompact).
+Having any issues? Either report it in the [GitHub issue tracker](https://github.com/badanka/Compact/issues) or in the [Steam Community Group](https://steamcommunity.com/groups/SteamCompact).
 
 ***
 
@@ -54,4 +50,4 @@ If you like living on the edge I might sometimes also have a dev branch going fo
 ![Overlay](http://i.imgur.com/vqrnNmr.png)
 
 
-_*This page was last updated 2017-01-22, 13:23 GMT+2_
+_*This page was last updated 2017-01-22, 13:23 GMT+1_
