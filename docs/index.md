@@ -12,7 +12,7 @@ The directory structure in the .zip file lets you quite quickly figure out where
 A few issues with fonts requires some manual work. Please let me know if you experience any issues with this, I haven't tested it much myself.
 
  {% for release in site.github.releases %} 
-  * [{{ 1.5.83 }}]({{ https://github.com/badanka/Compact/releases/latest }}) 
+  * [{{ release.name }}]({{ release.html_url }}) 
 {% endfor %}
 
 ***

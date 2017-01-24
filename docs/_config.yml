@@ -1,7 +1,7 @@
 title: Steam Compact
 description: A skin for the Steam client, by seq
 google_analytics: 
-show_downloads: false
+show_downloads: true
 theme: jekyll-theme-midnight
 "releases_url": "https://github.com/badanka/Compact/releases"
 "zip_url": "https://github.com/github/metadata-example/zipball/gh-pages"
