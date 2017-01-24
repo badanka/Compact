@@ -11,6 +11,10 @@ The directory structure in the .zip file lets you quite quickly figure out where
 **Linux users**: Read the included readme for instructions how to install this skin on Linux. 
 A few issues with fonts requires some manual work. Please let me know if you experience any issues with this, I haven't tested it much myself.
 
+ {% for release in site.github.releases %} 
+  * [{{ 1.5.83 }}]({{ https://github.com/badanka/Compact/releases/latest }}) 
+{% endfor %}
+
 ***
 
 ### Information about current version (updated January 22, 2017)
