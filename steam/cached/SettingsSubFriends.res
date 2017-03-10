@@ -311,6 +311,63 @@
 		"wrap"		"0"
 		"Default"		"0"
 	}
+	"LabelGroupEvents"
+	{
+		"ControlName"		"Label"
+		"fieldName"		"LabelGroupEvents"
+		"xpos"		"20"
+		"ypos"		"390"
+		"wide"		"202"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"labelText"		"#Friends_WhenGroupEventsOrAnnouncementsHappen"
+		"textAlignment"		"west"
+		"wrap"		"0"
+	}
+	"EventsAndAnnouncementsNotifyCheck"
+	{
+		"ControlName"		"CheckButton"
+		"fieldName"		"EventsAndAnnouncementsNotifyCheck"
+		"xpos"		"25"
+		"ypos"		"409"
+		"wide"		"202"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"5"
+		"paintbackground"		"1"
+		"labelText"		"#Friends_DisplayNotification"
+		"textAlignment"		"west"
+		"wrap"		"0"
+		"Default"		"0"
+	}
+	"EventsAndAnnouncementsPlaySoundCheck"
+	{
+		"ControlName"		"CheckButton"
+		"fieldName"		"EventsAndAnnouncementsPlaySoundCheck"
+		"xpos"		"25"
+		"ypos"		"430"
+		"wide"		"202"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"6"
+		"paintbackground"		"1"
+		"labelText"		"#Friends_PlayASound"
+		"textAlignment"		"west"
+		"wrap"		"0"
+		"Default"		"0"
+	}
+
 	"Label6"
 	{
 		"ControlName"		"Label"
@@ -514,6 +571,10 @@
 		place { control="Label6,ReceiveMessageNotifyCheck,ReceiveMessagePlaySoundCheck" dir=down margin-left=212 y=119 height=18 }
 		place { control="Label7,FlashModeAlways,FlashModeMinimized,FlashModeNever" dir=down margin-left=212 y=176 height=18 }
 
+		place { control="LabelGroupEvents,EventsAndAnnouncementsNotifyCheck,EventsAndAnnouncementsPlaySoundCheck" dir=down y=251 height=18  margin-left=10 }
+		
+		
+		
 		//hidden
 		place { control="Label1,Label2,Label3,URLLabel2" height=0 }
 	}
