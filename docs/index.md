@@ -14,7 +14,7 @@ A few issues with fonts requires some manual work. Please let me know if you exp
 ***
 
 ### Information about current version (updated March 10, 2017)
-Version 1.5.86 is compatible with Steam version *1489101908 (built March 9, 2017)**
+Version 1.5.86 is compatible with Steam version 1489101908 (built March 9, 2017)
 
 Changes since previous version include:<br>
 * Updated to match Steam version 1489101908 (built 170309)<br>
