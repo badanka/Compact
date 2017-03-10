@@ -13,14 +13,14 @@ A few issues with fonts requires some manual work. Please let me know if you exp
 
 ***
 
-### Information about current version (updated January 22, 2017)
-Version 1.5.83 is compatible with Steam version **1484790260, January 18, 2017**
+### Information about current version (updated March 10, 2017)
+Version 1.5.86 is compatible with Steam version *1489101908 (built March 9, 2017)**
 
 Changes since previous version include:<br>
-* Updated to match Steam version 1484790260 (built 170118)<br>
-* In-Home Streaming PIN code support<br>
-* Fixed appearance of the new 'move library folder' button in Game Properties<br>
-* Fixes to the login and 2FA input dialogs<br>
+* Updated to match Steam version 1489101908 (built 170309)<br>
+* Removal of option to check for GPU driver updates<br>
+* Changes in In-Home Streaming -> Advanced host options<br>
+* Added settings for group events and announcements in Settings -> Friends<br>
 
 ***
 
@@ -50,4 +50,4 @@ If you like living on the edge I might sometimes also have a dev branch going fo
 ![Overlay](http://i.imgur.com/vqrnNmr.png)
 
 
-_*This page was last updated 2017-01-22, 13:23 GMT+1_
+_*This page was last updated 2017-03-10, 15:40 GMT+1_
