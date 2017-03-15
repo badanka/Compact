@@ -58,6 +58,10 @@
 			textcolor=text
 			font-style=antialias
 			font-weight=700
+			
+			font-size=32 [$LINUX]
+			font-family=basefonthead  [$LINUX]
+			textcolor=text  [$LINUX]
 		}
 
 		clocksuffix
@@ -107,8 +111,11 @@
 		place { control="CommunityHubDetailPanel" region=detailpanelsnew end-right="CommunityDiscussionsDetailPanel" y=200 margin-right=4 width=115 height=24 align=right }
 		place { control="CommunityDiscussionsDetailPanel" region=detailpanelsnew y=200 margin-right=4 width=96 height=24 align=right }
 
-		place { control="Clock" region=topbar width=max height=22 margin-top=20 }
-		place { control="ClockSuffix" region=topbar align=bottom margin-left=123 width=17 height=24 margin-bottom=36 }
+		place [!$LINUX] { control="Clock" region=topbar width=max height=22 margin-top=20 }
+		place [!$LINUX] { control="ClockSuffix" region=topbar align=bottom margin-left=123 width=17 height=24 margin-bottom=36 }
+
+		place [$LINUX] { control="Clock" region=topbar width=max height=22 margin-top=14 margin-right=2 }
+		place [$LINUX]{ control="ClockSuffix" region=topbar align=bottom margin-left=123 width=17 height=24 margin-bottom=41 }
 
 		place { control="SessionText,TwoWeeksText,ForeverText" dir=right align=top-center spacing=32 region=detailpanels margin-top=217 }
 

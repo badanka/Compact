@@ -54,15 +54,6 @@ linux.styles
 			font-weight=400
 		}
 		
-		topbar
-		{
-			font-size=24
-			font-family=basefonthead
-			font-style=antialias
-			font-weight=700
-			textcolor=text
-		}
-		
 		//menu bar, Steam/View/Games/Help
 		"MenuBar MenuButton" 
 		{
