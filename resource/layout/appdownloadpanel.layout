@@ -31,13 +31,10 @@
 
 
 		// right column
-		updatetypelabel	{ controlname="Label"	labelText="#steam_downloads_suspended" style=ModuleHeading2 tooltiptext="" }
-		removefromqueuebutton	{ controlname="Button" style="SmRemoveButton" tooltiptext="#steam_downloads_remove" }
-		topofqueuebutton	{ controlname="Button" style="topOfQueueButton" tooltiptext="#steam_downloads_topofqueue" group="HideOnCompletion" }
-		newslink			{ controlname="URLlabel"	style="links"		labelText="#steam_downloads_updatenews" }
-
-	
-		
+		updatetypelabel			{ controlname="Label"	style=ModuleHeading2 labelText="#steam_downloads_suspended" tooltiptext="" }
+		removefromqueuebutton	{ controlname="Button"	style="SmRemoveButton" tooltiptext="#steam_downloads_remove" }
+		topofqueuebutton		{ controlname="Button"	style="topOfQueueButton" tooltiptext="#steam_downloads_topofqueue" group="HideOnCompletion" }
+		newslink				{ controlname="URLlabel"	style="links"		labelText="#steam_downloads_updatenews" }
 	}
 	
 	colors
@@ -176,9 +173,6 @@
 		{
 			bgcolor=		"FrameBG1"
 		}
-
-				
-				
 				
 		gameImagePanel
 		{   
@@ -217,9 +211,7 @@
 				7="fill( x0  , y0  , x0+1, y1  , FrameBG1 )"		//left
 				8="fill( x1-1, y0  , x1  , y1  , FrameBG1 )"		//right
 			}
-			render
-			{
-			}    
+			render {}    
 		}
 	}
 
@@ -228,7 +220,7 @@
 	{
 		//region	{ name="bottom" width="1262" y=5 height=60 }
 		//region	{ name="bottom" y=5 height=60 }
-		//region { name="bottom" y=75 height=60 width=400 }
+		//region	{ name="bottom" y=75 height=60 width=400 }
 
 		region { name="column1" x=10 width=200 }
 		region { name="column2" x=220 width=max }
@@ -238,8 +230,8 @@
 		
 		// left column
 		place { control="spacer" }
-		place { control="gameimage" start=spacer dir=down margin-left=23 width=192 height=85 }
-		place { control="workshopbanner" margin-left=23 margin-top=82 width=192 height=26 } 
+		place { control="gameimage" start=spacer dir=down margin-top=1 margin-left=23 width=192 height=85 }
+		place { control="workshopbanner" margin-left=23 margin-top=77 width=192 height=26 } 
 
 		
 		// left-mid column
