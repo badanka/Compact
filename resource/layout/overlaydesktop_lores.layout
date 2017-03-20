@@ -33,33 +33,61 @@
 	{
 		sidemenu
 		{
+			font-family=basefont
+			font-weight=700
 			font-size=13
-			textcolor=TextHover
+			font-size=13	[$LINUX]
+			textcolor=text
 		}
 		
 		sidemenu:hover
 		{
+			font-family=basefont
+			font-weight=700
 			font-size=13
-			textcolor=Text
+			font-size=13	[$LINUX]
+			textcolor=texthover
 		}
 		
-				skindescript
+		topbar
 		{
-			font-size=12
-			textcolor="label2"
-			font-family=basefont
-		}		
+			font-size=44
+			font-family=basefontbold
+			textcolor=text
+			font-style=antialias
+			font-weight=700
+			
+			font-size=32 [$LINUX]
+			font-family=basefonthead  [$LINUX]
+		}
+
+		clocksuffix
+		{
+			font-size=18
+			font-family=basefontbold
+			font-family=basefonthead  [$LINUX]
+			textcolor=text
+			font-weight=700
+			font-style=antialias
+		}
 	}
 	
 	layout
 	{
-		region { name=overlay width=max align=top-center margin-top=2 margin-left=2 margin-right=2 }
+		region { name=overlay width=max }
+		region { name="topbar" region=overlay width="max" height=50 }
 	
 		region { name="detailpanels" region=overlay align=bottom width=max height=400 }
 		region { name="taskbar" region=overlay width="140" align=top-center height=35 y=25 }
 		
+		place { control="Clock,ClockSuffix" region=topbar align=top-center }
+		
 		place { controls="BroadcastDetailPanel" region=detailpanels width=330 height=68 align=bottom}
 		place { controls="GameGroupsButton,ChatRoomButton,WebSiteButton" width=0 y=0 align=right region=overlay dir=down spacing=5 }
 		place { controls="DLCButton,GameHubButton,GuideButton,GuidesButton,LegacyCDKeyButton,FriendsButton,PlayersButton,AchievementsButton,ScreenshotsButton,ForumsButton,WorkshopButton,RecommendButton" y=0 align=right region=overlay dir=down spacing=3 }
+
+		
+		//hidden
+		place { control="SessionText,TwoWeeksText,ForeverText,CloseButton" region=overlay width=0 }
 	}	
 }

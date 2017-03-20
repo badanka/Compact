@@ -8,6 +8,13 @@ fonts.styles
 		basefonthead="Verdana"
 		basefontheader="Arial"
 		basefontsmall="Small Fonts"
+
+		basefont="Liberation Sans"	[$LINUX]
+		basefonthead="Liberation Sans"	[$LINUX]
+		//basefontheader="Arial"		[$LINUX]
+		//basefontsmall="Small Fonts"	[$LINUX]
+
+
 		basefont="Helvetica" [$OSX]
 		basefontbold="Helvetica Bold" [$OSX]
 	}
@@ -27,64 +34,34 @@ fonts.styles
 			font-family=basefont
 			font-size=13
 			font-weight=400
+			font-size=12	[$LINUX]
+			font-weight=700	[$LINUX]
 		}
 		"Page Button"
 		{     
 			font-family=basefont
 			font-size=13
 			font-weight=400
+			font-size=12	[$LINUX]
+			font-weight=700	[$LINUX]
 		}
 		
 		ComboBox
 		{
  			font-family=basefont
- 			font-size="13"
+ 			font-size=13
+			font-size=12	[$LINUX]
+			font-weight=700	[$LINUX]
  		}
  	   
 		"Page ComboBox"
 		{
  			font-family=basefont
- 			font-size="13"
+ 			font-size=13
+			font-size=12	[$LINUX]
+			font-weight=700	[$LINUX]
     	}
 
-		
-		//	---------------------
-		//		category headers
-		//	---------------------
-	
-		gamedetails-headerlabel
-		{
-			font-size="15"
-			font-family=basefonthead
-			font-weight=400
-			textcolor="text"
-		}
-	
-		gamedetails-headerlabel-red
-		{
-			font-size="15"
-			font-family=basefonthead
-			font-weight=400
-			textcolor="text"
-		}
-	 	
-	 	gamedetails-headerlabel-green
-		{
-			font-size="15"
-			font-family=basefonthead
-			font-weight=400
-			textcolor="text"
-		}
-	
-		gamedetails-headerlabel-blue
-		{
-			font-size="15"
-			font-family=basefonthead
-			font-weight=400
-			textcolor="text"
-		}
-
-		
 		//	------------------------------------------
 		//	appdownloadpanel.layout
 		//	------------------------------------------
@@ -94,6 +71,8 @@ fonts.styles
 			font-family=basefont
 			font-size=13
 			font-weight=400
+			font-size=12	[$LINUX]
+			font-weight=700	[$LINUX]
 		}
 	
 		DetailsLaunchButton:Hover
@@ -101,6 +80,8 @@ fonts.styles
 			font-family=basefont
 			font-size=13
 			font-weight=400
+			font-size=12	[$LINUX]
+			font-weight=700	[$LINUX]
 		}
 		
 		DetailsLaunchButton:Disabled
@@ -108,6 +89,8 @@ fonts.styles
 			font-family=basefont
 			font-size=13
 			font-weight=400
+			font-size=12	[$LINUX]
+			font-weight=700	[$LINUX]
 		}
 
 		topOfQueueButton
@@ -115,6 +98,8 @@ fonts.styles
 			font-family=basefont
 			font-size=13
 			font-weight=400
+			font-size=12	[$LINUX]
+			font-weight=700	[$LINUX]
 		}			
 		
 		SmRemoveButton
@@ -122,6 +107,8 @@ fonts.styles
 			font-family=basefont
 			font-size=13
 			font-weight=400
+			font-size=12	[$LINUX]
+			font-weight=700	[$LINUX]
 		}
 		
 		SmRemoveButton:Hover
@@ -129,6 +116,8 @@ fonts.styles
 			font-family=basefont
 			font-size=13
 			font-weight=400
+			font-size=12	[$LINUX]
+			font-weight=700	[$LINUX]
 		}
 
 		//	------------------------------------------
@@ -140,6 +129,8 @@ fonts.styles
 			font-family=basefont
 			font-size=13
 			font-weight=400
+			font-size=12	[$LINUX]
+			font-weight=700	[$LINUX]
 		}
 	   
 		PauseButton:Hover
@@ -147,6 +138,8 @@ fonts.styles
 			font-family=basefont
 			font-size=13
 			font-weight=400
+			font-size=12	[$LINUX]
+			font-weight=700	[$LINUX]
 		}
 			
 		ResumeButton
@@ -154,6 +147,8 @@ fonts.styles
 			font-family=basefont
 			font-size=13
 			font-weight=400
+			font-size=12	[$LINUX]
+			font-weight=700	[$LINUX]
 		}
 	   
 		ResumeButton:Hover
@@ -161,6 +156,8 @@ fonts.styles
 			font-family=basefont
 			font-size=13
 			font-weight=400
+			font-size=12	[$LINUX]
+			font-weight=700	[$LINUX]
 		}
 
 
@@ -224,6 +221,8 @@ fonts.styles
 			font-family=basefont
 			font-size=16
 			font-weight=400
+			font-size=15	[$LINUX]
+			font-weight=700	[$LINUX]
 		}
 		
 		CUILaunchButton:Hover
@@ -232,6 +231,8 @@ fonts.styles
 			font-size=16
 			font-weight=400
 			font-style=normal
+			font-size=15	[$LINUX]
+			font-weight=700	[$LINUX]
 		}
 	
 		CUIDetailsButton
@@ -240,6 +241,8 @@ fonts.styles
 			font-size=16
 			font-weight=400
 			font-style=normal
+			font-size=15	[$LINUX]
+			font-weight=700	[$LINUX]
 		}
 		
 		CUIDetailsButton:Hover
@@ -248,22 +251,10 @@ fonts.styles
 			font-size=16
 			font-weight=400
 			font-style=normal
+			font-size=15	[$LINUX]
+			font-weight=700	[$LINUX]
 		}
 	
-	
-		//	------------------------------------------
-		//	overlaydashboard.layout
-		//	------------------------------------------
-	
-		topbar
-		{
-			font-size=36
-			font-family=basefontbold
-			font-style=antialias
-			font-weight=700
-			textcolor=text
-		}
-
 		//	------------------------------------------
 		//	uinavigatorpanel.layout
 		//	------------------------------------------
@@ -274,14 +265,19 @@ fonts.styles
 			font-size=13
 			font-weight=400
 		}	
+
+		NavLabel2  [$LINUX]
+		{
+			font-family=basefont
+			font-size=12
+			font-weight=700
+		}	
 		
-		NavLabel2        [$OSX]
+		NavLabel2	[$OSX]
 		{
 			font-family=basefont
 			font-size=13
 			font-weight=400
 		}	
-
-
 	}
 }

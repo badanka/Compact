@@ -93,10 +93,12 @@
 	
 	layout
 	{
-		region 	{name=bottom align=bottom width=max height=120 }
+		region 	{name=top align=top-center width=max height=128 }
 		
-		place { control="TaskbarPanel" region="bottom" width=max height=64 }
-		place { controls="WebBrowserButton,MusicPlayerButton,SettingsButton" align=top-center   dir=right height=14 spacing=13 align=bottom margin-right=8 }	
+		//placed in region "taskbar" in overlaydashboard
+		place { controls="WebBrowserButton,MusicPlayerButton,SettingsButton" region="top" height=14 spacing=13 align=top-center }	
+
+		place { control="TaskbarPanel" region="top" width=0 }
 
 		place { control="SteamLogo"  x=0 y=10 width=200 height=0 }
 		place { control="FriendPanel" height=0 width=50 align=right margin-right=6 margin-top=4 }

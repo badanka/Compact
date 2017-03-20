@@ -23,14 +23,25 @@
 
 	}
 	
+	colors
+	{
+		PrgrsBar1="124 122 119 255"
+		PrgrsBar2="135 132 129 255"
+		PrgrsBar3="147 145 142 255"
+		PrgrsBar4="158 156 153 255"
+		PrgrsBar5="166 164 161 255"
+	}	
+	
 	styles
 	{
 		
 		button
 		{
-			font-size=13
 			font-family=basefont
+			font-size=13
 			font-weight=400
+			font-size=12		[$LINUX]
+			font-weight=700		[$LINUX]
 		}
 		
 		highlight
@@ -51,8 +62,19 @@
 
 		progressbarimage
 		{
-			bgcolor="Label"
-			render_bg = {}
+			bgcolor="none"
+			render_bg 
+			{
+				0="fill( x0, y0  , x1, y0+1 , PrgrsBar1 )"
+				1="fill( x0, y0+1, x1, y0+2 , PrgrsBar2 )"
+				2="fill( x0, y0+2, x1, y0+3 , PrgrsBar3 )"
+				3="fill( x0, y0+3, x1, y0+4 , PrgrsBar4 )"
+				4="fill( x0, y0+4, x1, y0+6 , PrgrsBar5 )"
+				5="fill( x0, y0+6, x1, y0+7 , PrgrsBar4 )"
+				6="fill( x0, y0+7, x1, y0+8 , PrgrsBar3 )"
+				7="fill( x0, y0+8, x1, y0+9 , PrgrsBar2 )"
+				8="fill( x0, y0+9, x1, y0+10, PrgrsBar1 )"
+			}
 		}
 
 		detailsboxtitle

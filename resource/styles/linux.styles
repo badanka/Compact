@@ -10,42 +10,6 @@ linux.styles
   
 	styles
 	{
-		gamedetails-headerlabel
-		{
-			font-size="15"
-			font-style="normal"
-			font-family=basefonthead
-			font-weight=400
-			textcolor="text"
-		}
-
-		gamedetails-headerlabel-red
-		{
-			font-size="15"
-			font-style="normal"
-			font-family=basefonthead
-			font-weight=400
-			textcolor="text"
-		}
- 	
- 		gamedetails-headerlabel-green
-		{
-			font-size="15"
-			font-style="normal"
-			font-family=basefonthead
-			font-weight=400
-			textcolor="text"
-		}
-
-		gamedetails-headerlabel-blue
-		{
-			font-size="15"
-			font-style="normal"
-			font-family=basefonthead
-			font-weight=400
-			textcolor="text"
-		}
-	
 		title_label
 		{
 			font-family="basefonthead"
@@ -64,7 +28,7 @@ linux.styles
 			font-style="normal"
 		}
 		
-		CUINavButton  [!$OSX]
+		CUINavButton  [$LINUX]
 		{
 			textcolor="TextGlowSelected2"
 			font-family=basefont

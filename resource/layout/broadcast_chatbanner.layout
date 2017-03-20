@@ -19,6 +19,7 @@
 	{
 		ChatTextLine
 		{
+			inset="0 4 0 0"
 			render
 			{
 				// nothing

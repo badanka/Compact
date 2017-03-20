@@ -29,12 +29,12 @@ steam.styles
 		darkcorner="57 53 51 255"
 
 		// background colours
-		MainFrameBG1="41 40 39 255"						// most frames are drawn like this (top to bottom): BG1-›BG2->BG1
-		MainFrameBG2="36 35 34 255"						// this includes friends, chat, group chat and main windows. 
-		MainFrameBG3="56 54 53 255"						
-		MainFrameBG4="29 28 27 255"						// this one is used in page frames 
+		MainFrameBG1="41 40 39 255"				// most frames are drawn like this (top to bottom): BG1-›BG2->BG1
+		MainFrameBG2="36 35 34 255"				// this includes friends, chat, group chat and main windows. 
+		MainFrameBG3="56 54 53 255"					
+		MainFrameBG4="29 28 27 255"				// this one is used in page frames 
 		
-		FrameBG1="17 16 14 255"							// background in most frames/lists
+		FrameBG1="17 16 14 255"					// background in most frames/lists
 		FrameBG2="7 6 4 255"
 		FrameBG2_trans="3 2 0 155"
 		FrameBG3="27 26 24 255"

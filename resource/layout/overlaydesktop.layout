@@ -41,19 +41,25 @@
 	{		
 		sidemenu
 		{
+			font-family=basefont
+			font-weight=700
 			font-size=13
+			font-size=13	[$LINUX]
 			textcolor=text
 		}
 		
 		sidemenu:hover
 		{
+			font-family=basefont
+			font-weight=700
 			font-size=13
+			font-size=13	[$LINUX]
 			textcolor=texthover
 		}
 
 		topbar
 		{
-			font-size=36
+			font-size=44
 			font-family=basefontbold
 			textcolor=text
 			font-style=antialias
@@ -61,15 +67,16 @@
 			
 			font-size=32 [$LINUX]
 			font-family=basefonthead  [$LINUX]
-			textcolor=text  [$LINUX]
 		}
 
 		clocksuffix
 		{
-			font-size=12
-			padding-top=10
+			font-size=18
+			font-family=basefontbold
+			font-family=basefonthead  [$LINUX]
+			textcolor=text
 			font-weight=700
-			font-style=uppercase;antialias
+			font-style=antialias
 		}
 
 		timeStrings
@@ -83,44 +90,47 @@
 	
 	layout
 	{
-		region	{ name=overlay width=max align=top-center  }
+		region	{ name=overlay width=max }
 	
-		region	{ name="left" region=overlay width=645 height=128 margin-top=0 align=left }
-		region	{ name="mid" region=overlay width=max height=128 margin-top=0 margin-left=645 align=top-center margin-right=415 }
+		region	{ name="left" region=overlay width=415 height=256 margin-top=0 align=left }
+		region	{ name="mid" region=overlay width=max height=128 margin-top=0 margin-left=415 margin-right=415 }
 		region	{ name="right" region=overlay width=415 height=128 margin-top=0 align=right }
 
-		region 	{ name="topbar" region=mid width="140" height=81 align=top-center }
-		
 		region	{ name="detailpanelsnew" region=overlay align=bottom width=max height=224 }
 		region	{ name="detailpanels" region=overlay align=bottom width=max height=232 }
-		region	{ name="taskbar" region=overlay width="max" height=75 align=bottom }
 
-		place { controls="LegacyCDKeyButton,DLCButton,GameGroupsButton,WebSiteButton,WorkshopButton,RecommendButton" align=bottom margin-left=2  region=detailpanelsnew dir=down spacing=2 margin-bottom=52 } 
-		
+		//top, left to right
+		place { control="FriendsDetailPanel" region=left width=360 height=133 align=left spacing=0 }
+
+		place [!$LINUX] { control="Clock" region=mid height=32 margin-top=22 align=top-center }
+		place [!$LINUX] { control="ClockSuffix" region=mid start="Clock" margin-top=16 }
+
+		place [$LINUX] { control="Clock" region=mid height=32 margin-top=14 margin-right=2 align=top-center }
+		place [$LINUX] { control="ClockSuffix" region=mid start="Clock" margin-top=16 }
+
 		//width 415 instead of 495 to hide the "So Close" achievement icon	
-		place { controls="AchievementsDetailPanel" align=right region=right width=415 height=81 }
-		place { controls="FriendsDetailPanel" region=left width=645 height=81 align=left spacing=0 }
+		place { control="AchievementsDetailPanel" align=right region=right width=415 height=81 margin-top=6 }
 
-		//has to be left-aligned, since the broadcast chat window is hardcoded to be drawn to the right of this panel
-		//so if this is right-aligned, the window will spawn off-screen
-		place { control="BroadcastDetailPanel" region=detailpanelsnew width=318 height=68 y=41 margin-left=1 }
+		
+		//bottom, left to right
+		
+			//has to be left-aligned, since the broadcast chat window is hardcoded to be drawn to the right of this panel
+			//so if this is right-aligned, the window will spawn off-screen
+		place { control="BroadcastDetailPanel" width=318 height=68 }
+		place { controls="BroadcastDetailPanel,LegacyCDKeyButton,DLCButton,GameGroupsButton,WebSiteButton,WorkshopButton,RecommendButton" align=bottom margin-left=2  region=detailpanelsnew dir=down spacing=2 } 
+
+		place { control="SessionText,TwoWeeksText,ForeverText" dir=right align=top-center spacing=32 region=detailpanels margin-top=217 }
 		
 		place { control="GuidesDetailPanel" region=detailpanelsnew height=96 width=318 y=106 align=right margin-right=1 }			
 		
-		place { control="ScreenshotsDetailPanel" region=detailpanelsnew end-right="CommunityHubDetailPanel" y=200 margin-right=4 width=96 height=24 align=right spacing=2 }
-		place { control="CommunityHubDetailPanel" region=detailpanelsnew end-right="CommunityDiscussionsDetailPanel" y=200 margin-right=4 width=115 height=24 align=right }
-		place { control="CommunityDiscussionsDetailPanel" region=detailpanelsnew y=200 margin-right=4 width=96 height=24 align=right }
+		place { control="ScreenshotsDetailPanel" width=96 }
+		place { control="CommunityHubDetailPanel" width=119 }
+		place { control="CommunityDiscussionsDetailPanel" width=96 }
+		place { controls="ScreenshotsDetailPanel,CommunityHubDetailPanel,CommunityDiscussionsDetailPanel" region=detailpanelsnew y=200 margin-right=4 height=24 align=right spacing=2 }
+		
 
-		place [!$LINUX] { control="Clock" region=topbar width=max height=22 margin-top=20 }
-		place [!$LINUX] { control="ClockSuffix" region=topbar align=bottom margin-left=123 width=17 height=24 margin-bottom=36 }
-
-		place [$LINUX] { control="Clock" region=topbar width=max height=22 margin-top=14 margin-right=2 }
-		place [$LINUX]{ control="ClockSuffix" region=topbar align=bottom margin-left=123 width=17 height=24 margin-bottom=41 }
-
-		place { control="SessionText,TwoWeeksText,ForeverText" dir=right align=top-center spacing=32 region=detailpanels margin-top=217 }
-
+		//hidden
 		place { controls="NewsDetailPanel" region=detailpanels width=0 height=0 }
-				place { controls="GuideButton,ChatRoomButton" region=detailpanels width=0 height=0 } 
-
+		place { controls="GuideButton,ChatRoomButton" region=detailpanels width=0 height=0 } 
 	}
 }

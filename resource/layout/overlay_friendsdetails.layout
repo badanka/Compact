@@ -42,10 +42,12 @@
 	
 		button
 		{
-		font-size=13
-		font-family=basefont
-		font-weight=400
-		inset=0
+			inset=0
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			font-size=12	[$LINUX]
+			font-weight=700	[$LINUX]
 		}
 		
 		FriendsGrid

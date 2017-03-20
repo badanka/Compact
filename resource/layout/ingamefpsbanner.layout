@@ -7,11 +7,13 @@
 	
 	styles
 	{
+		//not in use
 		CounterTextSmall
 		{
 			font-size="13"
 		}
 		
+		//not in use
 		CounterTextMedium
 		{
 			font-size="14"
@@ -30,8 +32,8 @@
 	  
 		LowContrast
 		{
-			bgcolor="0 0 0 0"
-			textcolor="128 128 128 255"
+			bgcolor="0 0 0 90"
+			textcolor="180 180 180 255"
 		}
 
 	}
