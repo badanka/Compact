@@ -65,7 +65,7 @@
 			font-style=antialias
 			font-weight=700
 			
-			font-size=32 [$LINUX]
+			font-size=44 [$LINUX]
 			font-family=basefonthead  [$LINUX]
 		}
 
@@ -105,7 +105,7 @@
 		place [!$LINUX] { control="Clock" region=mid height=32 margin-top=22 align=top-center }
 		place [!$LINUX] { control="ClockSuffix" region=mid start="Clock" margin-top=16 }
 
-		place [$LINUX] { control="Clock" region=mid height=32 margin-top=14 margin-right=2 align=top-center }
+		place [$LINUX] { control="Clock" region=mid height=32 margin-top=16 margin-right=2 align=top-center }
 		place [$LINUX] { control="ClockSuffix" region=mid start="Clock" margin-top=16 }
 
 		//width 415 instead of 495 to hide the "So Close" achievement icon	

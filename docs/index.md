@@ -13,14 +13,14 @@ A few issues with fonts requires some manual work. Please let me know if you exp
 
 ***
 
-### Information about current version (updated March 10, 2017)
-Version 1.5.86 is compatible with Steam version 1489101908 (built March 9, 2017)
+### Information about current version (updated April 26, 2017)
+Version 1.5.92 is compatible with Steam version 1492730551 (built April 20, 2017)
 
 Changes since previous version include:<br>
-* Updated to match Steam version 1489101908 (built 170309)<br>
-* Removal of option to check for GPU driver updates<br>
-* Changes in In-Home Streaming -> Advanced host options<br>
-* Added settings for group events and announcements in Settings -> Friends<br>
+* Added Steam controller config link in Library\Details<br>
+* Fixed appearance of Workshop content in Library\Downloads<br>
+* Fixed regression with necessary Linux adjustments not being applied properly in the overlay<br>
+* A number of design changes in the overlay<br>
 
 ***
 
@@ -50,4 +50,4 @@ If you like living on the edge I might sometimes also have a dev branch going fo
 ![Overlay](http://i.imgur.com/vqrnNmr.png)
 
 
-_*This page was last updated 2017-03-10, 15:40 GMT+1_
+_*This page was last updated 2017-04-26, 19:17 GMT+2_
