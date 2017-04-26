@@ -1,5 +1,5 @@
 <h2>Installation instructions</h2>
-Place the directory in \Steam\skins\. After you’ve extracted the contents of the archive you go to Settings › Interface and select the Compact skin.
+Place the directory in \Steam\skins\. After you’ve extracted the contents of the archive you go to <italic>Settings</italic> › <italic>Interface</italic> and select the Compact skin.
 
 <strong>Linux users:</strong> Read the included readme for instructions how to install this skin on Linux. A few issues with fonts requires some manual work. Please let me know if you experience any issues with this, I haven’t tested it much myself.
 
