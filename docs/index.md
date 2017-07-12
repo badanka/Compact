@@ -13,14 +13,13 @@ A few issues with fonts requires some manual work. Please let me know if you exp
 
 ***
 
-### Information about current version (updated June 2, 2017)
-Version 1.5.94 is compatible with Steam version 1496344747 (built June 1, 2017)
+### Information about current version (updated July 12, 2017)
+Version 1.5.95 is compatible with Steam version 1499823214  (built July 12, 2017)
 
 Changes since previous version include:<br>
-* Updated to match Steam version 1496344747 (built 170601)<br>
-* Added Settings › Controller<br>
-* Settings › Web Browser additions<br>
-* Minor additions and adjustments<br>
+* Updated to match Steam version 1499823214 (built 170712)<br>
+* Updated the purchase dialog when purchasing items in-game (e.g. Dota 2)<br>
+* Removed links to the forum thread since the forums seems to have been retired for good<br>
 
 ***
 
@@ -50,4 +49,4 @@ If you like living on the edge I might sometimes also have a dev branch going fo
 ![Overlay](http://i.imgur.com/vqrnNmr.png)
 
 
-_*This page was last updated 2017-06-02, 17:35 GMT+2_
+_*This page was last updated 2017-07-12, 16:04 GMT+2_
