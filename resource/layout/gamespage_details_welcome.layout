@@ -26,17 +26,18 @@
 			render_bg
 			{     
 				// background fill
-				0="fill( x0+1, y0+1, x1-1, y1-1, FrameBG2 )"
+				0="fill( x0+1, y0+1, x0+270, y1-1, FrameBG2 )"
+				1="gradient_horizontal( x0+270, y0+1, x1-1, y1-1, FrameBG2, FrameBG2_trans )"
                 
                 //this can't be drawn, because Steam will put it in top-left corner of the details view if you actually DO have friends
-           		1="image( x0+1, y0+1, x0+262, y0+72, graphics/libdet_corner_1 )"
+           		2="image( x0+1, y0+1, x0+262, y0+72, graphics/libdet_corner_1 )"
 
 				// lines around header
 				3="gradient_horizontal( x0+1, y0, x1-1, y0+1, ExBorderLight, ExBorderLowLight )"  // top
 				
-				8="gradient( x0, y0, x0+1, y1, ExBorderLight, ExBorderLowLight )"  // left
-				9="fill( x1-1, y0, x1, y1, ExBorderLowLight )"  // right
-				10="fill( x0+1, y1-1, x1, y1, ExBorderLowLight )"  // bottom
+				4="gradient( x0, y0, x0+1, y1, ExBorderLight, ExBorderLowLight )"  // left
+				5="fill( x1-1, y0, x1, y1, ExBorderLowLight )"  // right
+				6="fill( x0+1, y1-1, x1, y1, ExBorderLowLight )"  // bottom
 			}
 		}
 

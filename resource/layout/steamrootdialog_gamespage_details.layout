@@ -215,61 +215,83 @@
 		{
 			inset="-9 0 0 0"
 			font-family=basefonthead
+			font-style="outerglow"
 			font-weight=400
 			font-size=15
 			textcolor=text
 			padding-top=12
 			padding-left=10
+			font-outerglow-color="TextEntryBG"
+			font-outerglow-offset=2
+			font-outerglow-filtersize=1
 		}
 		
 		rightcolumnheadertext-red
 		{
 			inset="-9 0 0 0"
 			font-family=basefonthead
+			font-style="outerglow"
 			font-weight=400
 			font-size=15
 			textcolor=text
 			padding-top=12
 			padding-left=10
+			font-outerglow-color="TextEntryBG"
+			font-outerglow-offset=2
+			font-outerglow-filtersize=1
 		}
 
 		rightcolumnheadertext-green
 		{
 			inset="-9 0 0 0"
 			font-family=basefonthead
+			font-style="outerglow"
 			font-weight=400
 			font-size=15
 			textcolor=text
 			padding-top=12
 			padding-left=10
+			font-outerglow-color="TextEntryBG"
+			font-outerglow-offset=2
+			font-outerglow-filtersize=1
 		}
 
 		rightcolumnheadertext-blue
 		{
 			inset="-9 0 0 0"
 			font-family=basefonthead
+			font-style="outerglow"
 			font-weight=400
 			font-size=15
 			textcolor=text
 			padding-top=12
 			padding-left=10
+			font-outerglow-color="TextEntryBG"
+			font-outerglow-offset=2
+			font-outerglow-filtersize=1
 		}
 
 		rightcolumnlink
 		{
 			inset="-9 0 0 0"
 			font-size=13
-			font-style=normal
+			font-style="outerglow"
 			font-weight=400
 			textcolor=Text
 			font-family=basefont
 			padding-left=10
+			font-outerglow-color="TextEntryBG"
+			font-outerglow-offset=2
+			font-outerglow-filtersize=1
 		}
 
 		rightcolumnlink:hover
 		{
 			textcolor=White
-			font-style=underline
+			font-style="outerglow,underline"
+			font-outerglow-color="TextEntryBG"
+			font-outerglow-offset=2
+			font-outerglow-filtersize=1		
 		}
 		
 		rightcolumnlink:disabled
@@ -281,13 +303,16 @@
 		{
 			inset="-9 0 0 0"
 			font-size=13
-			font-style=normal
+			font-style="outerglow"
 			font-weight=700
 			textcolor=Text
 			padding-left=10
 			padding-top=0
 			font-family=basefont
 			padding-bottom=0
+			font-outerglow-color="TextEntryBG"
+			font-outerglow-offset=2
+			font-outerglow-filtersize=1		
 		}
 		
 		DetailsBorderPanel
@@ -347,8 +372,8 @@
 
 		// Main header image is at the bottom, then one of three color overlays is visible, and finally the 
 		// horizontal fade out gradient on the top.  We have an a and a b image, which we crossfade between.
-		place 	{ control=headerimagea width=1024 height=768 x=-105 y=1 start="detailsbody" }
-		place 	{ control=headerimageb width=1024 height=768 x=-105 y=1 start="detailsbody" }
+		place 	{ control=headerimagea width=1024 height=768 x=200 y=1 region="details" }
+		place 	{ control=headerimageb width=1024 height=768 x=200 y=1 region="details" }
 				
 		// Header text
 		place 	{ control=gametitleheader region=headertext dir=down width=690 height=48 margin-right=90 }

@@ -36,7 +36,7 @@ steam.styles
 		
 		FrameBG1="17 16 14 255"					// background in most frames/lists
 		FrameBG2="7 6 4 255"
-		FrameBG2_trans="3 2 0 155"
+		FrameBG2_trans="7 6 4 180"
 		FrameBG3="27 26 24 255"
 		
 		FrameShade="15 14 12 255"
