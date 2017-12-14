@@ -732,7 +732,7 @@
 		
 		place [!$OSX] { control="MenuBar" align=top margin-top=0 }
 			
-		place { control="ParentalLockButton,InboxButton,view_friends,startvr,exitvr" align=right margin-top=20 margin-right=36 height=26 spacing=3 }			//reserve 24+3 pixels for BPM button
+		place { control="ParentalLockButton,InboxButton,view_friends,startvr,exitvr" align=right margin-top=20 margin-right=42 height=26 spacing=3 }			//reserve 24+3 pixels for BPM button
 		
 		place [!$OSX] { control="universe_label" align=right margin-top=26 end-right="account_balance" margin-right=9 }	
 		place [!$OSX] { control="account_balance" align=right margin-top=26 end-right="ParentalLockButton" margin-right=9 }	
