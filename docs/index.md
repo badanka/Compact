@@ -13,13 +13,13 @@ A few issues with fonts requires some manual work. Please let me know if you exp
 
 ***
 
-### Information about current version (updated July 12, 2017)
-Version 1.5.95 is compatible with Steam version 1499823214  (built July 12, 2017)
+### Information about current version (updated December 14, 2017)
+Version 1.5.99 is compatible with Steam version 1499823214  (built July 12, 2017)
 
 Changes since previous version include:<br>
-* Updated to match Steam version 1499823214 (built 170712)<br>
-* Updated the purchase dialog when purchasing items in-game (e.g. Dota 2)<br>
-* Removed links to the forum thread since the forums seems to have been retired for good<br>
+* Updated to match Steam version 1513197415 (built 171712)<br>
+* Added some adjustments to the new Settings -> Shader Pre-Caching entry<br>
+* Minor adjustments<br>
 
 ***
 
@@ -49,4 +49,4 @@ If you like living on the edge I might sometimes also have a dev branch going fo
 ![Overlay](http://i.imgur.com/vqrnNmr.png)
 
 
-_*This page was last updated 2017-07-12, 16:04 GMT+2_
+_*This page was last updated 2017-12-14, 18:14 GMT+1_
