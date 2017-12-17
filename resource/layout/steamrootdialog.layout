@@ -752,15 +752,17 @@
 		region { name=bottom align=bottom width=max height=16 }
 			
  		// the title bar is missing, so increase the size of the grip
+		
+		// the title bar is missing, so increase the size of the grip
 		place { control="frame_captiongrip" margin=2 width=max height=104 }
 		//place { control="frame_grip" margin=0 width=2 height=2 }
 		
-		place [!$OSX] { control="fullscreen" align=right y=22 height=20 spacing=0 margin-right=0 margin-top=1 width=30 region="bigpicture"}
-		place [$OSX] { control="fullscreen" align=right y=22 height=20 spacing=0 margin-right=8 margin-top=1 width=30 region="bigpicture"}
+		place [!$OSX] { control="fullscreen" align=right y=22 height=20 spacing=0 margin-right=0 margin-top=1 width=30 }
+		place [$OSX] { control="fullscreen" align=right y=22 height=20 spacing=0 margin-right=0 margin-top=1 width=30 }
 
 		
 		//hidden elements
-		place { control="account_URL,add_game,FriendPanel,online_friends" align=right x=9999 height=0 }
+		place { control="account_URL,add_game,FriendPanel,online_friends" height=0 }		
 
 		place [!$OSX] { control="account_balance_seperator" align=right x=9999 width=0 }	
 		place [$OSX] { control="account_balance_seperator" align=right x=9999 width=0 }	
