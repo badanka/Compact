@@ -988,12 +988,23 @@ steam.styles
 				1="fill( 	x0  , y0-1 , x1-1, y0   , InBorderLight )"  	//t
 			}
 		}
-		
+
 		"GameItem_Uninstalled"
 		{
 			textcolor="labeldisabled"
 			selectedtextcolor="label"
 		}
+
+		"GameItem_Uninstalled GGPlaceholderBG"
+		{
+			alpha 89.25
+		}
+
+		"GameItem_Uninstalled GamesGridImage"
+		{
+			alpha 89.25
+		}	
+
 		
 		"GameItem_Uninstalled:hover"
 		{
