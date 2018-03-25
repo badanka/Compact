@@ -13,13 +13,12 @@ A few issues with fonts requires some manual work. Please let me know if you exp
 
 ***
 
-### Information about current version (updated December 14, 2017)
-Version 1.5.99 is compatible with Steam version 1499823214  (built July 12, 2017)
+### Information about current version (updated March 25, 2018)
+Version 1.6.04 is compatible with Steam version 1521764535  (built March 22, 2018)
 
 Changes since previous version include:<br>
-* Updated to match Steam version 1513197415 (built 171712)<br>
-* Added some adjustments to the new Settings -> Shader Pre-Caching entry<br>
-* Minor adjustments<br>
+* Updated to match Steam version 1521764535 (built 180322)<br>
+* Slight adjustment to the appearance of not installed games in Library\Grid view
 
 ***
 

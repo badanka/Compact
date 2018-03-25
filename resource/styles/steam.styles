@@ -913,6 +913,11 @@ steam.styles
 			}
 		}
 		
+		"HTMLFramelessPopup HTML"
+		{
+			inset="0 0 0 0"
+		}
+		
 		Label
 		{
 			textcolor="Label"
