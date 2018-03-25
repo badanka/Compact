@@ -146,7 +146,7 @@
 
 	layout
 	{
-		place [!$OSX]  { control="frame_minimize,frame_maximize,frame_close" align=right margin-top=3 margin-right=2 spacing=-8 }
+		place [!$OSX]  { control="frame_minimize,frame_maximize,frame_close" width=25 align=right margin-top=3 margin-right=2 spacing=-8 }
 		place [!$OSX] { control="ToolWindowSheet" x=0 y=0 height=max width=max margin-right=0 }
 		place [$OSX] { control="ToolWindowSheet" x=0 y=15 height=max width=max margin-right=0 }
 		place { control="ChatTabPanel" margin-left=7}
