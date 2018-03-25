@@ -5,7 +5,7 @@
 		TitleLabel { controlname=label labeltext="#Steam_SettingsInGameTitle" style=highlight }
 		EnableOverlayCheck {	ControlName=CheckButton labelText="#Overlay_SettingsEnable" }
 		EnableSCTenfootOverlayCheck [!$OSX&&!$LINUX] {	ControlName=CheckButton labelText="#Overlay_SettingsSCTenfootEnable" }	
-		EnableVRDesktopGameTheaterCheck [!$OSX&&!$LINUX] {	ControlName=CheckButton labelText="#Overlay_SettingsEnableVRDesktopGameTheaterCheck" }	
+		EnableVRDesktopGameTheaterCheck [!$OSX&&!$LINUX] {	ControlName=CheckButton labelText="#Overlay_SettingsEnableVRDesktopGameTheaterCheck" }
 		HotKeySelector {	ControlName=HotKeyEntry	}
 		ScreenshotHotKeySelector { ControlName=HotKeyEntry }
 		DescriptionLabel	{ ControlName=Label labeltext="#Overlay_SettingsDescription" wrap=1  }
@@ -55,13 +55,13 @@
 		region { name=box margin-top=2 margin-bottom=20 margin-left=10 margin-right=10 width=max height=max }
 		region { name=top region=box margin-top=4 }
 		region { name=topleft region=top y=100 width=190 }
-		region { name=topright region=top x=200 y=100 }
+		region { name=topright region=top x=220 y=100 }
 		
 		
-		place { controls=DescriptionLabel width=390 region=top }
+		place { controls=DescriptionLabel width=400 region=top }
 		place { controls=EnableOverlayCheck region=top start=DescriptionLabel dir=down height=18 margin-top=4 }
-		place [!$OSX&&!$LINUX] { controls=EnableSCTenfootOverlayCheck region=top start=EnableOverlayCheck dir=down height=18 }
-		place [!$OSX&&!$LINUX] { controls=EnableVRDesktopGameTheaterCheck region=top start=EnableSCTenfootOverlayCheck dir=down height=18 width=400 }
+		place [!$OSX&&!$LINUX] { controls=EnableSCTenfootOverlayCheck region=top start=EnableOverlayCheck dir=down height=18 width=500 }
+		place [!$OSX&&!$LINUX] { controls=EnableVRDesktopGameTheaterCheck region=top start=EnableSCTenfootOverlayCheck dir=down height=18 width=450 }
 	
 	
 		//left column

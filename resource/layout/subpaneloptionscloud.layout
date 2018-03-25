@@ -26,7 +26,6 @@
 	
 	colors
 	{
-
 	}	
 	
 	styles
@@ -37,16 +36,14 @@
 	{
 		region { name=box margin-top=6 margin-bottom=20 margin-left=10 margin-right=10 width=max height=max }
 		
-		place { control=SteamCloudInfo region=box width=310 }
+		place { control=SteamCloudInfo region=box width=400 }
 		place
 		{ 
 			control="EnableCloudCheck" 
 			start = "SteamCloudInfo"
 			region=box 
 			dir=down 
-			height=18
-			width=max
-			y=1
+			width=450
 		}
 		place
 		{ 
@@ -54,9 +51,8 @@
 			start = "EnableCloudCheck"
 			region=box 
 			dir=down 
-			height=36
-			width=max
-			y=-3
-		}		
+			y=-2
+			width=450
+		}
 	}
 }
