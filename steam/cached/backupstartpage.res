@@ -85,6 +85,6 @@
 	layout
 	{
 		place {	control="Label1" x=10 y=10 dir=down }
-		place {	control="RadioButtonBackup,RadioButtonRestore" start=Label1 height=16 x=0 y=6 dir=down spacing=2 }
+		place {	control="RadioButtonBackup,RadioButtonRestore" start=Label1 height=16 x=0 y=6 width=max dir=down spacing=2 }
 	}
 }
