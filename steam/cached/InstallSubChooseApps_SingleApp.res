@@ -230,7 +230,7 @@
 	layout
 	{
 		place { control="Label1" x=10 y=10 margin-right=10 width=max }
-		place { control="CreateShortcutCheck,CreateStartMenuShortcutCheck" start="Label1" dir=down margin-top=3 height=18 spacing=0 }
+		place { control="CreateShortcutCheck,CreateStartMenuShortcutCheck" start="Label1" dir=down margin-top=3 height=18 width=max spacing=0 }
 		
 		place { control="InstallSize" start="CreateStartMenuShortcutCheck" dir=down margin-top=6 }
 		place { control="InstallSizeLabel" start="CreateStartMenuShortcutCheck" dir=down margin-top=6 x=190 }
@@ -244,7 +244,7 @@
 		
 		place { control="InstallFolderLabel" start="DownloadTimeLabel" dir=down y=5 }
 		
-		place { control="InstallFolderCombo" start="InstallFolderLabel" dir=down y=5 width=max height=20 margin-right=10 }
+		place { control="InstallFolderCombo" start="InstallFolderLabel" dir=down y=5 width=340 height=20 margin-right=10 }
 		
 		region { name=bottom align=bottom height=24 }
 		place { control="PrevButton,NextButton,CancelButton" region=bottom align=right height=20 spacing=4 }
