@@ -13,12 +13,11 @@ A few issues with fonts requires some manual work. Please let me know if you exp
 
 ***
 
-### Information about current version (updated March 25, 2018)
-Version 1.6.04 is compatible with Steam version 1521764535  (built March 22, 2018)
+### Information about current version (updated March 28, 2018)
+Version 1.6.05 is compatible with Steam version 1522101301  (built March 26, 2018)
 
 Changes since previous version include:<br>
-* Updated to match Steam version 1521764535 (built 180322)<br>
-* Slight adjustment to the appearance of not installed games in Library\Grid view
+* Updated to match Steam version 1522101301 (built 180326)<br>
 
 ***
 
@@ -48,4 +47,4 @@ If you like living on the edge I might sometimes also have a dev branch going fo
 ![Overlay](http://i.imgur.com/vqrnNmr.png)
 
 
-_*This page was last updated 2017-12-14, 18:14 GMT+1_
+_*This page was last updated 2018-03-29, 22:56 GMT+1/UTC+2_
