@@ -59,7 +59,7 @@
 		"ControlName"		"Label"
 		"fieldName"		"Label1"
 		"xpos"		"20"
-		"ypos"		"117"
+		"ypos"		"114"
 		"wide"		"402"
 		"tall"		"30"
 		"AutoResize"		"0"
@@ -78,7 +78,7 @@
 		"ControlName"		"Label"
 		"fieldName"		"Label1"
 		"xpos"		"20"
-		"ypos"		"117"
+		"ypos"		"114"
 		"wide"		"402"
 		"tall"		"30"
 		"AutoResize"		"0"
@@ -131,12 +131,27 @@
 		"NumericInputOnly"		"0"
 		"unicode"		"0"
 	}
+	"Divider3"
+	{
+		"ControlName"		"Divider"
+		"fieldName"		"Divider3"
+		"xpos"		"20"
+		"ypos"		"180"
+		"wide"		"440"
+		"tall"		"2"
+		"AutoResize"	"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+	}
 	"Label3"
 	{
 		"ControlName"		"Label"
 		"fieldName"		"Label3"
 		"xpos"		"20"
-		"ypos"		"207"
+		"ypos"		"187"
 		"wide"		"416"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -156,7 +171,7 @@
 		"ControlName"		"ComboBox"
 		"fieldName"		"SkinCombo"
 		"xpos"		"20"
-		"ypos"		"227"
+		"ypos"		"209"
 		"wide"		"235"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -171,12 +186,52 @@
 		"NumericInputOnly"		"0"
 		"unicode"		"0"
 	}
+	"DPIScalingCheck" [$WINDOWS]
+	{
+		"ControlName"		"CheckButton"
+		"fieldName"		"DPIScalingCheck"
+		"xpos"		"17"
+		"ypos"		"241"
+		"wide"		"430"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"4"
+		"paintbackground"		"1"
+		"labelText"		"#Steam_DPIScaling_Option_Windows"
+		"textAlignment"		"west"
+		"wrap"		"0"
+		"Default"		"0"
+		"selected"		"0"
+	}
+	"DPIScalingCheck" [$LINUX]
+	{
+		"ControlName"		"CheckButton"
+		"fieldName"		"DPIScalingCheck"
+		"xpos"		"17"
+		"ypos"		"241"
+		"wide"		"430"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"7"
+		"paintbackground"		"1"
+		"labelText"		"#Steam_DPIScaling_Option"
+		"textAlignment"		"west"
+		"wrap"		"0"
+		"Default"		"0"
+		"selected"		"0"
+	}
 	"AutoLaunchCheck"
 	{
 		"ControlName"		"CheckButton"
 		"fieldName"		"AutoLaunchCheck"
 		"xpos"		"17"
-		"ypos"		"260"
+		"ypos"		"265"
 		"wide"		"430"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -196,7 +251,7 @@
 		"ControlName"		"CheckButton"
 		"fieldName"		"BigPictureModeCheck"
 		"xpos"		"17"
-		"ypos"		"285"
+		"ypos"		"289"
 		"wide"		"430"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -216,14 +271,14 @@
 		"ControlName"		"CheckButton"
 		"fieldName"		"UrlBarCheck"
 		"xpos"		"17"
-		"ypos"		"310"
+		"ypos"		"313"
 		"wide"		"430"
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
 		"visible"		"1"
 		"enabled"		"1"
-		"tabPosition"		"6"
+		"tabPosition"		"9"
 		"paintbackground"		"1"
 		"labelText"		"#Steam_ShowUrlBar_Option"
 		"textAlignment"		"west"
@@ -236,14 +291,14 @@
 		"ControlName"		"CheckButton"
 		"fieldName"		"DWriteCheck"
 		"xpos"		"17"
-		"ypos"		"335"
+		"ypos"		"337"
 		"wide"		"430"
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
 		"visible"		"1"
 		"enabled"		"1"
-		"tabPosition"		"7"
+		"tabPosition"		"6"
 		"paintbackground"		"1"
 		"labelText"		"#Steam_UseDirectWrite_Option"
 		"textAlignment"		"west"
@@ -256,14 +311,14 @@
 		"ControlName"		"CheckButton"
 		"fieldName"		"H264HWAccelCheck"
 		"xpos"		"17"
-		"ypos"		"360"
+		"ypos"		"361"
 		"wide"		"430"
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
 		"visible"		"1"
 		"enabled"		"1"
-		"tabPosition"		"7"
+		"tabPosition"		"8"
 		"paintbackground"		"1"
 		"labelText"		"#Steam_UseH264HWAccel_Option"
 		"textAlignment"		"west"
@@ -276,7 +331,7 @@
 		"ControlName"		"Divider"
 		"fieldName"		"Divider2"
 		"xpos"		"20"
-		"ypos"		"390"
+		"ypos"		"392"
 		"wide"		"440"
 		"tall"		"2"
 		"AutoResize"		"0"
@@ -298,7 +353,7 @@
 		"PinCorner"		"0"
 		"visible"		"1"
 		"enabled"		"1"
-		"tabPosition"		"8"
+		"tabPosition"		"10"
 		"paintbackground"		"1"
 		"labelText"		"#Steam_Settings_NotifyMeWithSteamInstantMessages"
 		"textAlignment"		"north-west"
@@ -337,7 +392,7 @@
 		"PinCorner"		"0"
 		"visible"		"1"
 		"enabled"		"1"
-		"tabPosition"		"9"
+		"tabPosition"		"11"
 		"paintbackground"		"1"
 		"labelText"		"#Steam_SetJumplistOptions"
 		"textAlignment"		"west"
@@ -358,13 +413,17 @@
 		place { control="Divider1" start=TranslationLabel width=max dir=down margin-top=7 margin-right=10 }
 		
 		place { control="Label2,FavoriteWindowCombo" start=Divider1 margin-top=7 dir=down spacing=4 }
-		
 		place { control="Label3,SkinCombo" start=FavoriteWindowCombo y=6 dir=down margin-right=10 spacing=4 }
-		place { control="AutoLaunchCheck,BigPictureModeCheck,DWriteCheck,H264HWAccelCheck,UrlBarCheck" start=SkinCombo y=5 height=18 spacing=0 width=max dir=down }
+		place { control="AutoLaunchCheck,BigPictureModeCheck" start=SkinCombo y=5 height=18 spacing=0 width=max dir=down }
 		
-		place { control="Divider2" start=UrlBarCheck dir=down width=max margin-top=7 margin-right=10 }
+		place { control="Divider2" start=BigPictureModeCheck width=max dir=down margin-top=7 margin-right=10 }
 		
-		place { control="NotifyAvailableGamesCheck" start=Divider2 dir=down margin-top=6 height=26 width=max margin-right=10 }
+		place { control="DWriteCheck,DPIScalingCheck, H264HWAccelCheck,UrlBarCheck" start=Divider2 margin-top=6 height=18 spacing=0 width=max dir=down }
+		
+		place { control="Divider3" start=UrlBarCheck dir=down width=max margin-top=7 margin-right=10 }
+		
+		place { control="NotifyAvailableGamesCheck" start=Divider3 dir=down margin-top=6 height=18 width=max }
+		
 		place { control="SetJumpListOptionsButton" start=NotifyAvailableGamesCheck margin-top=11 dir=down height=20 }
 	}
 }
