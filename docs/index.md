@@ -13,7 +13,7 @@ A few issues with fonts requires some manual work. Please let me know if you exp
 
 ***
 
-### Information about current version (updated March 28, 2018)
+### Information about current version (updated March 29, 2018)
 Version 1.6.05 is compatible with Steam version 1522101301  (built March 26, 2018)
 
 Changes since previous version include:<br>
