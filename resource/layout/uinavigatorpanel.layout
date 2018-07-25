@@ -694,8 +694,7 @@
 
 			render_bg
 			{
-				//0="fill(x0-5, y0+1, x1+6, y1-3, FrameBG3 )"
-				0="fill(x0-5, y0+1, x1+6, y1-3, red )"
+				0="fill(x0-5, y0+1, x1+6, y1-3, FrameBG3 )"
 		        1="fill(x0-8, y1-1, x1+9, y1, ExBorder )"	// bottom
 			}
 		}

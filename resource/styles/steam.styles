@@ -666,6 +666,7 @@ steam.styles
 			render_bg {}
 			image="graphics/win_min_1"
 			image="graphics/osx_win_dis"	[$OSX]
+			image="graphics/osx_win_dis_new_dark" [$OSX1010]
 		}
 		
 		FrameMinimizeButton:hover
@@ -674,6 +675,7 @@ steam.styles
 			render_bg {}
 			image="graphics/win_min_2"
 			image="graphics/osx_min_hov"	[$OSX]
+			image="graphics/osx_min_hov_new" [$OSX1010]
 		}
 		
 		FrameMinimizeButton:framefocus
@@ -682,6 +684,7 @@ steam.styles
 			render_bg {}
 			image="graphics/win_min_3"
 			image="graphics/osx_min_def"	[$OSX]
+			image="graphics/osx_min_def_new" [$OSX1010]
 		}
 		
 		FrameMinimizeButton:framefocus:hover
@@ -690,7 +693,8 @@ steam.styles
 			render_bg {}
 			image="graphics/win_min_4"
 			image="graphics/osx_min_hov"	[$OSX]
-		}
+			image="graphics/osx_min_hov_new" [$OSX1010]
+	}
 		
 		FrameMinimizeButton:active
 		{
@@ -698,6 +702,7 @@ steam.styles
 			bgcolor="none"
 			image="graphics/win_min_5"
 			image="graphics/osx_min_down" [$OSX]
+			image="graphics/osx_min_down_new" [$OSX1010]
 		}
 		
 		FrameMaximizeButton
@@ -706,6 +711,7 @@ steam.styles
 			render_bg {}
 			image="graphics/win_max_1"
 			image="graphics/osx_win_dis" [$OSX]
+			image="graphics/osx_win_dis_new_dark" [$OSX1010]
 		}
 		
 		FrameMaximizeButton:hover
@@ -714,7 +720,8 @@ steam.styles
 			render_bg {}
 			image="graphics/win_max_2"
 			image="graphics/osx_max_hov" [$OSX]
-		}
+			image="graphics/osx_max_hov_new" [$OSX1010]
+	}
 		
 		FrameMaximizeButton:framefocus
 		{
@@ -722,6 +729,7 @@ steam.styles
 			render_bg {}
 			image="graphics/win_max_3"
 			image="graphics/osx_max_def" [$OSX]
+			image="graphics/osx_max_def_new" [$OSX1010]
 		}
 		
 		FrameMaximizeButton:framefocus:hover
@@ -730,6 +738,7 @@ steam.styles
 			render_bg {}
 			image="graphics/win_max_4"
 			image="graphics/osx_max_hov"		[$OSX]
+			image="graphics/osx_max_hov_new" [$OSX1010]
 		}
 		
 		FrameMaximizeButton:active
@@ -738,6 +747,7 @@ steam.styles
 			bgcolor="none"
 			image="graphics/win_max_5"
 			image="graphics/osx_max_down"	[$OSX]
+			image="graphics/osx_max_down_new" [$OSX1010]
 		}
 		
 		FrameRestoreButton
@@ -745,6 +755,7 @@ steam.styles
 			render_bg {}
 			image="graphics/win_restore_1"
 			image="graphics/osx_win_dis" [$OSX]
+			image="graphics/osx_win_dis_new" [$OSX1010]
 		}
 		
 		FrameRestoreButton:hover
@@ -753,6 +764,7 @@ steam.styles
 			bgcolor="none"
 			image="graphics/win_restore_2"
 			image="graphics/osx_max_hov" [$OSX]
+			image="graphics/osx_max_hov_new" [$OSX1010]
 		}
 		
 		FrameRestoreButton:framefocus
@@ -761,6 +773,7 @@ steam.styles
 			bgcolor="none"
 			image="graphics/win_restore_3"
 			image="graphics/osx_max_def" [$OSX]
+    		image="graphics/osx_max_def_new" [$OSX1010]
 		}
 		
 		FrameRestoreButton:framefocus:hover
@@ -769,6 +782,7 @@ steam.styles
 			bgcolor="none"
 			image="graphics/win_restore_4"
 			image="graphics/osx_max_hov" [$OSX]
+			image="graphics/osx_max_hov_new" [$OSX1010]
 		}
 		
 		FrameRestoreButton:active
@@ -777,6 +791,7 @@ steam.styles
 			bgcolor="none"
 			image="graphics/win_restore_5"
 			image="graphics/osx_max_down" [$OSX]
+			image="graphics/osx_max_down_new" [$OSX1010]
 		}
 		
 		FrameCloseButton
@@ -785,6 +800,7 @@ steam.styles
 			bgcolor="none"
 			image="graphics/win_close_1"
 			image="graphics/osx_win_dis" [$OSX]
+			image="graphics/osx_win_dis_new_dark" [$OSX1010]
 		}
 		
 		FrameCloseButton:hover
@@ -793,6 +809,7 @@ steam.styles
 			render_bg {}
 			image="graphics/win_close_2"
 			image="graphics/osx_close_hov" [$OSX]
+			image="graphics/osx_close_hov_new" [$OSX1010]
 		}
 		
 		FrameCloseButton:framefocus
@@ -801,6 +818,7 @@ steam.styles
 			render_bg {}
 			image="graphics/win_close_3"
 			image="graphics/osx_close_def" [$OSX]
+			image="graphics/osx_close_def_new" [$OSX1010]
 		}
 		
 		FrameCloseButton:framefocus:hover
@@ -809,6 +827,7 @@ steam.styles
 			render_bg {}
 			image="graphics/win_close_4"
 			image="graphics/osx_close_hov" [$OSX]
+			image="graphics/osx_close_hov_new" [$OSX1010]
 		}
 		
 		FrameCloseButton:active
@@ -817,6 +836,15 @@ steam.styles
 			bgcolor="none"
 			image="graphics/win_close_5"
 			image="graphics/osx_close_down" [$OSX]
+			image="graphics/osx_close_down_new" [$OSX1010]
+		}
+		FrameCloseButton:disabled
+		{
+			render_bg {}
+			bgcolor="none"
+			image="graphics/win32_win_close_disabled"
+			image="graphics/osx_win_dis" [$OSX]
+			image="graphics/osx_win_dis_new_dark" [$OSX1010]
 		}
 		
 		FrameTitle
@@ -3591,6 +3619,58 @@ steam.styles
 		friends_ignored
 		{
 			textcolor="Friends.IgnoredColor"
+		}
+
+		view_friends [!$OSX]
+		{
+			textcolor="LabelFocus"
+			bgcolor="none"
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			font-style=regular
+			padding-top=0
+			padding-right=28
+
+			render_bg
+			{
+				1="image( x0+48, y0, x1, y1, graphics/glow_friendslist )"
+				2="image( x1-30, y0+20, x1, y1, graphics/icon_friendslist )"
+			}
+		}
+
+		view_friends [$OSX]
+		{
+			textcolor="LabelFocus"
+			bgcolor="none"
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			font-style=regular
+			padding-top=-1
+			padding-right=28
+	
+			render_bg
+			{
+				1="image( x0+48, y0, x1, y1, graphics/glow_friendslist )"
+				2="image( x1-30, y0+20, x0, y0, graphics/icon_friendslist )"
+			}	
+		}
+
+		view_friends:Hover
+		{
+			textcolor="white"
+	
+			render_bg
+			{
+				1="image( x0+48, y0, x1, y1, graphics/glow_friendslist )"
+				2="image( x1-30, y0+20, x1, y1, graphics/icon_friendslist_over )"
+			}
+		}
+
+		view_friends:disabled
+		{
+			textcolor="TextDisabled"
 		}
 
 		//

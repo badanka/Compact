@@ -201,7 +201,7 @@
 		"ControlName"		"HotKeyEntry"
 		"fieldName"		"PushToTalkKeyEntry"
 		"xpos"		"48"
-		"ypos"		"387"
+		"ypos"		"410"
 		"wide"		"207"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -249,6 +249,27 @@
 		"tabPosition"		"5"
 		"paintbackground"		"1"
 		"labelText"		"#Friends_Voice_PushToTalk"
+		"textAlignment"		"west"
+		"wrap"		"0"
+		"Default"		"0"
+		"SubTabPosition"		"2"
+		"group" "pushtotalk"
+	}
+	"TransmitMethodRadioButton3"
+	{
+		"ControlName"		"RadioButton"
+		"fieldName"		"TransmitMethodRadioButton3"
+		"xpos"		"20"
+		"ypos"		"384"
+		"wide"		"380"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"5"
+		"paintbackground"		"1"
+		"labelText"		"#Friends_Voice_PushToMute"
 		"textAlignment"		"west"
 		"wrap"		"0"
 		"Default"		"0"
@@ -387,10 +408,8 @@
 		place { control="Divider2" width=max y=163 align=top-center margin-left=10 margin-right=10 }
 		
 		place { control="WhenActiveLabel,TransmitMethodRadioButton1" y=172 margin-left=10 dir=down spacing=0 }
-		place { control="TransmitMethodRadioButton2,PushToTalkKeyLabel,PushToTalkKeyEntry" y=206 margin-left=10 dir=down spacing=0 }
-		
+		place { control="TransmitMethodRadioButton2,TransmitMethodRadioButton3,PushToTalkKeyLabel,PushToTalkKeyEntry" y=208 margin-left=10 height=20 dir=down spacing=0 }
 		
 		place { control=RepairAudio height=0 }			//the "When an audio device is plugged in or removed..." message
-
 	}
 }
