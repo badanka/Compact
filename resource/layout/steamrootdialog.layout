@@ -672,7 +672,7 @@
 		place [!$OSX] { control="fullscreen" align=right height=20 width=30 margin-top=23 }
 		place [$OSX]  { control="fullscreen" align=right height=20 width=30 margin-right=16 margin-top=11 }
 
-		place { control="startvr, exitvr" align=right end-right="fullscreen" margin-right=4 margin-top=10 }
+		place { control="startvr, exitvr" align=right end-right="fullscreen" margin-right=8 margin-top=22 }
 
 		place { control="AccountButton" align=right end-right="startvr" margin-top=25 margin-right=4 height=16 }
 		place { control="InboxButton" align=right end-right="AccountButton" margin-top=21 margin-right=4 height=24 }
