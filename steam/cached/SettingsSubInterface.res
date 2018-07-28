@@ -365,7 +365,7 @@
 	{
 		"ControlName"		"CheckButton"
 		"fieldName"		"NotifyAvailableGamesCheck"
-		"xpos"		"17"
+		"xpos"		"20"
 		"ypos"		"430"
 		"wide"		"430"
 		"tall"		"40"
@@ -442,7 +442,7 @@
 		
 		place { control="Divider3" start=UrlBarCheck dir=down width=max margin-top=7 margin-right=10 }
 		
-		place { control="NotifyAvailableGamesCheck" start=Divider3 dir=down margin-top=6 height=18 width=max }
+		place { control="NotifyAvailableGamesCheck" start=Divider3 dir=down margin-top=6 width=400 }
 		
 		place { control="SetJumpListOptionsButton" start=NotifyAvailableGamesCheck margin-top=11 dir=down height=20 }
 	}
