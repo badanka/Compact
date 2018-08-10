@@ -68,10 +68,10 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}
-	"ShowBusyStatus"
+	"ShowInvisibleStatus"
 	{
 		"ControlName"		"CheckButton"
-		"fieldName"		"ShowBusyStatus"
+		"fieldName"		"ShowInvisibleStatus"
 		"xpos"		"30"
 		"ypos"		"105"
 		"wide"		"475"
@@ -82,7 +82,7 @@
 		"enabled"		"1"
 		"tabPosition"		"3"
 		"paintbackground"		"1"
-		"labelText"		"#Friends_busy"
+		"labelText"		"#Friends_invisible"
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}
@@ -417,7 +417,7 @@
 
 	layout 
 	{
-		place { controls="Label1,ShowOnlineStatus,ShowAwayStatus,ShowBusyStatus,ShowAppearOfflineStatus" dir=down height=20 x=20 y=28 spacing=1 }
+		place { controls="Label1,ShowOnlineStatus,ShowAwayStatus,ShowInvisibleStatus,ShowAppearOfflineStatus" dir=down height=20 x=20 y=28 spacing=1 }
 		place { control=Divider1 y=137 align=top-center }
 		place { controls="Label2,ShowStore,ShowMyGames,ShowCommunity,ShowFriendActivity,ShowFriends,ShowMusicPlayer,ShowScreenshots,ShowServers,ShowSettings,ShowBigPicture,ShowVR,ShowExit" dir=down height=20 x=20 y=145 }
 		
