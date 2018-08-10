@@ -1881,10 +1881,10 @@ steam.styles
 			font-size=13
 			font-weight=400
 			font-style=normal
-			inset="4 -2 0 0"
+			inset="2 -1 0 0"
+			minimum-width=96
 			render_bg
 			{
-				// background
 				0="fill( x0, y0+2, x1, y1-3, FrameBG3 )"
 			}
 		}
@@ -1895,7 +1895,7 @@ steam.styles
 			font-family=basefont
 			font-size=13
 			font-weight=700
-			inset="3 -2 0 0"
+			inset="2 -1 0 0"
 			bgcolor="none"
 			render_bg
 			{
@@ -1915,10 +1915,9 @@ steam.styles
 			font-family=basefont
 			font-size=13
 			font-weight=400
-			inset="4 -2 0 0"
+			inset="2 -1 0 0"
 			render_bg
 			{
-				// background
 				0="gradient(x0+1, y0+2, x1-1, y1-2, Titlebar, MainFrameBG2 )"
 				1="fill(    x0  , y0+1, x1  , y0+2, ExBorder )" 			//t
 				2="gradient(x0  , y0+2, x0+1, y1-2, ExBorder, BtnBorder5 )" //l
@@ -1932,7 +1931,7 @@ steam.styles
 			font-family=basefont
 			font-size=13
 			font-weight=700
-			inset="3 -2 0 0"
+			inset="2 -1 0 0"
 			bgcolor="none"
 			render_bg
 			{
@@ -1948,13 +1947,18 @@ steam.styles
 		
 		"PageTab:Focus"
 		{
-			textcolor="Texthover"
+			textcolor="white"
 		}
 		
 		"PageDragFrame PageTab"
 		{
 			font-size=13
 			font-style="regular"
+		}
+		
+		"CPlayersDialog PageTab"
+		{
+			minimum-width=122
 		}
 		
 		"TabCloseButton"
@@ -3721,18 +3725,6 @@ steam.styles
 		"NotifyRemoteClientInfo"
 		{
 			textcolor="176 172 165 255"
-		}
-
-		PageTab
-		{
-			textcolor=Label
-			inset="0 0 0 0"
-			padding-left=0
-			minimum-width=96
-		}
-		PageTab:selected
-		{
-			textcolor=texthover
 		}
 	}
 }
