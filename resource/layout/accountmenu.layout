@@ -18,12 +18,12 @@
 			render_bg
 			{
 				// top area and graphic
-				0="fill( x0+1, y0+1, x1-1, y1-28, MainFrameBG3 )"
+				0="fill( x0+1, y0+1, x1-1, y1-1, MainFrameBG3 )"
 
-				1="fill( x0  , y0   , x1  , y0+1 , ExBorderDark )"  // t
-				2="fill( x0  , y1-29, x1  , y1-28, ExBorderDark )"  // b
-				3="fill( x0  , y0+1,  x0+1, y1-29, ExBorderDark )"  // l
-				4="fill( x1-1, y0+1,  x1  , y1-29, ExBorderDark )"  // r
+				1="fill( x0  , y0   , x1 , y0+1, ExBorderDark )"  // t
+				2="fill( x0  , y1-1, x1  , y1  , ExBorderDark )"  // b
+				3="fill( x0  , y0+1, x0+1, y1-1, ExBorderDark )"  // l
+				4="fill( x1-1, y0+1, x1  , y1-1, ExBorderDark )"  // r
 			}
 		}
 		
@@ -64,12 +64,14 @@
 	
 	layout
 	{
-		place { control="view_profile_button" align=left margin-top=0  height=20 width=max }
-		place { control="view_account_button" align=left margin-top=20 height=20 width=max }
-		place { control="change_user_button"  align=left margin-top=40 height=20 }
-		place { control="account_name_label"  start="change_user_button" dir="right" height=20 }
-		place { control="view_preferences_button" align=left margin-top=60 height=20 width=max }
-		place { control="view_wallet_button,wallet_amount_label" align=left margin-top=80 height=20 width=max }
+		place { control="view_profile_button" align=left margin-top=4  height=24 width=max }
+		place { control="view_account_button" align=left margin-top=28 height=24 width=max }
+		place { control="change_user_button"  align=left margin-top=52 height=24 width=max }
+		place { control="view_preferences_button" align=left margin-top=76 height=24 width=max }
+		place { control="view_wallet_button" align=left margin-top=100 height=24 width=max }
+
+		place { control="account_name_label" margin-top= 52 height=24 align=right margin-right=4 }
+		place { control="wallet_amount_label" margin-top=100 height=24 align=right margin-right=4  }
 
 	}
 }
