@@ -678,7 +678,7 @@
 		place { control="InboxButton" align=right end-right="AccountButton" margin-top=21 margin-right=4 height=24 }
 		place { control="AnnouncementButton" align=right end-right="InboxButton" margin-top=21 margin-right=4 height=24 width=34 }
 		place { control="view_friends" align=right end-right="AnnouncementButton" margin-top=20 margin-right=4 height=20 width=20 }
-		place { control="ParentalLockButton" align=right end-right="view_friends" margin-top=23 margin-right=4 height=20 width=44 }
+		place { control="ParentalLockButton" align=right end-right="view_friends" margin-top=20 margin-right=-6 height=20 width=44 }
 		place { control="universe_label, XPVistaAlert, SupportAlert" spacing=8 align=right end-right="ParentalLockButton" margin-top=21 margin-right=4 height=24 }
 
 		region { name=bottom align=bottom width=max height=16 }
