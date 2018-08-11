@@ -14,7 +14,7 @@ A few issues with fonts requires some manual work. Please let me know if you exp
 ***
 
 ### Information about current version (updated July 25, 2018)
-Version 1.6.30 is compatible with Steam version 1532458786  (built July 25, 2018)
+Version 1.6.30 is compatible with Steam version 1533766730  (built August 8, 2018)
 
 Changes since previous version include:<br>
 * Updated to match Steam version 1532458786 (built 180724)<br>
@@ -48,4 +48,4 @@ If you like living on the edge I might sometimes also have a dev branch going fo
 ![Overlay](http://i.imgur.com/vqrnNmr.png)
 
 
-_*This page was last updated 2018-07-25, 19:50 GMT+1/UTC+2_
+_*This page was last updated 2018-08-11, 11:01 GMT+1/UTC+2_
