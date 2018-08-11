@@ -27,17 +27,6 @@ Having any issues? Either report it in the [GitHub issue tracker](https://github
 
 ***
 
-### Beta development
-Keep in mind that I will only have beta versions compatible with the Steam beta when I have the time and inclination for it. Always check the compatibility note for each release I have available. 
-
-####"Stable" beta
-I will sometimes have a specific branch available for beta versions compatible with ongoing Steam beta development that are considered stable enough for everyday use, I'm looking into how to set that up. I'll update with further details here when I have something to share.
-
-####Beta versions in development
-If you like living on the edge I might sometimes also have a dev branch going for any Steam beta development called [Steam-beta-dev](https://github.com/badanka/Compact/tree/Steam-beta-dev). If you use this you need to expect things being broken and messed up since this will be dev build that I use while working on future updates, so I'm not kidding when I call it "living on the edge". Please don't issue any bug reports based on these builds.
-
-***
-
 ### Screenshots (updated September 24, 2015)
 ![Details view](http://i.imgur.com/yftqsMA.png)
 
