@@ -159,7 +159,7 @@
 		"fieldName"		"DownloadTimeLabel"
 		"xpos"		"10"
 		"ypos"		"176"
-		"wide"		"189"
+		"wide"		"186"
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
@@ -196,8 +196,8 @@
 		"ControlName"		"Label"
 		"fieldName"		"InstallFolderLabel"
 		"xpos"		"10"
-		"ypos"		"200"
-		"wide"		"200"
+		"ypos"		"232"
+		"wide"		"186"
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
@@ -215,7 +215,7 @@
 		"ControlName"		"ComboBox"
 		"fieldName"		"InstallFolderCombo"
 		"xpos"		"10"
-		"ypos"		"232"
+		"ypos"		"264"
 		"wide"		"432"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -226,7 +226,46 @@
 		"paintbackground"		"1"
 		"textAlignment"		"west"
 		"wrap"		"0"
+	}	
+	
+	// not sure how to invoke these, only non-English Steam installations?
+	"InstallLanguageLabel"
+	{
+		"ControlName"		"Label"
+		"fieldName"		"InstallLanguageLabel"
+		"xpos"		"10"
+		"ypos"		"200"
+		"wide"		"186"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"0"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"labelText"		"#Steam_Install_ChooseLanguage"
+		"textAlignment"		"west"
+		"wrap"		"0"
 	}
+	
+	"LanguageCombo"
+	{
+		"ControlName"		"ComboBox"
+		"fieldName"		"LanguageCombo"
+		"xpos"		"200"
+		"ypos"		"200"
+		"wide"		"240"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"0"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"textAlignment"		"west"
+		"wrap"		"0"
+	}
+
 	layout
 	{
 		place { control="Label1" x=10 y=10 margin-right=10 width=max }
