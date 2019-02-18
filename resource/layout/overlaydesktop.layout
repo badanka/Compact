@@ -15,6 +15,8 @@
 		WebSiteButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_WebSite" style=sidemenu }	
 		RecommendButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_Recommend" style=sidemenu }	
 		WorkshopButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_Workshop" style=sidemenu }	
+		EditControllerConfig { controlname="URLLabel" labeltext="#Overlay_Taskbar_EditControllerConfig" style=sidemenu }	
+		ForceQuitButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_ForceQuit" style=sidemenu }	
 		
 		FriendsDetailPanel { controlname="COverlay_Details_Friends" style="detailsbox" }
 		AchievementsDetailPanel { controlname="COverlay_Details_Achievements" style="detailsbox" }
@@ -117,7 +119,7 @@
 			//has to be left-aligned, since the broadcast chat window is hardcoded to be drawn to the right of this panel
 			//so if this is right-aligned, the window will spawn off-screen
 		place { control="BroadcastDetailPanel" width=318 height=68 }
-		place { controls="BroadcastDetailPanel,LegacyCDKeyButton,DLCButton,GameGroupsButton,WebSiteButton,WorkshopButton,RecommendButton" align=bottom margin-left=2  region=detailpanelsnew dir=down spacing=2 } 
+		place { controls="BroadcastDetailPanel,LegacyCDKeyButton,DLCButton,GameGroupsButton,WebSiteButton,WorkshopButton,RecommendButton,EditControllerConfig,ForceQuitButton" align=bottom margin-left=2  region=detailpanelsnew dir=down spacing=2 } 
 
 		place { control="SessionText,TwoWeeksText,ForeverText" dir=right align=top-center spacing=32 region=detailpanels margin-top=217 }
 		

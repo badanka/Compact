@@ -18,6 +18,7 @@
 		error_info { controlname="Label" labeltext="#steam_screenshots_error_info" visible="0" wrap="1" }
 		upload_info { controlname="Label" labeltext="#steam_screenshot_upload_info" visible="0" wrap="1" }
 		
+		//not tested
 		limited_user_upload_label { controlname="Label" labeltext="#steam_screenshots_limited_user" visible="1" wrap="1" }
 
 		shared_to_facebook_ok_label { controlname="Label" labeltext="#Overlay_ToBeSharedToFacebook" visible="1" wrap="1" }

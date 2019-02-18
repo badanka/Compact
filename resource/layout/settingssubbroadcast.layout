@@ -40,12 +40,12 @@
 	
 	layout
 	{
-		place { control="BroadcastDisabledLabel,BroadcastStatusHeader,BroadcastDisabledSupportURL,BroadcastStatus" margin-left=10 spacing=4 margin-right=20 margin-top=6 width=max }
-		place { control="BroadcastHelpHeader,BroadcastHelpURL" margin-left=10 spacing=4 margin-right=20 margin-top=21 width=max }
+		place { control="BroadcastDisabledLabel,BroadcastStatusHeader,BroadcastDisabledSupportURL,BroadcastStatus" margin-left=10 spacing=4 margin-right=10 margin-top=6 width=max }
+		place { control="BroadcastHelpHeader,BroadcastHelpURL" margin-left=10 spacing=4 margin-right=10 margin-top=21 width=max }
 		
 		place { start="BroadcastStatusHeader" control="Divider1" dir=down margin-top=22 width=max margin-right=10 }						
 
-		place { start="Divider1" control="PermissionsHeader" dir=down margin-right=20 margin-top=7 width=max }
+		place { start="Divider1" control="PermissionsHeader" dir=down margin-right=10 margin-top=7 width=max }
 		place { start="PermissionsHeader" control="Permissions" dir=down margin-top=4 width=250 height=20 }			
 		
 		place { start="Permissions" control="DimensionsHeader" dir=down margin-top=6 width=max }

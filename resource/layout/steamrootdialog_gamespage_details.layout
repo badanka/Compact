@@ -379,7 +379,7 @@
 		// Header text
 		place 	{ control=gametitleheader region=headertext dir=down width=690 height=48 margin-right=90 }
 		place	{ control=gamesubheader start=gametitleheader region=headertext dir=down width=690 height=48 margin-right=90 }
-		place	{ control=compatsubheader start=gamesubheader region=headertext dir=right margin-left=10 }
+		place	{ control=compatsubheader region=headertext x=300 y=50 }
 
 		//		Buttons and links on the right
 		place	

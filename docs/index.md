@@ -13,11 +13,18 @@ A few issues with fonts requires some manual work. Please let me know if you exp
 
 ***
 
-### Information about current version (updated July 25, 2018)
-Version 1.6.30 is compatible with Steam version 1533766730  (built August 8, 2018)
+### Information about current version (updated February 18, 2019)
+Version 1.6.42 is compatible with Steam version 1549129917 (built February 2, 2019)
 
 Changes since previous version include:<br>
-* Updated to match Steam version 1532458786 (built 180724)<br>
+* Updated to match Steam version 1549129917 (built 190202)<br>
+* Overlay - Added 'Controller configuration' and 'Force quit' buttons<br>
+* Library - Added preliminary support for upcoming new Library page (not tested)<br>
+* View -› Screenshots - Added upload limit text (not tested)<br>
+* * Library - Added Steam Play elements for Linux editions<br>
+* Game properties - Added Steam Input per-game settings<br>
+* Install game properties - Added support for installing a specific language (not tested)<br>
+* Numerous fixes for Linux<br>
 * Other minor adjustments<br>
 
 ***
@@ -37,4 +44,4 @@ Having any issues? Either report it in the [GitHub issue tracker](https://github
 ![Overlay](http://i.imgur.com/vqrnNmr.png)
 
 
-_*This page was last updated 2018-08-11, 11:01 GMT+1/UTC+2_
+_*This page was last updated 2019-02-18, 21:42 GMT+1/UTC+2_

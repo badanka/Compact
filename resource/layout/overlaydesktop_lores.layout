@@ -23,6 +23,8 @@
 		PlayersButton {	controlname="URLLabel" labeltext="#Overlay_Taskbar_Players" style=sidemenu }
 		AchievementsButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_Achievements" style=sidemenu }				
 		ScreenshotsButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_Screenshots" style=sidemenu }
+		EditControllerConfig { controlname="URLLabel" labeltext="#Overlay_Taskbar_EditControllerConfig" style=sidemenu }	
+		ForceQuitButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_ForceQuit" style=sidemenu }	
 	}
 	
 	colors
@@ -84,7 +86,7 @@
 		
 		place { controls="BroadcastDetailPanel" region=detailpanels width=330 height=68 align=bottom}
 		place { controls="GameGroupsButton,ChatRoomButton,WebSiteButton" width=0 y=0 align=right region=overlay dir=down spacing=5 }
-		place { controls="DLCButton,GameHubButton,GuideButton,GuidesButton,LegacyCDKeyButton,FriendsButton,PlayersButton,AchievementsButton,ScreenshotsButton,ForumsButton,WorkshopButton,RecommendButton" y=0 align=right region=overlay dir=down spacing=3 }
+		place { controls="DLCButton,GameHubButton,GuideButton,GuidesButton,LegacyCDKeyButton,FriendsButton,PlayersButton,AchievementsButton,ScreenshotsButton,ForumsButton,WorkshopButton,RecommendButton,EditControllerConfig,ForceQuitButton" y=0 align=right region=overlay dir=down spacing=3 }
 
 		
 		//hidden
