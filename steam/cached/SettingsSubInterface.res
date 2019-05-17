@@ -306,6 +306,26 @@
 		"Default"		"0"
 		"selected"		"0"
 	}
+	"SmoothScrollWebViewCheck"
+	{
+		"ControlName"		"CheckButton"
+		"fieldName"		"SmoothScrollWebViewCheck"
+		"xpos"		"17"
+		"ypos"		"361"
+		"wide"		"430"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"9"
+		"paintbackground"		"1"
+		"labelText"		"#Steam_SmoothScrollWebViews_Option"
+		"textAlignment"		"west"
+		"wrap"		"0"
+		"Default"		"0"
+		"selected"		"0"
+	}
 	"DWriteCheck" [$WINDOWS]
 	{
 		"ControlName"		"CheckButton"
@@ -438,12 +458,12 @@
 		
 		place { control="Divider2" start=BigPictureModeCheck width=max dir=down margin-top=7 margin-right=10 }
 		
-		place { control="DWriteCheck,DPIScalingCheck, H264HWAccelCheck,GPUWebViewCheck,UrlBarCheck" start=Divider2 margin-top=6 height=18 spacing=0 width=max dir=down }
+		place { control="DWriteCheck,DPIScalingCheck,H264HWAccelCheck,GPUWebViewCheck,SmoothScrollWebViewCheck,UrlBarCheck" start=Divider2 margin-top=6 height=18 spacing=0 width=max dir=down }
 		
 		place { control="Divider3" start=UrlBarCheck dir=down width=max margin-top=7 margin-right=10 }
 		
 		place { control="NotifyAvailableGamesCheck" start=Divider3 dir=down margin-top=6 width=400 }
 		
-		place { control="SetJumpListOptionsButton" start=NotifyAvailableGamesCheck margin-top=11 dir=down height=20 }
+		place { control="SetJumpListOptionsButton" start=NotifyAvailableGamesCheck margin-top=3 dir=down height=20 }
 	}
 }
