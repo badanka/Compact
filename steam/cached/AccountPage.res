@@ -510,9 +510,9 @@
 	
 		place { control="BetaParticipationLabel" x=10 y=159  width=max end-right="CurrentBetaLabel" }
 		
-		place { control="CurrentBetaLabel" margin-left=120 y=159 width=max }
+		place { control="CurrentBetaLabel" margin-left=120 y=159 width=max margin-right=100 }
 		place { start=CurrentBetaLabel control="ChangeBetaButton" y=6 width=76 height=20 dir=down }
-		place { control="ReportBugLink" y=159 height=20 align=right margin-right=18 }
+		place { control="ReportBugLink" y=159 align=right margin-right=10 }
 
 		place { control="Divider2" align=top-center width=max margin-top=9 margin-left=10 margin-right=10 start="ChangeBetaButton" dir=down }						
 		

@@ -17,6 +17,7 @@
 		}
 		"EnableStreaming" { ControlName="CheckButton" fieldName="EnableStreaming" labelText="#Steam_Settings_Streaming_EnableStreaming" }
 		"Pair" { ControlName="Button" fieldName="Pair" command="Pair" labelText="#Steam_Settings_Streaming_Pair" }
+		"Unpair" { ControlName="Button" fieldName="Unpair" command="Unpair" labelText="#Steam_Settings_Streaming_Unpair" }
 		"SetPIN" { ControlName="Button" fieldName="SetPIN" command="SetPIN" labelText="#Steam_Settings_Streaming_SetPIN" }
 
 		"HostDivider" { ControlName="divider" }
@@ -70,26 +71,26 @@
 	{
 		region { name=bottom width=max height=max y=206 margin-left=10 margin-right=10 }
 
+		place { control=DescriptionLabel width=max margin-top=6 margin-left=10 margin-right=10 }
+		place { control=EnableStreaming start="DescriptionLabel" dir=down y=2 height=18 }
+		place { control=RemoteClientList start="EnableStreaming" dir=down y=4 width=max margin-right=10 }
+		
 		place
 		{
-			control="DescriptionLabel,RemoteClientList"
-			dir=down
-			align=top
-			width=max
-			margin-top=6
+			control="Pair,Unpair,SetPIN"
+			y=202
+			height=20
+			spacing=4
 			margin-left=10
-			margin-right=10
-			spacing=6
+			z=4
 		}
-		place { control=EnableStreaming start="RemoteClientList" dir=down y=3 height=18 }
-		place { control=Pair start="EnableStreaming" y=1 height=20 align=right margin-right=12 z=4 }
-
-		place { region=bottom control=HostDivider start="EnableStreaming" dir=down width=max y=1 }
 		
-		place { region=bottom control=HostLabel width=max start="HostDivider" dir=down y=6 }
+
+		place { region=bottom control=HostDivider start="Pair" dir=down width=0 y=1 }
+		
+		place { region=bottom control=HostLabel width=max start="HostDivider" dir=down y=4 }
 		place { region=bottom control=UnsupportedPlatform width=max start="HostLabel" dir=down y=6 }
-		place { region=bottom control=SetPIN start="HostLabel" dir=down y=6 z=4 }
-		place { region=bottom control=AdvancedHostOptions height=20 start="SetPIN" dir=down y=4 }
+		place { region=bottom control=AdvancedHostOptions height=20 start="HostLabel" dir=down y=4 }
 		
 		place { region=bottom control=ClientDivider width=max start="AdvancedHostOptions" dir=down y=11 }
 		place { region=bottom control=ClientLabel width=max start="ClientDivider" dir=down y=6 }

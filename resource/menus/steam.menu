@@ -77,7 +77,7 @@
 		
 		Support							{	text="#steam_menu_support"					command="Support" }
 		Divider							{}
-		Compact							{ 	text="Steam Compact 1.6.44 [GitHub]"		shellcmd="steam://openurl/http://badanka.github.io/Compact/" }
+		Compact							{ 	text="Steam Compact 1.6.46 [GitHub]"		shellcmd="steam://openurl/http://badanka.github.io/Compact/" }
 		CompactGroup					{ 	text="Steam Compact Community Group"		shellcmd="steam://openurl/http://steamcommunity.com/groups/SteamCompact" }
 		Divider							{}
 		Privacy							{	text="#steam_menu_PrivacyPolicy"			shellcmd="steam://url/PrivacyPolicy" }

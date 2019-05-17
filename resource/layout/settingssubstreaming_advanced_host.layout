@@ -10,6 +10,8 @@
 			labelText="#Steam_Settings_Streaming_AdvancedHostOptions_Description"
 		}
 
+		"HostPlayAudioAlways" { ControlName="CheckButton" fieldName="HostPlayAudioAlways" labelText="#Steam_Settings_Streaming_HostPlayAudioAlways" }
+
 		"ChangeDesktopResolution" { ControlName="CheckButton" fieldName="ChangeDesktopResolution" labelText="#Steam_Settings_Streaming_ChangeDesktopResolution" }
 		"DynamicallyAdjustResolution" { ControlName="CheckButton" fieldName="DynamicallyAdjustResolution" labelText="#Steam_Settings_Streaming_DynamicallyAdjustResolution" }
 		"EnableCaptureNVFBC" { ControlName="CheckButton" fieldName="EnableCaptureNVFBC" labelText="#Steam_Settings_Streaming_EnableCaptureNVFBC" }
@@ -69,7 +71,7 @@
 		
 		place
 		{
-			control="DynamicallyAdjustResolution,,ChangeDesktopResolution,EnableCaptureNVFBC,EnableHardwareEncoding"
+			control="HostPlayAudioAlways,DynamicallyAdjustResolution,ChangeDesktopResolution,EnableCaptureNVFBC,EnableHardwareEncoding"
 			start="DescriptionLabel"
 			dir=down
 			align=top

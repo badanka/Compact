@@ -811,7 +811,7 @@
 	
 	layout
 	{
-		place { control="label_store,label_library,label_community,label_me,label_console,label_new_library" x=0 y=1 spacing=13 margin-left="9" height=20 } 
+		place { control="label_store,label_library,label_community,label_me,label_console,label_oldlibrary" x=0 y=1 spacing=13 margin-left="9" height=20 } 
 		place { control="label_community_new" start="label_console" x="9999" width=0 height=0 }
 
 		place { control="library_music_player_icon" align=right height=16 width=16 y=23 margin-right=8 }
