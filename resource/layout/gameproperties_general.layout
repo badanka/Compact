@@ -154,6 +154,7 @@
 		place [$LINUX] {controls=SteamPlayOverrideCheck start=Divider3 dir=down margin-top=7 width=max height=18 region=main }
 		place [$LINUX] {controls=SteamPlayOverrideCombo start=SteamPlayOverrideCheck dir=down margin-top=4 spacing=4 height=20 width=260 region=main }
 
+		//not tested
 		place {controls=FamilySharingUnsupportedLabel start=SteamPlayOverrideCombo dir=down margin-top=4}
 	}
 }
