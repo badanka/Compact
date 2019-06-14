@@ -13,13 +13,13 @@ A few issues with fonts requires some manual work. Please let me know if you exp
 
 ***
 
-### Information about current version (updated May 17, 2019)
-Version 1.6.44 is compatible with Steam version 1556574584 (built April 29, 2019)
+### Information about current version (updated June 14, 2019)
+Version 1.6.46 is compatible with Steam version 1556574584 (built April 29, 2019)
 
 Changes since previous version include:<br>
-* Updated to match Steam version 1556574584 (built 190429)<br>
-* Settings -› Added 'Pair Steam Link' button in In-Home Streaming<br>
-* Settings -› Added option for disabling notification in Controller<br>
+* Updated to match Steam version 1560477148 (built 190614)<br>
+* Settings -› Changed In-Home Streaming to Remote Play and updated accordingly<br>
+* Settings -› Added checkbox for smooth scrolling option in Interface<br>
 
 ***
 
@@ -36,4 +36,4 @@ Having any issues? Either report it in the [GitHub issue tracker](https://github
 ![Overlay](http://i.imgur.com/vqrnNmr.png)
 
 
-_*This page was last updated 2019-05-17, 23:13 GMT+1/UTC+2_
+_*This page was last updated 2019-06-14, 14:19 GMT+1/UTC+2_
