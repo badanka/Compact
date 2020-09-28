@@ -14,10 +14,10 @@ A few issues with fonts requires some manual work. Please let me know if you exp
 ***
 
 ### Information about current version (updated September 28, 2020)
-Version 1.6.46 is compatible with Steam version 1556574584 (built April 29, 2019)
+Version 1.6.52 is compatible with Steam version 1599174997 (built September 3, 2020)
 
 Changes since previous version include:<br>
-* Updated to match Steam version 1599174997  (built 200903)<br>
+* Updated to match Steam version 1599174997 (built 200903)<br>
 * Settings -› Music updated with high quality download option<br>
 * Settings -› Remote Play updated layout<br>
 * Settings -› Remote Play, Advanced Client and Host Options updated<br>
