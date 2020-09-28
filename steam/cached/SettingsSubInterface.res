@@ -326,26 +326,6 @@
 		"Default"		"0"
 		"selected"		"0"
 	}
-	"DWriteCheck" [$WINDOWS]
-	{
-		"ControlName"		"CheckButton"
-		"fieldName"		"DWriteCheck"
-		"xpos"		"17"
-		"ypos"		"361"
-		"wide"		"430"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"6"
-		"paintbackground"		"1"
-		"labelText"		"#Steam_UseDirectWrite_Option"
-		"textAlignment"		"west"
-		"wrap"		"0"
-		"Default"		"0"
-		"selected"		"0"
-	}
 	"H264HWAccelCheck" [$WINDOWS]
 	{
 		"ControlName"		"CheckButton"
@@ -361,6 +341,26 @@
 		"tabPosition"		"8"
 		"paintbackground"		"1"
 		"labelText"		"#Steam_UseH264HWAccel_Option"
+		"textAlignment"		"west"
+		"wrap"		"0"
+		"Default"		"0"
+		"selected"		"0"
+	}
+	"DWriteCheck" [$WINDOWS]
+	{
+		"ControlName"		"CheckButton"
+		"fieldName"		"DWriteCheck"
+		"xpos"		"17"
+		"ypos"		"361"
+		"wide"		"430"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"6"
+		"paintbackground"		"1"
+		"labelText"		"#Steam_UseDirectWrite_Option"
 		"textAlignment"		"west"
 		"wrap"		"0"
 		"Default"		"0"

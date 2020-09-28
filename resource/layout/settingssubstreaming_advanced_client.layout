@@ -2,12 +2,19 @@
 {
 	controls
 	{
-		"DescriptionLabel"
+		"DescriptionLabelLocal"
 		{
 			ControlName="Label"
-			fieldName="DescriptionLabel"
+			fieldName="DescriptionLabelLocal"
 			wrap=1
-			labelText="#Steam_Settings_Streaming_AdvancedClientOptions_Description"
+			labelText="#Steam_Settings_Streaming_AdvancedClientOptions_DescriptionLocal"
+		}
+		"DescriptionLabelRemote"
+		{
+			ControlName="Label"
+			fieldName="DescriptionLabelRemote"
+			wrap=1
+			labelText="#Steam_Settings_Streaming_AdvancedClientOptions_DescriptionRemote"
 		}
 		
 		"BandwidthLabel" { ControlName="Label" associate="BandwidthLimit" labelText="#Steam_Settings_Streaming_Bandwidth" }
@@ -19,8 +26,15 @@
 		"AudioChannelsLabel" { ControlName="Label" associate="AudioChannelSelect" labelText="#Steam_Settings_Streaming_AudioChannelSelect" }
 		"AudioChannelSelect" { ControlName="ComboBox" fieldName="AudioChannelSelect" editable="0" }
 
+		"ControllerOverlayHotkeyLabel" { ControlName="Label" associate="ControllerOverlayHotkeyLimit" labelText="#Steam_Settings_Streaming_ControllerOverlayHotkey" }
+		"ControllerOverlayHotkey" { ControlName="ComboBox" fieldName="ControllerOverlayHotkey" style="ControllerOverlayHotkey" editable="0" }
+
+		"PerformanceOverlayLabel" { ControlName="Label" associate="PerformanceOverlay" labelText="#Steam_Settings_Streaming_PerformanceOverlay" }
+		"PerformanceOverlay" { ControlName="ComboBox" fieldName="PerformanceOverlay" editable="0" }
+
 		"EnableHardwareDecoding" { ControlName="CheckButton" fieldName="EnableHardwareDecoding" labelText="#Steam_Settings_Streaming_EnableHardwareDecoding" }
-		"EnableDebugOverlay" { ControlName="CheckButton" fieldName="EnableDebugOverlay" labelText="#Steam_Settings_Streaming_EnableDebugOverlay" }
+
+		"EnableTouchController" { ControlName="CheckButton" fieldName="EnableTouchController" labelText="#Steam_Settings_Streaming_EnableTouchController" }
 		
 		"SupportInformationLabel"
 		{
@@ -39,30 +53,48 @@
 	
 	layout
 	{
-		region { name="buttons" width=max height=24 align="bottom" }
-	
-		place { control="DescriptionLabel" margin-left=10 margin-right=10 margin-top=30 width=max }
+		region { name="buttons" width=max height=36 align="bottom" }
+
+		place { control="DescriptionLabelLocal"
+				margin-left=10 margin-right=10 margin-top=30 width=max
+				margin-bottom=2 }
+
+		place { control="DescriptionLabelRemote"
+				margin-left=10 margin-right=10 margin-top=30 width=max
+				margin-bottom=2 }
+
 		place
 		{
-			control="BandwidthLabel,BandwidthLimit"
-			start="DescriptionLabel"
+			control="PerformanceOverlayLabel,PerformanceOverlay"
+			y=60
 			dir=down
-			align=top
-			width=256
+			width=max
 			height=20
-			margin-top=8
+			margin-left=10
 			margin-right=10
 			spacing=0
 		}
 		
 		place
 		{
+			control="BandwidthLabel,BandwidthLimit"
+			start="PerformanceOverlay"
+			margin-top=3
+			dir=down
+			width=max
+			height=20
+			margin-right=10
+			spacing=0
+		}
+	
+		place
+		{
 			control="ResolutionLabel,ResolutionLimit"
 			start="BandwidthLimit"
-			dir=down
-			width=256
-			height=20
 			margin-top=3
+			dir=down
+			width=max
+			height=20
 			margin-right=10
 			spacing=0
 		}
@@ -71,29 +103,39 @@
 		{
 			control="AudioChannelsLabel,AudioChannelSelect"
 			start="ResolutionLimit"
-			dir=down
-			width=256
-			height=20
 			margin-top=3
+			dir=down
+			width=max
+			height=20
+			margin-right=10
+			spacing=0
+		}
+
+		place
+		{
+			control="ControllerOverlayHotkeyLabel,ControllerOverlayHotkey"
+			start="AudioChannelSelect"
+			margin-top=3
+			dir=down
+			width=max
+			height=20
 			margin-right=10
 			spacing=0
 		}
 		
 		place
 		{
-			control="EnableHardwareDecoding,EnableDebugOverlay"
-			start="AudioChannelSelect"
+			control="EnableHardwareDecoding,EnableTouchController"
+			start="ControllerOverlayHotkey"
 			dir=down
-			width=256
+			width=max
 			height=18
 			margin-top=5
-			margin-right=10
 			spacing=0
 		}
-
 		
 		place { control="SupportInformationLabel" region="buttons"
-						margin-left=10 margin-top=0
+						margin-left=10 margin-top=0 height=25
 						margin-bottom=2 spacing=10 }
 		place { control="OKButton" region="buttons"
 		        width=92 height=20 align=right

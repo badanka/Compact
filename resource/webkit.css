@@ -1,68 +1,36 @@
-::-webkit-scrollbar,
-::-webkit-scrollbar-corner {
-	width: 11px;
-	height: 11px;
-	background: #272624;
+::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    background: transparent;
+    z-index: 12;
+    overflow: visible;
 }
 
-::-webkit-scrollbar-button,
-::-webkit-scrollbar-track {
-	background: #3e3d3c center no-repeat;
-	border: 1px solid #171615;
-	border-radius: 0px;
-}
-
-::-webkit-scrollbar-thumb:vertical {
-	background: -webkit-gradient(linear, left center, right center, from(rgb(80, 76, 72)), to(rgb(62, 61, 60))); 
-	border: 1px solid #2b2a28;
-	border-radius: 0px;
-} 
-
-::-webkit-scrollbar-thumb:horizontal {
-	background: -webkit-gradient(linear, left top, left bottom, from(rgb(80, 76, 72)), to(rgb(62, 61, 60))); 
-	border: 1px solid #2b2a28;
-	border-radius: 0px;
-} 
-
-::-webkit-scrollbar-track:vertical, 
-::-webkit-scrollbar-track:horizontal {
-	background: #272624; 
-}
-
-::-webkit-scrollbar-button:hover {
-	background: #73706d center no-repeat; 
+::-webkit-scrollbar-thumb {
+    width: 4px;
+    min-height: 32px;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    z-index: 12;
+    background-image: none;
+    background-color: rgba( 67, 73, 83, 1 );
+    background-clip: padding-box;
+    transition: background-color .32s ease-in-out;
+    // margin: 4px;
+    // min-width: 32px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: -webkit-gradient(linear, left center, right center, from(rgb(115, 112, 109)), to(rgb(80, 76, 72)));
+    background-color: rgb(96, 103, 116);
+    background-clip: padding-box;
 }
 
-/* up */
-::-webkit-scrollbar-button:vertical:decrement {
-	height: 11px;
-	background-position: 1px 2px;
-background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAECAYAAABCxiV9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD1JREFUeNpi+P//PwMMB/r5/Efmo0isX7v2P7ICJgYgCPL3/R8XnwhiMoBoEB/EZgSphEkgg0UL5zMABBgAmC0xrBJBvC8AAAAASUVORK5CYII=);
+::-webkit-scrollbar-corner {
+    background: #202020;
+    background-color: rgb(67, 73, 83);
 }
 
-/* down */
-::-webkit-scrollbar-button:vertical:increment {
-	width: 11px;
-	height: 11px;
-	background-position: 1px 3px;
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAECAYAAABCxiV9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADpJREFUeNpiDPTz+R8Xn8iADhYtnM/AtG7jZkYQA10CJM7w//9/MAaZsH7t2v8gGiYGl4QpQOYDBBgAndQzgEtnwBwAAAAASUVORK5CYII=); 
-}
-
-/* left */
-::-webkit-scrollbar-button:horizontal:decrement {
-	width: 11px;
-	height: 11px;
-	background-position: 2px 1px;
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAHCAYAAAAvZezQAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi+P//PwMMB/r5oHLWr137n4kBCIL8ff/HxSeCmAzMl86fhXNAgGndxs2MixbOhwtgmMGAbgtAgAEACao3LZWjxgIAAAAASUVORK5CYII=); */
-}
-
-/* right */
-::-webkit-scrollbar-button:horizontal:increment {
-	width: 11px;
-	height: 11px;
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAHCAYAAAAvZezQAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADxJREFUeNpiCPTz+Q8EDDDMsH7t2v/IgkwMQBAXn8gQ5O/7H8QGCyALwgUWLZzPsG7jZkYMMxjQbQEIMABFwzWs6T5UgwAAAABJRU5ErkJggg==); 
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-button {
+    display: none;
 }

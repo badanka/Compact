@@ -107,9 +107,17 @@
 	
 	layout
 	{
+	
+		// change ignored, not tested
+		// x75, y7 in 1599174997 200903
 		place { control="emailreminderbarlabel,emailreminderbaremail_email,emailreminderbar_yesbutton,emailreminderbar_nobutton" x=79 y=6 spacing=8 }
+		
+		// change ignored, not tested
+		// x75, y25 in 1599174997 200903
 		place { control="emailreminderbar_info,emailreminderbar_infolink" x=79 y=18 spacing=8 }
 		
+		// change ignored, not tested
+		// margin-right 8 in 1599174997 200903
 		place { control="emailreminderbar_close"  align=right margin-right=4 margin-top=4 }
 	}
 

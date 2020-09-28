@@ -3726,5 +3726,11 @@ steam.styles
 		{
 			textcolor="176 172 165 255"
 		}
+		
+		"NotifyRemotePlayTogetherTitle"
+		{
+			textcolor="white"
+		}
+
 	}
 }

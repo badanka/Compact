@@ -85,7 +85,24 @@
 			style="TextEntryURL"
 			group="url"
 		}
-		
+
+
+//most likely superfluous, missed during the long break of updating
+		"URLAnchor"
+		{
+			"ControlName" "Label"
+			"labelText" ""
+			group="url"
+			zpos="-5"
+		}
+		"LibraryAnchor"
+		{
+			"ControlName" "Label"
+			"labelText" ""
+			group="library"
+			zpos="-5"
+		}
+
 		"WebPanel"
 		{
 			style="WebPanelStyle"
@@ -93,7 +110,7 @@
 
 		library_filters				{ ControlName=MenuButton labelText="#steam_library_filter_allgames" style="NavLabel2" showDownArrow=1 group=library }
 		
-		library_search				{ ControlName=TextEntry maxchars=16 hintText="#steam_library_search" style="LibrarySearch" group=library tabposition=2 }
+		library_search				{ ControlName=TextEntry maxchars=16 hintText="#steam_library_search" style="LibrarySearch" group=library tabposition=2 unicode=1 }
 		label_search_icon			{ ControlName=Label style="LibrarySearchIcon" group=library zpos="4" }
 
 		label_library_zoom			{ ControlName=Label labelText="#steam_library_zoom"	style="NavLabelZoom" group=zoom }
@@ -838,6 +855,9 @@
 		place { control="library_filters" align=left spacing=1 region="dropdown" }
 
 		place { control="library_filters_details,library_filters_list,library_filters_grid," align=left start="library_filters" dir=right height=20 spacing=4 margin-left=12 width=20 }
+		
+		place { control=URLAnchor align=left y=54 height=28 width=max }
+		place { control=LibraryAnchor height=28 width=max start=URLAnchor dir=down }
 
  		place [!$OSX] { control="library_music_menu" height=20 start="library_filters" dir=right margin-left=4 spacing=2 }
  		place [!$OSX] { control="library_music_add_button" height=20 start="library_music_menu" dir=right y=1 x=4 }

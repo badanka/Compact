@@ -16,6 +16,17 @@
 			tall=140
 		}
 		"EnableStreaming" { ControlName="CheckButton" fieldName="EnableStreaming" labelText="#Steam_Settings_Streaming_EnableStreaming" }
+
+		"P2PScopeLabel"
+		{
+			ControlName="Label"
+			fieldName="P2PScopeLabel"
+			wrap=1
+			labelText="#Steam_Settings_Streaming_P2PScope_Description"
+		}
+
+		"P2PScope" { ControlName="ComboBox" fieldName="P2PScope" editable="0" }
+
 		"Pair" { ControlName="Button" fieldName="Pair" command="Pair" labelText="#Steam_Settings_Streaming_Pair" }
 		"Unpair" { ControlName="Button" fieldName="Unpair" command="Unpair" labelText="#Steam_Settings_Streaming_Unpair" }
 		"SetPIN" { ControlName="Button" fieldName="SetPIN" command="SetPIN" labelText="#Steam_Settings_Streaming_SetPIN" }
@@ -40,12 +51,19 @@
 		"AdvancedHostOptions" { ControlName="Button" fieldName="AdvancedHostOptions" command="AdvancedHostOptions" labelText="#Steam_Settings_Streaming_AdvancedHostOptions" }
 
 		"ClientDivider" { ControlName="divider" }
-		"ClientLabel"
+		"ClientLabelLocal"
 		{
 			ControlName="Label"
-			fieldName="ClientLabel"
+			fieldName="ClientLabelLocal"
 			wrap=1
-			labelText="#Steam_Settings_Streaming_ClientLabel"
+			labelText="#Steam_Settings_Streaming_ClientLabelLocal"
+		}
+		"ClientLabelRemote"
+		{
+			ControlName="Label"
+			fieldName="ClientLabelRemote"
+			wrap=1
+			labelText="#Steam_Settings_Streaming_ClientLabelRemote"
 		}
 		
 		"QualityFast" { ControlName="RadioButton" fieldName="QualityFast" labelText="#Steam_Settings_Streaming_QualityFast" }
@@ -69,8 +87,6 @@
 	
 	layout
 	{
-		region { name=bottom width=max height=max y=206 margin-left=10 margin-right=10 }
-
 		place { control=DescriptionLabel width=max margin-top=6 margin-left=10 margin-right=10 }
 		place { control=EnableStreaming start="DescriptionLabel" dir=down y=2 height=18 }
 		place { control=RemoteClientList start="EnableStreaming" dir=down y=4 width=max margin-right=10 }
@@ -85,28 +101,37 @@
 			z=4
 		}
 		
-
-		place { region=bottom control=HostDivider start="Pair" dir=down width=0 y=1 }
-		
-		place { region=bottom control=HostLabel width=max start="HostDivider" dir=down y=4 }
-		place { region=bottom control=UnsupportedPlatform width=max start="HostLabel" dir=down y=6 }
-		place { region=bottom control=AdvancedHostOptions height=20 start="HostLabel" dir=down y=4 }
-		
-		place { region=bottom control=ClientDivider width=max start="AdvancedHostOptions" dir=down y=11 }
-		place { region=bottom control=ClientLabel width=max start="ClientDivider" dir=down y=6 }
-		place { region=bottom control=QualityFast start="ClientLabel" dir=down height=18 y=3 }
 		place
 		{
-			control="QualityBalanced,QualityBeautiful"
-			region=bottom
-			width=max
-			height=18 
-			x=10
-			spacing=10
-			start="QualityFast"
+			start="Pair"
+			control="P2PScopeLabel"
+			dir=down
+			width=400
+			margin-top=10
 		}
-		place { region=bottom control=AdvancedClientOptions start="QualityFast" dir=down height=20 y=6 }
+		place
+		{
+			start="P2PScopeLabel"
+			control="P2PScope"
+			dir=down
+			width=250
+			height=20
+			margin-right=20
+			margin-top=4
+		}
+
+		place { start="P2PScope" control="HostDivider" dir=down margin-top=10 width=475 }
+		place { start="HostDivider" control="HostLabel" dir=down margin-top=7 width=max }
+		place { start="HostLabel" control="UnsupportedPlatform" dir=down margin-top=4 width=max }
+		place { start="HostLabel" control="AdvancedHostOptions" dir=down margin-top=4 }
 		
-		place { region=bottom control=SupportInformationLabel align=bottom }
+		place { start="AdvancedHostOptions" control="ClientDivider" dir=down margin-top=10 width=475 }
+		place { start="ClientDivider" control="ClientLabelLocal" dir=down margin-top=7 width=max }
+		place { start="ClientDivider" control="ClientLabelRemote" dir=down margin-top=7 width=max }
+		place { start="ClientDivider" control="QualityFast" dir=down margin-top=24 width=100 height=18 }
+		place { start="QualityFast" control="QualityBalanced" dir=right margin-left=10 width=100 height=18 }
+		place { start="QualityBalanced" control="QualityBeautiful" dir=right margin-left=10 width=100 height=18 }
+		place { start="QualityFast" control="AdvancedClientOptions" dir=down margin-top=10  height=20}
+		place { start="AdvancedClientOptions" control="SupportInformationLabel" dir=right align=right margin-right=20 }
 	}
 }

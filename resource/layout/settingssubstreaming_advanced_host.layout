@@ -28,7 +28,7 @@
 			wrap=1
 			labelText="#Steam_Settings_Streaming_SoftwareEncodingThreads_Description"
 		}
-		"SoftwareEncodingThreads" { ControlName="ComboBox" fieldName="SoftwareEncodingThreads" style="ResolutionLimit" editable="0" }
+		"SoftwareEncodingThreads" { ControlName="ComboBox" fieldName="SoftwareEncodingThreads" editable="0" }
 
 		
 		"EnableTrafficPriorityLabel"
