@@ -13,16 +13,14 @@ A few issues with fonts requires some manual work. Please let me know if you exp
 
 ***
 
-### Information about current version (updated September 28, 2020)
-Version 1.6.52 is compatible with Steam version 1599174997 (built September 3, 2020)
+### Information about current version (updated October 30, 2020)
+Version 1.6.53 is compatible with Steam version 1603487799  (built October  23, 2020)
 
 Changes since previous version include:<br>
 * Updated to match Steam version 1599174997 (built 200903)<br>
-* Settings -› Music updated with high quality download option<br>
-* Settings -› Remote Play updated layout<br>
-* Settings -› Remote Play, Advanced Client and Host Options updated<br>
-* Settings -› Library updated<br>
-* Fixed regression with Music library not showing all tracks in an album<br>
+* Settings -› Family, updated layout<br>
+* Settings -› In-Game, updated layout<br>
+* Settings -› Downloads, updated layout<br>
 
 ***
 
@@ -39,4 +37,4 @@ Having any issues? Either report it in the [GitHub issue tracker](https://github
 ![Overlay](http://i.imgur.com/vqrnNmr.png)
 
 
-_*This page was last updated 2020-09-28, 07:14 GMT+1/UTC+2_
+_*This page was last updated 2020-10-30, 20:59 GMT+1/UTC+2_
