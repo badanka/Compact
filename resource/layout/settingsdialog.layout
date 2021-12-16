@@ -15,7 +15,7 @@
 		CDialogSettings
 		{
 			minimum-width="610"
-			minimum-height="465"
+			minimum-height="495"
 			render_bg
 			{     
 			}

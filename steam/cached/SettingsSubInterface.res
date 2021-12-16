@@ -38,6 +38,7 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 		"URLText"		"http://translation.steampowered.com"
+		"group"			"SteamRealmGlobalOnly"
 	}
 	"Divider1"
 	{
@@ -286,10 +287,10 @@
 		"Default"		"0"
 		"selected"		"0"
 	}
-	"GPUWebViewCheck"
+	"SmoothScrollWebViewCheck"
 	{
 		"ControlName"		"CheckButton"
-		"fieldName"		"GPUWebViewCheck"
+		"fieldName"		"SmoothScrollWebViewCheck"
 		"xpos"		"17"
 		"ypos"		"337"
 		"wide"		"430"
@@ -300,16 +301,16 @@
 		"enabled"		"1"
 		"tabPosition"		"8"
 		"paintbackground"		"1"
-		"labelText"		"#Steam_EnableGPUWebViews_Option"
+		"labelText"		"#Steam_SmoothScrollWebViews_Option"
 		"textAlignment"		"west"
 		"wrap"		"0"
 		"Default"		"0"
 		"selected"		"0"
 	}
-	"SmoothScrollWebViewCheck"
+	"GPUWebViewCheck"
 	{
 		"ControlName"		"CheckButton"
-		"fieldName"		"SmoothScrollWebViewCheck"
+		"fieldName"		"GPUWebViewCheck"
 		"xpos"		"17"
 		"ypos"		"361"
 		"wide"		"430"
@@ -318,9 +319,9 @@
 		"PinCorner"		"0"
 		"visible"		"1"
 		"enabled"		"1"
-		"tabPosition"		"9"
+		"tabPosition"		"8"
 		"paintbackground"		"1"
-		"labelText"		"#Steam_SmoothScrollWebViews_Option"
+		"labelText"		"##Steam_EnableGPUWebViews_Option"
 		"textAlignment"		"west"
 		"wrap"		"0"
 		"Default"		"0"
@@ -400,10 +401,10 @@
 		"wrap"		"1"
 		"Default"		"0"
 	}
-	"Label4"
+	"LabelLanguageCombo"
 	{
 		"ControlName"		"Label"
-		"fieldName"		"Label4"
+		"fieldName"		"LabelLanguageCombo"
 		"xpos"		"20"
 		"ypos"		"15"
 		"wide"		"475"
@@ -418,6 +419,27 @@
 		"textAlignment"		"west"
 		"associate"		"LanguageCombo"
 		"wrap"		"0"
+				"group"			"SteamRealmGlobalOnly"
+	}
+	"LabelSteamChinaLanguageCombo"
+	{
+		"ControlName"		"Label"
+		"fieldName"		"LabelSteamChinaLanguageCombo"
+		"xpos"		"20"
+		"ypos"		"15"
+		"wide"		"475"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"labelText"		"#Steam_SteamChinaLanguageSelect"
+		"textAlignment"		"west"
+		"associate"		"LanguageCombo"
+		"wrap"		"0"
+		"group"			"SteamRealmChinaOnly"
 	}
 	
 	"SetJumplistOptionsButton"
@@ -448,7 +470,7 @@
 		place { control="SkinCombo" width=200 height=20 }
 		place { control="Label1" width=0 }
 		
-		place { control="Label4,LanguageCombo,TranslationLabel" y=6 margin-left=10 dir=down spacing=6 }
+		place { control="LabelLanguageCombo,LanguageCombo,TranslationLabel" y=6 margin-left=10 dir=down spacing=6 }
 		
 		place { control="Divider1" start=TranslationLabel width=max dir=down margin-top=7 margin-right=10 }
 		

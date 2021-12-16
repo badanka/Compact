@@ -13,14 +13,12 @@ A few issues with fonts requires some manual work. Please let me know if you exp
 
 ***
 
-### Information about current version (updated October 30, 2020)
-Version 1.6.53 is compatible with Steam version 1603487799  (built October  23, 2020)
+### Information about current version (updated December 16, 2021)
+Version 1.6.58 is compatible with Steam version 1637624439 (built November 22, 2021)
 
 Changes since previous version include:<br>
-* Updated to match Steam version 1599174997 (built 200903)<br>
-* Settings -› Family, updated layout<br>
-* Settings -› In-Game, updated layout<br>
-* Settings -› Downloads, updated layout<br>
+* Updated to match Steam version 1637624439 (built 211122)<br>
+* Fixed Settings menu in several places<br>
 
 ***
 

@@ -168,7 +168,6 @@ steam.styles
 		launch1 "83 172 204 255"
 		launch2 "54 125 153 255"
 
-
 		parental_lock_inactive1 "154 49 48 255"
 		parental_lock_inactive2 "189 79 79 255"	
 		parental_lock_inactive3 "215 90 90 255"	
@@ -549,7 +548,6 @@ steam.styles
 				17="fill(x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
 				18="fill(x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
 			}
-			
 		} 
 		
 		
@@ -861,7 +859,6 @@ steam.styles
 			bgcolor="none"
 			render_bg
 			{
-				//full path added by design, Steam won't load these images otherwise
 				0="image(x0    , y0   , x0+96 , y0+20, graphics/titlebar_1.png )"
 				1="image(x0+96 , y0   , x0+192, y0+20, graphics/titlebar_2.png )"
 				2="fill( x0+192, y0   , x1    , y0+20, FrameBG3 )"
@@ -881,7 +878,6 @@ steam.styles
 			textcolor="TitleTextFocus" [$OSX]
 			render_bg
 			{
-				//full path added by design, Steam won't load these images otherwise
 				0="image( x0   , y0, x0+96 , y0+20, graphics/titlebar_1 )"
 				1="image( x0+96, y0, x0+192, y0+20, graphics/titlebar_2)"
 				2="fill( x0+192, y0, x1, y0 + 20,  FrameBG3 )"
