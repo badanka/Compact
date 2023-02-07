@@ -857,7 +857,7 @@
 		place { control="library_filters_details,library_filters_list,library_filters_grid," align=left start="library_filters" dir=right height=20 spacing=4 margin-left=12 width=20 }
 		
 		place { control=URLAnchor align=left y=54 height=28 width=max }
-		place { control=LibraryAnchor height=28 width=max start=URLAnchor dir=down }
+		place { control=LibraryAnchor margin-top=40 margin-left=0 margin-right=0 width=max height=32 }
 
  		place [!$OSX] { control="library_music_menu" height=20 start="library_filters" dir=right margin-left=4 spacing=2 }
  		place [!$OSX] { control="library_music_add_button" height=20 start="library_music_menu" dir=right y=1 x=4 }
@@ -867,9 +867,6 @@
 		 place [$OSX] { control="library_zoom" align=left start="library_filters_grid" y=0 margin-left=12 height=18 }
 
 		place [$OSX] { control="label_library_filters" align=left y=23 height=20 spacing=3 x=13 }
-
- 	  	place { control=LibraryAnchor margin-top=40 margin-left=0 margin-right=0 width=max height=32 }
- 	  	place { control=LibraryAnchor start="LibraryAnchor" margin-left=0 margin-right=0 width=max height=48 dir=down }
 
 		place [!$OSX] { control="label_library_show,label_library_zoom,label_zoom_separator,label_library_view" x=99999 y=0 height=0 }
 		 place [$OSX] { control="label_library_show,label_library_zoom,label_zoom_separator,label_library_view" x=99999 height=0 width=0 }
