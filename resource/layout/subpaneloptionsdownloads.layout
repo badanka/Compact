@@ -3,28 +3,22 @@
 	controls
 	{
 		RegionLabel {	controlname=label	labeltext=#Steam_RegionLabel	style=highlight 	}
-		LibrariesLabel {	controlname=label	labeltext=#Steam_LibrariesLabel	style=highlight }
-		RestrictionsLabel {	controlname=label	labeltext=#Steam_DownloadRestrictionsLabel	style=highlight 	}
+		DownloadRegionCombo	{	controlname=combobox	editable="0"	}
 		RegionInfoLabel {	controlname=label labeltext=#Steam_RegionInfo wrap=1		}
+
+		RestrictionsLabel {	controlname=label	labeltext=#Steam_DownloadRestrictionsLabel	style=highlight 	}
+
 		ManageInstalledappsLabel { controlname=label labeltext=#SteamUI_ContentMgr_ManageInstalledAppsInfo }
-		FlushDownloadConfigLabel { controlname=label labeltext=#SteamUI_ContentMgr_FlushDownloadConfigInfo tooltiptext=#SteamUI_ContentMgr_FlushDownloadConfigTip }
-				
+		FlushDownloadConfig		{	controlname=button	labeltext = #SteamUI_ContentMgr_FlushDownloadConfig	command=FlushContentConfig	tooltiptext=#SteamUI_ContentMgr_FlushDownloadConfigTip	}
+		
 		ThrottleCheckbox { controlname=checkbutton  labeltext=#Steam_ThrottleRatesLabel }
-		ThrottleRateCurrent { controlname=label }
-		ThrottleRateEditLabel { controlname=label labeltext=#SteamUI_ThrottleEditLabel }
+
 		ThrottleRateEdit { controlname=textentry }
 		ThrottleRateEditSuffix { controlname=label }
-		ThrottleRateApply 
-		{ 
-			controlname=button 
-			labeltext = #SteamUI_ThrottleApplyChange
-			command=ChangeThrottleValue
-		}
-		DownloadRegionCombo
-		{
-			controlname=combobox
-			editable="0"
-		}
+
+		PeerContentLabel { controlname=label labeltext=#Steam_PeerContentTitle style=highlight }
+		PeerContentCombo	{ controlname=combobox editable="0"	}
+		PeerContentInfoLabel { controlname=label labeltext=#Steam_PeerContentInfo wrap=1  }
 		
 		ManageInstalledApps
 		{
@@ -32,7 +26,7 @@
 			labeltext = #SteamUI_ContentMgr_ManageInstalledApps
 			command=ManageInstalledApps
 		}
-		
+
 		FlushDownloadConfig
 		{
 			controlname=button
@@ -53,10 +47,6 @@
 		Divider3 { ControlName=Divider	}				
 	}
 	
-	colors
-	{
-	}	
-	
 	styles
 	{
 		highlight
@@ -73,42 +63,40 @@
 	layout
 	{
 		region { name=box margin-top=3 margin-bottom=20 margin-left=10 margin-right=10 width=max height=max }
-		
-		place { controls="ManageInstalledappsLabel" region=box margin-top=3 width=max }		
-		place { controls="ManageInstalledApps" region=box start=ManageInstalledappsLabel height=20 margin-top=6 dir=down }
-		
-		place { controls="Divider1" region=box start=ManageInstalledApps dir=down margin-top=9 width=max }
-		
-		place { controls="RegionLabel" region=box start=Divider1 dir=down margin-top=5 }
-		place { controls="DownloadRegionCombo" region=box start=RegionLabel margin-top=6 height=21 width=200  dir=down }
+
+		place { controls="RegionLabel" region=box dir=down margin-top=3 }
+		place { controls="DownloadRegionCombo" region=box start=RegionLabel margin-top=6 height=21 width=220  dir=down }
 		place { controls="RegionInfoLabel" region=box start=DownloadRegionCombo margin-top=5 width=max dir=down }
-	
-		place { controls="Divider2" region=box start=RegionInfoLabel dir=down width=max margin-top=7 }
-				
-		place { controls="RestrictionsLabel" region=box start=Divider2 dir=down margin-top=7 }
-		
+
+		place { controls="Divider1" region=box start=RegionInfoLabel dir=down width=max margin-top=7 }
+
+		place { controls="RestrictionsLabel" region=box start=Divider1 dir=down margin-top=7 }
+
 		place { controls="AutoUpdateTimeRestrictCheckbox" region=box start=RestrictionsLabel y=1 dir=down  }
-		place { controls="AutoUpdateTimeRestrictStart" region=box start=AutoUpdateTimeRestrictCheckbox y=2 dir=down margin-top=4 }
-		place { controls="AutoUpdateTimeRestrictEndLabel" region=box start=AutoUpdateTimeRestrictStart y=-2 dir=right margin-left=10 }
-		place { controls="AutoUpdateTimeRestrictEnd" region=box start=AutoUpdateTimeRestrictEndLabel y=2 dir=right margin-left=4 width=77 height=20 }
-		
-		place { controls="ThrottleCheckbox" region=box start=RestrictionsLabel dir=down margin-top=6 margin-left=260 height=18 }
-		place { controls="ThrottleRateCurrent" region=box start=ThrottleCheckbox dir=down width=235 margin-top=6 }
-		place { controls="ThrottleRateEditLabel" region=box start=ThrottleRateCurrent dir=down width=175 height=20 margin-top=5 }
-		place { controls="ThrottleRateEdit" region=box start=ThrottleRateEditLabel dir=down width=125 height=20 }
-		place { controls="ThrottleRateEditSuffix" region=box start=ThrottleRateEdit dir=right margin-left=4 margin-top=3 }
-		place { controls="ThrottleRateApply" region=box start=ThrottleRateEdit dir=down width=70 height=20 margin-top=4 }
-		
-		place { controls="AllowDownloadsDuringGameplayCheckbox" region=box start="AutoUpdateTimeRestrictStart" height=18 dir=down margin-top=10 }
+		place { controls="AutoUpdateTimeRestrictStart" region=box start=AutoUpdateTimeRestrictCheckbox dir=right margin-top=4 width=77 height=20 }
+		place { controls="AutoUpdateTimeRestrictEndLabel" region=box start=AutoUpdateTimeRestrictStart y=-2 dir=right margin-left=8 }
+		place { controls="AutoUpdateTimeRestrictEnd" region=box start=AutoUpdateTimeRestrictEndLabel y=2 dir=right margin-left=6 width=77 height=20 }
+
+		place { controls="AllowDownloadsDuringGameplayCheckbox" region=box start="AutoUpdateTimeRestrictCheckbox" height=18 y=-6 dir=down }
 		place { controls="ThrottleDownloadsWhileStreamingCheckbox" region=box start=AllowDownloadsDuringGameplayCheckbox height=18 dir=down }
 		place { controls="DownloadRatesInBitsCheckbox" region=box start=ThrottleDownloadsWhileStreamingCheckbox height=18 dir=down }
-		
-		place { controls="Divider3" region=box start=DownloadRatesInBitsCheckbox dir=down width=max margin-top=11 }
-		
-		place { controls="FlushDownloadConfig" region=box start=Divider3 margin-top=10 width=200 height=20 dir=down }
-		place { controls="FlushDownloadConfigLabel" region=box start=FlushDownloadConfig margin-top=5 width=max dir=down }
 
+		place { controls="ThrottleCheckbox" region=box start=DownloadRatesInBitsCheckbox dir=down height=18 }
+		place { controls="ThrottleRateEdit" region=box start=ThrottleCheckbox dir=right width=125 height=20 }
+		place { controls="ThrottleRateEditSuffix" region=box start=ThrottleRateEdit dir=right margin-left=4 margin-top=3 }
 
-		place { controls="LibrariesLabel" width=0 }
+		place { controls="Divider2" region=box start=ThrottleCheckbox dir=down width=max margin-top=7 }
+
+		place { controls="ManageInstalledApps" region=box start=Divider2 height=20 margin-top=7 dir=down }
+		place { controls="ManageInstalledappsLabel" start=ManageInstalledApps region=box margin-top=3 width=max dir=down }		
+
+		place { controls="FlushDownloadConfig" region=box start=ManageInstalledappsLabel margin-top=10 height=20 dir=down }
+		place { controls="FlushDownloadConfigLabel" region=box start=FlushDownloadConfig margin-top=3 width=max dir=down }
+
+		place { controls="Divider3" region=box start=FlushDownloadConfigLabel dir=down width=max margin-top=7 }
+
+		place { controls="PeerContentLabel" region=box start=Divider3 dir=down margin-top=7 width=max }
+		place { controls="PeerContentCombo" region=box start=PeerContentLabel dir=down margin-top=8 width=240 height=21 }
+		place { controls="PeerContentInfoLabel" region=box start=PeerContentCombo dir=down margin-top=5 width=max }
 	}
 }

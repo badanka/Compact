@@ -99,6 +99,8 @@ steam.styles
 		TitleBar="86 81 78 50"
 		TitleBar2="66 61 58 50"
 		TitleBarFocus="176 169 162 75"
+	    ToolWindowTitleBar="35 40 45 255"
+		ToolWindowTitleBarFocus="33 40 50 255"
 
 		// rename?
 		Focus="55 67 86 200"  			// background color of any selected menu or list item
@@ -122,6 +124,9 @@ steam.styles
 
 		TextEntry.IMEBGColor		"none"
 		TextEntry.IMEFGColor		"TextDisabled"
+		
+		// Login frame colors
+		Login.BGTop					"33 35 40 255"
 		
 		Friends.OnlineColor		"134 181 217 255"
 		Friends.OnlineColor2	"grey"
@@ -167,6 +172,7 @@ steam.styles
 		launch0 "119 215 250 255"
 		launch1 "83 172 204 255"
 		launch2 "54 125 153 255"
+
 
 		parental_lock_inactive1 "154 49 48 255"
 		parental_lock_inactive2 "189 79 79 255"	
@@ -548,6 +554,7 @@ steam.styles
 				17="fill(x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
 				18="fill(x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
 			}
+			
 		} 
 		
 		
@@ -665,6 +672,7 @@ steam.styles
 			image="graphics/win_min_1"
 			image="graphics/osx_win_dis"	[$OSX]
 			image="graphics/osx_win_dis_new_dark" [$OSX1010]
+			inset="-6 0 0 0" [$OSX]
 		}
 		
 		FrameMinimizeButton:hover
@@ -674,6 +682,7 @@ steam.styles
 			image="graphics/win_min_2"
 			image="graphics/osx_min_hov"	[$OSX]
 			image="graphics/osx_min_hov_new" [$OSX1010]
+			inset="-6 0 0 0" [$OSX]
 		}
 		
 		FrameMinimizeButton:framefocus
@@ -683,6 +692,7 @@ steam.styles
 			image="graphics/win_min_3"
 			image="graphics/osx_min_def"	[$OSX]
 			image="graphics/osx_min_def_new" [$OSX1010]
+			inset="-6 0 0 0" [$OSX]
 		}
 		
 		FrameMinimizeButton:framefocus:hover
@@ -692,6 +702,7 @@ steam.styles
 			image="graphics/win_min_4"
 			image="graphics/osx_min_hov"	[$OSX]
 			image="graphics/osx_min_hov_new" [$OSX1010]
+			inset="-6 0 0 0" [$OSX]
 	}
 		
 		FrameMinimizeButton:active
@@ -701,6 +712,7 @@ steam.styles
 			image="graphics/win_min_5"
 			image="graphics/osx_min_down" [$OSX]
 			image="graphics/osx_min_down_new" [$OSX1010]
+			inset="-6 0 0 0" [$OSX]
 		}
 		
 		FrameMaximizeButton
@@ -710,6 +722,7 @@ steam.styles
 			image="graphics/win_max_1"
 			image="graphics/osx_win_dis" [$OSX]
 			image="graphics/osx_win_dis_new_dark" [$OSX1010]
+			inset="-6 0 0 0" [$OSX]
 		}
 		
 		FrameMaximizeButton:hover
@@ -719,7 +732,8 @@ steam.styles
 			image="graphics/win_max_2"
 			image="graphics/osx_max_hov" [$OSX]
 			image="graphics/osx_max_hov_new" [$OSX1010]
-	}
+			inset="-6 0 0 0" [$OSX]
+		}
 		
 		FrameMaximizeButton:framefocus
 		{
@@ -728,6 +742,7 @@ steam.styles
 			image="graphics/win_max_3"
 			image="graphics/osx_max_def" [$OSX]
 			image="graphics/osx_max_def_new" [$OSX1010]
+			inset="-6 0 0 0" [$OSX]
 		}
 		
 		FrameMaximizeButton:framefocus:hover
@@ -737,6 +752,7 @@ steam.styles
 			image="graphics/win_max_4"
 			image="graphics/osx_max_hov"		[$OSX]
 			image="graphics/osx_max_hov_new" [$OSX1010]
+			inset="-6 0 0 0" [$OSX]
 		}
 		
 		FrameMaximizeButton:active
@@ -746,6 +762,7 @@ steam.styles
 			image="graphics/win_max_5"
 			image="graphics/osx_max_down"	[$OSX]
 			image="graphics/osx_max_down_new" [$OSX1010]
+			inset="-6 0 0 0" [$OSX]
 		}
 		
 		FrameRestoreButton
@@ -754,6 +771,7 @@ steam.styles
 			image="graphics/win_restore_1"
 			image="graphics/osx_win_dis" [$OSX]
 			image="graphics/osx_win_dis_new" [$OSX1010]
+			inset="-6 0 0 0" [$OSX]
 		}
 		
 		FrameRestoreButton:hover
@@ -763,6 +781,7 @@ steam.styles
 			image="graphics/win_restore_2"
 			image="graphics/osx_max_hov" [$OSX]
 			image="graphics/osx_max_hov_new" [$OSX1010]
+			inset="-6 0 0 0" [$OSX]
 		}
 		
 		FrameRestoreButton:framefocus
@@ -772,6 +791,7 @@ steam.styles
 			image="graphics/win_restore_3"
 			image="graphics/osx_max_def" [$OSX]
     		image="graphics/osx_max_def_new" [$OSX1010]
+			inset="-6 0 0 0" [$OSX]
 		}
 		
 		FrameRestoreButton:framefocus:hover
@@ -781,6 +801,7 @@ steam.styles
 			image="graphics/win_restore_4"
 			image="graphics/osx_max_hov" [$OSX]
 			image="graphics/osx_max_hov_new" [$OSX1010]
+			inset="-6 0 0 0" [$OSX]
 		}
 		
 		FrameRestoreButton:active
@@ -790,6 +811,7 @@ steam.styles
 			image="graphics/win_restore_5"
 			image="graphics/osx_max_down" [$OSX]
 			image="graphics/osx_max_down_new" [$OSX1010]
+			inset="-6 0 0 0" [$OSX]
 		}
 		
 		FrameCloseButton
@@ -799,6 +821,7 @@ steam.styles
 			image="graphics/win_close_1"
 			image="graphics/osx_win_dis" [$OSX]
 			image="graphics/osx_win_dis_new_dark" [$OSX1010]
+			inset="-6 0 0 0" [$OSX]
 		}
 		
 		FrameCloseButton:hover
@@ -808,6 +831,7 @@ steam.styles
 			image="graphics/win_close_2"
 			image="graphics/osx_close_hov" [$OSX]
 			image="graphics/osx_close_hov_new" [$OSX1010]
+			inset="-6 0 0 0" [$OSX]
 		}
 		
 		FrameCloseButton:framefocus
@@ -817,6 +841,7 @@ steam.styles
 			image="graphics/win_close_3"
 			image="graphics/osx_close_def" [$OSX]
 			image="graphics/osx_close_def_new" [$OSX1010]
+			inset="-6 0 0 0" [$OSX]
 		}
 		
 		FrameCloseButton:framefocus:hover
@@ -826,6 +851,7 @@ steam.styles
 			image="graphics/win_close_4"
 			image="graphics/osx_close_hov" [$OSX]
 			image="graphics/osx_close_hov_new" [$OSX1010]
+			inset="-6 0 0 0" [$OSX]
 		}
 		
 		FrameCloseButton:active
@@ -835,7 +861,9 @@ steam.styles
 			image="graphics/win_close_5"
 			image="graphics/osx_close_down" [$OSX]
 			image="graphics/osx_close_down_new" [$OSX1010]
+			inset="-6 0 0 0" [$OSX]
 		}
+
 		FrameCloseButton:disabled
 		{
 			render_bg {}
@@ -843,6 +871,7 @@ steam.styles
 			image="graphics/win32_win_close_disabled"
 			image="graphics/osx_win_dis" [$OSX]
 			image="graphics/osx_win_dis_new_dark" [$OSX1010]
+			inset="-6 0 0 0" [$OSX]
 		}
 		
 		FrameTitle
@@ -859,6 +888,7 @@ steam.styles
 			bgcolor="none"
 			render_bg
 			{
+				//full path added by design, Steam won't load these images otherwise
 				0="image(x0    , y0   , x0+96 , y0+20, graphics/titlebar_1.png )"
 				1="image(x0+96 , y0   , x0+192, y0+20, graphics/titlebar_2.png )"
 				2="fill( x0+192, y0   , x1    , y0+20, FrameBG3 )"
@@ -878,6 +908,7 @@ steam.styles
 			textcolor="TitleTextFocus" [$OSX]
 			render_bg
 			{
+				//full path added by design, Steam won't load these images otherwise
 				0="image( x0   , y0, x0+96 , y0+20, graphics/titlebar_1 )"
 				1="image( x0+96, y0, x0+192, y0+20, graphics/titlebar_2)"
 				2="fill( x0+192, y0, x1, y0 + 20,  FrameBG3 )"
@@ -3724,6 +3755,10 @@ steam.styles
 		}
 		
 		"NotifyRemotePlayTogetherTitle"
+		{
+			textcolor="white"
+		}
+		"PeerContentClientName"
 		{
 			textcolor="white"
 		}

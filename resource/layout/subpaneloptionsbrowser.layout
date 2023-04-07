@@ -10,9 +10,7 @@
 		
 		ClientBrowserAuthHomePage { ControlName=CheckButton fieldName="ClientBrowserAuthHomePage" }
 
-		ClearWebCacheButton { ControlName=Button labelText="#Steam_SettingsBrowserClearWebCache" 	command=ClearWebCache }
-		ClearAllCookiesButton { ControlName=Button labelText="#Steam_SettingsBrowserClearAllCookies" 	command=ClearCookies }
-
+		ClearAllBrowserDataButton { ControlName=Button labelText="#Steam_SettingsBrowserDeleteAllData" 	command=ClearAllBrowserData }
 	}
 	
 	colors
@@ -43,7 +41,7 @@
 		
 		place { start=ClientBrowserAuthHomePage controls=Divider1 dir=down region=bottom width=max margin-top=6 margin-right=10 }
 		
-		place { controls=ClearWebCacheButton,ClearAllCookiesButton start=Divider1 dir=down height=20 region=bottom margin-top=10 height=20 spacing=4 }
+		place { controls=ClearAllBrowserDataButton start=Divider1 dir=down height=20 region=bottom margin-top=10 height=20 spacing=4 }
 		
 	}
 }

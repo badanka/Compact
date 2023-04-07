@@ -23,5 +23,12 @@ gameoverlay.styles
 			font-size=15
 			textcolor="text"
 		}
+
+		"OverlayWebPopup"
+		{
+			bgcolor=none
+			render_bg {}
+			render {}
+		}
 	}
 }

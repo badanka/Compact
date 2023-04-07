@@ -33,8 +33,6 @@
 		"PerformanceOverlay" { ControlName="ComboBox" fieldName="PerformanceOverlay" editable="0" }
 
 		"EnableHardwareDecoding" { ControlName="CheckButton" fieldName="EnableHardwareDecoding" labelText="#Steam_Settings_Streaming_EnableHardwareDecoding" }
-
-		"EnableTouchController" { ControlName="CheckButton" fieldName="EnableTouchController" labelText="#Steam_Settings_Streaming_EnableTouchController" }
 		
 		"SupportInformationLabel"
 		{
@@ -125,7 +123,7 @@
 		
 		place
 		{
-			control="EnableHardwareDecoding,EnableTouchController"
+			control="EnableHardwareDecoding"
 			start="ControllerOverlayHotkey"
 			dir=down
 			width=max

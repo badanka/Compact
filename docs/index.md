@@ -13,26 +13,20 @@ A few issues with fonts requires some manual work. Please let me know if you exp
 
 ***
 
-### Information about current version (updated December 16, 2021)
-Version 1.6.58 is compatible with Steam version 1637624439 (built November 22, 2021)
+### Information about current version (updated April 07, 2023)
+Version 1.6.70 is compatible with Steam version 1679680416 (built March 24, 2023)
 
 Changes since previous version include:<br>
-* Updated to match Steam version 1637624439 (built 211122)<br>
-* Fixed Settings menu in several places<br>
-
+* Updated to match Steam version 1679680416 (230324)<br>
+* Fixed regression with UI panel being cropped off<br>
+* Updated Steam menu<br>
+* Settings -› updated Downloads dialog (e.g. local game file transfers)<br>
+* Settings -› updated Controllers dialog<br>
+* Settings -› updated Web browser dialog<br>
+* Other miscellaneous fixes<br>
 ***
 
 ### Support or Contact
 Having any issues? Either report it in the [GitHub issue tracker](https://github.com/badanka/Compact/issues) or in the [Steam Community Group](https://steamcommunity.com/groups/SteamCompact).
 
-***
-
-### Screenshots (updated September 24, 2015)
-![Details view](http://i.imgur.com/yftqsMA.png)
-
-![List view](http://i.imgur.com/wLCgu9J.png)
-
-![Overlay](http://i.imgur.com/vqrnNmr.png)
-
-
-_*This page was last updated 2020-10-30, 20:59 GMT+1/UTC+2_
+_*This page was last updated 2023-04-07, 15:17 GMT+1/UTC+2_

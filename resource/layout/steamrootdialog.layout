@@ -14,7 +14,7 @@
 		{
 			"ControlName"		"Button"
 			style="VRButton"
-      			command="url steam://run/250820"
+      			command="startvr"
      			tooltiptext="#tooltip_view_vr_start" 
 		}
     
@@ -29,7 +29,7 @@
 		"UINavigatorPanel"
 		{
 			"ControlName"		"CUINavigatorPanel"
-			zpos=-3
+			zpos=-2
 		}	
 		
 		"UIStatusPanel"
@@ -111,7 +111,7 @@
 		{
 			ControlName=URLLabel
 			labelText="#Steam_ViewFriends"
-			"URLText"	"steam://open/friends"
+			command="ViewFriends"
 			style="view_friends"
 			textAlignment=east
 		}
