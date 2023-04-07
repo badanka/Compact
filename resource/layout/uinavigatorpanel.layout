@@ -86,8 +86,6 @@
 			group="url"
 		}
 
-
-//most likely superfluous, missed during the long break of updating
 		"URLAnchor"
 		{
 			"ControlName" "Label"
@@ -125,9 +123,6 @@
 		library_music_menu			{ ControlName=MenuButton labelText="#Music_Nav_Menu_Artists" style="NavLabel2" showDownArrow=0 align=left group=music }
 		library_music_add_button {	ControlName=Button labelText=""	tooltiptext="#Music_Playlist_Details_Menu_Add" style="MusicAddButton" group=music_add_button visible=false }
 		library_music_player_icon	{ ControlName=URLLabel style="MusicPlayerIcon" tooltiptext="#music_tooltip_view_player" URLtext="steam://open/musicplayer" align=right group=music }
-
-		emailreminderbar { zpos=1 }
-		phonereminderbar { zpos=1 }
 
 		EVCert	{ controlname="Label" style="LabelEVCert" visible=false }		
 		URLStatusImage	{ controlname="ImagePanel" style="URLStatusImage" group="urlsec" }
@@ -399,6 +394,14 @@
 			padding-right=5
 		}
 	
+		NavLabel2
+		{
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="Label"
+			font-style=regular
+		}	
 		
 		Panel_transparent
 		{
@@ -702,6 +705,7 @@
 			}
 		}
 
+		//no longer in use?
 		CUINavButton2  [!$OSX]
 		{
 			textcolor="TextGlowSelected2"
@@ -840,55 +844,62 @@
 
 		place { control="refresh,stop,URLStatusImage,EVCert,URLBar" align=left x=46 y=21 height=20 width=max spacing=4 margin-left=3 margin-right=200 }
 
- 		place { control="library_zoom" width=82 height=16 y=25  }
+		//only used for Music Details panel nowadays AFAICT 
+	    region { name="dropdown" width=90 x=64 y=22 height=20}
+ 		place [!$OSX] { control="library_music_menu" align=left spacing=1 region="dropdown" }
+ 		place [!$OSX] { control="library_music_add_button" height=20 start="library_music_menu" dir=right margin-left=4 spacing=2  }
+		 place [$OSX] { control="library_music_menu,library_music_add_button" align=left height=20 align=left spacing=1 region="dropdown"}
 
-		//the actual search box
-		place { control="subnavgroup_library" align=left y=20 height=22 width=max margin-left=47 margin-right=140 }
-
-		place { control="library_search" width=144 }
-		place [!$OSX] { control="label_search_icon,library_search" align=left y=19 height=20 x=51 }
-		 place [$OSX] { control="label_search_icon,library_search" align=left y=19 height=20 x=51 }
-		 place [$LINUX] { control="label_search_icon" align=left y=19 height=20 x=51 }
-		 place [$LINUX] { control="library_search" start="label_search_icon" y=2 height=20}
-
-	    region { name="dropdown" width=90 x=226 y=21  height=20 }
-		place { control="library_filters" align=left spacing=1 region="dropdown" }
-
-		place { control="library_filters_details,library_filters_list,library_filters_grid," align=left start="library_filters" dir=right height=20 spacing=4 margin-left=12 width=20 }
-		
-		place { control=URLAnchor align=left y=54 height=28 width=max }
-		place { control=LibraryAnchor height=28 width=max start=URLAnchor dir=down }
-
- 		place [!$OSX] { control="library_music_menu" height=20 start="library_filters" dir=right margin-left=4 spacing=2 }
- 		place [!$OSX] { control="library_music_add_button" height=20 start="library_music_menu" dir=right y=1 x=4 }
-		 place [$OSX] { control="library_music_menu,library_music_add_button" align=left height=20 start="library_filters" dir=right margin-left=4 }
-
-		place [!$OSX] { control="library_zoom" align=left start="library_filters_grid" y=0 margin-left=12 height=18 }
-		 place [$OSX] { control="library_zoom" align=left start="library_filters_grid" y=0 margin-left=12 height=18 }
+		place { control=URLAnchor align=left y=27 height=1 width=max }
+		place { control=LibraryAnchor height=1 width=max start=URLAnchor margin-top=13 dir=down }
 
 		place [$OSX] { control="label_library_filters" align=left y=23 height=20 spacing=3 x=13 }
-
- 	  	place { control=emailreminderbar margin-top=40 margin-left=0 margin-right=0 width=max height=32 }
- 	  	place { control=phonereminderbar start="emailreminderbar" margin-left=0 margin-right=0 width=max height=48 dir=down }
 
 		place [!$OSX] { control="label_library_show,label_library_zoom,label_zoom_separator,label_library_view" x=99999 y=0 height=0 }
 		 place [$OSX] { control="label_library_show,label_library_zoom,label_zoom_separator,label_library_view" x=99999 height=0 width=0 }
 
 		// content pages
-		place { control=DownloadsPage 			width=max height=max margin-top=0 margin-left=2 margin-right=1  margin-bottom=3 start=phonereminderbar dir=down }
-		place { control=ScreenshotsPage 		width=max height=max margin-top=0 margin-left=0 margin-right=0  margin-bottom=0 start=phonereminderbar dir=down }
-		place { control=GamesPage_List 			width=max height=max margin-top=0 margin-left=1 margin-right=0  margin-bottom=0 start=phonereminderbar dir=down }
-		place { control=GamesPage_Details 		width=max height=max margin-top=0 margin-left=0 margin-right=0  margin-bottom=0 start=phonereminderbar dir=down }
-		place { control=GamesPage_Grid 			width=max height=max margin-top=0 margin-left=2 margin-right=1  margin-bottom=3 start=phonereminderbar dir=down }
-		place { control=WebPanel 				width=max height=max margin-top=0 margin-left=2 margin-right=1  margin-bottom=3 start=phonereminderbar dir=down }
-		place { control=BroadcastPage			width=max height=max margin-top=0 margin-left=0 margin-right=9  margin-bottom=21 start=phonereminderbar dir=down }
+		place { control=DownloadsPage 			width=max height=max margin-top=0 margin-left=2 margin-right=1  margin-bottom=3 start=LibraryAnchor dir=down }
+		place { control=ScreenshotsPage 		width=max height=max margin-top=0 margin-left=0 margin-right=0  margin-bottom=0 start=LibraryAnchor dir=down }
+		place { control=WebPanel 				width=max height=max margin-top=0 margin-left=2 margin-right=1  margin-bottom=3 start=LibraryAnchor dir=down }
+		place { control=BroadcastPage			width=max height=max margin-top=0 margin-left=0 margin-right=9  margin-bottom=21 start=LibraryAnchor dir=down }
 		place { control=BroadcastPageMin		width=298 height=168 margin-top=0 margin-left=0 margin-right=30 margin-bottom=26 dir=down align=bottom-right }
 		place { control=BroadcastPageMinHoriz	width=298 height=168 margin-top=0 margin-left=0 margin-right=30 margin-bottom=40 dir=down align=bottom-right }
-		place { control=MusicPage_Details 		width=max height=max margin-top=0 margin-left=2 margin-right=3  margin-bottom=3 start=phonereminderbar dir=down }
-		place { control=ConsolePage 			width=max height=max margin-top=0 margin-left=0 margin-right=0  margin-bottom=0 start=phonereminderbar dir=down }
-		place { control=NewLibraryPage		width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=21 start=phonereminderbar dir=down }
+		place { control=MusicPage_Details 		width=max height=max margin-top=0 margin-left=0 margin-right=2  margin-bottom=0 start=LibraryAnchor dir=down }
+		place { control=ConsolePage 			width=max height=max margin-top=0 margin-left=0 margin-right=0  margin-bottom=0 start=LibraryAnchor dir=down }
+		place { control=NewLibraryPage			width=max height=max margin-top=0 margin-left=0 margin-right=0 margin-bottom=1 start=LibraryAnchor dir=down }
 
-		place { control=MediaPage 				width=max height=max margin-top=1 margin-left=0 margin-right=28 margin-bottom=0 start=phonereminderbar dir=down }
-		place { control=ToolsPage 				width=max height=max margin-top=1 margin-left=2 margin-right=1  margin-bottom=1 start=phonereminderbar dir=down }
+		place { control=MediaPage 				width=max height=max margin-top=1 margin-left=0 margin-right=28 margin-bottom=0 start=LibraryAnchor dir=down }
+		place { control=ToolsPage 				width=max height=max margin-top=1 margin-left=2 margin-right=1  margin-bottom=1 start=LibraryAnchor dir=down }
+
+
+
+		// elements no longer in use since library overhaul, but still left in original code
+
+		place { control=GamesPage_List 			width=max height=max margin-top=0 margin-left=1 margin-right=0  margin-bottom=0 start=LibraryAnchor dir=down }
+		place { control=GamesPage_Details 		width=max height=max margin-top=0 margin-left=0 margin-right=0  margin-bottom=0 start=LibraryAnchor dir=down }
+		place { control=GamesPage_Grid 			width=max height=max margin-top=0 margin-left=2 margin-right=1  margin-bottom=3 start=LibraryAnchor dir=down }
+		
+		
+ 		//place { control="library_zoom" width=82 height=16 y=25  }
+ 		place { control="library_zoom" width=82 height=0 y=25  }
+		//place [!$OSX] { control="library_zoom" align=left start="library_filters_grid" y=0 margin-left=12 height=18 }
+		//place [$OSX] { control="library_zoom" align=left start="library_filters_grid" y=0 margin-left=12 height=18 }
+
+		place { control="library_filters_details,library_filters_list,library_filters_grid," align=left start="library_filters" dir=right height=0 spacing=4 margin-left=12 width=20 }
+
+		//the actual search box. only visible in Music Details, but no longer functioning
+		place { control="subnavgroup_library" align=left y=20 height=0 width=max margin-left=47 margin-right=140 }
+
+		place [!$OSX] { control="label_search_icon,library_search" align=left y=19 height=0 x=999 }
+		place [$OSX] { control="label_search_icon,library_search" align=left y=19 height=0 x=999 }
+		place [$LINUX] { control="label_search_icon" align=left y=19 height=0 x=999 }
+		place [$LINUX] { control="library_search" start="label_search_icon" y=2 height=0} 
+
+		//filter all games, no longer in use. can still be visible in Music Details
+		place { control="library_filters" align=left spacing=1 region="dropdown" height=0 x=999 }
+		
+
+
 	}
 }
